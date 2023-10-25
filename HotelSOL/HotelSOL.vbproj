@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9F0E12F-F9E9-4FB6-9DAE-ED96C91D1F2D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HotelSOL.My.MyApplication</StartupObject>
+    <RootNamespace>HotelSOL</RootNamespace>
+    <AssemblyName>HotelSOL</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HotelSOL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HotelSOL.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01.1Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01.1Main.Designer.vb">
+      <DependentUpon>01.1Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="02_MainMenu.Designer.vb">
+      <DependentUpon>02_MainMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="02_MainMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="03_ClientMain.Designer.vb">
+      <DependentUpon>03_ClientMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="03_ClientMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="04_ClientAdd.Designer.vb">
+      <DependentUpon>04_ClientAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="04_ClientAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="05_ClientUpdate.Designer.vb">
+      <DependentUpon>05_ClientUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="05_ClientUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="06_ClientCheck.Designer.vb">
+      <DependentUpon>06_ClientCheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="06_ClientCheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="07_ClientDelete.Designer.vb">
+      <DependentUpon>07_ClientDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="07_ClientDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="08_RoomMain.Designer.vb">
+      <DependentUpon>08_RoomMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="08_RoomMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="09_RoomAdd.Designer.vb">
+      <DependentUpon>09_RoomAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="09_RoomAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="10_RoomUpdate.Designer.vb">
+      <DependentUpon>10_RoomUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="10_RoomUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="11_RoomCheck.Designer.vb">
+      <DependentUpon>11_RoomCheck.vb</DependentUpon>
+    </Compile>
+    <Compile Include="11_RoomCheck.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_RoomDelete.Designer.vb">
+      <DependentUpon>12_RoomDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="12_RoomDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="13_ReservationMain.Designer.vb">
+      <DependentUpon>13_ReservationMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="13_ReservationMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="14_ReservationAdd.Designer.vb">
+      <DependentUpon>14_ReservationAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="14_ReservationAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="15_ReservationUpdate.Designer.vb">
+      <DependentUpon>15_ReservationUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="15_ReservationUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="16_ReservationDelete.Designer.vb">
+      <DependentUpon>16_ReservationDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="16_ReservationDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="17_ReservationCheckin.Designer.vb">
+      <DependentUpon>17_ReservationCheckin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="17_ReservationCheckin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="18_ReservationCheckout.Designer.vb">
+      <DependentUpon>18_ReservationCheckout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="18_ReservationCheckout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="19_ReservationPay.Designer.vb">
+      <DependentUpon>19_ReservationPay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="19_ReservationPay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="20_QueriesMain.Designer.vb">
+      <DependentUpon>20_QueriesMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="20_QueriesMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="21_QueriesCheckAvailable.Designer.vb">
+      <DependentUpon>21_QueriesCheckAvailable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="21_QueriesCheckAvailable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="22_QueriesLists.Designer.vb">
+      <DependentUpon>22_QueriesLists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="22_QueriesLists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="23_ServicesMain.Designer.vb">
+      <DependentUpon>23_ServicesMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="23_ServicesMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="24_ServicesAdd.Designer.vb">
+      <DependentUpon>24_ServicesAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="24_ServicesAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="25_ServicesUpdate.Designer.vb">
+      <DependentUpon>25_ServicesUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="25_ServicesUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="26_ServicesDelete.Designer.vb">
+      <DependentUpon>26_ServicesDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="26_ServicesDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="27_ServicesCharge.Designer.vb">
+      <DependentUpon>27_ServicesCharge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="27_ServicesCharge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="28_ListsShowView.Designer.vb">
+      <DependentUpon>28_ListsShowView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="28_ListsShowView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="01Login.Designer.vb">
+      <DependentUpon>01Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="01Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="01.1Main.resx">
+      <DependentUpon>01.1Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="02_MainMenu.resx">
+      <DependentUpon>02_MainMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="03_ClientMain.resx">
+      <DependentUpon>03_ClientMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="04_ClientAdd.resx">
+      <DependentUpon>04_ClientAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="05_ClientUpdate.resx">
+      <DependentUpon>05_ClientUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="06_ClientCheck.resx">
+      <DependentUpon>06_ClientCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="07_ClientDelete.resx">
+      <DependentUpon>07_ClientDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="08_RoomMain.resx">
+      <DependentUpon>08_RoomMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="09_RoomAdd.resx">
+      <DependentUpon>09_RoomAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="10_RoomUpdate.resx">
+      <DependentUpon>10_RoomUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="11_RoomCheck.resx">
+      <DependentUpon>11_RoomCheck.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_RoomDelete.resx">
+      <DependentUpon>12_RoomDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="13_ReservationMain.resx">
+      <DependentUpon>13_ReservationMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="14_ReservationAdd.resx">
+      <DependentUpon>14_ReservationAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="15_ReservationUpdate.resx">
+      <DependentUpon>15_ReservationUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="16_ReservationDelete.resx">
+      <DependentUpon>16_ReservationDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="17_ReservationCheckin.resx">
+      <DependentUpon>17_ReservationCheckin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="18_ReservationCheckout.resx">
+      <DependentUpon>18_ReservationCheckout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="19_ReservationPay.resx">
+      <DependentUpon>19_ReservationPay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="20_QueriesMain.resx">
+      <DependentUpon>20_QueriesMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="21_QueriesCheckAvailable.resx">
+      <DependentUpon>21_QueriesCheckAvailable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="22_QueriesLists.resx">
+      <DependentUpon>22_QueriesLists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="23_ServicesMain.resx">
+      <DependentUpon>23_ServicesMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="24_ServicesAdd.resx">
+      <DependentUpon>24_ServicesAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="25_ServicesUpdate.resx">
+      <DependentUpon>25_ServicesUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="26_ServicesDelete.resx">
+      <DependentUpon>26_ServicesDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="27_ServicesCharge.resx">
+      <DependentUpon>27_ServicesCharge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="28_ListsShowView.resx">
+      <DependentUpon>28_ListsShowView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="01Login.resx">
+      <DependentUpon>01Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
