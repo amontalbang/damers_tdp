@@ -4,7 +4,7 @@ Imports System.Data.SqlTypes
 
 Public Class Form24
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim sqlConnection As New System.Data.SqlClient.SqlConnection("Data Source = MAQUEDA \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
+        Dim sqlConnection As New System.Data.SqlClient.SqlConnection("Data Source = LAPTOP-QH1U0LAN \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
         Dim cmd As New System.Data.SqlClient.SqlCommand
         Dim decim As Double = Double.Parse(TextBox7.Text).ToString() '"###,##"
         cmd.CommandType = System.Data.CommandType.Text

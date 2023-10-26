@@ -16,30 +16,33 @@ Public Class Form28
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-        Dim xmlnode As XmlNodeList
+        'Dim xmlnode As XmlNodeList
         Dim i As Integer
         Dim consulta As String = "select * from Servicios"
         Dim adaptador As New SqlDataAdapter(consulta, conection)
         Dim dt As New DataTable
         adaptador.Fill(dt)
-        Dim xmldoc As New XmlDocument()
-        Dim doc As XDocument
-        doc = XDocument.Load("Exported1XML.xml")
-        Dim root As XElement
-
-        xmlnode = xmldoc.GetElementsByTagName("Servicio")
+        Dim root As XElement = New XElement("Servicios")
+        Dim node As XElement
         For i = 0 To dt.Rows.Count - 1
-            root = New XElement("Servicios")
-            root.Add(New XElement("IDservicio", DataGridView1.Item(0, i).Value()))
-            root.Add(New XElement("Nombre", DataGridView1.Item(1, i).Value()))
-            root.Add(New XElement("Descripcion", DataGridView1.Item(2, i).Value()))
-            root.Add(New XElement("Precio", DataGridView1.Item(3, i).Value()))
-            doc.Element("Servicios").Add(root)
-            doc.Save("123.xml")
+            node = New XElement("Servicios")
+            node.Add(New XElement("IDservicio", DataGridView1.Item(0, i).Value()))
+            node.Add(New XElement("Nombre", DataGridView1.Item(1, i).Value()))
+            node.Add(New XElement("Descripcion", DataGridView1.Item(2, i).Value()))
+            node.Add(New XElement("Precio", DataGridView1.Item(3, i).Value()))
+            root.Add(node)
         Next
+        Dim doc As XDocument = New XDocument(root)
+        doc.Save("123.xml")
         MessageBox.Show("XML exportado correctamente")
-
     End Sub
+
+    Private Class Service
+        Public Property IDservicio As String
+        Public Property Nombre As String
+        Public Property Descripcion As String
+        Public Property Precio As String
+    End Class
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
@@ -54,7 +57,7 @@ Public Class Form28
 
     Private Sub llenar_grid()
 
-        conection = New SqlConnection("Data Source = MAQUEDA \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
+        conection = New SqlConnection("Data Source = LAPTOP-QH1U0LAN \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
         conection.Open()
         Dim consulta As String = "select * from Servicios"
         Dim adaptador As New SqlDataAdapter(consulta, conection)
@@ -79,7 +82,7 @@ Public Class Form28
         Dim xmlnode As XmlNodeList
         Dim i As Integer
         Dim fs As New FileStream("ImportXML.xml", FileMode.Open, FileAccess.Read)
-        Dim sqlConnection As New System.Data.SqlClient.SqlConnection("Data Source = MAQUEDA \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
+        Dim sqlConnection As New System.Data.SqlClient.SqlConnection("Data Source = LAPTOP-QH1U0LAN \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
         Dim cmd As New System.Data.SqlClient.SqlCommand
 
         xmldoc.Load(fs)

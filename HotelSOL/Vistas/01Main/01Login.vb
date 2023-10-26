@@ -35,7 +35,7 @@ Public Class LoginForm1
     Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         Me.CenterToScreen()
-        conection = New SqlConnection("Data Source = MAQUEDA \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
+        conection = New SqlConnection("Data Source = LAPTOP-QH1U0LAN \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
 
 
     End Sub
