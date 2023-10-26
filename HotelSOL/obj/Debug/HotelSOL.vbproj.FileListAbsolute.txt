@@ -39,3 +39,8 @@ C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.Form26.resource
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.Form27.resources
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.Form28.resources
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.LoginForm1.resources
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\EntityFramework.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\EntityFramework.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.vbproj.CopyComplete

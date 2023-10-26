@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -14,6 +15,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,7 +51,14 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -74,167 +84,167 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="01.1Main.vb">
+    <Compile Include="Vistas\01Main\01.1Main.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="01.1Main.Designer.vb">
+    <Compile Include="Vistas\01Main\01.1Main.Designer.vb">
       <DependentUpon>01.1Main.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="02_MainMenu.Designer.vb">
+    <Compile Include="Vistas\01Main\02_MainMenu.Designer.vb">
       <DependentUpon>02_MainMenu.vb</DependentUpon>
     </Compile>
-    <Compile Include="02_MainMenu.vb">
+    <Compile Include="Vistas\01Main\02_MainMenu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="03_ClientMain.Designer.vb">
+    <Compile Include="Vistas\02Clients\03_ClientMain.Designer.vb">
       <DependentUpon>03_ClientMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="03_ClientMain.vb">
+    <Compile Include="Vistas\02Clients\03_ClientMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="04_ClientAdd.Designer.vb">
+    <Compile Include="Vistas\02Clients\04_ClientAdd.Designer.vb">
       <DependentUpon>04_ClientAdd.vb</DependentUpon>
     </Compile>
-    <Compile Include="04_ClientAdd.vb">
+    <Compile Include="Vistas\02Clients\04_ClientAdd.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="05_ClientUpdate.Designer.vb">
+    <Compile Include="Vistas\02Clients\05_ClientUpdate.Designer.vb">
       <DependentUpon>05_ClientUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="05_ClientUpdate.vb">
+    <Compile Include="Vistas\02Clients\05_ClientUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="06_ClientCheck.Designer.vb">
+    <Compile Include="Vistas\02Clients\06_ClientCheck.Designer.vb">
       <DependentUpon>06_ClientCheck.vb</DependentUpon>
     </Compile>
-    <Compile Include="06_ClientCheck.vb">
+    <Compile Include="Vistas\02Clients\06_ClientCheck.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="07_ClientDelete.Designer.vb">
+    <Compile Include="Vistas\02Clients\07_ClientDelete.Designer.vb">
       <DependentUpon>07_ClientDelete.vb</DependentUpon>
     </Compile>
-    <Compile Include="07_ClientDelete.vb">
+    <Compile Include="Vistas\02Clients\07_ClientDelete.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="08_RoomMain.Designer.vb">
+    <Compile Include="Vistas\03Rooms\08_RoomMain.Designer.vb">
       <DependentUpon>08_RoomMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="08_RoomMain.vb">
+    <Compile Include="Vistas\03Rooms\08_RoomMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="09_RoomAdd.Designer.vb">
+    <Compile Include="Vistas\03Rooms\09_RoomAdd.Designer.vb">
       <DependentUpon>09_RoomAdd.vb</DependentUpon>
     </Compile>
-    <Compile Include="09_RoomAdd.vb">
+    <Compile Include="Vistas\03Rooms\09_RoomAdd.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="10_RoomUpdate.Designer.vb">
+    <Compile Include="Vistas\03Rooms\10_RoomUpdate.Designer.vb">
       <DependentUpon>10_RoomUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="10_RoomUpdate.vb">
+    <Compile Include="Vistas\03Rooms\10_RoomUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="11_RoomCheck.Designer.vb">
+    <Compile Include="Vistas\03Rooms\11_RoomCheck.Designer.vb">
       <DependentUpon>11_RoomCheck.vb</DependentUpon>
     </Compile>
-    <Compile Include="11_RoomCheck.vb">
+    <Compile Include="Vistas\03Rooms\11_RoomCheck.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="12_RoomDelete.Designer.vb">
+    <Compile Include="Vistas\03Rooms\12_RoomDelete.Designer.vb">
       <DependentUpon>12_RoomDelete.vb</DependentUpon>
     </Compile>
-    <Compile Include="12_RoomDelete.vb">
+    <Compile Include="Vistas\03Rooms\12_RoomDelete.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="13_ReservationMain.Designer.vb">
+    <Compile Include="Vistas\04Reserv\13_ReservationMain.Designer.vb">
       <DependentUpon>13_ReservationMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="13_ReservationMain.vb">
+    <Compile Include="Vistas\04Reserv\13_ReservationMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="14_ReservationAdd.Designer.vb">
+    <Compile Include="Vistas\04Reserv\14_ReservationAdd.Designer.vb">
       <DependentUpon>14_ReservationAdd.vb</DependentUpon>
     </Compile>
-    <Compile Include="14_ReservationAdd.vb">
+    <Compile Include="Vistas\04Reserv\14_ReservationAdd.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="15_ReservationUpdate.Designer.vb">
+    <Compile Include="Vistas\04Reserv\15_ReservationUpdate.Designer.vb">
       <DependentUpon>15_ReservationUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="15_ReservationUpdate.vb">
+    <Compile Include="Vistas\04Reserv\15_ReservationUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="16_ReservationDelete.Designer.vb">
+    <Compile Include="Vistas\04Reserv\16_ReservationDelete.Designer.vb">
       <DependentUpon>16_ReservationDelete.vb</DependentUpon>
     </Compile>
-    <Compile Include="16_ReservationDelete.vb">
+    <Compile Include="Vistas\04Reserv\16_ReservationDelete.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="17_ReservationCheckin.Designer.vb">
+    <Compile Include="Vistas\04Reserv\17_ReservationCheckin.Designer.vb">
       <DependentUpon>17_ReservationCheckin.vb</DependentUpon>
     </Compile>
-    <Compile Include="17_ReservationCheckin.vb">
+    <Compile Include="Vistas\04Reserv\17_ReservationCheckin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="18_ReservationCheckout.Designer.vb">
+    <Compile Include="Vistas\04Reserv\18_ReservationCheckout.Designer.vb">
       <DependentUpon>18_ReservationCheckout.vb</DependentUpon>
     </Compile>
-    <Compile Include="18_ReservationCheckout.vb">
+    <Compile Include="Vistas\04Reserv\18_ReservationCheckout.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="19_ReservationPay.Designer.vb">
+    <Compile Include="Vistas\04Reserv\19_ReservationPay.Designer.vb">
       <DependentUpon>19_ReservationPay.vb</DependentUpon>
     </Compile>
-    <Compile Include="19_ReservationPay.vb">
+    <Compile Include="Vistas\04Reserv\19_ReservationPay.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="20_QueriesMain.Designer.vb">
+    <Compile Include="Vistas\05Queries\20_QueriesMain.Designer.vb">
       <DependentUpon>20_QueriesMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="20_QueriesMain.vb">
+    <Compile Include="Vistas\05Queries\20_QueriesMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="21_QueriesCheckAvailable.Designer.vb">
+    <Compile Include="Vistas\05Queries\21_QueriesCheckAvailable.Designer.vb">
       <DependentUpon>21_QueriesCheckAvailable.vb</DependentUpon>
     </Compile>
-    <Compile Include="21_QueriesCheckAvailable.vb">
+    <Compile Include="Vistas\05Queries\21_QueriesCheckAvailable.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="22_QueriesLists.Designer.vb">
+    <Compile Include="Vistas\05Queries\22_QueriesLists.Designer.vb">
       <DependentUpon>22_QueriesLists.vb</DependentUpon>
     </Compile>
-    <Compile Include="22_QueriesLists.vb">
+    <Compile Include="Vistas\05Queries\22_QueriesLists.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="23_ServicesMain.Designer.vb">
+    <Compile Include="Vistas\06Services\23_ServicesMain.Designer.vb">
       <DependentUpon>23_ServicesMain.vb</DependentUpon>
     </Compile>
-    <Compile Include="23_ServicesMain.vb">
+    <Compile Include="Vistas\06Services\23_ServicesMain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="24_ServicesAdd.Designer.vb">
+    <Compile Include="Vistas\06Services\24_ServicesAdd.Designer.vb">
       <DependentUpon>24_ServicesAdd.vb</DependentUpon>
     </Compile>
-    <Compile Include="24_ServicesAdd.vb">
+    <Compile Include="Vistas\06Services\24_ServicesAdd.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="25_ServicesUpdate.Designer.vb">
+    <Compile Include="Vistas\06Services\25_ServicesUpdate.Designer.vb">
       <DependentUpon>25_ServicesUpdate.vb</DependentUpon>
     </Compile>
-    <Compile Include="25_ServicesUpdate.vb">
+    <Compile Include="Vistas\06Services\25_ServicesUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="26_ServicesDelete.Designer.vb">
+    <Compile Include="Vistas\06Services\26_ServicesDelete.Designer.vb">
       <DependentUpon>26_ServicesDelete.vb</DependentUpon>
     </Compile>
-    <Compile Include="26_ServicesDelete.vb">
+    <Compile Include="Vistas\06Services\26_ServicesDelete.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="27_ServicesCharge.Designer.vb">
+    <Compile Include="Vistas\06Services\27_ServicesCharge.Designer.vb">
       <DependentUpon>27_ServicesCharge.vb</DependentUpon>
     </Compile>
-    <Compile Include="27_ServicesCharge.vb">
+    <Compile Include="Vistas\06Services\27_ServicesCharge.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="28_ListsShowView.Designer.vb">
@@ -243,10 +253,10 @@
     <Compile Include="28_ListsShowView.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="01Login.Designer.vb">
+    <Compile Include="Vistas\01Main\01Login.Designer.vb">
       <DependentUpon>01Login.vb</DependentUpon>
     </Compile>
-    <Compile Include="01Login.vb">
+    <Compile Include="Vistas\01Main\01Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -266,91 +276,91 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="01.1Main.resx">
+    <EmbeddedResource Include="Vistas\01Main\01.1Main.resx">
       <DependentUpon>01.1Main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="02_MainMenu.resx">
+    <EmbeddedResource Include="Vistas\01Main\02_MainMenu.resx">
       <DependentUpon>02_MainMenu.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="03_ClientMain.resx">
+    <EmbeddedResource Include="Vistas\02Clients\03_ClientMain.resx">
       <DependentUpon>03_ClientMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="04_ClientAdd.resx">
+    <EmbeddedResource Include="Vistas\02Clients\04_ClientAdd.resx">
       <DependentUpon>04_ClientAdd.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="05_ClientUpdate.resx">
+    <EmbeddedResource Include="Vistas\02Clients\05_ClientUpdate.resx">
       <DependentUpon>05_ClientUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="06_ClientCheck.resx">
+    <EmbeddedResource Include="Vistas\02Clients\06_ClientCheck.resx">
       <DependentUpon>06_ClientCheck.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="07_ClientDelete.resx">
+    <EmbeddedResource Include="Vistas\02Clients\07_ClientDelete.resx">
       <DependentUpon>07_ClientDelete.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="08_RoomMain.resx">
+    <EmbeddedResource Include="Vistas\03Rooms\08_RoomMain.resx">
       <DependentUpon>08_RoomMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="09_RoomAdd.resx">
+    <EmbeddedResource Include="Vistas\03Rooms\09_RoomAdd.resx">
       <DependentUpon>09_RoomAdd.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="10_RoomUpdate.resx">
+    <EmbeddedResource Include="Vistas\03Rooms\10_RoomUpdate.resx">
       <DependentUpon>10_RoomUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="11_RoomCheck.resx">
+    <EmbeddedResource Include="Vistas\03Rooms\11_RoomCheck.resx">
       <DependentUpon>11_RoomCheck.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="12_RoomDelete.resx">
+    <EmbeddedResource Include="Vistas\03Rooms\12_RoomDelete.resx">
       <DependentUpon>12_RoomDelete.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="13_ReservationMain.resx">
+    <EmbeddedResource Include="Vistas\04Reserv\13_ReservationMain.resx">
       <DependentUpon>13_ReservationMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="14_ReservationAdd.resx">
+    <EmbeddedResource Include="Vistas\04Reserv\14_ReservationAdd.resx">
       <DependentUpon>14_ReservationAdd.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="15_ReservationUpdate.resx">
+    <EmbeddedResource Include="Vistas\04Reserv\15_ReservationUpdate.resx">
       <DependentUpon>15_ReservationUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="16_ReservationDelete.resx">
+    <EmbeddedResource Include="Vistas\04Reserv\16_ReservationDelete.resx">
       <DependentUpon>16_ReservationDelete.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="17_ReservationCheckin.resx">
+    <EmbeddedResource Include="Vistas\04Reserv\17_ReservationCheckin.resx">
       <DependentUpon>17_ReservationCheckin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="18_ReservationCheckout.resx">
+    <EmbeddedResource Include="Vistas\04Reserv\18_ReservationCheckout.resx">
       <DependentUpon>18_ReservationCheckout.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="19_ReservationPay.resx">
+    <EmbeddedResource Include="Vistas\04Reserv\19_ReservationPay.resx">
       <DependentUpon>19_ReservationPay.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="20_QueriesMain.resx">
+    <EmbeddedResource Include="Vistas\05Queries\20_QueriesMain.resx">
       <DependentUpon>20_QueriesMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="21_QueriesCheckAvailable.resx">
+    <EmbeddedResource Include="Vistas\05Queries\21_QueriesCheckAvailable.resx">
       <DependentUpon>21_QueriesCheckAvailable.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="22_QueriesLists.resx">
+    <EmbeddedResource Include="Vistas\05Queries\22_QueriesLists.resx">
       <DependentUpon>22_QueriesLists.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="23_ServicesMain.resx">
+    <EmbeddedResource Include="Vistas\06Services\23_ServicesMain.resx">
       <DependentUpon>23_ServicesMain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="24_ServicesAdd.resx">
+    <EmbeddedResource Include="Vistas\06Services\24_ServicesAdd.resx">
       <DependentUpon>24_ServicesAdd.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="25_ServicesUpdate.resx">
+    <EmbeddedResource Include="Vistas\06Services\25_ServicesUpdate.resx">
       <DependentUpon>25_ServicesUpdate.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="26_ServicesDelete.resx">
+    <EmbeddedResource Include="Vistas\06Services\26_ServicesDelete.resx">
       <DependentUpon>26_ServicesDelete.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="27_ServicesCharge.resx">
+    <EmbeddedResource Include="Vistas\06Services\27_ServicesCharge.resx">
       <DependentUpon>27_ServicesCharge.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="28_ListsShowView.resx">
       <DependentUpon>28_ListsShowView.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="01Login.resx">
+    <EmbeddedResource Include="Vistas\01Main\01Login.resx">
       <DependentUpon>01Login.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -371,6 +381,15 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

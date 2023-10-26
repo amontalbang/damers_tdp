@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Servicios>
+  <Servicios>
+    <IDservicio>1</IDservicio>
+    <Nombre>Lavanderia</Nombre>
+    <Descripcion>servicio de lavanderia</Descripcion>
+    <Precio>13.95</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>2</IDservicio>
+    <Nombre>Servicio aeropuerto</Nombre>
+    <Descripcion>servicio transporte hacia el aeropuerto</Descripcion>
+    <Precio>35</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>3</IDservicio>
+    <Nombre>Retoucherie</Nombre>
+    <Descripcion>servicio de reparacion de ropa y calzado</Descripcion>
+    <Precio>14.99</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>4</IDservicio>
+    <Nombre>Cama</Nombre>
+    <Descripcion>cama extra en la habitacion</Descripcion>
+    <Precio>37.5</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>5</IDservicio>
+    <Nombre>Persona extra</Nombre>
+    <Descripcion>precio por huesped extra</Descripcion>
+    <Precio>58</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>1</IDservicio>
+    <Nombre>Perrito</Nombre>
+    <Descripcion>Caliente</Descripcion>
+    <Precio>3</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>2</IDservicio>
+    <Nombre>Hamburgesa</Nombre>
+    <Descripcion>Hamburguesa deluxe</Descripcion>
+    <Precio>8</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>3</IDservicio>
+    <Nombre>Agua mineral</Nombre>
+    <Descripcion>Agua mineral 1.5L</Descripcion>
+    <Precio>2</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>4</IDservicio>
+    <Nombre>Medu dia</Nombre>
+    <Descripcion>Menu del dia en el restaurante</Descripcion>
+    <Precio>12</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>5</IDservicio>
+    <Nombre>Zapateria</Nombre>
+    <Descripcion>Servicio de zapateria</Descripcion>
+    <Precio>10</Precio>
+  </Servicios>
+  <Servicios>
+    <IDservicio>6</IDservicio>
+    <Nombre>batido</Nombre>
+    <Descripcion>fresa</Descripcion>
+    <Precio>3</Precio>
+  </Servicios>
+</Servicios>
