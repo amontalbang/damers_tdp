@@ -127,6 +127,12 @@
     <Compile Include="Vistas\02Clients\07_ClientDelete.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="29_ListShowClients.Designer.vb">
+      <DependentUpon>29_ListShowClients.vb</DependentUpon>
+    </Compile>
+    <Compile Include="29_ListShowClients.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\03Rooms\08_RoomMain.Designer.vb">
       <DependentUpon>08_RoomMain.vb</DependentUpon>
     </Compile>
@@ -247,10 +253,10 @@
     <Compile Include="Vistas\06Services\27_ServicesCharge.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="28_ListsShowView.Designer.vb">
-      <DependentUpon>28_ListsShowView.vb</DependentUpon>
+    <Compile Include="28_ListsShowServices.Designer.vb">
+      <DependentUpon>28_ListsShowServices.vb</DependentUpon>
     </Compile>
-    <Compile Include="28_ListsShowView.vb">
+    <Compile Include="28_ListsShowServices.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\01Main\01Login.Designer.vb">
@@ -296,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\02Clients\07_ClientDelete.resx">
       <DependentUpon>07_ClientDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="29_ListShowClients.resx">
+      <DependentUpon>29_ListShowClients.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\03Rooms\08_RoomMain.resx">
       <DependentUpon>08_RoomMain.vb</DependentUpon>
@@ -357,8 +366,8 @@
     <EmbeddedResource Include="Vistas\06Services\27_ServicesCharge.resx">
       <DependentUpon>27_ServicesCharge.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="28_ListsShowView.resx">
-      <DependentUpon>28_ListsShowView.vb</DependentUpon>
+    <EmbeddedResource Include="28_ListsShowServices.resx">
+      <DependentUpon>28_ListsShowServices.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\01Main\01Login.resx">
       <DependentUpon>01Login.vb</DependentUpon>

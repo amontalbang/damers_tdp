@@ -34,13 +34,14 @@ Partial Class Form3
         '
         'Button4
         '
+        Me.Button4.BackColor = System.Drawing.Color.Khaki
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(520, 419)
+        Me.Button4.Location = New System.Drawing.Point(329, 509)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(185, 40)
+        Me.Button4.Size = New System.Drawing.Size(342, 40)
         Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Consultar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Text = "Prueba XML"
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'Button3
         '

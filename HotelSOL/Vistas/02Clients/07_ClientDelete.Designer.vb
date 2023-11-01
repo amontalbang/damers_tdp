@@ -30,6 +30,8 @@ Partial Class Form7
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label12
@@ -38,7 +40,7 @@ Partial Class Form7
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label12.Location = New System.Drawing.Point(178, 351)
+        Me.Label12.Location = New System.Drawing.Point(325, 499)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(122, 25)
         Me.Label12.TabIndex = 56
@@ -46,9 +48,9 @@ Partial Class Form7
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(339, 356)
+        Me.TextBox10.Location = New System.Drawing.Point(486, 504)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(444, 20)
+        Me.TextBox10.Size = New System.Drawing.Size(212, 20)
         Me.TextBox10.TabIndex = 55
         '
         'Label2
@@ -81,7 +83,7 @@ Partial Class Form7
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(163, 218)
+        Me.Label3.Location = New System.Drawing.Point(162, 182)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(670, 76)
         Me.Label3.TabIndex = 59
@@ -92,7 +94,7 @@ Partial Class Form7
         '
         Me.Button1.BackColor = System.Drawing.Color.RosyBrown
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(666, 619)
+        Me.Button1.Location = New System.Drawing.Point(438, 547)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(150, 30)
         Me.Button1.TabIndex = 61
@@ -109,12 +111,23 @@ Partial Class Form7
         Me.Button5.Text = "Cancelar"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 299)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(960, 156)
+        Me.DataGridView1.TabIndex = 82
+        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label3)
@@ -125,6 +138,7 @@ Partial Class Form7
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form7"
         Me.Text = "HotelSOL"
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -137,4 +151,5 @@ Partial Class Form7
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button5 As Button
+    Friend WithEvents DataGridView1 As DataGridView
 End Class

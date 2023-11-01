@@ -5,37 +5,34 @@ Public Class Form26
 
     Dim conection As New SqlConnection
     Dim comando As New SqlCommand
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
+    Dim i As Integer
 
     Private Sub Form26_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         Me.CenterToScreen()
         conection = New SqlConnection("Data Source = MAQUEDA \ SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
         conection.Open()
         llenar_grid()
-
     End Sub
 
     Private Sub llenar_grid()
-
         Dim consulta As String = "select * from Servicios"
         Dim adaptador As New SqlDataAdapter(consulta, conection)
         Dim dt As New DataTable
         adaptador.Fill(dt)
         DataGridView1.DataSource = dt
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-
+        i = DataGridView1.CurrentRow.Index
+        TextBox10.Text = DataGridView1.Item(0, i).Value()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        Dim id As Int16 = DataGridView1.CurrentCell.Value
-        Dim query = "delete from Servicios where IDservicio = '" & id & "'"
+        Dim query = "delete from Servicios where IDservicio = '" & TextBox10.Text & "'"
         comando = New SqlCommand(query, conection)
         Dim lector As SqlDataReader
         lector = comando.ExecuteReader
@@ -43,15 +40,12 @@ Public Class Form26
         DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
         MessageBox.Show("Registro eliminado con éxito")
         llenar_grid()
-
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
         conection.Close()
         Form23.Show()
         Me.Close()
-
     End Sub
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick

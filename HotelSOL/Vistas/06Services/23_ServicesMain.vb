@@ -1,4 +1,9 @@
 ﻿Public Class Form23
+
+    Private Sub Form23_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.CenterToScreen()
+    End Sub
+
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Me.Close()
         Form2.Show()
@@ -22,11 +27,5 @@
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Close()
         Form26.Show()
-    End Sub
-
-    Private Sub Form23_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Me.CenterToScreen()
-
     End Sub
 End Class

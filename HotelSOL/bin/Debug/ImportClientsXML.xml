@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<Clientes>
+	<Cliente>
+		<IDcliente>56984123K</IDcliente>
+		<Nombre>Juan</Nombre>
+		<Apellidos>Navarro Serrano</Apellidos>
+		<FechaNac>2001-06-15</FechaNac>
+		<Telefono>3658942310</Telefono>
+		<Ema1l>juan@mail.com</Ema1l>
+		<Direccion>calle luna 6</Direccion>
+		<TarjetaCred>32314568792586394</TarjetaCred>
+		<Descuento>0</Descuento>
+		<ReservaActiva>0</ReservaActiva>
+	</Cliente>
+	<Cliente>
+		<IDcliente>54872369P</IDcliente>
+		<Nombre>Sara</Nombre>
+		<Apellidos>Martin Sanchez</Apellidos>
+		<FechaNac>1999-02-15</FechaNac>
+		<Telefono>658946230</Telefono>
+		<Ema1l>Sara@mail.com</Ema1l>
+		<Direccion>Paseo recoletos</Direccion>
+		<TarjetaCred>32314568792586394</TarjetaCred>
+		<Descuento>10</Descuento>
+		<ReservaActiva>0</ReservaActiva>
+	</Cliente>
+	<Cliente>
+		<IDcliente>52369874D</IDcliente>
+		<Nombre>Antonio</Nombre>
+		<Apellidos>Ramos Soler</Apellidos>
+		<FechaNac>1979-06-15</FechaNac>
+		<Telefono>654712038</Telefono>
+		<Ema1l>Antonio@mail.com</Ema1l>
+		<Direccion>call pez</Direccion>
+		<TarjetaCred>32314568792586394</TarjetaCred>
+		<Descuento>15</Descuento>
+		<ReservaActiva>0</ReservaActiva>
+	</Cliente>
+	<Cliente>
+		<IDcliente>59874565R</IDcliente>
+		<Nombre>Natalia</Nombre>
+		<Apellidos>Romero Saez</Apellidos>
+		<FechaNac>1982-06-15</FechaNac>
+		<Telefono>632597410</Telefono>
+		<Ema1l>Natalia@mail.com</Ema1l>
+		<Direccion>Avenida olivos</Direccion>
+		<TarjetaCred>32314568792586394</TarjetaCred>
+		<Descuento>0</Descuento>
+		<ReservaActiva>0</ReservaActiva>
+	</Cliente>
+	<Cliente>
+		<IDcliente>40126587T</IDcliente>
+		<Nombre>Carmen</Nombre>
+		<Apellidos>Gutierrez Calvo</Apellidos>
+		<FechaNac>1996-06-15</FechaNac>
+		<Telefono>652310478</Telefono>
+		<Ema1l>Carmen@mail.com</Ema1l>
+		<Direccion>Calle cebreros</Direccion>
+		<TarjetaCred>32314568792586394</TarjetaCred>
+		<Descuento>0</Descuento>
+		<ReservaActiva>0</ReservaActiva>
+	</Cliente>
+</Clientes>

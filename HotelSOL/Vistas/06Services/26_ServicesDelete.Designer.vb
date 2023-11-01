@@ -29,6 +29,8 @@ Partial Class Form26
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -36,7 +38,7 @@ Partial Class Form26
         '
         Me.Button1.BackColor = System.Drawing.Color.RosyBrown
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(414, 480)
+        Me.Button1.Location = New System.Drawing.Point(413, 549)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(179, 30)
         Me.Button1.TabIndex = 80
@@ -59,11 +61,12 @@ Partial Class Form26
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(216, 176)
+        Me.Label3.Location = New System.Drawing.Point(195, 182)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(582, 64)
+        Me.Label3.Size = New System.Drawing.Size(595, 64)
         Me.Label3.TabIndex = 78
-        Me.Label3.Text = "Por favor, selecciona el servicio o producto" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " que deseas eliminar"
+        Me.Label3.Text = "Por favor, selecciona el servicio o introduce " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "la ID del servicio que deseas eli" &
+    "minar"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label2
@@ -95,10 +98,29 @@ Partial Class Form26
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(170, 276)
+        Me.DataGridView1.Location = New System.Drawing.Point(29, 276)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(660, 156)
+        Me.DataGridView1.Size = New System.Drawing.Size(930, 156)
         Me.DataGridView1.TabIndex = 81
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.BackColor = System.Drawing.Color.Transparent
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label12.Location = New System.Drawing.Point(376, 493)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(133, 25)
+        Me.Label12.TabIndex = 83
+        Me.Label12.Text = "ID Servicio:"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(537, 498)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(66, 20)
+        Me.TextBox10.TabIndex = 82
         '
         'Form26
         '
@@ -106,6 +128,8 @@ Partial Class Form26
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.TextBox10)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Button5)
@@ -127,4 +151,6 @@ Partial Class Form26
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Label12 As Label
+    Friend WithEvents TextBox10 As TextBox
 End Class

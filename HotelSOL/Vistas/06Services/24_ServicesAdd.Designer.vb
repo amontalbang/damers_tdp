@@ -34,6 +34,7 @@ Partial Class Form24
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.SuspendLayout()
         '
         'Button1
@@ -176,4 +177,5 @@ Partial Class Form24
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class
