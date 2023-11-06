@@ -84,6 +84,14 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\DAO\DAOFactory.vb" />
+    <Compile Include="Modelo\DAO\DatabaseConnection.vb" />
+    <Compile Include="Modelo\DAO\DAOUser.vb" />
+    <Compile Include="Modelo\DAO\DAOService.vb" />
+    <Compile Include="Modelo\DAO\DAOClient.vb" />
+    <Compile Include="Modelo\Service.vb" />
+    <Compile Include="Modelo\User.vb" />
+    <Compile Include="Modelo\Client.vb" />
     <Compile Include="Vistas\01Main\01.1Main.vb">
       <SubType>Form</SubType>
     </Compile>
