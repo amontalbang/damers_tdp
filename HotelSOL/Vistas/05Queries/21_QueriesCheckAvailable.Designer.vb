@@ -29,7 +29,6 @@ Partial Class Form21
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -44,7 +43,7 @@ Partial Class Form21
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Elephant", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.PowderBlue
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(464, 54)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(112, 26)
@@ -65,19 +64,22 @@ Partial Class Form21
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(144, 396)
+        Me.DataGridView1.Location = New System.Drawing.Point(46, 391)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(702, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(734, 150)
         Me.DataGridView1.TabIndex = 114
         '
         'Label6
         '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(306, 361)
+        Me.Label6.ForeColor = System.Drawing.Color.DarkKhaki
+        Me.Label6.Location = New System.Drawing.Point(224, 356)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(352, 32)
         Me.Label6.TabIndex = 113
@@ -85,35 +87,28 @@ Partial Class Form21
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(545, 281)
+        Me.DateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DateTimePicker2.Location = New System.Drawing.Point(453, 278)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker2.TabIndex = 112
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(274, 281)
+        Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DateTimePicker1.Location = New System.Drawing.Point(182, 278)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 111
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(822, 619)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 30)
-        Me.Button1.TabIndex = 110
-        Me.Button1.Text = "Atrás"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Label5
         '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(602, 253)
+        Me.Label5.Location = New System.Drawing.Point(510, 250)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(78, 25)
         Me.Label5.TabIndex = 109
@@ -121,11 +116,12 @@ Partial Class Form21
         '
         'Label4
         '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(331, 253)
+        Me.Label4.Location = New System.Drawing.Point(239, 250)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(93, 25)
         Me.Label4.TabIndex = 108
@@ -133,11 +129,12 @@ Partial Class Form21
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(485, 188)
+        Me.Label3.Location = New System.Drawing.Point(393, 185)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(121, 25)
         Me.Label3.TabIndex = 107
@@ -145,18 +142,20 @@ Partial Class Form21
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(607, 193)
+        Me.TextBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TextBox2.Location = New System.Drawing.Point(515, 190)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(216, 20)
         Me.TextBox2.TabIndex = 106
         '
         'Label9
         '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(172, 189)
+        Me.Label9.Location = New System.Drawing.Point(80, 186)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(60, 25)
         Me.Label9.TabIndex = 105
@@ -164,7 +163,8 @@ Partial Class Form21
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(238, 194)
+        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TextBox1.Location = New System.Drawing.Point(146, 191)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(216, 20)
         Me.TextBox1.TabIndex = 104
@@ -174,12 +174,11 @@ Partial Class Form21
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.ClientSize = New System.Drawing.Size(818, 622)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -202,7 +201,6 @@ Partial Class Form21
     Friend WithEvents Label6 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label

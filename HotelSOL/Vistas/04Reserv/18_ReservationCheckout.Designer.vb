@@ -23,7 +23,6 @@ Partial Class Form18
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form18))
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -32,22 +31,12 @@ Partial Class Form18
         Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(822, 619)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(150, 30)
-        Me.Button5.TabIndex = 84
-        Me.Button5.Text = "Cancelar"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Elephant", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.PowderBlue
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(211, 55)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 26)
@@ -68,11 +57,12 @@ Partial Class Form18
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(281, 231)
+        Me.Label3.Location = New System.Drawing.Point(201, 218)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(422, 32)
         Me.Label3.TabIndex = 87
@@ -81,11 +71,12 @@ Partial Class Form18
         '
         'Label12
         '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label12.Location = New System.Drawing.Point(295, 304)
+        Me.Label12.Location = New System.Drawing.Point(215, 291)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(57, 25)
         Me.Label12.TabIndex = 86
@@ -93,16 +84,20 @@ Partial Class Form18
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(383, 309)
+        Me.TextBox10.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TextBox10.Location = New System.Drawing.Point(303, 296)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(279, 20)
         Me.TextBox10.TabIndex = 85
         '
         'Button1
         '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button1.BackColor = System.Drawing.SystemColors.Info
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(353, 402)
+        Me.Button1.Location = New System.Drawing.Point(273, 389)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(252, 40)
         Me.Button1.TabIndex = 88
@@ -114,12 +109,11 @@ Partial Class Form18
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.ClientSize = New System.Drawing.Size(818, 622)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -129,8 +123,6 @@ Partial Class Form18
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label

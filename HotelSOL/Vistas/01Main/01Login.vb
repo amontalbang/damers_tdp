@@ -12,7 +12,7 @@ Public Class LoginForm1
         Dim lector As SqlDataReader
         lector = comando.ExecuteReader
         If lector.HasRows Then
-            Form2.Show()
+            MenuAdmin.Show()
             Form1.Hide()
             Me.Close()
         Else

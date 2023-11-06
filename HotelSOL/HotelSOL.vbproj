@@ -84,6 +84,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\DataBaseConnection.vb" />
+    <Compile Include="Modelo\DAO\DaoInvoice.vb" />
+    <Compile Include="Modelo\DAO\DaoRoom.vb" />
+    <Compile Include="Modelo\DAO\DaoReservation.vb" />
+    <Compile Include="Modelo\Invoice.vb" />
+    <Compile Include="Modelo\Room.vb" />
+    <Compile Include="Modelo\Reservation.vb" />
     <Compile Include="Vistas\01Main\01.1Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -127,10 +134,10 @@
     <Compile Include="Vistas\02Clients\07_ClientDelete.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="29_ListShowClients.Designer.vb">
+    <Compile Include="Vistas\29_ListShowClients.Designer.vb">
       <DependentUpon>29_ListShowClients.vb</DependentUpon>
     </Compile>
-    <Compile Include="29_ListShowClients.vb">
+    <Compile Include="Vistas\29_ListShowClients.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\03Rooms\08_RoomMain.Designer.vb">
@@ -253,10 +260,10 @@
     <Compile Include="Vistas\06Services\27_ServicesCharge.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="28_ListsShowServices.Designer.vb">
+    <Compile Include="Vistas\28_ListsShowServices.Designer.vb">
       <DependentUpon>28_ListsShowServices.vb</DependentUpon>
     </Compile>
-    <Compile Include="28_ListsShowServices.vb">
+    <Compile Include="Vistas\28_ListsShowServices.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\01Main\01Login.Designer.vb">
@@ -279,6 +286,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Vistas\01Main\30_MenuTrabajador.Designer.vb">
+      <DependentUpon>30_MenuTrabajador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\01Main\30_MenuTrabajador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\01Main\31_MenuAdmin.Designer.vb">
+      <DependentUpon>31_MenuAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\01Main\31_MenuAdmin.vb">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -303,7 +322,7 @@
     <EmbeddedResource Include="Vistas\02Clients\07_ClientDelete.resx">
       <DependentUpon>07_ClientDelete.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="29_ListShowClients.resx">
+    <EmbeddedResource Include="Vistas\29_ListShowClients.resx">
       <DependentUpon>29_ListShowClients.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\03Rooms\08_RoomMain.resx">
@@ -366,7 +385,7 @@
     <EmbeddedResource Include="Vistas\06Services\27_ServicesCharge.resx">
       <DependentUpon>27_ServicesCharge.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="28_ListsShowServices.resx">
+    <EmbeddedResource Include="Vistas\28_ListsShowServices.resx">
       <DependentUpon>28_ListsShowServices.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\01Main\01Login.resx">
@@ -377,6 +396,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\01Main\30_MenuTrabajador.resx">
+      <DependentUpon>30_MenuTrabajador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\01Main\31_MenuAdmin.resx">
+      <DependentUpon>31_MenuAdmin.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

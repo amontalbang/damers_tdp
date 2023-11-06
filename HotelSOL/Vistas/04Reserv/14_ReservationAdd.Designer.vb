@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Form14
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,23 +20,24 @@ Partial Class Form14
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form14))
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.BoardTextBox = New System.Windows.Forms.TextBox()
+        Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.RoomIdTextBox = New System.Windows.Forms.TextBox()
+        Me.DepartureDatePicker = New System.Windows.Forms.DateTimePicker()
+        Me.EntryDatePicker = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SuspendLayout()
         '
         'Label2
@@ -44,7 +45,7 @@ Partial Class Form14
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Elephant", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.PowderBlue
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(139, 50)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 26)
@@ -65,32 +66,26 @@ Partial Class Form14
         '
         'Button1
         '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(666, 619)
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(331, 580)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(150, 30)
         Me.Button1.TabIndex = 72
         Me.Button1.Text = "Registrar"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(822, 619)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(150, 30)
-        Me.Button5.TabIndex = 71
-        Me.Button5.Text = "Cancelar"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Label4
         '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(231, 262)
+        Me.Label4.Location = New System.Drawing.Point(170, 237)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(116, 25)
         Me.Label4.TabIndex = 64
@@ -98,70 +93,88 @@ Partial Class Form14
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(236, 214)
+        Me.Label3.Location = New System.Drawing.Point(175, 189)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(111, 25)
         Me.Label3.TabIndex = 63
         Me.Label3.Text = "ID Cliente:"
         '
-        'TextBox8
+        'BoardTextBox
         '
-        Me.TextBox8.Location = New System.Drawing.Point(392, 262)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(342, 20)
-        Me.TextBox8.TabIndex = 62
+        Me.BoardTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BoardTextBox.Location = New System.Drawing.Point(331, 294)
+        Me.BoardTextBox.MaximumSize = New System.Drawing.Size(300, 20)
+        Me.BoardTextBox.MinimumSize = New System.Drawing.Size(300, 20)
+        Me.BoardTextBox.Name = "BoardTextBox"
+        Me.BoardTextBox.Size = New System.Drawing.Size(300, 20)
+        Me.BoardTextBox.TabIndex = 62
         '
-        'TextBox1
+        'ClientIdTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(392, 219)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(342, 20)
-        Me.TextBox1.TabIndex = 57
+        Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ClientIdTextBox.Location = New System.Drawing.Point(331, 194)
+        Me.ClientIdTextBox.MaximumSize = New System.Drawing.Size(300, 20)
+        Me.ClientIdTextBox.MinimumSize = New System.Drawing.Size(300, 20)
+        Me.ClientIdTextBox.Name = "ClientIdTextBox"
+        Me.ClientIdTextBox.Size = New System.Drawing.Size(300, 20)
+        Me.ClientIdTextBox.TabIndex = 57
         '
         'Label6
         '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(244, 313)
+        Me.Label6.Location = New System.Drawing.Point(183, 288)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(103, 25)
         Me.Label6.TabIndex = 76
         Me.Label6.Text = "Régimen:"
         '
-        'TextBox2
+        'RoomIdTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(392, 313)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(342, 20)
-        Me.TextBox2.TabIndex = 75
+        Me.RoomIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RoomIdTextBox.Location = New System.Drawing.Point(331, 243)
+        Me.RoomIdTextBox.MaximumSize = New System.Drawing.Size(300, 20)
+        Me.RoomIdTextBox.MinimumSize = New System.Drawing.Size(300, 20)
+        Me.RoomIdTextBox.Name = "RoomIdTextBox"
+        Me.RoomIdTextBox.Size = New System.Drawing.Size(300, 20)
+        Me.RoomIdTextBox.TabIndex = 75
         '
-        'DateTimePicker2
+        'DepartureDatePicker
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(670, 430)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker2.TabIndex = 80
+        Me.DepartureDatePicker.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DepartureDatePicker.Location = New System.Drawing.Point(441, 399)
+        Me.DepartureDatePicker.MaximumSize = New System.Drawing.Size(158, 20)
+        Me.DepartureDatePicker.MinimumSize = New System.Drawing.Size(158, 20)
+        Me.DepartureDatePicker.Name = "DepartureDatePicker"
+        Me.DepartureDatePicker.Size = New System.Drawing.Size(158, 20)
+        Me.DepartureDatePicker.TabIndex = 80
         '
-        'DateTimePicker1
+        'EntryDatePicker
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(272, 430)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
-        Me.DateTimePicker1.TabIndex = 79
+        Me.EntryDatePicker.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.EntryDatePicker.Location = New System.Drawing.Point(180, 399)
+        Me.EntryDatePicker.MaximumSize = New System.Drawing.Size(158, 20)
+        Me.EntryDatePicker.MinimumSize = New System.Drawing.Size(158, 20)
+        Me.EntryDatePicker.Name = "EntryDatePicker"
+        Me.EntryDatePicker.Size = New System.Drawing.Size(158, 20)
+        Me.EntryDatePicker.TabIndex = 79
         '
         'Label7
         '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label7.Location = New System.Drawing.Point(523, 427)
+        Me.Label7.Location = New System.Drawing.Point(436, 371)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(141, 25)
         Me.Label7.TabIndex = 78
@@ -169,34 +182,39 @@ Partial Class Form14
         '
         'Label8
         '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(109, 425)
+        Me.Label8.Location = New System.Drawing.Point(175, 371)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(157, 25)
         Me.Label8.TabIndex = 77
         Me.Label8.Text = "Fecha entrada:"
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
         'Form14
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(984, 661)
-        Me.Controls.Add(Me.DateTimePicker2)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.DepartureDatePicker)
+        Me.Controls.Add(Me.EntryDatePicker)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.RoomIdTextBox)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.BoardTextBox)
+        Me.Controls.Add(Me.ClientIdTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -210,15 +228,15 @@ Partial Class Form14
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents BoardTextBox As TextBox
+    Friend WithEvents ClientIdTextBox As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents RoomIdTextBox As TextBox
+    Friend WithEvents DepartureDatePicker As DateTimePicker
+    Friend WithEvents EntryDatePicker As DateTimePicker
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
 End Class

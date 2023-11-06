@@ -23,29 +23,18 @@ Partial Class Form17
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form17))
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(822, 619)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(150, 30)
-        Me.Button5.TabIndex = 79
-        Me.Button5.Text = "Cancelar"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Elephant", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.PowderBlue
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(173, 56)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(94, 26)
@@ -66,8 +55,11 @@ Partial Class Form17
         '
         'Button1
         '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(232, 298)
+        Me.Button1.Location = New System.Drawing.Point(149, 279)
+        Me.Button1.MaximumSize = New System.Drawing.Size(510, 40)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(510, 40)
         Me.Button1.TabIndex = 80
@@ -76,8 +68,11 @@ Partial Class Form17
         '
         'Button2
         '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(232, 389)
+        Me.Button2.Location = New System.Drawing.Point(149, 370)
+        Me.Button2.MaximumSize = New System.Drawing.Size(510, 40)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(510, 40)
         Me.Button2.TabIndex = 81
@@ -89,10 +84,9 @@ Partial Class Form17
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.ClientSize = New System.Drawing.Size(818, 622)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -102,8 +96,6 @@ Partial Class Form17
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button5 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button

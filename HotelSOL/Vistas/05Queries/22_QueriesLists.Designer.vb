@@ -26,7 +26,6 @@ Partial Class Form22
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -52,11 +51,12 @@ Partial Class Form22
         '
         'Label6
         '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label6.Location = New System.Drawing.Point(107, 168)
+        Me.Label6.ForeColor = System.Drawing.Color.DarkKhaki
+        Me.Label6.Location = New System.Drawing.Point(36, 148)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(108, 23)
         Me.Label6.TabIndex = 126
@@ -64,35 +64,30 @@ Partial Class Form22
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(524, 194)
+        Me.DateTimePicker2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DateTimePicker2.Location = New System.Drawing.Point(453, 174)
+        Me.DateTimePicker2.MaximumSize = New System.Drawing.Size(200, 20)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker2.TabIndex = 125
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(203, 194)
+        Me.DateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DateTimePicker1.Location = New System.Drawing.Point(132, 174)
+        Me.DateTimePicker1.MaximumSize = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker1.TabIndex = 124
         '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(822, 619)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(150, 30)
-        Me.Button1.TabIndex = 123
-        Me.Button1.Text = "Atrás"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'Label5
         '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(440, 191)
+        Me.Label5.Location = New System.Drawing.Point(369, 171)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(78, 25)
         Me.Label5.TabIndex = 122
@@ -100,11 +95,12 @@ Partial Class Form22
         '
         'Label4
         '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(104, 191)
+        Me.Label4.Location = New System.Drawing.Point(33, 171)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(93, 25)
         Me.Label4.TabIndex = 121
@@ -115,7 +111,7 @@ Partial Class Form22
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Elephant", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.PowderBlue
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(138, 48)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(112, 26)
@@ -136,31 +132,36 @@ Partial Class Form22
         '
         'Button2
         '
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(739, 190)
+        Me.Button2.Location = New System.Drawing.Point(668, 170)
+        Me.Button2.MaximumSize = New System.Drawing.Size(120, 30)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(150, 30)
+        Me.Button2.Size = New System.Drawing.Size(120, 30)
         Me.Button2.TabIndex = 127
         Me.Button2.Text = "Buscar"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
+        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(739, 292)
+        Me.Button3.Location = New System.Drawing.Point(668, 272)
+        Me.Button3.MaximumSize = New System.Drawing.Size(120, 30)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(150, 30)
+        Me.Button3.Size = New System.Drawing.Size(120, 30)
         Me.Button3.TabIndex = 133
         Me.Button3.Text = "Buscar"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label3
         '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label3.Location = New System.Drawing.Point(105, 270)
+        Me.Label3.ForeColor = System.Drawing.Color.DarkKhaki
+        Me.Label3.Location = New System.Drawing.Point(34, 250)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(105, 23)
         Me.Label3.TabIndex = 132
@@ -168,25 +169,30 @@ Partial Class Form22
         '
         'DateTimePicker3
         '
-        Me.DateTimePicker3.Location = New System.Drawing.Point(524, 296)
+        Me.DateTimePicker3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DateTimePicker3.Location = New System.Drawing.Point(453, 276)
+        Me.DateTimePicker3.MaximumSize = New System.Drawing.Size(200, 20)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker3.TabIndex = 131
         '
         'DateTimePicker4
         '
-        Me.DateTimePicker4.Location = New System.Drawing.Point(203, 296)
+        Me.DateTimePicker4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DateTimePicker4.Location = New System.Drawing.Point(132, 276)
+        Me.DateTimePicker4.MaximumSize = New System.Drawing.Size(200, 20)
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker4.TabIndex = 130
         '
         'Label7
         '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label7.Location = New System.Drawing.Point(440, 293)
+        Me.Label7.Location = New System.Drawing.Point(369, 273)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(78, 25)
         Me.Label7.TabIndex = 129
@@ -194,11 +200,12 @@ Partial Class Form22
         '
         'Label8
         '
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(104, 293)
+        Me.Label8.Location = New System.Drawing.Point(33, 273)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(93, 25)
         Me.Label8.TabIndex = 128
@@ -206,21 +213,24 @@ Partial Class Form22
         '
         'Button4
         '
+        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(739, 399)
+        Me.Button4.Location = New System.Drawing.Point(668, 379)
+        Me.Button4.MaximumSize = New System.Drawing.Size(120, 30)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(150, 30)
+        Me.Button4.Size = New System.Drawing.Size(120, 30)
         Me.Button4.TabIndex = 139
         Me.Button4.Text = "Buscar"
         Me.Button4.UseVisualStyleBackColor = True
         '
         'Label9
         '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label9.Location = New System.Drawing.Point(107, 377)
+        Me.Label9.ForeColor = System.Drawing.Color.DarkKhaki
+        Me.Label9.Location = New System.Drawing.Point(36, 357)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(87, 23)
         Me.Label9.TabIndex = 138
@@ -228,25 +238,30 @@ Partial Class Form22
         '
         'DateTimePicker5
         '
-        Me.DateTimePicker5.Location = New System.Drawing.Point(524, 403)
+        Me.DateTimePicker5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DateTimePicker5.Location = New System.Drawing.Point(453, 383)
+        Me.DateTimePicker5.MaximumSize = New System.Drawing.Size(200, 20)
         Me.DateTimePicker5.Name = "DateTimePicker5"
         Me.DateTimePicker5.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker5.TabIndex = 137
         '
         'DateTimePicker6
         '
-        Me.DateTimePicker6.Location = New System.Drawing.Point(203, 403)
+        Me.DateTimePicker6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DateTimePicker6.Location = New System.Drawing.Point(132, 383)
+        Me.DateTimePicker6.MaximumSize = New System.Drawing.Size(200, 20)
         Me.DateTimePicker6.Name = "DateTimePicker6"
         Me.DateTimePicker6.Size = New System.Drawing.Size(200, 20)
         Me.DateTimePicker6.TabIndex = 136
         '
         'Label10
         '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label10.Location = New System.Drawing.Point(440, 400)
+        Me.Label10.Location = New System.Drawing.Point(369, 380)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(78, 25)
         Me.Label10.TabIndex = 135
@@ -254,11 +269,12 @@ Partial Class Form22
         '
         'Label11
         '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label11.Location = New System.Drawing.Point(104, 400)
+        Me.Label11.Location = New System.Drawing.Point(33, 380)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(93, 25)
         Me.Label11.TabIndex = 134
@@ -266,11 +282,12 @@ Partial Class Form22
         '
         'Label12
         '
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.Info
-        Me.Label12.Location = New System.Drawing.Point(107, 468)
+        Me.Label12.ForeColor = System.Drawing.Color.DarkKhaki
+        Me.Label12.Location = New System.Drawing.Point(36, 448)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(217, 23)
         Me.Label12.TabIndex = 144
@@ -278,11 +295,12 @@ Partial Class Form22
         '
         'Label14
         '
+        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.Color.Transparent
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label14.Location = New System.Drawing.Point(106, 491)
+        Me.Label14.Location = New System.Drawing.Point(35, 471)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(111, 25)
         Me.Label14.TabIndex = 140
@@ -290,17 +308,21 @@ Partial Class Form22
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(237, 496)
+        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.TextBox1.Location = New System.Drawing.Point(166, 476)
+        Me.TextBox1.MaximumSize = New System.Drawing.Size(200, 20)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(216, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
         Me.TextBox1.TabIndex = 145
         '
         'Button5
         '
+        Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(516, 491)
+        Me.Button5.Location = New System.Drawing.Point(405, 469)
+        Me.Button5.MaximumSize = New System.Drawing.Size(120, 30)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(150, 30)
+        Me.Button5.Size = New System.Drawing.Size(120, 30)
         Me.Button5.TabIndex = 146
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
@@ -310,7 +332,7 @@ Partial Class Form22
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(984, 661)
+        Me.ClientSize = New System.Drawing.Size(818, 622)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label12)
@@ -331,7 +353,6 @@ Partial Class Form22
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
@@ -346,7 +367,6 @@ Partial Class Form22
     Friend WithEvents Label6 As Label
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label

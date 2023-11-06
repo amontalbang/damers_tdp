@@ -90,3 +90,5 @@ C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debu
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.xml
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.pdb
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.Form29.resources
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.Form30.resources
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.MenuAdmin.resources
