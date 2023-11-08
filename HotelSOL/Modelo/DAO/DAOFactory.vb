@@ -16,4 +16,16 @@ Public Class DaoFactory
     Public Function GetDaoService() As DaoService
         Return New DaoService()
     End Function
+
+    Public Function GetDaoInvoice() As DAOInvoice
+        Return New DAOInvoice()
+    End Function
+
+    Public Function GetDaoRoom() As DAORoom
+        Return New DAORoom()
+    End Function
+
+    Public Function GetDaoReservation() As DAOReservation
+        Return New DAOReservation()
+    End Function
 End Class

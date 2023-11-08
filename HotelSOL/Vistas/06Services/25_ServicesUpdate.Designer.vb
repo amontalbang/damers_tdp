@@ -34,6 +34,10 @@ Partial Class Form25
         Me.NameTextBox = New System.Windows.Forms.TextBox()
         Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.PriceTextBox = New System.Windows.Forms.TextBox()
+        Me.ServiceIdTextBox = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,7 +62,7 @@ Partial Class Form25
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(162, 488)
+        Me.Label5.Location = New System.Drawing.Point(158, 508)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(79, 25)
         Me.Label5.TabIndex = 61
@@ -71,7 +75,7 @@ Partial Class Form25
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(110, 444)
+        Me.Label4.Location = New System.Drawing.Point(106, 471)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(131, 25)
         Me.Label4.TabIndex = 60
@@ -84,7 +88,7 @@ Partial Class Form25
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(148, 396)
+        Me.Label3.Location = New System.Drawing.Point(144, 430)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 25)
         Me.Label3.TabIndex = 59
@@ -121,7 +125,7 @@ Partial Class Form25
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label12.Location = New System.Drawing.Point(195, 145)
+        Me.Label12.Location = New System.Drawing.Point(195, 105)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(422, 31)
         Me.Label12.TabIndex = 65
@@ -134,7 +138,7 @@ Partial Class Form25
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 189)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 149)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 40
         Me.DataGridView1.Size = New System.Drawing.Size(794, 165)
@@ -143,7 +147,7 @@ Partial Class Form25
         'NameTextBox
         '
         Me.NameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.NameTextBox.Location = New System.Drawing.Point(262, 402)
+        Me.NameTextBox.Location = New System.Drawing.Point(258, 436)
         Me.NameTextBox.MaximumSize = New System.Drawing.Size(444, 20)
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.Size = New System.Drawing.Size(444, 20)
@@ -152,7 +156,7 @@ Partial Class Form25
         'DescriptionTextBox
         '
         Me.DescriptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DescriptionTextBox.Location = New System.Drawing.Point(262, 449)
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(258, 476)
         Me.DescriptionTextBox.MaximumSize = New System.Drawing.Size(444, 20)
         Me.DescriptionTextBox.Name = "DescriptionTextBox"
         Me.DescriptionTextBox.Size = New System.Drawing.Size(444, 20)
@@ -161,11 +165,59 @@ Partial Class Form25
         'PriceTextBox
         '
         Me.PriceTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PriceTextBox.Location = New System.Drawing.Point(262, 494)
+        Me.PriceTextBox.Location = New System.Drawing.Point(258, 514)
         Me.PriceTextBox.MaximumSize = New System.Drawing.Size(444, 20)
         Me.PriceTextBox.Name = "PriceTextBox"
-        Me.PriceTextBox.Size = New System.Drawing.Size(444, 20)
+        Me.PriceTextBox.Size = New System.Drawing.Size(84, 20)
         Me.PriceTextBox.TabIndex = 86
+        '
+        'ServiceIdTextBox
+        '
+        Me.ServiceIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ServiceIdTextBox.Location = New System.Drawing.Point(258, 395)
+        Me.ServiceIdTextBox.MaximumSize = New System.Drawing.Size(444, 20)
+        Me.ServiceIdTextBox.Name = "ServiceIdTextBox"
+        Me.ServiceIdTextBox.Size = New System.Drawing.Size(84, 20)
+        Me.ServiceIdTextBox.TabIndex = 88
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label6.Location = New System.Drawing.Point(119, 389)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(118, 25)
+        Me.Label6.TabIndex = 87
+        Me.Label6.Text = "ID servicio:"
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.DarkKhaki
+        Me.Label7.Location = New System.Drawing.Point(367, 334)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(18, 25)
+        Me.Label7.TabIndex = 94
+        Me.Label7.Text = " "
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.DarkKhaki
+        Me.Label11.Location = New System.Drawing.Point(266, 334)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(95, 25)
+        Me.Label11.TabIndex = 93
+        Me.Label11.Text = "Servicio:"
         '
         'Form25
         '
@@ -173,6 +225,10 @@ Partial Class Form25
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.ServiceIdTextBox)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.PriceTextBox)
         Me.Controls.Add(Me.DescriptionTextBox)
         Me.Controls.Add(Me.NameTextBox)
@@ -204,4 +260,8 @@ Partial Class Form25
     Friend WithEvents NameTextBox As TextBox
     Friend WithEvents DescriptionTextBox As TextBox
     Friend WithEvents PriceTextBox As TextBox
+    Friend WithEvents ServiceIdTextBox As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label11 As Label
 End Class

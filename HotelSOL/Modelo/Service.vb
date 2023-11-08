@@ -1,10 +1,10 @@
 ﻿Public Class Service
-	Private serviceId As String
+	Private serviceId As UInteger
 	Private name As String
 	Private description As String
 	Private price As UInteger
 
-	Public Sub New(serviceId As String, name As String, description As String, price As UInteger)
+	Public Sub New(serviceId As UInteger, name As String, description As String, price As UInteger)
 		Me.serviceId = serviceId
 		Me.name = name
 		Me.description = description
@@ -17,15 +17,19 @@
 		Me.price = price
 	End Sub
 
+	Public Sub New(serviceId As UInteger)
+		Me.serviceId = serviceId
+	End Sub
+
 	Public Sub New()
 
 	End Sub
 
-	Public Property ServiceIdProp() As String
+	Public Property ServiceIdProp() As UInteger
 		Get
 			Return serviceId
 		End Get
-		Set(ByVal Value As String)
+		Set(ByVal Value As UInteger)
 			serviceId = Value
 		End Set
 	End Property

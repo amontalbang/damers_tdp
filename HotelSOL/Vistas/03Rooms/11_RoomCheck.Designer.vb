@@ -28,7 +28,8 @@ Partial Class Form11
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
+        Me.NumHabTextBox = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,7 +39,7 @@ Partial Class Form11
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Elephant", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(210, 60)
+        Me.Label2.Location = New System.Drawing.Point(182, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 26)
         Me.Label2.TabIndex = 37
@@ -50,11 +51,11 @@ Partial Class Form11
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Elephant", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Silver
-        Me.Label1.Location = New System.Drawing.Point(32, 9)
+        Me.Label1.Location = New System.Drawing.Point(29, 9)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(251, 51)
+        Me.Label1.Size = New System.Drawing.Size(220, 51)
         Me.Label1.TabIndex = 36
-        Me.Label1.Text = "Comprobar"
+        Me.Label1.Text = "Consultar"
         '
         'DataGridView1
         '
@@ -63,7 +64,7 @@ Partial Class Form11
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 247)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 327)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(794, 134)
         Me.DataGridView1.TabIndex = 75
@@ -72,7 +73,7 @@ Partial Class Form11
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(643, 192)
+        Me.Button2.Location = New System.Drawing.Point(428, 267)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(120, 30)
         Me.Button2.TabIndex = 78
@@ -86,19 +87,33 @@ Partial Class Form11
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.DarkKhaki
-        Me.Label12.Location = New System.Drawing.Point(52, 193)
+        Me.Label12.Location = New System.Drawing.Point(198, 268)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(126, 25)
         Me.Label12.TabIndex = 77
         Me.Label12.Text = "Núm. hab.:"
         '
-        'ClientIdTextBox
+        'NumHabTextBox
         '
-        Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ClientIdTextBox.Location = New System.Drawing.Point(180, 197)
-        Me.ClientIdTextBox.Name = "ClientIdTextBox"
-        Me.ClientIdTextBox.Size = New System.Drawing.Size(444, 20)
-        Me.ClientIdTextBox.TabIndex = 76
+        Me.NumHabTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NumHabTextBox.Location = New System.Drawing.Point(326, 272)
+        Me.NumHabTextBox.Name = "NumHabTextBox"
+        Me.NumHabTextBox.Size = New System.Drawing.Size(68, 20)
+        Me.NumHabTextBox.TabIndex = 76
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 24.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label3.Location = New System.Drawing.Point(43, 166)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(734, 76)
+        Me.Label3.TabIndex = 79
+        Me.Label3.Text = "Por favor, introduce el número de habitación" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " que deseas consultar"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Form11
         '
@@ -106,9 +121,10 @@ Partial Class Form11
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.ClientIdTextBox)
+        Me.Controls.Add(Me.NumHabTextBox)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -126,5 +142,6 @@ Partial Class Form11
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button2 As Button
     Friend WithEvents Label12 As Label
-    Friend WithEvents ClientIdTextBox As TextBox
+    Friend WithEvents NumHabTextBox As TextBox
+    Friend WithEvents Label3 As Label
 End Class

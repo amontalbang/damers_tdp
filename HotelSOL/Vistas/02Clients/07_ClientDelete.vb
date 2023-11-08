@@ -4,6 +4,7 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Form7
 
+    Private controller As Controller = New Controller
     Private connector As DataBaseConnection = New DataBaseConnection
     Dim comando As New SqlCommand
     Dim i As Integer
@@ -24,17 +25,22 @@ Public Class Form7
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim query = "DELETE from clientes where IDcliente = '" & ClientIdTextBox.Text & "'"
-        comando = New SqlCommand(query, connector.sqlConnection)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        lector.Close()
-        DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
-        MessageBox.Show("Cliente eliminado con éxito")
+        'Dim query = "DELETE from clientes where IDcliente = '" & ClientIdTextBox.Text & "'"
+        'comando = New SqlCommand(query, connector.sqlConnection)
+        'Dim lector As SqlDataReader
+        'lector = comando.ExecuteReader
+        'lector.Close()
+        'DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
+        'MessageBox.Show("Cliente eliminado con éxito")
+        'llenar_grid()
+
+        Dim id As String = ClientIdTextBox.Text
+        Dim newClient As Client = New Client(id)
+        Controller.deleteClient(newClient)
         llenar_grid()
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         i = DataGridView1.CurrentRow.Index
         ClientIdTextBox.Text = DataGridView1.Item(0, i).Value()
     End Sub

@@ -23,7 +23,7 @@ Partial Class Form15
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form15))
-        Me.DepartureTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.DepartureDatePicker = New System.Windows.Forms.DateTimePicker()
         Me.EntryDatePicker = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -45,14 +45,14 @@ Partial Class Form15
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DepartureTimePicker
+        'DepartureDatePicker
         '
-        Me.DepartureTimePicker.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DepartureTimePicker.Location = New System.Drawing.Point(433, 522)
-        Me.DepartureTimePicker.MaximumSize = New System.Drawing.Size(200, 20)
-        Me.DepartureTimePicker.Name = "DepartureTimePicker"
-        Me.DepartureTimePicker.Size = New System.Drawing.Size(200, 20)
-        Me.DepartureTimePicker.TabIndex = 94
+        Me.DepartureDatePicker.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DepartureDatePicker.Location = New System.Drawing.Point(433, 522)
+        Me.DepartureDatePicker.MaximumSize = New System.Drawing.Size(200, 20)
+        Me.DepartureDatePicker.Name = "DepartureDatePicker"
+        Me.DepartureDatePicker.Size = New System.Drawing.Size(200, 20)
+        Me.DepartureDatePicker.TabIndex = 94
         '
         'EntryDatePicker
         '
@@ -278,7 +278,7 @@ Partial Class Form15
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.ReservationIdTextBox)
-        Me.Controls.Add(Me.DepartureTimePicker)
+        Me.Controls.Add(Me.DepartureDatePicker)
         Me.Controls.Add(Me.EntryDatePicker)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
@@ -300,7 +300,7 @@ Partial Class Form15
 
     End Sub
 
-    Friend WithEvents DepartureTimePicker As DateTimePicker
+    Friend WithEvents DepartureDatePicker As DateTimePicker
     Friend WithEvents EntryDatePicker As DateTimePicker
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label

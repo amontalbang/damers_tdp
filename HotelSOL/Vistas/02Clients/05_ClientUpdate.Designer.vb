@@ -46,6 +46,8 @@ Partial Class Form5
         Me.Label12 = New System.Windows.Forms.Label()
         Me.BirthDatePicker = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -80,7 +82,7 @@ Partial Class Form5
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label11.Location = New System.Drawing.Point(416, 527)
+        Me.Label11.Location = New System.Drawing.Point(416, 539)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(121, 25)
         Me.Label11.TabIndex = 47
@@ -89,7 +91,7 @@ Partial Class Form5
         'DiscountTextBox
         '
         Me.DiscountTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DiscountTextBox.Location = New System.Drawing.Point(555, 532)
+        Me.DiscountTextBox.Location = New System.Drawing.Point(555, 544)
         Me.DiscountTextBox.MaximumSize = New System.Drawing.Size(194, 20)
         Me.DiscountTextBox.Name = "DiscountTextBox"
         Me.DiscountTextBox.Size = New System.Drawing.Size(194, 20)
@@ -102,7 +104,7 @@ Partial Class Form5
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label10.Location = New System.Drawing.Point(429, 441)
+        Me.Label10.Location = New System.Drawing.Point(429, 453)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(108, 25)
         Me.Label10.TabIndex = 45
@@ -115,7 +117,7 @@ Partial Class Form5
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(405, 483)
+        Me.Label9.Location = New System.Drawing.Point(405, 495)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(132, 25)
         Me.Label9.TabIndex = 44
@@ -128,7 +130,7 @@ Partial Class Form5
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(466, 395)
+        Me.Label8.Location = New System.Drawing.Point(466, 407)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(71, 25)
         Me.Label8.TabIndex = 43
@@ -141,7 +143,7 @@ Partial Class Form5
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label7.Location = New System.Drawing.Point(67, 526)
+        Me.Label7.Location = New System.Drawing.Point(67, 538)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(102, 25)
         Me.Label7.TabIndex = 42
@@ -154,7 +156,7 @@ Partial Class Form5
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(41, 482)
+        Me.Label6.Location = New System.Drawing.Point(41, 494)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(128, 25)
         Me.Label6.TabIndex = 41
@@ -167,7 +169,7 @@ Partial Class Form5
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkKhaki
-        Me.Label5.Location = New System.Drawing.Point(320, 348)
+        Me.Label5.Location = New System.Drawing.Point(320, 314)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(90, 25)
         Me.Label5.TabIndex = 40
@@ -180,7 +182,7 @@ Partial Class Form5
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(63, 438)
+        Me.Label4.Location = New System.Drawing.Point(63, 450)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(106, 25)
         Me.Label4.TabIndex = 39
@@ -193,7 +195,7 @@ Partial Class Form5
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(76, 395)
+        Me.Label3.Location = New System.Drawing.Point(76, 407)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(93, 25)
         Me.Label3.TabIndex = 38
@@ -202,7 +204,7 @@ Partial Class Form5
         'NameTextBox
         '
         Me.NameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.NameTextBox.Location = New System.Drawing.Point(188, 397)
+        Me.NameTextBox.Location = New System.Drawing.Point(188, 409)
         Me.NameTextBox.MaximumSize = New System.Drawing.Size(194, 20)
         Me.NameTextBox.Name = "NameTextBox"
         Me.NameTextBox.Size = New System.Drawing.Size(194, 20)
@@ -211,7 +213,7 @@ Partial Class Form5
         'SurnameTextBox
         '
         Me.SurnameTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.SurnameTextBox.Location = New System.Drawing.Point(188, 441)
+        Me.SurnameTextBox.Location = New System.Drawing.Point(188, 453)
         Me.SurnameTextBox.MaximumSize = New System.Drawing.Size(194, 20)
         Me.SurnameTextBox.Name = "SurnameTextBox"
         Me.SurnameTextBox.Size = New System.Drawing.Size(194, 20)
@@ -220,7 +222,7 @@ Partial Class Form5
         'PhoneTextBox
         '
         Me.PhoneTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PhoneTextBox.Location = New System.Drawing.Point(188, 531)
+        Me.PhoneTextBox.Location = New System.Drawing.Point(188, 543)
         Me.PhoneTextBox.MaximumSize = New System.Drawing.Size(194, 20)
         Me.PhoneTextBox.Name = "PhoneTextBox"
         Me.PhoneTextBox.Size = New System.Drawing.Size(194, 20)
@@ -229,7 +231,7 @@ Partial Class Form5
         'MailTextBox
         '
         Me.MailTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.MailTextBox.Location = New System.Drawing.Point(555, 400)
+        Me.MailTextBox.Location = New System.Drawing.Point(555, 412)
         Me.MailTextBox.MaximumSize = New System.Drawing.Size(194, 20)
         Me.MailTextBox.Name = "MailTextBox"
         Me.MailTextBox.Size = New System.Drawing.Size(194, 20)
@@ -238,7 +240,7 @@ Partial Class Form5
         'AdressTextBox
         '
         Me.AdressTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.AdressTextBox.Location = New System.Drawing.Point(555, 446)
+        Me.AdressTextBox.Location = New System.Drawing.Point(555, 458)
         Me.AdressTextBox.MaximumSize = New System.Drawing.Size(194, 20)
         Me.AdressTextBox.Name = "AdressTextBox"
         Me.AdressTextBox.Size = New System.Drawing.Size(194, 20)
@@ -247,7 +249,7 @@ Partial Class Form5
         'CredCardTextBox
         '
         Me.CredCardTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CredCardTextBox.Location = New System.Drawing.Point(555, 488)
+        Me.CredCardTextBox.Location = New System.Drawing.Point(555, 500)
         Me.CredCardTextBox.MaximumSize = New System.Drawing.Size(194, 20)
         Me.CredCardTextBox.Name = "CredCardTextBox"
         Me.CredCardTextBox.Size = New System.Drawing.Size(194, 20)
@@ -274,10 +276,10 @@ Partial Class Form5
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 165)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 136)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 40
-        Me.DataGridView1.Size = New System.Drawing.Size(794, 165)
+        Me.DataGridView1.Size = New System.Drawing.Size(794, 162)
         Me.DataGridView1.TabIndex = 84
         '
         'Label12
@@ -287,7 +289,7 @@ Partial Class Form5
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label12.Location = New System.Drawing.Point(199, 131)
+        Me.Label12.Location = New System.Drawing.Point(199, 102)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(408, 31)
         Me.Label12.TabIndex = 83
@@ -296,7 +298,7 @@ Partial Class Form5
         'BirthDatePicker
         '
         Me.BirthDatePicker.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BirthDatePicker.Location = New System.Drawing.Point(188, 488)
+        Me.BirthDatePicker.Location = New System.Drawing.Point(188, 500)
         Me.BirthDatePicker.MaximumSize = New System.Drawing.Size(194, 20)
         Me.BirthDatePicker.Name = "BirthDatePicker"
         Me.BirthDatePicker.Size = New System.Drawing.Size(194, 20)
@@ -309,11 +311,33 @@ Partial Class Form5
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.DarkKhaki
-        Me.Label13.Location = New System.Drawing.Point(416, 348)
+        Me.Label13.Location = New System.Drawing.Point(416, 314)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(18, 25)
         Me.Label13.TabIndex = 86
         Me.Label13.Text = " "
+        '
+        'Label14
+        '
+        Me.Label14.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label14.AutoSize = True
+        Me.Label14.BackColor = System.Drawing.Color.Transparent
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label14.Location = New System.Drawing.Point(304, 363)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(53, 25)
+        Me.Label14.TabIndex = 88
+        Me.Label14.Text = "DNI:"
+        '
+        'ClientIdTextBox
+        '
+        Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ClientIdTextBox.Location = New System.Drawing.Point(372, 368)
+        Me.ClientIdTextBox.MaximumSize = New System.Drawing.Size(194, 20)
+        Me.ClientIdTextBox.Name = "ClientIdTextBox"
+        Me.ClientIdTextBox.Size = New System.Drawing.Size(194, 20)
+        Me.ClientIdTextBox.TabIndex = 87
         '
         'Form5
         '
@@ -321,6 +345,8 @@ Partial Class Form5
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.ClientIdTextBox)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.BirthDatePicker)
         Me.Controls.Add(Me.DataGridView1)
@@ -376,4 +402,6 @@ Partial Class Form5
     Friend WithEvents Label12 As Label
     Friend WithEvents BirthDatePicker As DateTimePicker
     Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents ClientIdTextBox As TextBox
 End Class

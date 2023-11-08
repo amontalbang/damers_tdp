@@ -1,6 +1,7 @@
-﻿Imports HotelSOL.Invoice
+﻿Imports System.Data.SqlClient
+Imports HotelSOL.Invoice
 
-Public Class DaoInvoice
+Public Class DAOInvoice
     Private connector As DataBaseConnection = New DataBaseConnection
     Public Sub AddInvoice(Invoice As Invoice)
         Dim cmd As New System.Data.SqlClient.SqlCommand
@@ -32,21 +33,34 @@ Public Class DaoInvoice
         MessageBox.Show("Factura actualizada correctamente")
     End Sub
 
-    Public Function InvoiceExists(Invoice As UInteger) As Boolean
+    Public Function InvoiceExists(InvoiceId As UInteger) As Boolean
+        Dim query As String = "SELECT * from Facturas WHERE IDfactura = '" & InvoiceId & "'"
+        Dim adapter As New SqlDataAdapter(query, connector.Connect())
+        Dim dt As New DataTable
+        adapter.Fill(dt)
+        If dt.AsEnumerable().Count() > 0 Then
+            Return True
+        End If
         Return False
     End Function
 
-    Public Function GetInvoiceById(Invoice As UInteger) As Invoice
-        Dim cmd As New System.Data.SqlClient.SqlCommand
-        cmd.CommandType = System.Data.CommandType.Text
-        cmd.CommandText = "SELECT from Facturas where IDfactura = '" & Invoice & "'"
-        cmd.Connection = connector.Connect()
-        cmd.ExecuteNonQuery()
-        connector.Disconnect()
-        Return New Invoice()
+    Public Function GetInvoiceById(InvoiceId As UInteger) As Invoice
+        Dim query As String = "SELECT from Facturas WHERE IDfactura = '" & InvoiceId & "'"
+        Dim adapter As New SqlDataAdapter(query, connector.Connect())
+        Dim dt As New DataTable
+        adapter.Fill(dt)
+        If dt.AsEnumerable().Count() = 0 Then
+            Return New Invoice()
+        End If
+        Dim dr As DataRow = dt.AsEnumerable().ElementAt(0)
+        Return New Invoice(dr.Field(Of String)("IDfactura"), dr.Field(Of String)("IDreserva"), dr.Field(Of String)("Total"))
     End Function
 
-    Public Function GetInvoiceList() As Invoice()
-        Return {New Invoice()}
+    Public Function GetInvoiceList() As DataTable
+        Dim consulta As String = "SELECT * FROM Facturas"
+        Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
+        Dim invoiceList As New DataTable
+        adaptador.Fill(invoiceList)
+        Return invoiceList
     End Function
 End Class

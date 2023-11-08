@@ -38,12 +38,10 @@ Partial Class Form10
         Me.PriceLTextBox = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.CradleCheckBox = New System.Windows.Forms.CheckBox()
-        Me.AnimalsCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.NumHabTextBox = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -131,7 +129,7 @@ Partial Class Form10
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label5.Location = New System.Drawing.Point(87, 453)
+        Me.Label5.Location = New System.Drawing.Point(87, 497)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(121, 25)
         Me.Label5.TabIndex = 64
@@ -144,7 +142,7 @@ Partial Class Form10
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label4.Location = New System.Drawing.Point(148, 409)
+        Me.Label4.Location = New System.Drawing.Point(148, 453)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(60, 25)
         Me.Label4.TabIndex = 63
@@ -153,7 +151,7 @@ Partial Class Form10
         'CapacityTextBox
         '
         Me.CapacityTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CapacityTextBox.Location = New System.Drawing.Point(225, 459)
+        Me.CapacityTextBox.Location = New System.Drawing.Point(225, 503)
         Me.CapacityTextBox.MaximumSize = New System.Drawing.Size(216, 20)
         Me.CapacityTextBox.Name = "CapacityTextBox"
         Me.CapacityTextBox.Size = New System.Drawing.Size(216, 20)
@@ -162,7 +160,7 @@ Partial Class Form10
         'TypeTextBox
         '
         Me.TypeTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TypeTextBox.Location = New System.Drawing.Point(225, 414)
+        Me.TypeTextBox.Location = New System.Drawing.Point(225, 458)
         Me.TypeTextBox.MaximumSize = New System.Drawing.Size(216, 20)
         Me.TypeTextBox.Name = "TypeTextBox"
         Me.TypeTextBox.Size = New System.Drawing.Size(216, 20)
@@ -222,54 +220,6 @@ Partial Class Form10
         Me.DataGridView1.Size = New System.Drawing.Size(794, 165)
         Me.DataGridView1.TabIndex = 85
         '
-        'CradleCheckBox
-        '
-        Me.CradleCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CradleCheckBox.AutoSize = True
-        Me.CradleCheckBox.Location = New System.Drawing.Point(340, 514)
-        Me.CradleCheckBox.MaximumSize = New System.Drawing.Size(15, 14)
-        Me.CradleCheckBox.Name = "CradleCheckBox"
-        Me.CradleCheckBox.Size = New System.Drawing.Size(15, 14)
-        Me.CradleCheckBox.TabIndex = 89
-        Me.CradleCheckBox.UseVisualStyleBackColor = True
-        '
-        'AnimalsCheckBox
-        '
-        Me.AnimalsCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.AnimalsCheckBox.AutoSize = True
-        Me.AnimalsCheckBox.Location = New System.Drawing.Point(214, 512)
-        Me.AnimalsCheckBox.MaximumSize = New System.Drawing.Size(15, 14)
-        Me.AnimalsCheckBox.Name = "AnimalsCheckBox"
-        Me.AnimalsCheckBox.Size = New System.Drawing.Size(15, 14)
-        Me.AnimalsCheckBox.TabIndex = 88
-        Me.AnimalsCheckBox.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label10.Location = New System.Drawing.Point(102, 503)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(106, 25)
-        Me.Label10.TabIndex = 87
-        Me.Label10.Text = "Animales:"
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(265, 505)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(69, 25)
-        Me.Label9.TabIndex = 86
-        Me.Label9.Text = "Cuna:"
-        '
         'Label11
         '
         Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -296,18 +246,38 @@ Partial Class Form10
         Me.Label12.TabIndex = 92
         Me.Label12.Text = " "
         '
+        'Label9
+        '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label9.Location = New System.Drawing.Point(67, 409)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(141, 25)
+        Me.Label9.TabIndex = 94
+        Me.Label9.Text = "Número hab.:"
+        '
+        'NumHabTextBox
+        '
+        Me.NumHabTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NumHabTextBox.Location = New System.Drawing.Point(225, 414)
+        Me.NumHabTextBox.MaximumSize = New System.Drawing.Size(216, 20)
+        Me.NumHabTextBox.Name = "NumHabTextBox"
+        Me.NumHabTextBox.Size = New System.Drawing.Size(216, 20)
+        Me.NumHabTextBox.TabIndex = 93
+        '
         'Form10
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.NumHabTextBox)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.CradleCheckBox)
-        Me.Controls.Add(Me.AnimalsCheckBox)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label3)
@@ -347,10 +317,8 @@ Partial Class Form10
     Friend WithEvents PriceLTextBox As TextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents CradleCheckBox As CheckBox
-    Friend WithEvents AnimalsCheckBox As CheckBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents NumHabTextBox As TextBox
 End Class

@@ -13,19 +13,33 @@ Public Class DaoClient
     End Sub
 
     Public Sub AddClient(Client As Client)
-        command.CommandText = "INSERT Clientes (IDCliente, Nombre, Apellidos, FechaNac, Telefono, Email, Adress, TarjetaCred, Descuento, ReservaActiva) VALUES 
+        command.CommandText = "INSERT Clientes (IDCliente, Nombre, Apellidos, FechaNac, Telefono, Email, Direccion, TarjetaCred, Descuento, ReservaActiva) VALUES 
             ('" & Client.NumberIdProp() & "', '" & Client.NameProp() & "', '" & Client.SurnameProp() & "', '" & Client.BirthDateProp() & "', '" & Client.PhoneNumberProp() & "', '" & Client.EmailProp() & "', '" & Client.AddressProp() & "', '" & Client.CreditCardProp() & "', '" & Client.DiscountAvailableProp() & "', '" & Client.ActiveReservationProp() & "')"
         ExecuteQuery()
     End Sub
-    Public Sub DeleteClient(ClientId As String)
-        command.CommandText = "DELETE FROM Clientes WHERE IDcliente = '" & ClientId & "'"
+    Public Sub DeleteClient(Client As Client)
+        command.CommandText = "DELETE FROM Clientes WHERE IDcliente = '" & Client.NumberIdProp() & "'"
         ExecuteQuery()
     End Sub
     Public Sub UpdateClient(Client As Client)
         command.CommandText = "UPDATE Clientes SET IDcliente = '" & Client.NumberIdProp() & "', Nombre = '" & Client.NameProp() & "', Apellidos = '" & Client.SurnameProp() & "',
-            FechaNac = '" & Client.BirthDateProp() & "', Telefono = '" & Client.PhoneNumberProp() & "', Email = '" & Client.EmailProp() & "', Adress = '" & Client.AddressProp() & "', TarjetaCred = '" & Client.CreditCardProp() & "', Descuento = '" & Client.DiscountAvailableProp() & "', ReservaActiva = '" & Client.ActiveReservationProp() & "' where IDcliente = '" & Client.NumberIdProp() & "'"
+            FechaNac = '" & Client.BirthDateProp() & "', Telefono = '" & Client.PhoneNumberProp() & "', Email = '" & Client.EmailProp() & "', Direccion = '" & Client.AddressProp() & "', TarjetaCred = '" & Client.CreditCardProp() & "', Descuento = '" & Client.DiscountAvailableProp() & "', ReservaActiva = '" & Client.ActiveReservationProp() & "' where IDcliente = '" & Client.NumberIdProp() & "'"
         ExecuteQuery()
     End Sub
+
+    Public Sub CheckClient(client As Client)
+        connector.Connect()
+        Dim consulta As String = "SELECT * from Clientes WHERE IDcliente = '" & client.NumberIdProp() & "'"
+        Dim adaptador As New SqlDataAdapter(consulta, connector.sqlConnection)
+        Dim dt As New DataTable
+        adaptador.Fill(dt)
+        Form6.DataGridView1.DataSource = dt
+        If dt.Rows.Count = 0 Then
+            MessageBox.Show("No existe ningun cliente con ese ID")
+        End If
+        connector.Disconnect()
+    End Sub
+
     Public Function ClientExists(ClientId As String) As Boolean
         Dim query As String = "SELECT * FROM Clientes WHERE IDcliente = '" & ClientId & "'"
         Dim adapter As New SqlDataAdapter(query, connector.Connect())

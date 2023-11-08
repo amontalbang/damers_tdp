@@ -10,7 +10,7 @@
 	Private discountAvailable As UInteger
 	Private activeReservation As Boolean
 
-	Public Sub New(name As String, surname As String, numberId As String, birthDate As Date, phoneNumber As String,
+	Public Sub New(numberId As String, name As String, surname As String, birthDate As Date, phoneNumber As String,
 					email As String, address As String, creditCard As String, discount As UInteger, activeReservation As Boolean)
 		Me.name = name
 		Me.surname = surname
@@ -22,6 +22,10 @@
 		Me.creditCard = creditCard
 		Me.discountAvailable = discount
 		Me.activeReservation = activeReservation
+	End Sub
+
+	Public Sub New(numberId As String)
+		Me.numberId = numberId
 	End Sub
 
 	Public Sub New()

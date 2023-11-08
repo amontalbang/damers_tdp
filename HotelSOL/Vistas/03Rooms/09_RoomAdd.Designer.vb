@@ -24,8 +24,6 @@ Partial Class Form9
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form9))
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -39,8 +37,8 @@ Partial Class Form9
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.AnimalsCheckBox = New System.Windows.Forms.CheckBox()
-        Me.CradleCheckBox = New System.Windows.Forms.CheckBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.NumHabTextBox = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button1
@@ -56,32 +54,6 @@ Partial Class Form9
         Me.Button1.TabIndex = 53
         Me.Button1.Text = "Registrar"
         Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label10
-        '
-        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label10.Location = New System.Drawing.Point(349, 417)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(106, 25)
-        Me.Label10.TabIndex = 49
-        Me.Label10.Text = "Animales:"
-        '
-        'Label9
-        '
-        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(386, 459)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(69, 25)
-        Me.Label9.TabIndex = 48
-        Me.Label9.Text = "Cuna:"
         '
         'Label8
         '
@@ -231,27 +203,27 @@ Partial Class Form9
         Me.Label12.Text = "PRECIO NOCHE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(temporada)"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
-        'AnimalsCheckBox
+        'Label3
         '
-        Me.AnimalsCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.AnimalsCheckBox.AutoSize = True
-        Me.AnimalsCheckBox.Location = New System.Drawing.Point(478, 426)
-        Me.AnimalsCheckBox.MaximumSize = New System.Drawing.Size(15, 14)
-        Me.AnimalsCheckBox.Name = "AnimalsCheckBox"
-        Me.AnimalsCheckBox.Size = New System.Drawing.Size(15, 14)
-        Me.AnimalsCheckBox.TabIndex = 55
-        Me.AnimalsCheckBox.UseVisualStyleBackColor = True
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label3.Location = New System.Drawing.Point(41, 258)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(141, 25)
+        Me.Label3.TabIndex = 56
+        Me.Label3.Text = "Número hab.:"
         '
-        'CradleCheckBox
+        'NumHabTextBox
         '
-        Me.CradleCheckBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.CradleCheckBox.AutoSize = True
-        Me.CradleCheckBox.Location = New System.Drawing.Point(478, 468)
-        Me.CradleCheckBox.MaximumSize = New System.Drawing.Size(15, 14)
-        Me.CradleCheckBox.Name = "CradleCheckBox"
-        Me.CradleCheckBox.Size = New System.Drawing.Size(15, 14)
-        Me.CradleCheckBox.TabIndex = 56
-        Me.CradleCheckBox.UseVisualStyleBackColor = True
+        Me.NumHabTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.NumHabTextBox.Location = New System.Drawing.Point(222, 264)
+        Me.NumHabTextBox.MaximumSize = New System.Drawing.Size(216, 20)
+        Me.NumHabTextBox.Name = "NumHabTextBox"
+        Me.NumHabTextBox.Size = New System.Drawing.Size(216, 20)
+        Me.NumHabTextBox.TabIndex = 55
         '
         'Form9
         '
@@ -259,12 +231,10 @@ Partial Class Form9
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
-        Me.Controls.Add(Me.CradleCheckBox)
-        Me.Controls.Add(Me.AnimalsCheckBox)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.NumHabTextBox)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -286,8 +256,6 @@ Partial Class Form9
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
@@ -301,6 +269,6 @@ Partial Class Form9
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label12 As Label
-    Friend WithEvents AnimalsCheckBox As CheckBox
-    Friend WithEvents CradleCheckBox As CheckBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents NumHabTextBox As TextBox
 End Class

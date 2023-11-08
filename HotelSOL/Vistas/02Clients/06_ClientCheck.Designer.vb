@@ -61,7 +61,7 @@ Partial Class Form6
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(641, 168)
+        Me.Button2.Location = New System.Drawing.Point(505, 170)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(120, 30)
         Me.Button2.TabIndex = 55
@@ -75,7 +75,7 @@ Partial Class Form6
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.DarkKhaki
-        Me.Label12.Location = New System.Drawing.Point(50, 169)
+        Me.Label12.Location = New System.Drawing.Point(148, 171)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(122, 25)
         Me.Label12.TabIndex = 54
@@ -84,9 +84,9 @@ Partial Class Form6
         'ClientIdTextBox
         '
         Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ClientIdTextBox.Location = New System.Drawing.Point(178, 173)
+        Me.ClientIdTextBox.Location = New System.Drawing.Point(276, 175)
         Me.ClientIdTextBox.Name = "ClientIdTextBox"
-        Me.ClientIdTextBox.Size = New System.Drawing.Size(444, 20)
+        Me.ClientIdTextBox.Size = New System.Drawing.Size(200, 20)
         Me.ClientIdTextBox.TabIndex = 53
         '
         'DataGridView1

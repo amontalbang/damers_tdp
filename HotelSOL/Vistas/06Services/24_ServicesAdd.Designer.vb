@@ -27,7 +27,7 @@ Partial Class Form24
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DesciptionTextBox = New System.Windows.Forms.TextBox()
+        Me.DescriptionTextBox = New System.Windows.Forms.TextBox()
         Me.PriceTextBox = New System.Windows.Forms.TextBox()
         Me.NameTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -89,14 +89,14 @@ Partial Class Form24
         Me.Label3.TabIndex = 42
         Me.Label3.Text = "Nombre:"
         '
-        'DesciptionTextBox
+        'DescriptionTextBox
         '
-        Me.DesciptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DesciptionTextBox.Location = New System.Drawing.Point(264, 309)
-        Me.DesciptionTextBox.MaximumSize = New System.Drawing.Size(444, 20)
-        Me.DesciptionTextBox.Name = "DesciptionTextBox"
-        Me.DesciptionTextBox.Size = New System.Drawing.Size(444, 20)
-        Me.DesciptionTextBox.TabIndex = 41
+        Me.DescriptionTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DescriptionTextBox.Location = New System.Drawing.Point(264, 309)
+        Me.DescriptionTextBox.MaximumSize = New System.Drawing.Size(444, 20)
+        Me.DescriptionTextBox.Name = "DescriptionTextBox"
+        Me.DescriptionTextBox.Size = New System.Drawing.Size(444, 20)
+        Me.DescriptionTextBox.TabIndex = 41
         '
         'PriceTextBox
         '
@@ -150,7 +150,7 @@ Partial Class Form24
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.DesciptionTextBox)
+        Me.Controls.Add(Me.DescriptionTextBox)
         Me.Controls.Add(Me.PriceTextBox)
         Me.Controls.Add(Me.NameTextBox)
         Me.Controls.Add(Me.Label2)
@@ -167,7 +167,7 @@ Partial Class Form24
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents DesciptionTextBox As TextBox
+    Friend WithEvents DescriptionTextBox As TextBox
     Friend WithEvents PriceTextBox As TextBox
     Friend WithEvents NameTextBox As TextBox
     Friend WithEvents Label2 As Label

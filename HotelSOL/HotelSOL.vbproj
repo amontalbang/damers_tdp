@@ -26,7 +26,9 @@
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>HotelSOL.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,7 +38,9 @@
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>HotelSOL.xml</DocumentationFile>
-    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</NoWarn>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
     <OptionExplicit>On</OptionExplicit>
@@ -84,6 +88,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controlador\Controller.vb" />
     <Compile Include="Modelo\DAO\DAOFactory.vb" />
     <Compile Include="Modelo\DAO\DatabaseConnection.vb" />
     <Compile Include="Modelo\DAO\DAOUser.vb" />
@@ -92,10 +97,9 @@
     <Compile Include="Modelo\Service.vb" />
     <Compile Include="Modelo\User.vb" />
     <Compile Include="Modelo\Client.vb" />
-    <Compile Include="Modelo\DataBaseConnection.vb" />
-    <Compile Include="Modelo\DAO\DaoInvoice.vb" />
-    <Compile Include="Modelo\DAO\DaoRoom.vb" />
-    <Compile Include="Modelo\DAO\DaoReservation.vb" />
+    <Compile Include="Modelo\DAO\DAOInvoice.vb" />
+    <Compile Include="Modelo\DAO\DAORoom.vb" />
+    <Compile Include="Modelo\DAO\DAOReservation.vb" />
     <Compile Include="Modelo\Invoice.vb" />
     <Compile Include="Modelo\Room.vb" />
     <Compile Include="Modelo\Reservation.vb" />
@@ -104,18 +108,6 @@
     </Compile>
     <Compile Include="Vistas\01Main\01.1Main.Designer.vb">
       <DependentUpon>01.1Main.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\01Main\02_MainMenu.Designer.vb">
-      <DependentUpon>02_MainMenu.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\01Main\02_MainMenu.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\02Clients\03_ClientMain.Designer.vb">
-      <DependentUpon>03_ClientMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\02Clients\03_ClientMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\02Clients\04_ClientAdd.Designer.vb">
@@ -148,12 +140,6 @@
     <Compile Include="Vistas\29_ListShowClients.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\03Rooms\08_RoomMain.Designer.vb">
-      <DependentUpon>08_RoomMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\03Rooms\08_RoomMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Vistas\03Rooms\09_RoomAdd.Designer.vb">
       <DependentUpon>09_RoomAdd.vb</DependentUpon>
     </Compile>
@@ -176,12 +162,6 @@
       <DependentUpon>12_RoomDelete.vb</DependentUpon>
     </Compile>
     <Compile Include="Vistas\03Rooms\12_RoomDelete.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\04Reserv\13_ReservationMain.Designer.vb">
-      <DependentUpon>13_ReservationMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\04Reserv\13_ReservationMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\04Reserv\14_ReservationAdd.Designer.vb">
@@ -220,12 +200,6 @@
     <Compile Include="Vistas\04Reserv\19_ReservationPay.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\05Queries\20_QueriesMain.Designer.vb">
-      <DependentUpon>20_QueriesMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\05Queries\20_QueriesMain.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Vistas\05Queries\21_QueriesCheckAvailable.Designer.vb">
       <DependentUpon>21_QueriesCheckAvailable.vb</DependentUpon>
     </Compile>
@@ -236,12 +210,6 @@
       <DependentUpon>22_QueriesLists.vb</DependentUpon>
     </Compile>
     <Compile Include="Vistas\05Queries\22_QueriesLists.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vistas\06Services\23_ServicesMain.Designer.vb">
-      <DependentUpon>23_ServicesMain.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\06Services\23_ServicesMain.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\06Services\24_ServicesAdd.Designer.vb">
@@ -312,12 +280,6 @@
     <EmbeddedResource Include="Vistas\01Main\01.1Main.resx">
       <DependentUpon>01.1Main.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\01Main\02_MainMenu.resx">
-      <DependentUpon>02_MainMenu.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\02Clients\03_ClientMain.resx">
-      <DependentUpon>03_ClientMain.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\02Clients\04_ClientAdd.resx">
       <DependentUpon>04_ClientAdd.vb</DependentUpon>
     </EmbeddedResource>
@@ -333,9 +295,6 @@
     <EmbeddedResource Include="Vistas\29_ListShowClients.resx">
       <DependentUpon>29_ListShowClients.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\03Rooms\08_RoomMain.resx">
-      <DependentUpon>08_RoomMain.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\03Rooms\09_RoomAdd.resx">
       <DependentUpon>09_RoomAdd.vb</DependentUpon>
     </EmbeddedResource>
@@ -347,9 +306,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\03Rooms\12_RoomDelete.resx">
       <DependentUpon>12_RoomDelete.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\04Reserv\13_ReservationMain.resx">
-      <DependentUpon>13_ReservationMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\04Reserv\14_ReservationAdd.resx">
       <DependentUpon>14_ReservationAdd.vb</DependentUpon>
@@ -369,17 +325,11 @@
     <EmbeddedResource Include="Vistas\04Reserv\19_ReservationPay.resx">
       <DependentUpon>19_ReservationPay.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\05Queries\20_QueriesMain.resx">
-      <DependentUpon>20_QueriesMain.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\05Queries\21_QueriesCheckAvailable.resx">
       <DependentUpon>21_QueriesCheckAvailable.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\05Queries\22_QueriesLists.resx">
       <DependentUpon>22_QueriesLists.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\06Services\23_ServicesMain.resx">
-      <DependentUpon>23_ServicesMain.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\06Services\24_ServicesAdd.resx">
       <DependentUpon>24_ServicesAdd.vb</DependentUpon>

@@ -1,7 +1,7 @@
 ﻿Imports System.Collections.ObjectModel
 Imports System.Data.SqlClient
 
-Public Class DaoReservation
+Public Class DAOReservation
     Private connector As DataBaseConnection = New DataBaseConnection
 
     Public Sub AddReservation(Reservation As Reservation)
@@ -31,20 +31,33 @@ Public Class DaoReservation
         connector.Disconnect()
         MessageBox.Show("Reserva actualizada correctamente")
     End Sub
-    Public Function ReservationExists(Reservation As UInteger) As Boolean
+    Public Function ReservationExists(reservationId As UInteger) As Boolean
+        Dim query As String = "SELECT * from Reservas WHERE IDreserva = '" & reservationId & "'"
+        Dim adapter As New SqlDataAdapter(query, connector.Connect())
+        Dim dt As New DataTable
+        adapter.Fill(dt)
+        If dt.AsEnumerable().Count() > 0 Then
+            Return True
+        End If
         Return False
     End Function
-    Public Function GetReservationById(Reservation As UInteger) As Reservation
-        Dim cmd As New System.Data.SqlClient.SqlCommand
-        cmd.CommandType = System.Data.CommandType.Text
-        cmd.CommandText = "SELECT from RESERVAS where IDreserva = '" & Reservation & "'"
-        cmd.Connection = connector.Connect()
-        cmd.ExecuteNonQuery()
-        connector.Disconnect()
-        MessageBox.Show("Reserva actualizada correctamente")
-        Return New Reservation()
+    Public Function GetReservationById(reservationId As UInteger) As Reservation
+        Dim query As String = "SELECT from Reservas WHERE IDreserva = '" & reservationId & "'"
+        Dim adapter As New SqlDataAdapter(query, connector.Connect())
+        Dim dt As New DataTable
+        adapter.Fill(dt)
+        If dt.AsEnumerable().Count() = 0 Then
+            Return New Reservation()
+        End If
+        Dim dr As DataRow = dt.AsEnumerable().ElementAt(0)
+        Return New Reservation(dr.Field(Of String)("reservationId"), dr.Field(Of String)("roomId"), dr.Field(Of String)("clientId"), dr.Field(Of String)("entryDate"), dr.Field(Of String)("departureDate"), dr.Field(Of String)("season"), dr.Field(Of String)("board"), dr.Field(Of String)("status"))
+
     End Function
-    Public Function GetReservationList() As Reservation()
-        Return {New Reservation()}
+    Public Function GetReservationList() As DataTable
+        Dim consulta As String = "SELECT * FROM Reservas"
+        Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
+        Dim reservationList As New DataTable
+        adaptador.Fill(reservationList)
+        Return reservationList
     End Function
 End Class

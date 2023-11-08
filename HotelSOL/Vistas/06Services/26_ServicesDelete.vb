@@ -3,7 +3,8 @@ Imports System.Data.SqlClient
 
 Public Class Form26
 
-    Private connector As DataBaseConnection = New DataBaseConnection
+    Private controller As Controller = New Controller
+    Private connector As DatabaseConnection = New DatabaseConnection
     Dim comando As New SqlCommand
     Dim i As Integer
 
@@ -13,6 +14,7 @@ Public Class Form26
     End Sub
 
     Private Sub llenar_grid()
+        connector.Connect()
         Dim consulta As String = "SELECT * from Servicios"
         Dim adaptador As New SqlDataAdapter(consulta, connector.sqlConnection)
         Dim dt As New DataTable
@@ -27,13 +29,18 @@ Public Class Form26
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim query = "DELETE from Servicios where IDservicio = '" & TextBox10.Text & "'"
-        comando = New SqlCommand(query, connector.sqlConnection)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        lector.Close()
-        DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
-        MessageBox.Show("Servicio eliminado con éxito")
+        'Dim query = "DELETE from Servicios where IDservicio = '" & TextBox10.Text & "'"
+        'comando = New SqlCommand(query, connector.sqlConnection)
+        'Dim lector As SqlDataReader
+        'lector = comando.ExecuteReader
+        'lector.Close()
+        'DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
+        'MessageBox.Show("Servicio eliminado con éxito")
+        'llenar_grid()
+
+        Dim id As String = TextBox10.Text
+        Dim newService As Service = New Service(id)
+        controller.deleteService(newService)
         llenar_grid()
     End Sub
 End Class

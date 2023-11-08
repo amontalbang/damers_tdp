@@ -77,8 +77,4 @@ Public Class Form29
         MessageBox.Show("XML exportado correctamente")
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Me.Close()
-        Form3.Show()
-    End Sub
 End Class

@@ -3,12 +3,12 @@
 
 Public Class Room
 
-    Private roomId As UInteger
+    Private roomId As String
     Private type As String
-    Private capacity As UInteger
-    Private priceH As Double
-    Private priceM As Double
-    Private priceL As Double
+    Private capacity As String
+    Private priceH As UInteger
+    Private priceM As UInteger
+    Private priceL As UInteger
 
     'Metodo constructor por defecto
     Public Sub New()
@@ -19,44 +19,52 @@ Public Class Room
     '@param type - Tipo de habitacion
     '@param capacity - Capacidad de la habitacion
     '@param price - Precio dependiendo de la temporada
-    Public Sub New(roomId As UInteger, type As String, capacity As UInteger, price As Double)
+
+    Public Sub New(roomId As String)
+        Me.roomId = roomId
+    End Sub
+
+    Public Sub New(roomId As String, type As String, capacity As String, priceH As UInteger, priceM As UInteger, priceL As UInteger)
         Me.roomId = roomId
         Me.type = type
         Me.capacity = capacity
+        Me.priceH = priceH
+        Me.priceM = priceM
+        Me.priceL = priceL
     End Sub
 
     '*propiedades de roomId
-    Public Property RoomIdProp() As UInteger
+    Public Property RoomIdProp() As String
         'obtener el numero de habitacion
         Get
             Return roomId
         End Get
         'asignar el numero de habitacion
-        Set(ByVal Value As UInteger)
+        Set(ByVal Value As String)
             roomId = Value
         End Set
     End Property
 
     'propiedades de type
-    Public Property TypeProp() As UInteger
+    Public Property TypeProp() As String
         'obtener el tipo de habitacion
         Get
             Return type
         End Get
         'asignar el tipo de habitacion
-        Set(ByVal Value As UInteger)
+        Set(ByVal Value As String)
             type = Value
         End Set
     End Property
 
     'propiedades de capacity
-    Public Property CapacityProp() As UInteger
+    Public Property CapacityProp() As String
         'obtener la capacidad de huespedes para una habitacion
         Get
             Return capacity
         End Get
         'asignar la capacidad de huespedes para una habitacion
-        Set(ByVal Value As UInteger)
+        Set(ByVal Value As String)
             capacity = Value
         End Set
     End Property
