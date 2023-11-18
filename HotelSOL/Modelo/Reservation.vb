@@ -12,10 +12,26 @@ Public Class Reservation
     Private depatureDate As Date
     Private season As String
     Private board As String
-    Private status As Boolean
+    Private isActive As Boolean
 
     'Metodo constructor por defecto
     Public Sub New()
+    End Sub
+
+    'Metodos constructores parametrizados
+    '@param roomId - Numero de habitacion
+    '@param clientId - ID del cliente (DNI)
+    '@param entryDate - Fecha de entrada
+    '@param depatureDate - Fecha de salida
+    '@param board - Tipo de alojamiento
+    '@param isActive - Estado de la reserva
+    Public Sub New(roomId As UInteger, clientId As String, entryDate As Date, depatureDate As Date, board As String, isActive As Boolean)
+        Me.roomId = roomId
+        Me.clientId = clientId
+        Me.entryDate = entryDate
+        Me.depatureDate = depatureDate
+        Me.board = board
+        Me.isActive = isActive
     End Sub
 
     'Metodos constructores parametrizados
@@ -26,8 +42,8 @@ Public Class Reservation
     '@param depatureDate - Fecha de salida
     '@param season - Temporada de la reserva
     '@param board - Tipo de alojamiento
-    '@param status - Estado de la reserva
-    Public Sub New(reservationId As UInteger, roomId As UInteger, clientId As String, entryDate As Date, depatureDate As Date, season As String, board As String, status As Boolean)
+    '@param isActive - Estado de la reserva
+    Public Sub New(reservationId As UInteger, roomId As UInteger, clientId As String, entryDate As Date, depatureDate As Date, season As String, board As String, isActive As Boolean)
         Me.reservationId = reservationId
         Me.roomId = roomId
         Me.clientId = clientId
@@ -35,7 +51,7 @@ Public Class Reservation
         Me.depatureDate = depatureDate
         Me.season = season
         Me.board = board
-        Me.status = status
+        Me.isActive = isActive
     End Sub
 
     '*propiedades de reservationId
@@ -122,15 +138,15 @@ Public Class Reservation
         End Set
     End Property
 
-    'propiedades de status
-    Public Property StatusProp() As Boolean
+    'propiedades de isActive
+    Public Property isActiveProp() As Boolean
         'obtener el precio en temporada baja
         Get
-            Return status
+            Return isActive
         End Get
         'asignar el precio en temporada baja
         Set(ByVal Value As Boolean)
-            status = Value
+            isActive = Value
         End Set
     End Property
 End Class

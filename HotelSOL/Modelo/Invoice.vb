@@ -10,6 +10,7 @@ Public Class Invoice
 
     'Metodo constructor por defecto
     Public Sub New()
+        Me.totalAmount = 0
     End Sub
 
     'Metodos constructores parametrizados
@@ -20,6 +21,14 @@ Public Class Invoice
         Me.InvoiceId = InvoiceId
         Me.reservationId = reservationId
         Me.totalAmount = totalAmount
+    End Sub
+
+    'Metodos constructores parametrizados
+    '@param reservationId - Numero de reserva
+    '@param totalAmount - Precio total de la factura
+    Public Sub New(reservationId As UInteger)
+        Me.reservationId = reservationId
+        Me.totalAmount = 0
     End Sub
 
     '*propiedades de invoice

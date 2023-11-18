@@ -1,9 +1,7 @@
-﻿Imports System.Data.SqlClient
+﻿Public Class Form16
 
-Public Class Form16
-
-    Private connector As DataBaseConnection = New DataBaseConnection
-    Dim comando As New SqlCommand
+    Private controller As Controller = New Controller
+    Private reservationId As UInteger
     Dim i As Integer
 
     Private Sub Form16_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -11,34 +9,41 @@ Public Class Form16
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim clientId As String = TextBox10.Text
-        connector.Connect()
-        Dim consulta As String = "SELECT * from Reservas where IDCliente = '" & clientId & "'"
-        Dim adaptador As New SqlDataAdapter(consulta, connector.sqlConnection)
-        Dim dt As New DataTable
-        adaptador.Fill(dt)
-        DataGridView1.DataSource = dt
-        connector.Disconnect()
+        Try
+            Dim clientId As String = TextBox10.Text
+            Dim dt As DataTable = controller.GetReservationById(clientId)
+            DataGridView1.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show("No se ha podido realizar la consulta a base de datos")
+        End Try
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim query = "DELETE from Reservas where IDreserva = '" & Label13.Text & "'"
-        comando = New SqlCommand(query, connector.sqlConnection)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        lector.Close()
-        DataGridView1.Rows.Remove(DataGridView1.CurrentRow)
-        MessageBox.Show("Reserva eliminada con éxito")
-        llenar_grid()
+        If reservationId Then
+            Try
+                controller.RemoveReservation(reservationId)
+                MessageBox.Show("La reserva se ha eliminado correctamente")
+                llenar_grid()
+            Catch ex As Exception
+                MessageBox.Show("Error en base de datos")
+            End Try
+        Else
+
+        End If
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        i = DataGridView1.CurrentRow.Index
+        reservationId = UInteger.Parse(DataGridView1.Item(0, i).Value())
+        Label13.Text = DataGridView1.Item(0, i).Value()
     End Sub
 
     Private Sub llenar_grid()
-        connector.Connect()
-        Dim consulta As String = "SELECT * from Reservas"
-        Dim adaptador As New SqlDataAdapter(consulta, connector.sqlConnection)
-        Dim dt As New DataTable
-        adaptador.Fill(dt)
-        DataGridView1.DataSource = dt
-        connector.Disconnect()
+        Try
+            Dim dt As DataTable = controller.GetReservationsList()
+            DataGridView1.DataSource = dt
+        Catch ex As Exception
+            MessageBox.Show("Error en la conexión con base de datos")
+        End Try
     End Sub
 End Class

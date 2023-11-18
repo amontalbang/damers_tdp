@@ -59,7 +59,7 @@ Partial Class Form16
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label3.Location = New System.Drawing.Point(199, 146)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(430, 64)
+        Me.Label3.Size = New System.Drawing.Size(431, 64)
         Me.Label3.TabIndex = 71
         Me.Label3.Text = "Por favor, selecciona la reserva" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " que deseas eliminar"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -152,7 +152,7 @@ Partial Class Form16
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkKhaki
-        Me.Label5.Location = New System.Drawing.Point(149, 493)
+        Me.Label5.Location = New System.Drawing.Point(155, 493)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(335, 25)
         Me.Label5.TabIndex = 87

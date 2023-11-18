@@ -2,14 +2,16 @@
 
 Public Class Form15
 
-    Private connector As DataBaseConnection = New DataBaseConnection
-    Dim comando As New SqlCommand
+    Private controller As Controller = New Controller
+    Private reservation As Reservation
     Dim i As Integer
 
     Private Sub Form15_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         llenar_grid()
     End Sub
+
+    'TODO: Falta implementar la lógica para filtrar por una reserva
 
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         i = DataGridView1.CurrentRow.Index
@@ -19,29 +21,21 @@ Public Class Form15
         EntryDatePicker.Text = DataGridView1.Item(3, i).Value()
         DepartureDatePicker.Text = DataGridView1.Item(4, i).Value()
         BoardTextBox.Text = DataGridView1.Item(6, i).Value()
+        reservation = New Reservation(DataGridView1.Item(0, i).Value(), DataGridView1.Item(1, i).Value(), DataGridView1.Item(2, i).Value(), DataGridView1.Item(3, i).Value(), DataGridView1.Item(4, i).Value(), DataGridView1.Item(5, i).Value(), DataGridView1.Item(6, i).Value(), DataGridView1.Item(7, i).Value())
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        connector.Connect()
-        Dim roomId As Integer = Integer.Parse(RoomIdTextBox.Text).ToString()
-        Dim entry As Date = Date.Parse(EntryDatePicker.Text).ToString()
-        Dim departure As Date = Date.Parse(DepartureDatePicker.Text).ToString()
-        Dim consulta1 As String = "UPDATE Reservas set IDCliente = '" & ClientIdTextBox.Text & "', IDhabitacion = '" & RoomIdTextBox.Text & "', FechaEntr = '" & entry & "' , FechaSal = '" & departure & "', Board = '" & BoardTextBox.Text & "'"
-        comando = New SqlCommand(consulta1, connector.sqlConnection)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        connector.Disconnect()
-        MessageBox.Show("Reserva actualizada con éxito")
-        llenar_grid()
+        Try
+            controller.UpdateReservation(Me.reservation)
+            MessageBox.Show("Reserva actualizada con éxito")
+            llenar_grid()
+        Catch ex As Exception
+            MessageBox.Show("Se ha producido un error al realizar la actualización de los datos. Vuelva a intentarlo más tarde")
+        End Try
     End Sub
 
     Private Sub llenar_grid()
-        connector.Connect()
-        Dim consulta As String = "select * from Reservas"
-        Dim adaptador As New SqlDataAdapter(consulta, connector.sqlConnection)
-        Dim dt As New DataTable
-        adaptador.Fill(dt)
+        Dim dt As DataTable = controller.GetReservationsList()
         DataGridView1.DataSource = dt
-        connector.Disconnect()
     End Sub
 End Class

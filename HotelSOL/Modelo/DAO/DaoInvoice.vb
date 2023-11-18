@@ -63,4 +63,17 @@ Public Class DAOInvoice
         adaptador.Fill(invoiceList)
         Return invoiceList
     End Function
+
+    Public Function GetInvoiceByReservationId(ReservationId As UInteger) As Invoice
+        Dim consulta As String = "SELECT * FROM Facturas WHERE IDreserva = " & ReservationId.ToString() & "'"
+        Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
+        Dim invoiceList As New DataTable
+        adaptador.Fill(invoiceList)
+        Dim invoice As New Invoice
+        invoice.InvoiceIdProp = CUInt(invoiceList.AsEnumerable().ElementAt(0).Item(0).ToString)
+        invoice.ReservationIdProp = CUInt(invoiceList.AsEnumerable().ElementAt(0).Item(1).ToString)
+        invoice.TotalAmountProp = CDbl(invoiceList.AsEnumerable().ElementAt(0).Item(2).ToString)
+        'TODO: Recuperar el listado de consumidos
+        Return invoice
+    End Function
 End Class
