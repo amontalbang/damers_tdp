@@ -47,6 +47,8 @@ Partial Class Form22
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label6
@@ -327,12 +329,39 @@ Partial Class Form22
         Me.Button5.Text = "Buscar"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(462, 553)
+        Me.Button1.MaximumSize = New System.Drawing.Size(120, 30)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(120, 30)
+        Me.Button1.TabIndex = 150
+        Me.Button1.Text = "Buscar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.Transparent
+        Me.Label13.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.DarkKhaki
+        Me.Label13.Location = New System.Drawing.Point(36, 555)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(398, 23)
+        Me.Label13.TabIndex = 148
+        Me.Label13.Text = "Reservas activas (clientes hospedados)"
+        '
         'Form22
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label12)
@@ -388,4 +417,6 @@ Partial Class Form22
     Friend WithEvents Label14 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Button5 As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Label13 As Label
 End Class

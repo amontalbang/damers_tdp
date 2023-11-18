@@ -1,18 +1,31 @@
-﻿Imports System.Data.SqlClient
-
+﻿''' <summary>
+''' Vista de modificar cliente
+''' </summary>
 Public Class Form5
 
     Private controller As Controller = New Controller
-    Private connector As DataBaseConnection = New DataBaseConnection
-    Dim comando As New SqlCommand
     Dim i As Integer
 
+    ''' <summary>
+    ''' Carga del formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub Form5_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
-        llenar_grid()
+        Try
+            DataGridView1.DataSource = controller.GetClientList()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+    ''' <summary>
+    ''' Metodo que muestra los datos del objeto seleccionado en el Grid
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick, DataGridView1.CellClick
         i = DataGridView1.CurrentRow.Index
         Label13.Text = DataGridView1.Item(0, i).Value()
         ClientIdTextBox.Text = DataGridView1.Item(0, i).Value()
@@ -26,20 +39,13 @@ Public Class Form5
         DiscountTextBox.Text = DataGridView1.Item(8, i).Value()
     End Sub
 
+    ''' <summary>
+    ''' Metodo que captura el boton para mopdificar un cliente
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'connector.Connect()
-        'Dim phone As Integer = Integer.Parse(PhoneTextBox.Text).ToString()
-        'Dim credCard As Int64 = Int64.Parse(CredCardTextBox.Text).ToString()
-        'Dim birth As Date = Date.Parse(BirthDatePicker.Text).ToString()
-        'Dim consulta1 As String = "UPDATE Clientes set Nombre = '" & NameTextBox.Text & "', Apellidos = '" & SurnameTextBox.Text & "', FechaNac = '" & birth & "' , Telefono = '" & phone & "', Email = '" & MailTextBox.Text & "', Direccion = '" & AdressTextBox.Text & "', TarjetaCred = '" & credCard & "', Descuento = '" & DiscountTextBox.Text & "' where IDcliente = '" & Label13.Text & "'"
-        'comando = New SqlCommand(consulta1, connector.sqlConnection)
-        'Dim lector As SqlDataReader
-        'lector = comando.ExecuteReader
-        'connector.Disconnect()
-        'MessageBox.Show("Cliente actualizado con éxito")
-        'llenar_grid()
-
-        Dim idClinte As String = ClientIdTextBox.Text
+        Dim idCliente As String = ClientIdTextBox.Text
         Dim nombre As String = NameTextBox.Text
         Dim apellidos As String = SurnameTextBox.Text
         Dim fechaNac As Date = Date.Parse(BirthDatePicker.Text).ToString()
@@ -49,17 +55,22 @@ Public Class Form5
         Dim tarjCred As String = CredCardTextBox.Text
         Dim descuento As UInteger = UInteger.Parse(DiscountTextBox.Text).ToString()
         Dim reservAct As Boolean = False
-        Dim newClient As Client = New Client(idClinte, nombre, apellidos, fechaNac, telefono, mail, direccion, tarjCred, descuento, reservAct)
-        controller.updateClient(newClient)
-        llenar_grid()
+        Dim newClient As Client = New Client(idCliente, nombre, apellidos, fechaNac, telefono, mail, direccion, tarjCred, descuento, reservAct)
+        Try
+            If controller.ClientExists(idCliente) Then
+                controller.UpdateClient(newClient)
+                DataGridView1.DataSource = controller.GetClientList()
+                DataGridView1.Refresh()
+                MessageBox.Show("CLIENTE ACTUALIZADO CORRECTAMENTE")
+            Else
+                MessageBox.Show("EL CLIENTE INDICADO NO EXISTE")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("NO SE HA PODIDO ESTABLECER CONEXIÓN CON LA BASE DE DATOS '" & vbCr & "''" & vbCr & "'ERROR: '" & ex.ToString & "'")
+        End Try
     End Sub
-    Private Sub llenar_grid()
-        connector.Connect()
-        Dim consulta As String = "SELECT * from Clientes"
-        Dim adaptador As New SqlDataAdapter(consulta, connector.sqlConnection)
-        Dim dt As New DataTable
-        adaptador.Fill(dt)
-        DataGridView1.DataSource = dt
-        connector.Disconnect()
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

@@ -39,6 +39,9 @@ Partial Class Form9
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.NumHabTextBox = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
@@ -62,7 +65,7 @@ Partial Class Form9
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label8.Location = New System.Drawing.Point(544, 354)
+        Me.Label8.Location = New System.Drawing.Point(544, 264)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(61, 25)
         Me.Label8.TabIndex = 47
@@ -88,7 +91,7 @@ Partial Class Form9
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label6.Location = New System.Drawing.Point(550, 264)
+        Me.Label6.Location = New System.Drawing.Point(550, 352)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(55, 25)
         Me.Label6.TabIndex = 45
@@ -141,28 +144,28 @@ Partial Class Form9
         'PriceHTextBox
         '
         Me.PriceHTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PriceHTextBox.Location = New System.Drawing.Point(638, 264)
+        Me.PriceHTextBox.Location = New System.Drawing.Point(611, 357)
         Me.PriceHTextBox.MaximumSize = New System.Drawing.Size(115, 20)
         Me.PriceHTextBox.Name = "PriceHTextBox"
-        Me.PriceHTextBox.Size = New System.Drawing.Size(115, 20)
+        Me.PriceHTextBox.Size = New System.Drawing.Size(68, 20)
         Me.PriceHTextBox.TabIndex = 39
         '
         'PriceMTextBox
         '
         Me.PriceMTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PriceMTextBox.Location = New System.Drawing.Point(638, 308)
+        Me.PriceMTextBox.Location = New System.Drawing.Point(611, 313)
         Me.PriceMTextBox.MaximumSize = New System.Drawing.Size(115, 20)
         Me.PriceMTextBox.Name = "PriceMTextBox"
-        Me.PriceMTextBox.Size = New System.Drawing.Size(115, 20)
+        Me.PriceMTextBox.Size = New System.Drawing.Size(68, 20)
         Me.PriceMTextBox.TabIndex = 38
         '
         'PriceLTextBox
         '
         Me.PriceLTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PriceLTextBox.Location = New System.Drawing.Point(638, 354)
+        Me.PriceLTextBox.Location = New System.Drawing.Point(611, 269)
         Me.PriceLTextBox.MaximumSize = New System.Drawing.Size(115, 20)
         Me.PriceLTextBox.Name = "PriceLTextBox"
-        Me.PriceLTextBox.Size = New System.Drawing.Size(115, 20)
+        Me.PriceLTextBox.Size = New System.Drawing.Size(68, 20)
         Me.PriceLTextBox.TabIndex = 37
         '
         'Label2
@@ -225,12 +228,54 @@ Partial Class Form9
         Me.NumHabTextBox.Size = New System.Drawing.Size(216, 20)
         Me.NumHabTextBox.TabIndex = 55
         '
+        'Label9
+        '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label9.Location = New System.Drawing.Point(685, 269)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(24, 25)
+        Me.Label9.TabIndex = 57
+        Me.Label9.Text = "€"
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label10.Location = New System.Drawing.Point(685, 312)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(24, 25)
+        Me.Label10.TabIndex = 58
+        Me.Label10.Text = "€"
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label11.Location = New System.Drawing.Point(685, 357)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(24, 25)
+        Me.Label11.TabIndex = 59
+        Me.Label11.Text = "€"
+        '
         'Form9
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.NumHabTextBox)
         Me.Controls.Add(Me.Label12)
@@ -271,4 +316,7 @@ Partial Class Form9
     Friend WithEvents Label12 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents NumHabTextBox As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
 End Class

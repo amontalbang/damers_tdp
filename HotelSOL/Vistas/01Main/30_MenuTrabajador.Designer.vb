@@ -31,19 +31,9 @@ Partial Class Form30
         Me.ButtonConsultas = New System.Windows.Forms.Button()
         Me.PanelSubmenuServicios = New System.Windows.Forms.Panel()
         Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button18 = New System.Windows.Forms.Button()
-        Me.Button19 = New System.Windows.Forms.Button()
-        Me.Button20 = New System.Windows.Forms.Button()
         Me.ButtonServicios = New System.Windows.Forms.Button()
-        Me.PanelSubmenuHabitaciones = New System.Windows.Forms.Panel()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.ButtonHabitaciones = New System.Windows.Forms.Button()
         Me.PanelSubmenuCliente = New System.Windows.Forms.Panel()
         Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
         Me.ButtonClientes = New System.Windows.Forms.Button()
@@ -63,7 +53,6 @@ Partial Class Form30
         Me.PanelMenuLateral.SuspendLayout()
         Me.PanelSubmenuConsultas.SuspendLayout()
         Me.PanelSubmenuServicios.SuspendLayout()
-        Me.PanelSubmenuHabitaciones.SuspendLayout()
         Me.PanelSubmenuCliente.SuspendLayout()
         Me.PanelSubmenuReserva.SuspendLayout()
         Me.PanelLogo.SuspendLayout()
@@ -79,8 +68,6 @@ Partial Class Form30
         Me.PanelMenuLateral.Controls.Add(Me.ButtonConsultas)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubmenuServicios)
         Me.PanelMenuLateral.Controls.Add(Me.ButtonServicios)
-        Me.PanelMenuLateral.Controls.Add(Me.PanelSubmenuHabitaciones)
-        Me.PanelMenuLateral.Controls.Add(Me.ButtonHabitaciones)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubmenuCliente)
         Me.PanelMenuLateral.Controls.Add(Me.ButtonClientes)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubmenuReserva)
@@ -102,7 +89,7 @@ Partial Class Form30
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText
-        Me.Button7.Location = New System.Drawing.Point(0, 1348)
+        Me.Button7.Location = New System.Drawing.Point(0, 964)
         Me.Button7.Name = "Button7"
         Me.Button7.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.Button7.Size = New System.Drawing.Size(233, 45)
@@ -116,7 +103,7 @@ Partial Class Form30
         Me.PanelSubmenuConsultas.Controls.Add(Me.Button21)
         Me.PanelSubmenuConsultas.Controls.Add(Me.Button22)
         Me.PanelSubmenuConsultas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubmenuConsultas.Location = New System.Drawing.Point(0, 1257)
+        Me.PanelSubmenuConsultas.Location = New System.Drawing.Point(0, 873)
         Me.PanelSubmenuConsultas.Name = "PanelSubmenuConsultas"
         Me.PanelSubmenuConsultas.Size = New System.Drawing.Size(233, 91)
         Me.PanelSubmenuConsultas.TabIndex = 9
@@ -164,7 +151,7 @@ Partial Class Form30
         Me.ButtonConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonConsultas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonConsultas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonConsultas.Location = New System.Drawing.Point(0, 1212)
+        Me.ButtonConsultas.Location = New System.Drawing.Point(0, 828)
         Me.ButtonConsultas.Name = "ButtonConsultas"
         Me.ButtonConsultas.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.ButtonConsultas.Size = New System.Drawing.Size(233, 45)
@@ -177,13 +164,10 @@ Partial Class Form30
         '
         Me.PanelSubmenuServicios.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
         Me.PanelSubmenuServicios.Controls.Add(Me.Button13)
-        Me.PanelSubmenuServicios.Controls.Add(Me.Button18)
-        Me.PanelSubmenuServicios.Controls.Add(Me.Button19)
-        Me.PanelSubmenuServicios.Controls.Add(Me.Button20)
         Me.PanelSubmenuServicios.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubmenuServicios.Location = New System.Drawing.Point(0, 1041)
+        Me.PanelSubmenuServicios.Location = New System.Drawing.Point(0, 781)
         Me.PanelSubmenuServicios.Name = "PanelSubmenuServicios"
-        Me.PanelSubmenuServicios.Size = New System.Drawing.Size(233, 171)
+        Me.PanelSubmenuServicios.Size = New System.Drawing.Size(233, 47)
         Me.PanelSubmenuServicios.TabIndex = 7
         '
         'Button13
@@ -194,7 +178,7 @@ Partial Class Form30
         Me.Button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button13.Location = New System.Drawing.Point(0, 120)
+        Me.Button13.Location = New System.Drawing.Point(0, 0)
         Me.Button13.Name = "Button13"
         Me.Button13.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
         Me.Button13.Size = New System.Drawing.Size(233, 40)
@@ -202,57 +186,6 @@ Partial Class Form30
         Me.Button13.Text = "REALIZAR CARGO"
         Me.Button13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button13.UseVisualStyleBackColor = False
-        '
-        'Button18
-        '
-        Me.Button18.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button18.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button18.FlatAppearance.BorderSize = 0
-        Me.Button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button18.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button18.Location = New System.Drawing.Point(0, 80)
-        Me.Button18.Name = "Button18"
-        Me.Button18.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button18.Size = New System.Drawing.Size(233, 40)
-        Me.Button18.TabIndex = 5
-        Me.Button18.Text = "Borrar Servicio"
-        Me.Button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button18.UseVisualStyleBackColor = False
-        '
-        'Button19
-        '
-        Me.Button19.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button19.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button19.FlatAppearance.BorderSize = 0
-        Me.Button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button19.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button19.Location = New System.Drawing.Point(0, 40)
-        Me.Button19.Name = "Button19"
-        Me.Button19.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button19.Size = New System.Drawing.Size(233, 40)
-        Me.Button19.TabIndex = 4
-        Me.Button19.Text = "Actualizar Servicio"
-        Me.Button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button19.UseVisualStyleBackColor = False
-        '
-        'Button20
-        '
-        Me.Button20.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button20.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button20.FlatAppearance.BorderSize = 0
-        Me.Button20.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button20.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button20.Location = New System.Drawing.Point(0, 0)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button20.Size = New System.Drawing.Size(233, 40)
-        Me.Button20.TabIndex = 3
-        Me.Button20.Text = "Añadir Servicio"
-        Me.Button20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button20.UseVisualStyleBackColor = False
         '
         'ButtonServicios
         '
@@ -263,7 +196,7 @@ Partial Class Form30
         Me.ButtonServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonServicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonServicios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonServicios.Location = New System.Drawing.Point(0, 996)
+        Me.ButtonServicios.Location = New System.Drawing.Point(0, 736)
         Me.ButtonServicios.Name = "ButtonServicios"
         Me.ButtonServicios.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.ButtonServicios.Size = New System.Drawing.Size(233, 45)
@@ -272,116 +205,16 @@ Partial Class Form30
         Me.ButtonServicios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.ButtonServicios.UseVisualStyleBackColor = False
         '
-        'PanelSubmenuHabitaciones
-        '
-        Me.PanelSubmenuHabitaciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
-        Me.PanelSubmenuHabitaciones.Controls.Add(Me.Button14)
-        Me.PanelSubmenuHabitaciones.Controls.Add(Me.Button15)
-        Me.PanelSubmenuHabitaciones.Controls.Add(Me.Button16)
-        Me.PanelSubmenuHabitaciones.Controls.Add(Me.Button17)
-        Me.PanelSubmenuHabitaciones.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubmenuHabitaciones.Location = New System.Drawing.Point(0, 825)
-        Me.PanelSubmenuHabitaciones.Name = "PanelSubmenuHabitaciones"
-        Me.PanelSubmenuHabitaciones.Size = New System.Drawing.Size(233, 171)
-        Me.PanelSubmenuHabitaciones.TabIndex = 5
-        '
-        'Button14
-        '
-        Me.Button14.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button14.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button14.FlatAppearance.BorderSize = 0
-        Me.Button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button14.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button14.Location = New System.Drawing.Point(0, 120)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button14.Size = New System.Drawing.Size(233, 40)
-        Me.Button14.TabIndex = 6
-        Me.Button14.Text = "Comprobar Habitación"
-        Me.Button14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button14.UseVisualStyleBackColor = False
-        '
-        'Button15
-        '
-        Me.Button15.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button15.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button15.FlatAppearance.BorderSize = 0
-        Me.Button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button15.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button15.Location = New System.Drawing.Point(0, 80)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button15.Size = New System.Drawing.Size(233, 40)
-        Me.Button15.TabIndex = 5
-        Me.Button15.Text = "Borrar Habitación"
-        Me.Button15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button15.UseVisualStyleBackColor = False
-        '
-        'Button16
-        '
-        Me.Button16.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button16.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button16.FlatAppearance.BorderSize = 0
-        Me.Button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button16.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button16.Location = New System.Drawing.Point(0, 40)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button16.Size = New System.Drawing.Size(233, 40)
-        Me.Button16.TabIndex = 4
-        Me.Button16.Text = "Actualizar Habitación"
-        Me.Button16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button16.UseVisualStyleBackColor = False
-        '
-        'Button17
-        '
-        Me.Button17.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button17.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button17.FlatAppearance.BorderSize = 0
-        Me.Button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button17.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button17.Location = New System.Drawing.Point(0, 0)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button17.Size = New System.Drawing.Size(233, 40)
-        Me.Button17.TabIndex = 3
-        Me.Button17.Text = "Añadir Habitación"
-        Me.Button17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button17.UseVisualStyleBackColor = False
-        '
-        'ButtonHabitaciones
-        '
-        Me.ButtonHabitaciones.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
-        Me.ButtonHabitaciones.Dock = System.Windows.Forms.DockStyle.Top
-        Me.ButtonHabitaciones.FlatAppearance.BorderSize = 0
-        Me.ButtonHabitaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.ButtonHabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ButtonHabitaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonHabitaciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonHabitaciones.Location = New System.Drawing.Point(0, 780)
-        Me.ButtonHabitaciones.Name = "ButtonHabitaciones"
-        Me.ButtonHabitaciones.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.ButtonHabitaciones.Size = New System.Drawing.Size(233, 45)
-        Me.ButtonHabitaciones.TabIndex = 4
-        Me.ButtonHabitaciones.Text = "Habitaciones"
-        Me.ButtonHabitaciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ButtonHabitaciones.UseVisualStyleBackColor = False
-        '
         'PanelSubmenuCliente
         '
         Me.PanelSubmenuCliente.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
         Me.PanelSubmenuCliente.Controls.Add(Me.Button9)
-        Me.PanelSubmenuCliente.Controls.Add(Me.Button10)
         Me.PanelSubmenuCliente.Controls.Add(Me.Button11)
         Me.PanelSubmenuCliente.Controls.Add(Me.Button12)
         Me.PanelSubmenuCliente.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSubmenuCliente.Location = New System.Drawing.Point(0, 609)
         Me.PanelSubmenuCliente.Name = "PanelSubmenuCliente"
-        Me.PanelSubmenuCliente.Size = New System.Drawing.Size(233, 171)
+        Me.PanelSubmenuCliente.Size = New System.Drawing.Size(233, 127)
         Me.PanelSubmenuCliente.TabIndex = 3
         '
         'Button9
@@ -392,7 +225,7 @@ Partial Class Form30
         Me.Button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button9.Location = New System.Drawing.Point(0, 120)
+        Me.Button9.Location = New System.Drawing.Point(0, 80)
         Me.Button9.Name = "Button9"
         Me.Button9.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
         Me.Button9.Size = New System.Drawing.Size(233, 40)
@@ -400,23 +233,6 @@ Partial Class Form30
         Me.Button9.Text = "Comprobar Cliente"
         Me.Button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button9.UseVisualStyleBackColor = False
-        '
-        'Button10
-        '
-        Me.Button10.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button10.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button10.FlatAppearance.BorderSize = 0
-        Me.Button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button10.Location = New System.Drawing.Point(0, 80)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button10.Size = New System.Drawing.Size(233, 40)
-        Me.Button10.TabIndex = 5
-        Me.Button10.Text = "Borrar Cliente"
-        Me.Button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button10.UseVisualStyleBackColor = False
         '
         'Button11
         '
@@ -675,7 +491,6 @@ Partial Class Form30
         Me.PanelMenuLateral.ResumeLayout(False)
         Me.PanelSubmenuConsultas.ResumeLayout(False)
         Me.PanelSubmenuServicios.ResumeLayout(False)
-        Me.PanelSubmenuHabitaciones.ResumeLayout(False)
         Me.PanelSubmenuCliente.ResumeLayout(False)
         Me.PanelSubmenuReserva.ResumeLayout(False)
         Me.PanelLogo.ResumeLayout(False)
@@ -701,19 +516,9 @@ Partial Class Form30
     Friend WithEvents ButtonConsultas As Button
     Friend WithEvents PanelSubmenuServicios As Panel
     Friend WithEvents Button13 As Button
-    Friend WithEvents Button18 As Button
-    Friend WithEvents Button19 As Button
-    Friend WithEvents Button20 As Button
     Friend WithEvents ButtonServicios As Button
-    Friend WithEvents PanelSubmenuHabitaciones As Panel
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Button17 As Button
-    Friend WithEvents ButtonHabitaciones As Button
     Friend WithEvents PanelSubmenuCliente As Panel
     Friend WithEvents Button9 As Button
-    Friend WithEvents Button10 As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents ButtonClientes As Button

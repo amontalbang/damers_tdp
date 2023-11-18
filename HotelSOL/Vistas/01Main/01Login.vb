@@ -1,40 +1,48 @@
-Imports System.Data.SqlClient
-
+''' <summary>
+''' Vista de ventana de Login
+''' </summary>
 Public Class LoginForm1
 
-    Dim conection As New SqlConnection
-    Dim comando As New SqlCommand
+    Private controller As Controller = New Controller
 
-    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        conection.Open()
-        Dim query = "SELECT * FROM Usuarios where IDusuario='" & UsernameTextBox.Text & "'and Password ='" & PasswordTextBox.Text & "'"
-        comando = New SqlCommand(query, conection)
-        Dim lector As SqlDataReader
-        lector = comando.ExecuteReader
-        If lector.HasRows Then
-            MenuAdmin.Show()
-            Form1.Hide()
-            Me.Close()
-        Else
-            MessageBox.Show("El usuario no existe o los datos son incorrectos")
-        End If
-        conection.Close()
-    End Sub
-
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-        Me.Close()
-    End Sub
-
-    Private Sub LogoPictureBox_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
+    ''' <summary>
+    ''' Carga del formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
-        conection = New SqlConnection("Data Source = MAQUEDA\SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
     End Sub
 
-    Private Sub UsernameLabel_Click(sender As Object, e As EventArgs) Handles UsernameLabel.Click
+    ''' <summary>
+    ''' Captura de boton confirmar
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+        Try
+            If controller.UserLogin(UsernameTextBox.Text, PasswordTextBox.Text) And UsernameTextBox.Text = "admin" Then
+                MenuAdmin.Show()
+                Form1.Hide()
+                Me.Close()
+            ElseIf controller.UserLogin(UsernameTextBox.Text, PasswordTextBox.Text) And UsernameTextBox.Text <> "admin" Then
+                Form30.Show()
+                Form1.Hide()
+                Me.Close()
+            Else
+                MessageBox.Show("El usuario no existe o los datos son incorrectos")
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 
+    ''' <summary>
+    ''' Captura de boton cancelar
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
+        Me.Close()
     End Sub
 End Class

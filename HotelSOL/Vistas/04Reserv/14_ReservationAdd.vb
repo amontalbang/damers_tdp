@@ -1,13 +1,24 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
+﻿''' <summary>
+''' Vista de añadir reserva
+''' </summary>
 Public Class Form14
 
-    Private connector As DataBaseConnection = New DataBaseConnection
+    Private connector As DatabaseConnection = New DatabaseConnection
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub Form14_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim cmd As New System.Data.SqlClient.SqlCommand
         Dim roomId As Integer = Integer.Parse(RoomIdTextBox.Text).ToString()
@@ -20,5 +31,4 @@ Public Class Form14
         connector.Disconnect()
         MessageBox.Show("Reserva registrada correctamente")
     End Sub
-
 End Class

@@ -1,70 +1,79 @@
-﻿'Esta clase contiene los atributos y metodos de la clase Factura
-'@author DAMERs TPD
-
+﻿''' <summary>
+''' Clase que alberga los atributos, constructores y propiedades de Factura
+''' </summary>
 Public Class Invoice
 
+    'Definicion de atributos
     Private InvoiceId As UInteger
     Private reservationId As UInteger
     Private consumedServices As Array
     Private totalAmount As Double
 
-    'Metodo constructor por defecto
+    ''' <summary>
+	''' Metodo constructor vacio para Factura
+	''' </summary>
     Public Sub New()
     End Sub
 
-    'Metodos constructores parametrizados
-    '@param invoice - Numero de factura
-    '@param reservationId - Numero de reserva
-    '@param totalAmount - Precio total de la factura
-    Public Sub New(InvoiceId As UInteger, reservationId As UInteger, totalAmount As Double)
+    ''' <summary>
+    ''' Metodo constructor del objeto
+    ''' </summary>
+    ''' <param name="InvoiceId">Numero de factura</param>
+    ''' <param name="ReservationId">Numero de reserva</param>
+    ''' <param name="TotalAmount">Precio total</param>
+    Public Sub New(InvoiceId As UInteger, ReservationId As UInteger, TotalAmount As Double)
         Me.InvoiceId = InvoiceId
-        Me.reservationId = reservationId
-        Me.totalAmount = totalAmount
+        Me.reservationId = ReservationId
+        Me.totalAmount = TotalAmount
     End Sub
 
-    '*propiedades de invoice
+    ''' <summary>
+    ''' Propiedad con get/set para numero de factura
+    ''' </summary>
+    ''' <returns>entero con el numero de factura</returns>
     Public Property InvoiceIdProp() As UInteger
-        'obtener el numero factura
         Get
             Return InvoiceId
         End Get
-        'asignar el numero factura
         Set(ByVal Value As UInteger)
             InvoiceId = Value
         End Set
     End Property
 
-    'propiedades de reservationId
+    ''' <summary>
+    ''' Propiedad con get/set para numero de reserva
+    ''' </summary>
+    ''' <returns>entero con el numero de reserva</returns>
     Public Property ReservationIdProp() As UInteger
-        'obtener el numero de reserva
         Get
             Return reservationId
         End Get
-        'asignar el numero de reserva
         Set(ByVal Value As UInteger)
             reservationId = Value
         End Set
     End Property
 
-    'propiedades de capacity
+    ''' <summary>
+    ''' Propiedad con get/set para precio total
+    ''' </summary>
+    ''' <returns>doble con el precio total</returns>
     Public Property TotalAmountProp() As Double
-        'obtener el precio total de la factura
         Get
             Return totalAmount
         End Get
-        'asignar el precio total de la factura
         Set(ByVal Value As Double)
             totalAmount = Value
         End Set
     End Property
 
-    'propiedades de priceH
+    ''' <summary>
+    ''' Propiedad con get/set para los servicios consumidos
+    ''' </summary>
+    ''' <returns>array con los servicios consumidos</returns>
     Public Property ConsumedServicesProp() As Array
-        'obtener el precio en temporada alta
         Get
             Return consumedServices
         End Get
-        'asignar el precio en temporada alta
         Set(ByVal Value As Array)
             consumedServices = Value
         End Set

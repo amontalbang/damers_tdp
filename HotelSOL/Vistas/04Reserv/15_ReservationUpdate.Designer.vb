@@ -42,12 +42,14 @@ Partial Class Form15
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DepartureDatePicker
         '
-        Me.DepartureDatePicker.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DepartureDatePicker.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.DepartureDatePicker.Location = New System.Drawing.Point(433, 522)
         Me.DepartureDatePicker.MaximumSize = New System.Drawing.Size(200, 20)
         Me.DepartureDatePicker.Name = "DepartureDatePicker"
@@ -56,7 +58,7 @@ Partial Class Form15
         '
         'EntryDatePicker
         '
-        Me.EntryDatePicker.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.EntryDatePicker.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.EntryDatePicker.Location = New System.Drawing.Point(141, 522)
         Me.EntryDatePicker.MaximumSize = New System.Drawing.Size(200, 20)
         Me.EntryDatePicker.Name = "EntryDatePicker"
@@ -65,7 +67,7 @@ Partial Class Form15
         '
         'Label7
         '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -78,7 +80,7 @@ Partial Class Form15
         '
         'Label8
         '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -91,7 +93,7 @@ Partial Class Form15
         '
         'Label6
         '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -104,7 +106,7 @@ Partial Class Form15
         '
         'BoardTextBox
         '
-        Me.BoardTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BoardTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.BoardTextBox.Location = New System.Drawing.Point(294, 455)
         Me.BoardTextBox.MaximumSize = New System.Drawing.Size(342, 20)
         Me.BoardTextBox.Name = "BoardTextBox"
@@ -113,7 +115,7 @@ Partial Class Form15
         '
         'Button1
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Button1.BackColor = System.Drawing.Color.DarkSeaGreen
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Lime
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -127,7 +129,7 @@ Partial Class Form15
         '
         'Label4
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -140,7 +142,7 @@ Partial Class Form15
         '
         'Label3
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -153,7 +155,7 @@ Partial Class Form15
         '
         'RoomIdTextBox
         '
-        Me.RoomIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RoomIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.RoomIdTextBox.Location = New System.Drawing.Point(294, 418)
         Me.RoomIdTextBox.MaximumSize = New System.Drawing.Size(342, 20)
         Me.RoomIdTextBox.Name = "RoomIdTextBox"
@@ -162,7 +164,7 @@ Partial Class Form15
         '
         'ClientIdTextBox
         '
-        Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.ClientIdTextBox.Location = New System.Drawing.Point(294, 381)
         Me.ClientIdTextBox.MaximumSize = New System.Drawing.Size(342, 20)
         Me.ClientIdTextBox.Name = "ClientIdTextBox"
@@ -195,7 +197,7 @@ Partial Class Form15
         '
         'Button2
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(656, 120)
         Me.Button2.MaximumSize = New System.Drawing.Size(120, 30)
@@ -207,7 +209,7 @@ Partial Class Form15
         '
         'Label12
         '
-        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label12.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -220,7 +222,7 @@ Partial Class Form15
         '
         'ReservationIdTextBox
         '
-        Me.ReservationIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ReservationIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.ReservationIdTextBox.Location = New System.Drawing.Point(192, 126)
         Me.ReservationIdTextBox.MaximumSize = New System.Drawing.Size(444, 20)
         Me.ReservationIdTextBox.Name = "ReservationIdTextBox"
@@ -229,20 +231,20 @@ Partial Class Form15
         '
         'DataGridView1
         '
-        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 156)
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersWidth = 40
-        Me.DataGridView1.Size = New System.Drawing.Size(794, 165)
+        Me.DataGridView1.Size = New System.Drawing.Size(794, 141)
         Me.DataGridView1.TabIndex = 98
         '
         'Label13
         '
-        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label13.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.Color.Transparent
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -255,7 +257,7 @@ Partial Class Form15
         '
         'Label5
         '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -266,15 +268,27 @@ Partial Class Form15
         Me.Label5.TabIndex = 99
         Me.Label5.Text = "Núm. reserva:"
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Location = New System.Drawing.Point(12, 179)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(794, 141)
+        Me.Panel1.TabIndex = 101
+        '
         'Form15
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.ReservationIdTextBox)
@@ -295,6 +309,7 @@ Partial Class Form15
         Me.Name = "Form15"
         Me.Text = "HotelSOL"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -319,4 +334,5 @@ Partial Class Form15
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label13 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Panel1 As Panel
 End Class
