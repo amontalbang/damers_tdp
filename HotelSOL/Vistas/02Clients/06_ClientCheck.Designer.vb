@@ -29,7 +29,9 @@ Partial Class Form6
         Me.Label12 = New System.Windows.Forms.Label()
         Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label2
@@ -91,15 +93,25 @@ Partial Class Form6
         '
         'DataGridView1
         '
-        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.White
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 233)
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(794, 122)
+        Me.DataGridView1.Size = New System.Drawing.Size(794, 82)
         Me.DataGridView1.TabIndex = 57
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
+        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Location = New System.Drawing.Point(12, 224)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(794, 82)
+        Me.Panel1.TabIndex = 58
         '
         'Form6
         '
@@ -107,7 +119,7 @@ Partial Class Form6
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.ClientIdTextBox)
@@ -117,6 +129,7 @@ Partial Class Form6
         Me.Name = "Form6"
         Me.Text = "HotelSOL"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -128,4 +141,5 @@ Partial Class Form6
     Friend WithEvents Label12 As Label
     Friend WithEvents ClientIdTextBox As TextBox
     Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents Panel1 As Panel
 End Class

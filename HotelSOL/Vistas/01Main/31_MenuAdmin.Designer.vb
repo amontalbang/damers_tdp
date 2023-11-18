@@ -24,8 +24,19 @@ Partial Class MenuAdmin
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MenuAdmin))
         Me.PanelMenuLateral = New System.Windows.Forms.Panel()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.PanelSubmenuUsuarios = New System.Windows.Forms.Panel()
+        Me.Button27 = New System.Windows.Forms.Button()
+        Me.DeleteUserButton = New System.Windows.Forms.Button()
+        Me.UpdateUserButton = New System.Windows.Forms.Button()
+        Me.AddUserButton = New System.Windows.Forms.Button()
+        Me.GestionUsuariosButton = New System.Windows.Forms.Button()
         Me.PanelSubmenuConsultas = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button23 = New System.Windows.Forms.Button()
+        Me.Button24 = New System.Windows.Forms.Button()
+        Me.Button25 = New System.Windows.Forms.Button()
+        Me.Button26 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
         Me.Button22 = New System.Windows.Forms.Button()
         Me.ButtonConsultas = New System.Windows.Forms.Button()
@@ -61,7 +72,9 @@ Partial Class MenuAdmin
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PanelFormHijo = New System.Windows.Forms.Panel()
         Me.PanelMenuLateral.SuspendLayout()
+        Me.PanelSubmenuUsuarios.SuspendLayout()
         Me.PanelSubmenuConsultas.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.PanelSubmenuServicios.SuspendLayout()
         Me.PanelSubmenuHabitaciones.SuspendLayout()
         Me.PanelSubmenuCliente.SuspendLayout()
@@ -74,7 +87,9 @@ Partial Class MenuAdmin
         '
         Me.PanelMenuLateral.AutoScroll = True
         Me.PanelMenuLateral.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
-        Me.PanelMenuLateral.Controls.Add(Me.Button7)
+        Me.PanelMenuLateral.Controls.Add(Me.Button8)
+        Me.PanelMenuLateral.Controls.Add(Me.PanelSubmenuUsuarios)
+        Me.PanelMenuLateral.Controls.Add(Me.GestionUsuariosButton)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubmenuConsultas)
         Me.PanelMenuLateral.Controls.Add(Me.ButtonConsultas)
         Me.PanelMenuLateral.Controls.Add(Me.PanelSubmenuServicios)
@@ -93,26 +108,125 @@ Partial Class MenuAdmin
         Me.PanelMenuLateral.Size = New System.Drawing.Size(250, 661)
         Me.PanelMenuLateral.TabIndex = 0
         '
-        'Button7
+        'Button8
         '
-        Me.Button7.BackColor = System.Drawing.Color.IndianRed
-        Me.Button7.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button7.FlatAppearance.BorderSize = 0
-        Me.Button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button7.Location = New System.Drawing.Point(0, 1348)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Button7.Size = New System.Drawing.Size(233, 45)
-        Me.Button7.TabIndex = 10
-        Me.Button7.Text = "LOG OUT"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.Button8.BackColor = System.Drawing.Color.IndianRed
+        Me.Button8.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button8.Location = New System.Drawing.Point(0, 1513)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button8.Size = New System.Drawing.Size(233, 45)
+        Me.Button8.TabIndex = 15
+        Me.Button8.Text = "LOG OUT"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'PanelSubmenuUsuarios
+        '
+        Me.PanelSubmenuUsuarios.Controls.Add(Me.Button27)
+        Me.PanelSubmenuUsuarios.Controls.Add(Me.DeleteUserButton)
+        Me.PanelSubmenuUsuarios.Controls.Add(Me.UpdateUserButton)
+        Me.PanelSubmenuUsuarios.Controls.Add(Me.AddUserButton)
+        Me.PanelSubmenuUsuarios.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelSubmenuUsuarios.Location = New System.Drawing.Point(0, 1393)
+        Me.PanelSubmenuUsuarios.Name = "PanelSubmenuUsuarios"
+        Me.PanelSubmenuUsuarios.Size = New System.Drawing.Size(233, 120)
+        Me.PanelSubmenuUsuarios.TabIndex = 9
+        '
+        'Button27
+        '
+        Me.Button27.BackColor = System.Drawing.Color.IndianRed
+        Me.Button27.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button27.FlatAppearance.BorderSize = 0
+        Me.Button27.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(30, Byte), Integer), CType(CType(30, Byte), Integer))
+        Me.Button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button27.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Button27.Location = New System.Drawing.Point(0, 120)
+        Me.Button27.Name = "Button27"
+        Me.Button27.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button27.Size = New System.Drawing.Size(233, 45)
+        Me.Button27.TabIndex = 13
+        Me.Button27.Text = "LOG OUT"
+        Me.Button27.UseVisualStyleBackColor = False
+        '
+        'DeleteUserButton
+        '
+        Me.DeleteUserButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.DeleteUserButton.Dock = System.Windows.Forms.DockStyle.Top
+        Me.DeleteUserButton.FlatAppearance.BorderSize = 0
+        Me.DeleteUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.DeleteUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteUserButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DeleteUserButton.Location = New System.Drawing.Point(0, 80)
+        Me.DeleteUserButton.Name = "DeleteUserButton"
+        Me.DeleteUserButton.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.DeleteUserButton.Size = New System.Drawing.Size(233, 40)
+        Me.DeleteUserButton.TabIndex = 8
+        Me.DeleteUserButton.Text = "Eliminar Usuario"
+        Me.DeleteUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.DeleteUserButton.UseVisualStyleBackColor = False
+        '
+        'UpdateUserButton
+        '
+        Me.UpdateUserButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.UpdateUserButton.Dock = System.Windows.Forms.DockStyle.Top
+        Me.UpdateUserButton.FlatAppearance.BorderSize = 0
+        Me.UpdateUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.UpdateUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.UpdateUserButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.UpdateUserButton.Location = New System.Drawing.Point(0, 40)
+        Me.UpdateUserButton.Name = "UpdateUserButton"
+        Me.UpdateUserButton.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.UpdateUserButton.Size = New System.Drawing.Size(233, 40)
+        Me.UpdateUserButton.TabIndex = 7
+        Me.UpdateUserButton.Text = "Actualizar Usuario"
+        Me.UpdateUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.UpdateUserButton.UseVisualStyleBackColor = False
+        '
+        'AddUserButton
+        '
+        Me.AddUserButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.AddUserButton.Dock = System.Windows.Forms.DockStyle.Top
+        Me.AddUserButton.FlatAppearance.BorderSize = 0
+        Me.AddUserButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.AddUserButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddUserButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.AddUserButton.Location = New System.Drawing.Point(0, 0)
+        Me.AddUserButton.Name = "AddUserButton"
+        Me.AddUserButton.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.AddUserButton.Size = New System.Drawing.Size(233, 40)
+        Me.AddUserButton.TabIndex = 6
+        Me.AddUserButton.Text = "Añadir Usuario"
+        Me.AddUserButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.AddUserButton.UseVisualStyleBackColor = False
+        '
+        'GestionUsuariosButton
+        '
+        Me.GestionUsuariosButton.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
+        Me.GestionUsuariosButton.Dock = System.Windows.Forms.DockStyle.Top
+        Me.GestionUsuariosButton.FlatAppearance.BorderSize = 0
+        Me.GestionUsuariosButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.GestionUsuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.GestionUsuariosButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GestionUsuariosButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.GestionUsuariosButton.Location = New System.Drawing.Point(0, 1348)
+        Me.GestionUsuariosButton.Name = "GestionUsuariosButton"
+        Me.GestionUsuariosButton.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.GestionUsuariosButton.Size = New System.Drawing.Size(233, 45)
+        Me.GestionUsuariosButton.TabIndex = 14
+        Me.GestionUsuariosButton.Text = "GESTIÓN USUARIOS"
+        Me.GestionUsuariosButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.GestionUsuariosButton.UseVisualStyleBackColor = False
         '
         'PanelSubmenuConsultas
         '
         Me.PanelSubmenuConsultas.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
+        Me.PanelSubmenuConsultas.Controls.Add(Me.Panel1)
         Me.PanelSubmenuConsultas.Controls.Add(Me.Button21)
         Me.PanelSubmenuConsultas.Controls.Add(Me.Button22)
         Me.PanelSubmenuConsultas.Dock = System.Windows.Forms.DockStyle.Top
@@ -120,6 +234,87 @@ Partial Class MenuAdmin
         Me.PanelSubmenuConsultas.Name = "PanelSubmenuConsultas"
         Me.PanelSubmenuConsultas.Size = New System.Drawing.Size(233, 91)
         Me.PanelSubmenuConsultas.TabIndex = 9
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Button23)
+        Me.Panel1.Controls.Add(Me.Button24)
+        Me.Panel1.Controls.Add(Me.Button25)
+        Me.Panel1.Controls.Add(Me.Button26)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 80)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(233, 171)
+        Me.Panel1.TabIndex = 7
+        '
+        'Button23
+        '
+        Me.Button23.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button23.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button23.FlatAppearance.BorderSize = 0
+        Me.Button23.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button23.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button23.Location = New System.Drawing.Point(0, 120)
+        Me.Button23.Name = "Button23"
+        Me.Button23.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.Button23.Size = New System.Drawing.Size(233, 40)
+        Me.Button23.TabIndex = 6
+        Me.Button23.Text = "Comprobar Habitación"
+        Me.Button23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button23.UseVisualStyleBackColor = False
+        '
+        'Button24
+        '
+        Me.Button24.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button24.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button24.FlatAppearance.BorderSize = 0
+        Me.Button24.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button24.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button24.Location = New System.Drawing.Point(0, 80)
+        Me.Button24.Name = "Button24"
+        Me.Button24.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.Button24.Size = New System.Drawing.Size(233, 40)
+        Me.Button24.TabIndex = 5
+        Me.Button24.Text = "Borrar Habitación"
+        Me.Button24.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button24.UseVisualStyleBackColor = False
+        '
+        'Button25
+        '
+        Me.Button25.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button25.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button25.FlatAppearance.BorderSize = 0
+        Me.Button25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button25.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button25.Location = New System.Drawing.Point(0, 40)
+        Me.Button25.Name = "Button25"
+        Me.Button25.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.Button25.Size = New System.Drawing.Size(233, 40)
+        Me.Button25.TabIndex = 4
+        Me.Button25.Text = "Actualizar Habitación"
+        Me.Button25.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button25.UseVisualStyleBackColor = False
+        '
+        'Button26
+        '
+        Me.Button26.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button26.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Button26.FlatAppearance.BorderSize = 0
+        Me.Button26.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button26.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Button26.Location = New System.Drawing.Point(0, 0)
+        Me.Button26.Name = "Button26"
+        Me.Button26.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
+        Me.Button26.Size = New System.Drawing.Size(233, 40)
+        Me.Button26.TabIndex = 3
+        Me.Button26.Text = "Añadir Habitación"
+        Me.Button26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button26.UseVisualStyleBackColor = False
         '
         'Button21
         '
@@ -624,9 +819,9 @@ Partial Class MenuAdmin
         Me.LabelUsername.ForeColor = System.Drawing.Color.LightCoral
         Me.LabelUsername.Location = New System.Drawing.Point(12, 236)
         Me.LabelUsername.Name = "LabelUsername"
-        Me.LabelUsername.Size = New System.Drawing.Size(22, 21)
+        Me.LabelUsername.Size = New System.Drawing.Size(107, 21)
         Me.LabelUsername.TabIndex = 2
-        Me.LabelUsername.Text = "..."
+        Me.LabelUsername.Text = "Administrador"
         Me.LabelUsername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LabelUser
@@ -673,7 +868,9 @@ Partial Class MenuAdmin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "HotelSOL"
         Me.PanelMenuLateral.ResumeLayout(False)
+        Me.PanelSubmenuUsuarios.ResumeLayout(False)
         Me.PanelSubmenuConsultas.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
         Me.PanelSubmenuServicios.ResumeLayout(False)
         Me.PanelSubmenuHabitaciones.ResumeLayout(False)
         Me.PanelSubmenuCliente.ResumeLayout(False)
@@ -721,5 +918,16 @@ Partial Class MenuAdmin
     Friend WithEvents LabelUsername As Label
     Friend WithEvents LabelUser As Label
     Friend WithEvents PanelFormHijo As Panel
-    Friend WithEvents Button7 As Button
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Button23 As Button
+    Friend WithEvents Button24 As Button
+    Friend WithEvents Button25 As Button
+    Friend WithEvents Button26 As Button
+    Friend WithEvents PanelSubmenuUsuarios As Panel
+    Friend WithEvents Button27 As Button
+    Friend WithEvents DeleteUserButton As Button
+    Friend WithEvents UpdateUserButton As Button
+    Friend WithEvents AddUserButton As Button
+    Friend WithEvents GestionUsuariosButton As Button
+    Friend WithEvents Button8 As Button
 End Class

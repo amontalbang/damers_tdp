@@ -1,23 +1,25 @@
-﻿Public Class Form4
-    Private connector As DatabaseConnection = New DatabaseConnection
+﻿''' <summary>
+''' Vista de añadir cliente
+''' </summary>
+Public Class Form4
+
     Private controller As Controller = New Controller
 
+    ''' <summary>
+    ''' Carga del formulario
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
     End Sub
 
+    ''' <summary>
+    ''' Metodo que captura el boton para añadir un cliente
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'Dim cmd As New System.Data.SqlClient.SqlCommand
-        'Dim phone As Integer = Integer.Parse(PhoneTextBox.Text).ToString()
-        'Dim credCard As Int64 = Int64.Parse(CredCardTextBox.Text).ToString()
-        'Dim birth As Date = Date.Parse(BirthDatePicker.Text).ToString()
-        'cmd.CommandType = System.Data.CommandType.Text
-        'cmd.CommandText = "INSERT Clientes (IDcliente, Nombre, Apellidos, FechaNac, Telefono, Email, Direccion, TarjetaCred, Descuento, ReservaActiva) VALUES ('" & ClientIdTextBox.Text & "', '" & NameTextBox.Text & "', '" & SurnameTextBox.Text & "', '" & birth & "', '" & phone & "', '" & MailTextBox.Text & "', '" & AdressTextBox.Text & "', '" & credCard & "', '" & DiscountTextBox.Text & "', '" & 0 & "')"
-        'cmd.Connection = connector.Connect()
-        'cmd.ExecuteNonQuery()
-        'connector.Disconnect()
-        'MessageBox.Show("Cliente registrado correctamente")
-
         Dim idCliente As String = ClientIdTextBox.Text
         Dim nombre As String = NameTextBox.Text
         Dim apellidos As String = SurnameTextBox.Text
@@ -28,7 +30,15 @@
         Dim tarjCred As String = CredCardTextBox.Text
         Dim descuento As UInteger = DiscountTextBox.Text
         Dim newClient As Client = New Client(idCliente, nombre, apellidos, fechaNac, telefono, mail, direccion, tarjCred, descuento, 0)
-        controller.addClient(newClient)
+        Try
+            If controller.ClientExists(idCliente) Then
+                MessageBox.Show("EL CLIENTE YA EXISTE EN LA BASE DE DATOS")
+            Else
+                controller.AddClient(newClient)
+                MessageBox.Show("CLIENTE CREADO CORRECTAMENTE")
+            End If
+        Catch ex As Exception
+            MessageBox.Show("NO SE HA PODIDO ESTABLECER CONEXIÓN CON LA BASE DE DATOS '" & vbCr & "''" & vbCr & "'ERROR: '" & ex.ToString & "'")
+        End Try
     End Sub
-
 End Class

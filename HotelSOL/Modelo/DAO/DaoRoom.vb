@@ -1,6 +1,4 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Reflection.Emit
-Imports HotelSOL.Room
 
 Public Class DAORoom
     Private connector As DatabaseConnection = New DatabaseConnection
@@ -16,37 +14,21 @@ Public Class DAORoom
         command.CommandText = "INSERT Habitaciones (IDhabitacion, Tipo, Capacidad, PrecioL, PrecioM, PrecioH) VALUES 
             ('" & room.RoomIdProp() & "', '" & room.TypeProp() & "', '" & room.CapacityProp() & "', '" & room.PriceLProp() & "', '" & room.PriceMProp() & "', '" & room.PriceHProp() & "')"
         ExecuteQuery()
-        MessageBox.Show("Habitación creada correctamente")
     End Sub
 
     Public Sub DeleteRoom(room As Room)
-        command.CommandText = "DELETE from Habitaciones where IDhabitacion = '" & room.RoomIdProp() & "'"
+        command.CommandText = "DELETE FROM Habitaciones where IDhabitacion = '" & room.RoomIdProp() & "'"
         ExecuteQuery()
-        MessageBox.Show("Habitación eliminada con éxito")
     End Sub
 
     Public Sub UpdateRoom(Room As Room)
         command.CommandText = "UPDATE Habitaciones SET Tipo = '" & Room.TypeProp() & "', Capacidad = '" & Room.CapacityProp() & "', 
             PrecioL = '" & Room.PriceLProp() & "', PrecioM = '" & Room.PriceMProp() & "', PrecioH = '" & Room.PriceHProp() & "' WHERE IDhabitacion = '" & Room.RoomIdProp() & "'"
         ExecuteQuery()
-        MessageBox.Show("Habitación actualizada correctamente")
-    End Sub
-
-    Public Sub CheckRoom(room As Room)
-        connector.Connect()
-        Dim consulta As String = "SELECT * from Habitaciones WHERE IDhabitacion = '" & room.RoomIdProp() & "'"
-        Dim adaptador As New SqlDataAdapter(consulta, connector.sqlConnection)
-        Dim dt As New DataTable
-        adaptador.Fill(dt)
-        Form11.DataGridView1.DataSource = dt
-        If dt.Rows.Count = 0 Then
-            MessageBox.Show("No existe ninguna habitacion con ese número de habitacion")
-        End If
-        connector.Disconnect()
     End Sub
 
     Public Function RoomExists(roomId As UInteger) As Boolean
-        Dim query As String = "SELECT * from Habitaciones WHERE IDhabitacion = '" & roomId & "'"
+        Dim query As String = "SELECT * FROM Habitaciones WHERE IDhabitacion = '" & roomId & "'"
         Dim adapter As New SqlDataAdapter(query, connector.Connect())
         Dim dt As New DataTable
         adapter.Fill(dt)
@@ -57,7 +39,7 @@ Public Class DAORoom
     End Function
 
     Public Function GetRoomById(roomId As UInteger) As Room
-        Dim query As String = "SELECT from Habitaciones WHERE IDhabitacion = '" & roomId & "'"
+        Dim query As String = "SELECT * FROM Habitaciones WHERE IDhabitacion = '" & roomId & "'"
         Dim adapter As New SqlDataAdapter(query, connector.Connect())
         Dim dt As New DataTable
         adapter.Fill(dt)
@@ -65,8 +47,21 @@ Public Class DAORoom
             Return New Room()
         End If
         Dim dr As DataRow = dt.AsEnumerable().ElementAt(0)
-        Return New Room(dr.Field(Of String)("IDhabitacion"), dr.Field(Of String)("Tipo"), dr.Field(Of String)("Capacidad"), dr.Field(Of String)("PrecioH"), dr.Field(Of String)("PrecioM"), dr.Field(Of String)("PrecioL"))
-
+        Dim room As New Room
+        Dim priceL As String
+        Dim priceM As String
+        Dim priceH As String
+        'Return New Room(dr.Field(Of String)("IDhabitacion"), dr.Field(Of String)("Tipo"), dr.Field(Of String)("Capacidad"), dr.Field(Of UInteger)("PrecioH"), dr.Field(Of UInteger)("PrecioM"), dr.Field(Of UInteger)("PrecioL"))
+        room.RoomIdProp = dt.AsEnumerable().ElementAt(0).Item(0).ToString
+        room.TypeProp = dt.AsEnumerable().ElementAt(0).Item(1).ToString
+        room.CapacityProp = dt.AsEnumerable().ElementAt(0).Item(2).ToString
+        priceL = dt.AsEnumerable().ElementAt(0).Item(3).ToString
+        room.PriceLProp = priceL
+        priceM = dt.AsEnumerable().ElementAt(0).Item(4).ToString
+        room.PriceMProp = priceM
+        priceH = dt.AsEnumerable().ElementAt(0).Item(5).ToString
+        room.PriceHProp = priceH
+        Return New Room(room.RoomIdProp, room.TypeProp, room.CapacityProp, room.PriceLProp, room.PriceMProp, room.PriceHProp)
     End Function
 
     Public Function GetRoomList() As DataTable

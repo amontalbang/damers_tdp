@@ -1,8 +1,10 @@
-﻿'Esta clase contiene los atributos y metodos de la clase Habitacion
-'@author DAMERs TPD
+﻿''' <summary>
+''' Clase que alberga los atributos, constructores y propiedades de Habitacion
+''' </summary>
 
 Public Class Room
 
+    'Atributos de la clase Habitacion
     Private roomId As String
     Private type As String
     Private capacity As String
@@ -10,96 +12,111 @@ Public Class Room
     Private priceM As UInteger
     Private priceL As UInteger
 
-    'Metodo constructor por defecto
+    ''' <summary>
+	''' Metodo constructor vacio para Habitacion
+	''' </summary>
     Public Sub New()
     End Sub
 
-    'Metodos constructores parametrizados
-    '@param roomId - Numero de habitacion
-    '@param type - Tipo de habitacion
-    '@param capacity - Capacidad de la habitacion
-    '@param price - Precio dependiendo de la temporada
-
-    Public Sub New(roomId As String)
-        Me.roomId = roomId
+    ''' <summary>
+    ''' Metodo constructor con numero de habitacion
+    ''' </summary>
+    ''' <param name="RoomId">numero de habitacion</param>
+    Public Sub New(RoomId As String)
+        Me.roomId = RoomId
     End Sub
 
-    Public Sub New(roomId As String, type As String, capacity As String, priceH As UInteger, priceM As UInteger, priceL As UInteger)
-        Me.roomId = roomId
-        Me.type = type
-        Me.capacity = capacity
-        Me.priceH = priceH
-        Me.priceM = priceM
-        Me.priceL = priceL
+    ''' <summary>
+    ''' Metodo constructor con los atributos del objeto
+    ''' </summary>
+    ''' <param name="RoomId">numero de habitacion</param>
+    ''' <param name="Type">tipo de habitacion</param>
+    ''' <param name="Capacity">capacidad de huespedes</param>
+    ''' <param name="PriceH">precio temporada alta</param>
+    ''' <param name="PriceM">precio temporada media</param>
+    ''' <param name="PriceL">precio temporada baja</param>
+    Public Sub New(RoomId As String, Type As String, Capacity As String, PriceH As UInteger, PriceM As UInteger, PriceL As UInteger)
+        Me.roomId = RoomId
+        Me.type = Type
+        Me.capacity = Capacity
+        Me.priceH = PriceH
+        Me.priceM = PriceM
+        Me.priceL = PriceL
     End Sub
 
-    '*propiedades de roomId
+    ''' <summary>
+    ''' Propiedad con get/set para numero de habitacion
+    ''' </summary>
+    ''' <returns>cadena con numero de habitacion</returns>
     Public Property RoomIdProp() As String
-        'obtener el numero de habitacion
         Get
             Return roomId
         End Get
-        'asignar el numero de habitacion
         Set(ByVal Value As String)
             roomId = Value
         End Set
     End Property
 
-    'propiedades de type
+    ''' <summary>
+    ''' Propiedad con get/set para tipo de habitacion
+    ''' </summary>
+    ''' <returns>cadena con tipo de habitacion</returns>
     Public Property TypeProp() As String
-        'obtener el tipo de habitacion
         Get
             Return type
         End Get
-        'asignar el tipo de habitacion
         Set(ByVal Value As String)
             type = Value
         End Set
     End Property
 
-    'propiedades de capacity
+    ''' <summary>
+    ''' Propiedad con get/set para capacidad de habitacion
+    ''' </summary>
+    ''' <returns>cadena con capacidad de habitacion</returns>
     Public Property CapacityProp() As String
-        'obtener la capacidad de huespedes para una habitacion
         Get
             Return capacity
         End Get
-        'asignar la capacidad de huespedes para una habitacion
         Set(ByVal Value As String)
             capacity = Value
         End Set
     End Property
 
-    'propiedades de priceH
+    ''' <summary>
+    ''' Propiedad con get/set para precio en temporada alta
+    ''' </summary>
+    ''' <returns>entero con el precio de la habitacion</returns>
     Public Property PriceHProp() As UInteger
-        'obtener el precio en temporada alta
         Get
             Return priceH
         End Get
-        'asignar el precio en temporada alta
         Set(ByVal Value As UInteger)
             priceH = Value
         End Set
     End Property
 
-    'propiedades de priceM
+    ''' <summary>
+    ''' Propiedad con get/set para precio en temporada media
+    ''' </summary>
+    ''' <returns>entero con el precio de la habitacion</returns>
     Public Property PriceMProp() As UInteger
-        'obtener el precio en temporada media
         Get
             Return priceM
         End Get
-        'asignar el precio en temporada media
         Set(ByVal Value As UInteger)
             priceM = Value
         End Set
     End Property
 
-    'propiedades de priceL
+    ''' <summary>
+    ''' Propiedad con get/set para precio en temporada baja
+    ''' </summary>
+    ''' <returns>entero con el precio de la habitacion</returns>
     Public Property PriceLProp() As UInteger
-        'obtener el precio en temporada baja
         Get
             Return priceL
         End Get
-        'asignar el precio en temporada baja
         Set(ByVal Value As UInteger)
             priceL = Value
         End Set

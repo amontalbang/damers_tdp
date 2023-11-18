@@ -134,6 +134,24 @@
     <Compile Include="Vistas\02Clients\07_ClientDelete.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\07Users\UserAdd.Designer.vb">
+      <DependentUpon>UserAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\07Users\UserAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\07Users\UserDelete.Designer.vb">
+      <DependentUpon>UserDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\07Users\UserDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\07Users\UserUpdate.Designer.vb">
+      <DependentUpon>UserUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\07Users\UserUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\29_ListShowClients.Designer.vb">
       <DependentUpon>29_ListShowClients.vb</DependentUpon>
     </Compile>
@@ -291,6 +309,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\02Clients\07_ClientDelete.resx">
       <DependentUpon>07_ClientDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\07Users\UserAdd.resx">
+      <DependentUpon>UserAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\07Users\UserDelete.resx">
+      <DependentUpon>UserDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\07Users\UserUpdate.resx">
+      <DependentUpon>UserUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\29_ListShowClients.resx">
       <DependentUpon>29_ListShowClients.vb</DependentUpon>

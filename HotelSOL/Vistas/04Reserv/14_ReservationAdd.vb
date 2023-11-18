@@ -1,10 +1,16 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
+﻿''' <summary>
+''' Vista de añadir reserva
+''' </summary>
 Public Class Form14
 
     Private controller As Controller = New Controller
 
-    Private Sub Form14_Load(Sender As Object, E As EventArgs) Handles MyBase.Load
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub Form14_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
     End Sub
 
@@ -22,5 +28,4 @@ Public Class Form14
             MessageBox.Show("Ha ocurrido un problema y la reserva no ha podido darse de alta.")
         End Try
     End Sub
-
 End Class

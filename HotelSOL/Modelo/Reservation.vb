@@ -1,10 +1,10 @@
-﻿'Esta clase contiene los atributos y metodos de la clase Reserva
-'@author DAMERs TPD
-
-Imports System.Collections.ObjectModel
-Imports System.Data.SqlClient
+﻿''' <summary>
+''' Clase que alberga los atributos, constructores y propiedades de Reserva
+''' </summary>
 
 Public Class Reservation
+
+    'Definicion de atributos
     Private reservationId As UInteger
     Private roomId As UInteger
     Private clientId As String
@@ -14,7 +14,9 @@ Public Class Reservation
     Private board As String
     Private isActive As Boolean
 
-    'Metodo constructor por defecto
+    ''' <summary>
+	''' Metodo constructor vacio para Reserva
+	''' </summary>
     Public Sub New()
     End Sub
 
@@ -54,85 +56,92 @@ Public Class Reservation
         Me.isActive = isActive
     End Sub
 
-    '*propiedades de reservationId
+    ''' <summary>
+    ''' Propiedad con get/set para numero de reserva
+    ''' </summary>
+    ''' <returns>entero con el numero de reserva</returns>
     Public Property ReservationIdProp() As UInteger
-        'obtener el numero de habitacion
         Get
             Return reservationId
         End Get
-        'asignar el numero de habitacion
         Set(ByVal Value As UInteger)
             reservationId = Value
         End Set
     End Property
 
-    'propiedades de roomId
+    ''' <summary>
+    ''' Propiedad con get/set para numero de habitacion
+    ''' </summary>
+    ''' <returns>entero con el numero de habitacion</returns>
     Public Property RoomIdProp() As UInteger
-        'obtener el tipo de habitacion
         Get
             Return roomId
         End Get
-        'asignar el tipo de habitacion
         Set(ByVal Value As UInteger)
             roomId = Value
         End Set
     End Property
 
-    'propiedades de clientId
+    ''' <summary>
+    ''' Propiedad con get/set para Id de cliente
+    ''' </summary>
+    ''' <returns>cadena con el Id de cliente</returns>
     Public Property ClientIdProp() As String
-        'obtener el tipo de habitacion
         Get
             Return clientId
         End Get
-        'asignar el tipo de habitacion
         Set(ByVal Value As String)
             clientId = Value
         End Set
     End Property
 
-    'propiedades de entryDate
+    ''' <summary>
+    ''' Propiedad con get/set para fecha de entrada
+    ''' </summary>
+    ''' <returns>fecha de entrada</returns>
     Public Property EntryDateProp() As Date
-        'obtener la capacidad de huespedes para una habitacion
         Get
             Return entryDate
         End Get
-        'asignar la capacidad de huespedes para una habitacion
         Set(ByVal Value As Date)
             entryDate = Value
         End Set
     End Property
 
-    'propiedades de depatureDate
+    ''' <summary>
+    ''' Propiedad con get/set para fecha de salida
+    ''' </summary>
+    ''' <returns>fecha de salida</returns>
     Public Property DepartureDateProp() As Date
-        'obtener el precio en temporada alta
         Get
             Return depatureDate
         End Get
-        'asignar el precio en temporada alta
         Set(ByVal Value As Date)
             depatureDate = Value
         End Set
     End Property
 
-    'propiedades de season
+    ''' <summary>
+    ''' Propiedad con get/set para temporada
+    ''' </summary>
+    ''' <returns>cadena indicando la temporada</returns>
     Public Property SeasonProp() As String
-        'obtener el precio en temporada media
         Get
             Return season
         End Get
-        'asignar el precio en temporada media
         Set(ByVal Value As String)
             season = Value
         End Set
     End Property
 
-    'propiedades de board
+    ''' <summary>
+    ''' Propiedad con get/set para regimen
+    ''' </summary>
+    ''' <returns>cadena indicando el regimen</returns>
     Public Property BoardProp() As String
-        'obtener el precio en temporada baja
         Get
             Return board
         End Get
-        'asignar el precio en temporada baja
         Set(ByVal Value As String)
             board = Value
         End Set
@@ -144,7 +153,6 @@ Public Class Reservation
         Get
             Return isActive
         End Get
-        'asignar el precio en temporada baja
         Set(ByVal Value As Boolean)
             isActive = Value
         End Set
