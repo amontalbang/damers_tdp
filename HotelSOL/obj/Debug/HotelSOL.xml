@@ -177,6 +177,12 @@ HotelSOL
  </summary>
  <returns>devuelve lista con todos los usuarios</returns>
 </member>
+<member name="M:HotelSOL.Controller.GenerateInvoice(HotelSOL.Reservation)">
+ <summary>
+ Método para generar una nueva factura
+ </summary>
+ <param name="Reservation"></param>
+</member>
 <member name="M:HotelSOL.Controller.UserLogin(System.String,System.String)">
  <summary>
  Metodo que instancia on objeto daoUser y accede al metodo de comprobar las credenciales para el login
@@ -675,12 +681,6 @@ HotelSOL
  <param name="ReservationId">Numero de reserva</param>
  <param name="TotalAmount">Precio total</param>
 </member>
-<member name="P:HotelSOL.Invoice.InvoiceIdProp">
- <summary>
- Propiedad con get/set para numero de factura
- </summary>
- <returns>entero con el numero de factura</returns>
-</member>
 <member name="P:HotelSOL.Invoice.ReservationIdProp">
  <summary>
  Propiedad con get/set para numero de reserva
@@ -772,19 +772,6 @@ HotelSOL
  Metodo constructor vacio para Reserva
  </summary>
 </member>
-<member name="M:HotelSOL.Reservation.#ctor(System.UInt32,System.UInt32,System.String,System.DateTime,System.DateTime,System.String,System.String,System.Boolean)">
- <summary>
-  Metodo constructor con todos los atributos del objeto
- </summary>
- <param name="ReservationId">Numero de reserva</param>
- <param name="RoomId">Numero de habitacion</param>
- <param name="ClientId">Id del cliente</param>
- <param name="EntryDate">Fecha de entrada</param>
- <param name="DepatureDate">Fecha de salida</param>
- <param name="Season">Temporada</param>
- <param name="Board">Regimen</param>
- <param name="Status">Estado de la reseva</param>
-</member>
 <member name="P:HotelSOL.Reservation.ReservationIdProp">
  <summary>
  Propiedad con get/set para numero de reserva
@@ -826,12 +813,6 @@ HotelSOL
  Propiedad con get/set para regimen
  </summary>
  <returns>cadena indicando el regimen</returns>
-</member>
-<member name="P:HotelSOL.Reservation.StatusProp">
- <summary>
- Propiedad con get/set para estado de la reserva
- </summary>
- <returns>booleano estado de la reserva</returns>
 </member>
 <member name="T:HotelSOL.Form1">
  <summary>
@@ -1051,13 +1032,6 @@ HotelSOL
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:HotelSOL.Form14.Button1_Click(System.Object,System.EventArgs)">
- <summary>
- 
- </summary>
- <param name="sender"></param>
- <param name="e"></param>
-</member>
 <member name="T:HotelSOL.Form24">
  <summary>
  Vista de añadir servicio
@@ -1125,6 +1099,41 @@ HotelSOL
 <member name="M:HotelSOL.LoginForm1.Cancel_Click(System.Object,System.EventArgs)">
  <summary>
  Captura de boton cancelar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form30">
+ <summary>
+ Vista Menu Trabajador
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.Form30_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form30.ocultarSubmenu">
+ <summary>
+ Metodo para ocultar los submenus
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.mostrarSubmenu(System.Windows.Forms.Panel)">
+ <summary>
+ Metodo para mostrar los submenus
+ </summary>
+ <param name="submenu"></param>
+</member>
+<member name="M:HotelSOL.Form30.openFormHijo(System.Windows.Forms.Form)">
+ <summary>
+ Metodo para mostrarlas vistas de las secciones en un panel secundario
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.Button7_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo para Logout y regreso a menu principal
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

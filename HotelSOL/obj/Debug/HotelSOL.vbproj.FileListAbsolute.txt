@@ -48,28 +48,22 @@ C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debu
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.vbproj.AssemblyReference.cache
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form1.resources
-C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form2.resources
-C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form3.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form4.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form5.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form6.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form7.resources
-C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form8.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form9.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form10.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form11.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form12.resources
-C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form13.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form14.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form15.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form16.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form17.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form18.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form19.resources
-C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form20.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form21.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form22.resources
-C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form23.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form24.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form25.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form26.resources
@@ -89,3 +83,9 @@ C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.MenuAdmin.resou
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.UserAdd.resources
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.UserDelete.resources
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.UserUpdate.resources
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.UserAdd.resources
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.UserDelete.resources
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.UserUpdate.resources
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form29.resources
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Form30.resources
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.MenuAdmin.resources

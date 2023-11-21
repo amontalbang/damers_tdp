@@ -31,13 +31,13 @@ Partial Class Form14
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.RoomIdTextBox = New System.Windows.Forms.TextBox()
         Me.DepartureDatePicker = New System.Windows.Forms.DateTimePicker()
         Me.EntryDatePicker = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.RoomSelector = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label2
@@ -127,16 +127,6 @@ Partial Class Form14
         Me.Label6.TabIndex = 76
         Me.Label6.Text = "Régimen:"
         '
-        'RoomIdTextBox
-        '
-        Me.RoomIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.RoomIdTextBox.Location = New System.Drawing.Point(331, 243)
-        Me.RoomIdTextBox.MaximumSize = New System.Drawing.Size(300, 20)
-        Me.RoomIdTextBox.MinimumSize = New System.Drawing.Size(300, 20)
-        Me.RoomIdTextBox.Name = "RoomIdTextBox"
-        Me.RoomIdTextBox.Size = New System.Drawing.Size(300, 20)
-        Me.RoomIdTextBox.TabIndex = 75
-        '
         'DepartureDatePicker
         '
         Me.DepartureDatePicker.Anchor = System.Windows.Forms.AnchorStyles.None
@@ -197,19 +187,27 @@ Partial Class Form14
         Me.ComboBox1.Size = New System.Drawing.Size(300, 21)
         Me.ComboBox1.TabIndex = 81
         '
+        'RoomSelector
+        '
+        Me.RoomSelector.FormattingEnabled = True
+        Me.RoomSelector.Location = New System.Drawing.Point(331, 240)
+        Me.RoomSelector.Name = "RoomSelector"
+        Me.RoomSelector.Size = New System.Drawing.Size(300, 21)
+        Me.RoomSelector.TabIndex = 82
+        '
         'Form14
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.RoomSelector)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.DepartureDatePicker)
         Me.Controls.Add(Me.EntryDatePicker)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.RoomIdTextBox)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -231,11 +229,11 @@ Partial Class Form14
     Friend WithEvents Label3 As Label
     Friend WithEvents ClientIdTextBox As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents RoomIdTextBox As TextBox
     Friend WithEvents DepartureDatePicker As DateTimePicker
     Friend WithEvents EntryDatePicker As DateTimePicker
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents RoomSelector As ComboBox
 End Class

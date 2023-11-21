@@ -26,7 +26,6 @@ Partial Class Form27
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ServiceTextBox = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -34,6 +33,7 @@ Partial Class Form27
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RoomSelector = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -74,15 +74,6 @@ Partial Class Form27
         Me.Label3.Size = New System.Drawing.Size(110, 25)
         Me.Label3.TabIndex = 88
         Me.Label3.Text = "Núm hab.:"
-        '
-        'ClientIdTextBox
-        '
-        Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.ClientIdTextBox.Location = New System.Drawing.Point(210, 374)
-        Me.ClientIdTextBox.MaximumSize = New System.Drawing.Size(165, 20)
-        Me.ClientIdTextBox.Name = "ClientIdTextBox"
-        Me.ClientIdTextBox.Size = New System.Drawing.Size(165, 20)
-        Me.ClientIdTextBox.TabIndex = 87
         '
         'Label4
         '
@@ -165,12 +156,22 @@ Partial Class Form27
         Me.Panel1.Size = New System.Drawing.Size(794, 213)
         Me.Panel1.TabIndex = 95
         '
+        'RoomSelector
+        '
+        Me.RoomSelector.FormattingEnabled = True
+        Me.RoomSelector.Location = New System.Drawing.Point(210, 373)
+        Me.RoomSelector.Name = "RoomSelector"
+        Me.RoomSelector.Size = New System.Drawing.Size(154, 21)
+        Me.RoomSelector.TabIndex = 96
+        Me.RoomSelector.Text = "Seleccione una habitación"
+        '
         'Form27
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.RoomSelector)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
@@ -178,7 +179,6 @@ Partial Class Form27
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ServiceTextBox)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.ClientIdTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -193,7 +193,6 @@ Partial Class Form27
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents ClientIdTextBox As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents ServiceTextBox As TextBox
     Friend WithEvents Label5 As Label
@@ -201,4 +200,5 @@ Partial Class Form27
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents RoomSelector As ComboBox
 End Class

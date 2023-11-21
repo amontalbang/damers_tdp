@@ -18,7 +18,7 @@ Public Class DatabaseConnection
     ''' <returns>Devuelve una conexion abierta con SQL</returns>
     Public Function Connect() As SqlConnection
         Try
-            sqlConnection = New SqlConnection("Data Source = MAQUEDA\SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
+            sqlConnection = New SqlConnection("Data Source = LAPTOP-QH1U0LAN\SQLEXPRESS;Initial Catalog=HotelSOL;Integrated Security=True")
             sqlConnection.Open()
             Return sqlConnection
         Catch ex As Exception

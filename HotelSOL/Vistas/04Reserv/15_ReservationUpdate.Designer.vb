@@ -32,7 +32,6 @@ Partial Class Form15
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.RoomIdTextBox = New System.Windows.Forms.TextBox()
         Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -43,6 +42,7 @@ Partial Class Form15
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.RoomSelector = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -152,15 +152,6 @@ Partial Class Form15
         Me.Label3.Size = New System.Drawing.Size(111, 25)
         Me.Label3.TabIndex = 85
         Me.Label3.Text = "ID Cliente:"
-        '
-        'RoomIdTextBox
-        '
-        Me.RoomIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.RoomIdTextBox.Location = New System.Drawing.Point(294, 418)
-        Me.RoomIdTextBox.MaximumSize = New System.Drawing.Size(342, 20)
-        Me.RoomIdTextBox.Name = "RoomIdTextBox"
-        Me.RoomIdTextBox.Size = New System.Drawing.Size(342, 20)
-        Me.RoomIdTextBox.TabIndex = 84
         '
         'ClientIdTextBox
         '
@@ -280,12 +271,21 @@ Partial Class Form15
         Me.Panel1.Size = New System.Drawing.Size(794, 141)
         Me.Panel1.TabIndex = 101
         '
+        'RoomSelector
+        '
+        Me.RoomSelector.FormattingEnabled = True
+        Me.RoomSelector.Location = New System.Drawing.Point(295, 418)
+        Me.RoomSelector.Name = "RoomSelector"
+        Me.RoomSelector.Size = New System.Drawing.Size(341, 21)
+        Me.RoomSelector.TabIndex = 102
+        '
         'Form15
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.RoomSelector)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label5)
@@ -301,7 +301,6 @@ Partial Class Form15
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.RoomIdTextBox)
         Me.Controls.Add(Me.ClientIdTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -324,7 +323,6 @@ Partial Class Form15
     Friend WithEvents Button1 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents RoomIdTextBox As TextBox
     Friend WithEvents ClientIdTextBox As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
@@ -335,4 +333,5 @@ Partial Class Form15
     Friend WithEvents Label13 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents RoomSelector As ComboBox
 End Class

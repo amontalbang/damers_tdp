@@ -51,15 +51,19 @@ Public Class DaoClient
     ''' <param name="ClientId">ID del cliente que queremos comprobar</param>
     ''' <returns>Booleano con la respuesta de su existencia en la BD</returns>
     Public Function ClientExists(ClientId As String) As Boolean
-        Dim query As String = "SELECT * FROM Clientes WHERE IDcliente = '" & ClientId & "'"
-        Dim adapter As New SqlDataAdapter(query, connector.Connect())
-        Dim dt As New DataTable
-        adapter.Fill(dt)
-        If dt.AsEnumerable().Count() > 0 Then
-            Return True
-        Else
-            Return False
-        End If
+        Try
+            Dim query As String = "SELECT * FROM Clientes WHERE IDcliente = '" & ClientId & "'"
+            Dim adapter As New SqlDataAdapter(query, connector.Connect())
+            Dim dt As New DataTable
+            adapter.Fill(dt)
+            If dt.AsEnumerable().Count() > 0 Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>

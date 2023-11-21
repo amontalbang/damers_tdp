@@ -9,6 +9,7 @@ Public Class Form15
     Private Sub Form15_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
         llenar_grid()
+        GetRooms()
     End Sub
 
     'TODO: Falta implementar la lógica para filtrar por una reserva
@@ -16,7 +17,7 @@ Public Class Form15
     Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         i = DataGridView1.CurrentRow.Index
         Label13.Text = DataGridView1.Item(0, i).Value()
-        RoomIdTextBox.Text = DataGridView1.Item(1, i).Value()
+        RoomSelector.SelectedItem = DataGridView1.Item(1, i).Value()
         ClientIdTextBox.Text = DataGridView1.Item(2, i).Value()
         EntryDatePicker.Text = DataGridView1.Item(3, i).Value()
         DepartureDatePicker.Text = DataGridView1.Item(4, i).Value()
@@ -37,5 +38,13 @@ Public Class Form15
     Private Sub llenar_grid()
         Dim dt As DataTable = controller.GetReservationsList()
         DataGridView1.DataSource = dt
+    End Sub
+
+    Private Sub GetRooms()
+        Try
+            RoomSelector.DataSource = controller.GetRoomIds()
+        Catch ex As Exception
+            MessageBox.Show("Error al conectar con la base de datos")
+        End Try
     End Sub
 End Class

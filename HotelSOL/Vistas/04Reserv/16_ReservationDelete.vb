@@ -11,7 +11,7 @@
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             Dim clientId As String = TextBox10.Text
-            Dim dt As DataTable = controller.GetReservationById(clientId)
+            Dim dt As DataTable = controller.GetAllReservationByClientId(clientId)
             DataGridView1.DataSource = dt
         Catch ex As Exception
             MessageBox.Show("No se ha podido realizar la consulta a base de datos")
