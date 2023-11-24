@@ -24,13 +24,13 @@ Partial Class Form7
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form7))
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ClientIdTextBox = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -47,14 +47,6 @@ Partial Class Form7
         Me.Label12.Size = New System.Drawing.Size(122, 25)
         Me.Label12.TabIndex = 56
         Me.Label12.Text = "ID Cliente:"
-        '
-        'ClientIdTextBox
-        '
-        Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.ClientIdTextBox.Location = New System.Drawing.Point(377, 464)
-        Me.ClientIdTextBox.Name = "ClientIdTextBox"
-        Me.ClientIdTextBox.Size = New System.Drawing.Size(212, 20)
-        Me.ClientIdTextBox.TabIndex = 55
         '
         'Label2
         '
@@ -131,6 +123,14 @@ Partial Class Form7
         Me.Panel1.Size = New System.Drawing.Size(794, 163)
         Me.Panel1.TabIndex = 83
         '
+        'ClientIdTextBox
+        '
+        Me.ClientIdTextBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.ClientIdTextBox.Location = New System.Drawing.Point(377, 464)
+        Me.ClientIdTextBox.Name = "ClientIdTextBox"
+        Me.ClientIdTextBox.Size = New System.Drawing.Size(212, 20)
+        Me.ClientIdTextBox.TabIndex = 55
+        '
         'Form7
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -155,11 +155,11 @@ Partial Class Form7
     End Sub
 
     Friend WithEvents Label12 As Label
-    Friend WithEvents ClientIdTextBox As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents ClientIdTextBox As TextBox
 End Class

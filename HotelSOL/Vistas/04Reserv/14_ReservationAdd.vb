@@ -19,8 +19,8 @@ Public Class Form14
             Dim roomId As Integer = Integer.Parse(RoomIdTextBox.Text).ToString()
             Dim entry As Date = Date.Parse(EntryDatePicker.Text)
             Dim departure As Date = Date.Parse(DepartureDatePicker.Text)
-            Dim clientId As String = ClientIdTextBox.ToString()
-            Dim board As String = BoardTextBox.ToString()
+            Dim clientId As String = ClientIdTextBox.Text
+            Dim board As String = BoardComboBox.Text
             Dim reservation As Reservation = New Reservation(roomId, clientId, entry, departure, board, False)
             controller.AddReservation(reservation)
             MessageBox.Show("Reserva registrada correctamente")

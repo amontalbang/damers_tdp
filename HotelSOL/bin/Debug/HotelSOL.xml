@@ -34,148 +34,225 @@ HotelSOL
 </member>
 <member name="M:HotelSOL.Controller.AddClient(HotelSOL.Client)">
  <summary>
- Metodo que instancia on objeto daoClient y accede al metodo de añadir cliente
+ Metodo que accede al metodo AddClient de daoClient
  </summary>
  <param name="Client">objeto cliente</param>
 </member>
 <member name="M:HotelSOL.Controller.UpdateClient(HotelSOL.Client)">
  <summary>
- Metodo que instancia on objeto daoClient y accede al metodo de modificar cliente
+ Metodo que accede al metodo UpdateClient de daoClient
  </summary>
  <param name="Client">objeto cliente</param>
 </member>
 <member name="M:HotelSOL.Controller.DeleteClient(HotelSOL.Client)">
  <summary>
- Metodo que instancia on objeto daoClient y accede al metodo de eliminar cliente
+ Metodo que accede al metodo DeleteClient de daoClient
  </summary>
  <param name="Client">objeto cliente</param>
 </member>
 <member name="M:HotelSOL.Controller.GetClientById(System.String)">
  <summary>
- Metodo que instancia on objeto daoClient y accede al metodo de recuperar un cliente
+ Metodo que accede al metodo GetClientById de daoClient
  </summary>
  <param name="Client">cadena con Id del cliente</param>
  <returns>devuelve el cliente solicitado</returns>
 </member>
 <member name="M:HotelSOL.Controller.ClientExists(System.String)">
  <summary>
- Metodo que instancia on objeto daoClient y accede al metodo comprobar si existe un cliente
+ Metodo que accede al metodo ClientExists de daoClient
  </summary>
  <param name="Client">cadena con Id del cliente</param>
  <returns>devuelve booleano con la existencia del cliente</returns>
 </member>
 <member name="M:HotelSOL.Controller.GetClientList">
  <summary>
- Metodo que instancia on objeto daoClient y accede al metodo de recuperar todos los clientes
+ Metodo que accede al metodo GetClientList de daoClient
  </summary>
  <returns>devuelve la lista de clientes</returns>
 </member>
 <member name="M:HotelSOL.Controller.AddRoom(HotelSOL.Room)">
  <summary>
- Metodo que instancia on objeto daoRoom y accede al metodo de añadir habitacion
+ Metodo que accede al metodo AddRoom de daoRoom
  </summary>
  <param name="Room">objeto habitacion</param>
 </member>
 <member name="M:HotelSOL.Controller.DeleteRoom(HotelSOL.Room)">
  <summary>
- Metodo que instancia on objeto daoRoom y accede al metodo de eliminar habitacion
+ Metodo que accede al metodo DeleteRoom de daoRoom
  </summary>
  <param name="Room">objeto habitacion</param>
 </member>
 <member name="M:HotelSOL.Controller.UpdateRoom(HotelSOL.Room)">
  <summary>
- Metodo que instancia on objeto daoRoom y accede al metodo de modificar habitacion
+ Metodo que accede al metodo UpdateRoom de daoRoom
  </summary>
  <param name="Room">objeto habitacion</param>
 </member>
 <member name="M:HotelSOL.Controller.GetRoomById(System.String)">
  <summary>
- Metodo que instancia on objeto daoRoom y accede al metodo de recuperar una habitacion
+ Metodo que accede al metodo GetRoomById de daoRoom
  </summary>
  <param name="Room">cadena con el numero de habitacion</param>
  <returns>devuelve la habitacion solicitada</returns>
 </member>
 <member name="M:HotelSOL.Controller.RoomExists(System.String)">
  <summary>
- Metodo que instancia on objeto daoRoom y accede al metodo comprobar si existe una habitacion
+ Metodo que accede al metodo RoomExists de daoRoom
  </summary>
  <param name="Room">cadena con el numero de habitacion</param>
  <returns>booleano con la existencia de la habitacion</returns>
 </member>
 <member name="M:HotelSOL.Controller.GetRoomList">
  <summary>
- Metodo que instancia on objeto daoRoom y accede al metodo de recuperar todos las habitaciones
+ Metodo que accede al metodo GetRoomList de daoRoom
  </summary>
  <returns>devuelve datatable con lista de habitaciones</returns>
 </member>
 <member name="M:HotelSOL.Controller.AddService(HotelSOL.Service)">
  <summary>
- Metodo que instancia on objeto daoService y accede al metodo de añadir servicio
+ Metodo que accede al metodo AddService de daoService
  </summary>
  <param name="Service">objeto servicio</param>
 </member>
 <member name="M:HotelSOL.Controller.DeleteService(HotelSOL.Service)">
  <summary>
- Metodo que instancia on objeto daoService y accede al metodo de eliminar servicio
+ Metodo que accede al metodo DeleteService de daoService
  </summary>
  <param name="Service">objeto servicio</param>
 </member>
 <member name="M:HotelSOL.Controller.UpdateService(HotelSOL.Service)">
  <summary>
- Metodo que instancia on objeto daoService y accede al metodo de modificar servicio
+ Metodo que accede al metodo UpdateService de daoService
  </summary>
  <param name="Service">objeto servicio</param>
 </member>
 <member name="M:HotelSOL.Controller.GetServiceById(System.UInt32)">
  <summary>
- Metodo que instancia on objeto daoService y accede al metodo de recuperar un servicio
+ Metodo que accede al metodo GetServiceById de daoService
  </summary>
  <param name="Service">entero con el Id del servicio</param>
  <returns>devuelve el objeto servicio solicitado</returns>
 </member>
 <member name="M:HotelSOL.Controller.ServiceExists(System.UInt32)">
  <summary>
- Metodo que instancia on objeto daoService y accede al metodo comprobar si existe un servicio
+ Metodo que accede al metodo ServiceExists de daoService
  </summary>
  <param name="Service">entero con el Id del servicio</param>
  <returns>booleano con la existencia del servicio</returns>
 </member>
 <member name="M:HotelSOL.Controller.GetServiceList">
  <summary>
- Metodo que instancia on objeto daoService y accede al metodo de recuperar todos los servicios
+ Metodo que accede al metodo GetServiceList de daoService
  </summary>
  <returns>devuelve lista con todos los servicios</returns>
 </member>
 <member name="M:HotelSOL.Controller.AddUser(HotelSOL.User)">
  <summary>
- Metodo que instancia on objeto daoUser y accede al metodo de añadir usuario
+ Metodo que accede al metodo AddUser de daoUser
  </summary>
  <param name="User">objeto usuario</param>
 </member>
 <member name="M:HotelSOL.Controller.DeleteUser(HotelSOL.User)">
  <summary>
-  Metodo que instancia on objeto daoUser y accede al metodo de eliminar usuario
+ Metodo que accede al metodo DeleteUser de daoUser
  </summary>
  <param name="User">objeto usuario</param>
 </member>
 <member name="M:HotelSOL.Controller.UpdateUser(HotelSOL.User)">
  <summary>
-  Metodo que instancia on objeto daoUser y accede al metodo de modificar usuario
+ Metodo que accede al metodo UpdateUser de daoUser
  </summary>
  <param name="User">objeto usuario</param>
 </member>
 <member name="M:HotelSOL.Controller.UserExists(System.String)">
  <summary>
- Metodo que instancia on objeto daoUser y accede al metodo comprobar si existe un usuario
+ Metodo que accede al metodo UserExists de daoUser
  </summary>
  <param name="User">cadena con el Id de usuario</param>
  <returns>booleano con la existencia del usuario consultado</returns>
 </member>
 <member name="M:HotelSOL.Controller.GetUserList">
  <summary>
- Metodo que instancia on objeto daoUser y accede al metodo de recuperar todos los usuarios
+ Metodo que accede al metodo GetUserList de daoUser
  </summary>
  <returns>devuelve lista con todos los usuarios</returns>
+</member>
+<member name="M:HotelSOL.Controller.AddReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que añade una reserva
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.UpdateReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que accede al metodo UpdateReservation de daoReservation
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.RemoveReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que accede al metodo RemoveReservation de daoReservation
+ </summary>
+ <param name="ReservationId">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.CheckIn(System.UInt32)">
+ <summary>
+ Metodo para realizar el checkin de una reserva
+ </summary>
+ <param name="ReservationId">ID de la reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.CheckOut(System.UInt32)">
+ <summary>
+ Metodo para realizar el checkout de una reserva
+ </summary>
+ <param name="ReservationId">ID de la reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationById(System.UInt32)">
+ <summary>
+ Metodo que devuelve una reserva dada una ID de reserva
+ </summary>
+ <param name="ReservationId">ID de la resevra</param>
+ <returns>datatable con la informacion de la reserva</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationsList">
+ <summary>
+ Metodo que devuelve una lista de todas las reservas
+ </summary>
+ <returns>datatable con la informacion de las reservas</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationByClientId(System.String)">
+ <summary>
+ Metodo que devuelve una reserva dada una ID de cliente
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <returns>datatable con la informacion de la reserva</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationSeasson(System.DateTime)">
+ <summary>
+ Metodo que devuelve la temporada de la reserva
+ </summary>
+ <param name="EntryDate">fecha de entrada en la reserva</param>
+ <returns>tipo de temporada</returns>
+</member>
+<member name="M:HotelSOL.Controller.CheckReservationExists(System.UInt32)">
+ <summary>
+ Metodo que comprueba si existe una reserva dada una ID de reserva
+ </summary>
+ <param name="ReservationId">ID de la reserva</param>
+ <returns>booleano con la respuesta</returns>
+</member>
+<member name="M:HotelSOL.Controller.CheckClientExists(System.String)">
+ <summary>
+ Metodo que comprueba si existe un cliente
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <returns>booleano con la respuesta</returns>
+</member>
+<member name="M:HotelSOL.Controller.GenerateInvoice(HotelSOL.Reservation)">
+ <summary>
+ Metodo que genera una factura para una reserva concreta
+ </summary>
+ <param name="Reservation">objeto reserva</param>
 </member>
 <member name="M:HotelSOL.Controller.UserLogin(System.String,System.String)">
  <summary>
@@ -657,6 +734,64 @@ HotelSOL
  Metodo que establece la comunicacion con la BD
  </summary>
 </member>
+<member name="T:HotelSOL.DAOReservation">
+ <summary>
+ Clase que implementa los metodos referentes a las reservas
+ </summary>
+</member>
+<member name="M:HotelSOL.DAOReservation.AddReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que añade una reserva de la BD
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.DAOReservation.RemoveReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que elimina una reserva de la BD
+ </summary>
+ <param name="ReservationId">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.DAOReservation.UpdateReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que actualiza una reserva en la BD
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.DAOReservation.ReservationExists(System.UInt32)">
+ <summary>
+ Metodo que comprueba se existe una reserva en la BD
+ </summary>
+ <param name="reservationId">ID de la reserva</param>
+ <returns>devuelve el resultado de la comprobacion</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationById(System.UInt32)">
+ <summary>
+ Metodo que devuelve una reserva por su ID de reserva
+ </summary>
+ <param name="reservationId">ID de la reserva</param>
+ <returns>la reserva si existe en la BD o una nueva reserva si no existe</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationList">
+ <summary>
+ Metodo que devuelve una lista con todas las reservas
+ </summary>
+ <returns>devuelve un datatable con la lista de reservas</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationByClientId(System.String)">
+ <summary>
+ Metodo que devuelve las reservas referentes a un cliente
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <returns>devuelve un datatable con la lista de reservas</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationByClientAndRoom(System.String,System.String)">
+ <summary>
+ Metodo que devuelve una reserva dada una ID de cliente y una ID de habitacion
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <param name="RoomId">ID de habitacion</param>
+ <returns>Objeto reserva</returns>
+</member>
 <member name="T:HotelSOL.Invoice">
  <summary>
  Clase que alberga los atributos, constructores y propiedades de Factura
@@ -674,12 +809,6 @@ HotelSOL
  <param name="InvoiceId">Numero de factura</param>
  <param name="ReservationId">Numero de reserva</param>
  <param name="TotalAmount">Precio total</param>
-</member>
-<member name="P:HotelSOL.Invoice.InvoiceIdProp">
- <summary>
- Propiedad con get/set para numero de factura
- </summary>
- <returns>entero con el numero de factura</returns>
 </member>
 <member name="P:HotelSOL.Invoice.ReservationIdProp">
  <summary>
@@ -772,19 +901,6 @@ HotelSOL
  Metodo constructor vacio para Reserva
  </summary>
 </member>
-<member name="M:HotelSOL.Reservation.#ctor(System.UInt32,System.UInt32,System.String,System.DateTime,System.DateTime,System.String,System.String,System.Boolean)">
- <summary>
-  Metodo constructor con todos los atributos del objeto
- </summary>
- <param name="ReservationId">Numero de reserva</param>
- <param name="RoomId">Numero de habitacion</param>
- <param name="ClientId">Id del cliente</param>
- <param name="EntryDate">Fecha de entrada</param>
- <param name="DepatureDate">Fecha de salida</param>
- <param name="Season">Temporada</param>
- <param name="Board">Regimen</param>
- <param name="Status">Estado de la reseva</param>
-</member>
 <member name="P:HotelSOL.Reservation.ReservationIdProp">
  <summary>
  Propiedad con get/set para numero de reserva
@@ -826,12 +942,6 @@ HotelSOL
  Propiedad con get/set para regimen
  </summary>
  <returns>cadena indicando el regimen</returns>
-</member>
-<member name="P:HotelSOL.Reservation.StatusProp">
- <summary>
- Propiedad con get/set para estado de la reserva
- </summary>
- <returns>booleano estado de la reserva</returns>
 </member>
 <member name="T:HotelSOL.Form1">
  <summary>
@@ -1051,13 +1161,6 @@ HotelSOL
  <param name="sender"></param>
  <param name="e"></param>
 </member>
-<member name="M:HotelSOL.Form14.Button1_Click(System.Object,System.EventArgs)">
- <summary>
- 
- </summary>
- <param name="sender"></param>
- <param name="e"></param>
-</member>
 <member name="T:HotelSOL.Form24">
  <summary>
  Vista de añadir servicio
@@ -1125,6 +1228,41 @@ HotelSOL
 <member name="M:HotelSOL.LoginForm1.Cancel_Click(System.Object,System.EventArgs)">
  <summary>
  Captura de boton cancelar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form30">
+ <summary>
+ Vista Menu Trabajador
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.Form30_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form30.ocultarSubmenu">
+ <summary>
+ Metodo para ocultar los submenus
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.mostrarSubmenu(System.Windows.Forms.Panel)">
+ <summary>
+ Metodo para mostrar los submenus
+ </summary>
+ <param name="submenu"></param>
+</member>
+<member name="M:HotelSOL.Form30.openFormHijo(System.Windows.Forms.Form)">
+ <summary>
+ Metodo para mostrarlas vistas de las secciones en un panel secundario
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.Button7_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo para Logout y regreso a menu principal
  </summary>
  <param name="sender"></param>
  <param name="e"></param>

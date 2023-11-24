@@ -76,24 +76,18 @@ Public Class DaoClient
             Return New Client()
         End If
         Dim dr As DataRow = dt.AsEnumerable().ElementAt(0)
-        Dim client As New Client()
-        Dim birth As String
-        Dim discount As String
-        Dim actRes As String
+        Dim client As New Client
         'Return New Client(dr.Field(Of String)("IDcliente"), dr.Field(Of String)("Nombre"), dr.Field(Of String)("Apellidos"), dr.Field(Of Date)("FechaNac"), dr.Field(Of String)("Telefono"), dr.Field(Of String)("Email"), dr.Field(Of String)("Direccion"), dr.Field(Of String)("TarjetaCred"), dr.Field(Of UInteger)("Descuento"), dr.Field(Of Boolean)("ReservaActiva"))
         client.NumberIdProp = dt.AsEnumerable().ElementAt(0).Item(0).ToString
         client.NameProp = dt.AsEnumerable().ElementAt(0).Item(1).ToString
         client.SurnameProp = dt.AsEnumerable().ElementAt(0).Item(2).ToString
-        birth = dt.AsEnumerable().ElementAt(0).Item(3).ToString
-        client.BirthDateProp = CDate(birth)
+        client.BirthDateProp = CDate(dt.AsEnumerable().ElementAt(0).Item(3).ToString)
         client.PhoneNumberProp = dt.AsEnumerable().ElementAt(0).Item(4).ToString
         client.EmailProp = dt.AsEnumerable().ElementAt(0).Item(5).ToString
         client.AddressProp = dt.AsEnumerable().ElementAt(0).Item(6).ToString
         client.CreditCardProp = dt.AsEnumerable().ElementAt(0).Item(7).ToString
-        discount = dt.AsEnumerable().ElementAt(0).Item(8).ToString
-        client.DiscountAvailableProp = CUInt(discount)
-        actRes = dt.AsEnumerable().ElementAt(0).Item(9).ToString
-        client.ActiveReservationProp = CBool(actRes)
+        client.DiscountAvailableProp = CUInt(dt.AsEnumerable().ElementAt(0).Item(8).ToString)
+        client.ActiveReservationProp = CBool(dt.AsEnumerable().ElementAt(0).Item(9).ToString)
         Return New Client(client.NumberIdProp, client.NameProp, client.SurnameProp, client.BirthDateProp, client.PhoneNumberProp, client.EmailProp, client.AddressProp, client.CreditCardProp, client.DiscountAvailableProp, client.ActiveReservationProp)
     End Function
 

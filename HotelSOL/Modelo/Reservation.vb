@@ -20,6 +20,10 @@ Public Class Reservation
     Public Sub New()
     End Sub
 
+    Public Sub New(reservationId As UInteger)
+        Me.reservationId = reservationId
+    End Sub
+
     'Metodos constructores parametrizados
     '@param roomId - Numero de habitacion
     '@param clientId - ID del cliente (DNI)

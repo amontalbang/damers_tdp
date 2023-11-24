@@ -37,7 +37,7 @@ Partial Class Form14
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.BoardComboBox = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label2
@@ -188,14 +188,15 @@ Partial Class Form14
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
-        'ComboBox1
+        'BoardComboBox
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Sin régimen", "Media pensión", "Pensión completa"})
-        Me.ComboBox1.Location = New System.Drawing.Point(331, 292)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(300, 21)
-        Me.ComboBox1.TabIndex = 81
+        Me.BoardComboBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BoardComboBox.FormattingEnabled = True
+        Me.BoardComboBox.Items.AddRange(New Object() {"Sin régimen", "Media pensión", "Pensión completa"})
+        Me.BoardComboBox.Location = New System.Drawing.Point(331, 292)
+        Me.BoardComboBox.Name = "BoardComboBox"
+        Me.BoardComboBox.Size = New System.Drawing.Size(300, 21)
+        Me.BoardComboBox.TabIndex = 81
         '
         'Form14
         '
@@ -203,7 +204,7 @@ Partial Class Form14
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.BoardComboBox)
         Me.Controls.Add(Me.DepartureDatePicker)
         Me.Controls.Add(Me.EntryDatePicker)
         Me.Controls.Add(Me.Label7)
@@ -237,5 +238,5 @@ Partial Class Form14
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents BoardComboBox As ComboBox
 End Class

@@ -89,3 +89,4 @@ C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.MenuAdmin.resou
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.UserAdd.resources
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.UserDelete.resources
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.UserUpdate.resources
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL._32_Exports.resources

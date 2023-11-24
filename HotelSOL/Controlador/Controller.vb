@@ -1,4 +1,6 @@
-﻿''' <summary>
+﻿Imports System.Data.Entity.Core
+Imports System.Data.SqlClient
+''' <summary>
 ''' Clase Controlador que enlaza las vistas y el modelo
 ''' </summary>
 Public Class Controller
@@ -25,196 +27,292 @@ Public Class Controller
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoClient y accede al metodo de añadir cliente
+    ''' Metodo que accede al metodo AddClient de daoClient
     ''' </summary>
     ''' <param name="Client">objeto cliente</param>
     Public Sub AddClient(Client As Client)
-        daoClient.AddClient(Client)
+        Try
+            daoClient.AddClient(Client)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoClient y accede al metodo de modificar cliente
+    ''' Metodo que accede al metodo UpdateClient de daoClient
     ''' </summary>
     ''' <param name="Client">objeto cliente</param>
     Public Sub UpdateClient(Client As Client)
-        daoClient.UpdateClient(Client)
+        Try
+            daoClient.UpdateClient(Client)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoClient y accede al metodo de eliminar cliente
+    ''' Metodo que accede al metodo DeleteClient de daoClient
     ''' </summary>
     ''' <param name="Client">objeto cliente</param>
     Public Sub DeleteClient(Client As Client)
-        daoClient.DeleteClient(Client)
+        Try
+            daoClient.DeleteClient(Client)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoClient y accede al metodo de recuperar un cliente
+    ''' Metodo que accede al metodo GetClientById de daoClient
     ''' </summary>
     ''' <param name="Client">cadena con Id del cliente</param>
     ''' <returns>devuelve el cliente solicitado</returns>
     Public Function GetClientById(Client As String)
-        Return daoClient.GetClientById(Client)
+        Try
+            Return daoClient.GetClientById(Client)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoClient y accede al metodo comprobar si existe un cliente
+    ''' Metodo que accede al metodo ClientExists de daoClient
     ''' </summary>
     ''' <param name="Client">cadena con Id del cliente</param>
     ''' <returns>devuelve booleano con la existencia del cliente</returns>
     Public Function ClientExists(Client As String) As Boolean
-        Return daoClient.ClientExists(Client)
+        Try
+            Return daoClient.ClientExists(Client)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoClient y accede al metodo de recuperar todos los clientes
+    ''' Metodo que accede al metodo GetClientList de daoClient
     ''' </summary>
     ''' <returns>devuelve la lista de clientes</returns>
     Public Function GetClientList()
-        Return daoClient.GetClientList()
+        Try
+            Return daoClient.GetClientList()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoRoom y accede al metodo de añadir habitacion
+    ''' Metodo que accede al metodo AddRoom de daoRoom
     ''' </summary>
     ''' <param name="Room">objeto habitacion</param>
     Public Sub AddRoom(Room As Room)
-        daoRoom.AddRoom(Room)
+        Try
+            daoRoom.AddRoom(Room)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoRoom y accede al metodo de eliminar habitacion
+    ''' Metodo que accede al metodo DeleteRoom de daoRoom
     ''' </summary>
     ''' <param name="Room">objeto habitacion</param>
     Public Sub DeleteRoom(Room As Room)
-        daoRoom.DeleteRoom(Room)
+        Try
+            daoRoom.DeleteRoom(Room)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoRoom y accede al metodo de modificar habitacion
+    ''' Metodo que accede al metodo UpdateRoom de daoRoom
     ''' </summary>
     ''' <param name="Room">objeto habitacion</param>
     Public Sub UpdateRoom(Room As Room)
-        daoRoom.UpdateRoom(Room)
+        Try
+            daoRoom.UpdateRoom(Room)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoRoom y accede al metodo de recuperar una habitacion
+    ''' Metodo que accede al metodo GetRoomById de daoRoom
     ''' </summary>
     ''' <param name="Room">cadena con el numero de habitacion</param>
     ''' <returns>devuelve la habitacion solicitada</returns>
     Public Function GetRoomById(Room As String)
-        Return daoRoom.GetRoomById(Room)
+        Try
+            Return daoRoom.GetRoomById(Room)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoRoom y accede al metodo comprobar si existe una habitacion
+    ''' Metodo que accede al metodo RoomExists de daoRoom
     ''' </summary>
     ''' <param name="Room">cadena con el numero de habitacion</param>
     ''' <returns>booleano con la existencia de la habitacion</returns>
     Public Function RoomExists(Room As String) As Boolean
-        Return daoRoom.RoomExists(Room)
+        Try
+            Return daoRoom.RoomExists(Room)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoRoom y accede al metodo de recuperar todos las habitaciones
+    ''' Metodo que accede al metodo GetRoomList de daoRoom
     ''' </summary>
     ''' <returns>devuelve datatable con lista de habitaciones</returns>
     Public Function GetRoomList()
-        Return daoRoom.GetRoomList()
+        Try
+            Return daoRoom.GetRoomList()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoService y accede al metodo de añadir servicio
+    ''' Metodo que accede al metodo AddService de daoService
     ''' </summary>
     ''' <param name="Service">objeto servicio</param>
     Public Sub AddService(Service As Service)
-        daoService.AddService(Service)
+        Try
+            daoService.AddService(Service)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoService y accede al metodo de eliminar servicio
+    ''' Metodo que accede al metodo DeleteService de daoService
     ''' </summary>
     ''' <param name="Service">objeto servicio</param>
     Public Sub DeleteService(Service As Service)
-        daoService.DeleteService(Service)
+        Try
+            daoService.DeleteService(Service)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoService y accede al metodo de modificar servicio
+    ''' Metodo que accede al metodo UpdateService de daoService
     ''' </summary>
     ''' <param name="Service">objeto servicio</param>
     Public Sub UpdateService(Service As Service)
-        daoService.UpdateService(Service)
+        Try
+            daoService.UpdateService(Service)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoService y accede al metodo de recuperar un servicio
+    ''' Metodo que accede al metodo GetServiceById de daoService
     ''' </summary>
     ''' <param name="Service">entero con el Id del servicio</param>
     ''' <returns>devuelve el objeto servicio solicitado</returns>
     Public Function GetServiceById(Service As UInteger)
-        Return daoService.GetServiceById(Service)
+        Try
+            Return daoService.GetServiceById(Service)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoService y accede al metodo comprobar si existe un servicio
+    ''' Metodo que accede al metodo ServiceExists de daoService
     ''' </summary>
     ''' <param name="Service">entero con el Id del servicio</param>
     ''' <returns>booleano con la existencia del servicio</returns>
     Public Function ServiceExists(Service As UInteger) As Boolean
-        Return daoService.ServiceExists(Service)
+        Try
+            Return daoService.ServiceExists(Service)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoService y accede al metodo de recuperar todos los servicios
+    ''' Metodo que accede al metodo GetServiceList de daoService
     ''' </summary>
     ''' <returns>devuelve lista con todos los servicios</returns>
     Public Function GetServiceList()
-        Return daoService.GetServiceList()
+        Try
+            Return daoService.GetServiceList()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoUser y accede al metodo de añadir usuario
+    ''' Metodo que accede al metodo AddUser de daoUser
     ''' </summary>
     ''' <param name="User">objeto usuario</param>
     Public Sub AddUser(User As User)
-        daoUser.AddUser(User)
+        Try
+            daoUser.AddUser(User)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    '''  Metodo que instancia on objeto daoUser y accede al metodo de eliminar usuario
+    ''' Metodo que accede al metodo DeleteUser de daoUser
     ''' </summary>
     ''' <param name="User">objeto usuario</param>
     Public Sub DeleteUser(User As User)
-        daoUser.DeleteUser(User)
+        Try
+            daoUser.DeleteUser(User)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    '''  Metodo que instancia on objeto daoUser y accede al metodo de modificar usuario
+    ''' Metodo que accede al metodo UpdateUser de daoUser
     ''' </summary>
     ''' <param name="User">objeto usuario</param>
     Public Sub UpdateUser(User As User)
-        daoUser.UpdateUser(User)
+        Try
+            daoUser.UpdateUser(User)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoUser y accede al metodo comprobar si existe un usuario
+    ''' Metodo que accede al metodo UserExists de daoUser
     ''' </summary>
     ''' <param name="User">cadena con el Id de usuario</param>
     ''' <returns>booleano con la existencia del usuario consultado</returns>
     Public Function UserExists(User As String) As Boolean
-        Return daoUser.UserExists(User)
+        Try
+            Return daoUser.UserExists(User)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>
-    ''' Metodo que instancia on objeto daoUser y accede al metodo de recuperar todos los usuarios
+    ''' Metodo que accede al metodo GetUserList de daoUser
     ''' </summary>
     ''' <returns>devuelve lista con todos los usuarios</returns>
     Public Function GetUserList()
-        Return daoUser.GetUserList()
+        Try
+            Return daoUser.GetUserList()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
+    ''' <summary>
+    ''' Metodo que añade una reserva
+    ''' </summary>
+    ''' <param name="Reservation">objeto reserva</param>
     Public Sub AddReservation(Reservation As Reservation)
         Try
             Dim seasson As String = GetReservationSeasson(Reservation.EntryDateProp)
@@ -227,6 +325,10 @@ Public Class Controller
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Metodo que accede al metodo UpdateReservation de daoReservation
+    ''' </summary>
+    ''' <param name="Reservation">objeto reserva</param>
     Public Sub UpdateReservation(Reservation As Reservation)
         Try
             daoReservation.UpdateReservation(Reservation)
@@ -239,7 +341,11 @@ Public Class Controller
 
     End Sub
 
-    Public Sub RemoveReservation(ReservationId As UInteger)
+    ''' <summary>
+    ''' Metodo que accede al metodo RemoveReservation de daoReservation
+    ''' </summary>
+    ''' <param name="ReservationId">objeto reserva</param>
+    Public Sub RemoveReservation(ReservationId As Reservation)
         Try
             daoReservation.RemoveReservation(ReservationId)
         Catch ex As Exception
@@ -247,6 +353,10 @@ Public Class Controller
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Metodo para realizar el checkin de una reserva
+    ''' </summary>
+    ''' <param name="ReservationId">ID de la reserva</param>
     Public Sub CheckIn(ReservationId As UInteger)
         'Cambiar la vista del checkin para que sea el listado de reservas con entrada para la fecha actual o
         'un botón de checkin sin reserva
@@ -261,6 +371,10 @@ Public Class Controller
         End Try
     End Sub
 
+    ''' <summary>
+    ''' Metodo para realizar el checkout de una reserva
+    ''' </summary>
+    ''' <param name="ReservationId">ID de la reserva</param>
     Public Sub CheckOut(ReservationId As UInteger)
         Try
             Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
@@ -272,17 +386,24 @@ Public Class Controller
         End Try
     End Sub
 
-    Public Function GetReservationById(ReservationId As UInteger) As DataTable
+    ''' <summary>
+    ''' Metodo que devuelve una reserva dada una ID de reserva
+    ''' </summary>
+    ''' <param name="ReservationId">ID de la resevra</param>
+    ''' <returns>datatable con la informacion de la reserva</returns>
+    Public Function GetReservationById(ReservationId As UInteger)
         If Me.CheckReservationExists(ReservationId) Then
-            Dim dt As DataTable = New DataTable
             Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
-            'Rellenamos la tabla
-            Return dt
+            Return reservation
         Else
             Return New DataTable
         End If
     End Function
 
+    ''' <summary>
+    ''' Metodo que devuelve una lista de todas las reservas
+    ''' </summary>
+    ''' <returns>datatable con la informacion de las reservas</returns>
     Public Function GetReservationsList() As DataTable
         Try
             Return daoReservation.GetReservationList()
@@ -291,6 +412,11 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' Metodo que devuelve una reserva dada una ID de cliente
+    ''' </summary>
+    ''' <param name="ClientId">ID de cliente</param>
+    ''' <returns>datatable con la informacion de la reserva</returns>
     Public Function GetReservationByClientId(ClientId As String) As DataTable
         Try
             If Me.CheckClientExists(ClientId) Then
@@ -303,7 +429,12 @@ Public Class Controller
         End Try
     End Function
 
-    Private Function GetReservationSeasson(EntryDate As Date) As String
+    ''' <summary>
+    ''' Metodo que devuelve la temporada de la reserva
+    ''' </summary>
+    ''' <param name="EntryDate">fecha de entrada en la reserva</param>
+    ''' <returns>tipo de temporada</returns>
+    Public Function GetReservationSeasson(EntryDate As Date) As String
         If EntryDate.Month >= 6 And EntryDate.Month <= 8 Then
             Return "alta"
         End If
@@ -313,7 +444,12 @@ Public Class Controller
         Return "media"
     End Function
 
-    Private Function CheckReservationExists(ReservationId As UInteger) As Boolean
+    ''' <summary>
+    ''' Metodo que comprueba si existe una reserva dada una ID de reserva
+    ''' </summary>
+    ''' <param name="ReservationId">ID de la reserva</param>
+    ''' <returns>booleano con la respuesta</returns>
+    Public Function CheckReservationExists(ReservationId As UInteger) As Boolean
         Try
             Return daoReservation.ReservationExists(ReservationId)
         Catch ex As Exception
@@ -321,6 +457,11 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' Metodo que comprueba si existe un cliente
+    ''' </summary>
+    ''' <param name="ClientId">ID de cliente</param>
+    ''' <returns>booleano con la respuesta</returns>
     Private Function CheckClientExists(ClientId As String) As Boolean
         Try
             Return daoClient.ClientExists(ClientId)
@@ -329,6 +470,10 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' Metodo que genera una factura para una reserva concreta
+    ''' </summary>
+    ''' <param name="Reservation">objeto reserva</param>
     Private Sub GenerateInvoice(Reservation As Reservation)
         Try
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(Reservation.ReservationIdProp)
@@ -344,6 +489,10 @@ Public Class Controller
     ''' <param name="Password">cadena con la contraseña de usuario</param>
     ''' <returns>devuelve booleano con resultado del login</returns>
     Public Function UserLogin(UserId As String, Password As String) As Boolean
-        Return daoUser.UserLogin(UserId, Password)
+        Try
+            Return daoUser.UserLogin(UserId, Password)
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 End Class

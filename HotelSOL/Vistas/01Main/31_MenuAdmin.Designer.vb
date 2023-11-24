@@ -59,7 +59,6 @@ Partial Class MenuAdmin
         Me.Button12 = New System.Windows.Forms.Button()
         Me.ButtonClientes = New System.Windows.Forms.Button()
         Me.PanelSubmenuReserva = New System.Windows.Forms.Panel()
-        Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -117,7 +116,7 @@ Partial Class MenuAdmin
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Button8.Location = New System.Drawing.Point(0, 1513)
+        Me.Button8.Location = New System.Drawing.Point(0, 1474)
         Me.Button8.Name = "Button8"
         Me.Button8.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.Button8.Size = New System.Drawing.Size(233, 45)
@@ -132,7 +131,7 @@ Partial Class MenuAdmin
         Me.PanelSubmenuUsuarios.Controls.Add(Me.UpdateUserButton)
         Me.PanelSubmenuUsuarios.Controls.Add(Me.AddUserButton)
         Me.PanelSubmenuUsuarios.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubmenuUsuarios.Location = New System.Drawing.Point(0, 1393)
+        Me.PanelSubmenuUsuarios.Location = New System.Drawing.Point(0, 1354)
         Me.PanelSubmenuUsuarios.Name = "PanelSubmenuUsuarios"
         Me.PanelSubmenuUsuarios.Size = New System.Drawing.Size(233, 120)
         Me.PanelSubmenuUsuarios.TabIndex = 9
@@ -214,7 +213,7 @@ Partial Class MenuAdmin
         Me.GestionUsuariosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GestionUsuariosButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GestionUsuariosButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GestionUsuariosButton.Location = New System.Drawing.Point(0, 1348)
+        Me.GestionUsuariosButton.Location = New System.Drawing.Point(0, 1309)
         Me.GestionUsuariosButton.Name = "GestionUsuariosButton"
         Me.GestionUsuariosButton.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.GestionUsuariosButton.Size = New System.Drawing.Size(233, 45)
@@ -230,7 +229,7 @@ Partial Class MenuAdmin
         Me.PanelSubmenuConsultas.Controls.Add(Me.Button21)
         Me.PanelSubmenuConsultas.Controls.Add(Me.Button22)
         Me.PanelSubmenuConsultas.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubmenuConsultas.Location = New System.Drawing.Point(0, 1257)
+        Me.PanelSubmenuConsultas.Location = New System.Drawing.Point(0, 1218)
         Me.PanelSubmenuConsultas.Name = "PanelSubmenuConsultas"
         Me.PanelSubmenuConsultas.Size = New System.Drawing.Size(233, 91)
         Me.PanelSubmenuConsultas.TabIndex = 9
@@ -359,7 +358,7 @@ Partial Class MenuAdmin
         Me.ButtonConsultas.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonConsultas.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonConsultas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonConsultas.Location = New System.Drawing.Point(0, 1212)
+        Me.ButtonConsultas.Location = New System.Drawing.Point(0, 1173)
         Me.ButtonConsultas.Name = "ButtonConsultas"
         Me.ButtonConsultas.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.ButtonConsultas.Size = New System.Drawing.Size(233, 45)
@@ -376,7 +375,7 @@ Partial Class MenuAdmin
         Me.PanelSubmenuServicios.Controls.Add(Me.Button19)
         Me.PanelSubmenuServicios.Controls.Add(Me.Button20)
         Me.PanelSubmenuServicios.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubmenuServicios.Location = New System.Drawing.Point(0, 1041)
+        Me.PanelSubmenuServicios.Location = New System.Drawing.Point(0, 1002)
         Me.PanelSubmenuServicios.Name = "PanelSubmenuServicios"
         Me.PanelSubmenuServicios.Size = New System.Drawing.Size(233, 171)
         Me.PanelSubmenuServicios.TabIndex = 7
@@ -458,7 +457,7 @@ Partial Class MenuAdmin
         Me.ButtonServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonServicios.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonServicios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonServicios.Location = New System.Drawing.Point(0, 996)
+        Me.ButtonServicios.Location = New System.Drawing.Point(0, 957)
         Me.ButtonServicios.Name = "ButtonServicios"
         Me.ButtonServicios.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.ButtonServicios.Size = New System.Drawing.Size(233, 45)
@@ -475,7 +474,7 @@ Partial Class MenuAdmin
         Me.PanelSubmenuHabitaciones.Controls.Add(Me.Button16)
         Me.PanelSubmenuHabitaciones.Controls.Add(Me.Button17)
         Me.PanelSubmenuHabitaciones.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubmenuHabitaciones.Location = New System.Drawing.Point(0, 825)
+        Me.PanelSubmenuHabitaciones.Location = New System.Drawing.Point(0, 786)
         Me.PanelSubmenuHabitaciones.Name = "PanelSubmenuHabitaciones"
         Me.PanelSubmenuHabitaciones.Size = New System.Drawing.Size(233, 171)
         Me.PanelSubmenuHabitaciones.TabIndex = 5
@@ -557,7 +556,7 @@ Partial Class MenuAdmin
         Me.ButtonHabitaciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonHabitaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonHabitaciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonHabitaciones.Location = New System.Drawing.Point(0, 780)
+        Me.ButtonHabitaciones.Location = New System.Drawing.Point(0, 741)
         Me.ButtonHabitaciones.Name = "ButtonHabitaciones"
         Me.ButtonHabitaciones.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.ButtonHabitaciones.Size = New System.Drawing.Size(233, 45)
@@ -574,7 +573,7 @@ Partial Class MenuAdmin
         Me.PanelSubmenuCliente.Controls.Add(Me.Button11)
         Me.PanelSubmenuCliente.Controls.Add(Me.Button12)
         Me.PanelSubmenuCliente.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelSubmenuCliente.Location = New System.Drawing.Point(0, 609)
+        Me.PanelSubmenuCliente.Location = New System.Drawing.Point(0, 570)
         Me.PanelSubmenuCliente.Name = "PanelSubmenuCliente"
         Me.PanelSubmenuCliente.Size = New System.Drawing.Size(233, 171)
         Me.PanelSubmenuCliente.TabIndex = 3
@@ -656,7 +655,7 @@ Partial Class MenuAdmin
         Me.ButtonClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ButtonClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ButtonClientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.ButtonClientes.Location = New System.Drawing.Point(0, 564)
+        Me.ButtonClientes.Location = New System.Drawing.Point(0, 525)
         Me.ButtonClientes.Name = "ButtonClientes"
         Me.ButtonClientes.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.ButtonClientes.Size = New System.Drawing.Size(233, 45)
@@ -668,7 +667,6 @@ Partial Class MenuAdmin
         'PanelSubmenuReserva
         '
         Me.PanelSubmenuReserva.BackColor = System.Drawing.Color.FromArgb(CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer), CType(CType(27, Byte), Integer))
-        Me.PanelSubmenuReserva.Controls.Add(Me.Button6)
         Me.PanelSubmenuReserva.Controls.Add(Me.Button5)
         Me.PanelSubmenuReserva.Controls.Add(Me.Button4)
         Me.PanelSubmenuReserva.Controls.Add(Me.Button3)
@@ -677,25 +675,8 @@ Partial Class MenuAdmin
         Me.PanelSubmenuReserva.Dock = System.Windows.Forms.DockStyle.Top
         Me.PanelSubmenuReserva.Location = New System.Drawing.Point(0, 317)
         Me.PanelSubmenuReserva.Name = "PanelSubmenuReserva"
-        Me.PanelSubmenuReserva.Size = New System.Drawing.Size(233, 247)
+        Me.PanelSubmenuReserva.Size = New System.Drawing.Size(233, 208)
         Me.PanelSubmenuReserva.TabIndex = 1
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button6.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button6.Location = New System.Drawing.Point(0, 200)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Padding = New System.Windows.Forms.Padding(35, 0, 0, 0)
-        Me.Button6.Size = New System.Drawing.Size(233, 40)
-        Me.Button6.TabIndex = 5
-        Me.Button6.Text = "PAGO"
-        Me.Button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.UseVisualStyleBackColor = False
         '
         'Button5
         '
@@ -886,7 +867,6 @@ Partial Class MenuAdmin
     Friend WithEvents ButtonReservas As Button
     Friend WithEvents PanelLogo As Panel
     Friend WithEvents PanelSubmenuReserva As Panel
-    Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button

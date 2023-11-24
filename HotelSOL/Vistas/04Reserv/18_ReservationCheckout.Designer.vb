@@ -68,9 +68,9 @@ Partial Class Form18
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Arial Rounded MT Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label3.Location = New System.Drawing.Point(210, 131)
+        Me.Label3.Location = New System.Drawing.Point(210, 135)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(423, 32)
+        Me.Label3.Size = New System.Drawing.Size(422, 32)
         Me.Label3.TabIndex = 87
         Me.Label3.Text = "Recuperar datos de la reserva:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -82,7 +82,7 @@ Partial Class Form18
         Me.Label12.BackColor = System.Drawing.Color.Transparent
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label12.Location = New System.Drawing.Point(164, 193)
+        Me.Label12.Location = New System.Drawing.Point(164, 188)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(57, 25)
         Me.Label12.TabIndex = 86
@@ -91,7 +91,7 @@ Partial Class Form18
         'TextBox10
         '
         Me.TextBox10.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox10.Location = New System.Drawing.Point(227, 198)
+        Me.TextBox10.Location = New System.Drawing.Point(227, 193)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(279, 20)
         Me.TextBox10.TabIndex = 85
@@ -113,30 +113,31 @@ Partial Class Form18
         'Panel1
         '
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Location = New System.Drawing.Point(159, 261)
+        Me.Panel1.Location = New System.Drawing.Point(38, 281)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(531, 242)
+        Me.Panel1.Size = New System.Drawing.Size(741, 242)
         Me.Panel1.TabIndex = 89
         '
         'DataGridView1
         '
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(531, 242)
+        Me.DataGridView1.Size = New System.Drawing.Size(741, 242)
         Me.DataGridView1.TabIndex = 0
         '
         'Button2
         '
         Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button2.BackColor = System.Drawing.SystemColors.Info
-        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow
+        Me.Button2.BackColor = System.Drawing.Color.Silver
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(534, 187)
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(524, 187)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(187, 40)
+        Me.Button2.Size = New System.Drawing.Size(156, 31)
         Me.Button2.TabIndex = 90
         Me.Button2.Text = "Recuperar reservas"
         Me.Button2.UseVisualStyleBackColor = False
@@ -145,10 +146,11 @@ Partial Class Form18
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label4.Location = New System.Drawing.Point(160, 240)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.Label4.Location = New System.Drawing.Point(43, 258)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(122, 13)
+        Me.Label4.Size = New System.Drawing.Size(178, 20)
         Me.Label4.TabIndex = 91
         Me.Label4.Text = "Seleccione una reserva:"
         '

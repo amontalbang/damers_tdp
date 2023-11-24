@@ -16,6 +16,11 @@ Public Class MenuAdmin
     ''' Metodo para ocultar los submenus
     ''' </summary>
     Private Sub ocultarSubmenu()
+        Try
+
+        Catch ex As Exception
+
+        End Try
         PanelSubmenuReserva.Visible = False
         PanelSubmenuCliente.Visible = False
         PanelSubmenuHabitaciones.Visible = False
@@ -87,7 +92,7 @@ Public Class MenuAdmin
         ocultarSubmenu()
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
         openFormHijo(New Form18())
         ocultarSubmenu()
     End Sub

@@ -80,7 +80,7 @@ Public Class Form30
         ocultarSubmenu()
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
         openFormHijo(New Form18())
         ocultarSubmenu()
     End Sub
