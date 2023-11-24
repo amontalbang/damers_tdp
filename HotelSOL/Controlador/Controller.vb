@@ -248,6 +248,48 @@ Public Class Controller
         End Try
     End Function
 
+    Public Sub ChargeService(roomId As String, serviceId As Integer, units As Integer)
+        Try
+            Dim reservation As Reservation = daoReservation.GetReservationByRoomId(roomId)
+            Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(reservation.ReservationIdProp)
+            'Add servicio con unidades e invoiceId en la tabla de servicios cargados
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    Public Function GetRoomIds() As Array
+        Try
+            Dim dt As DataTable = daoRoom.GetRoomList()
+            Dim totalRooms As Integer = dt.AsEnumerable().Count()
+            Dim roomIds(totalRooms) As String
+            For index = 0 To dt.AsEnumerable().Count() - 1
+                roomIds(index) = dt.AsEnumerable().ElementAt(index).Item(0).ToString()
+            Next
+            Return roomIds
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function CheckRoomAvailability(EntryDate As Date, DepartureDate As Date) As Array
+        Try
+            Dim dt As DataTable = daoRoom.GetRoomList()
+            Dim totalRooms As Integer = dt.AsEnumerable().Count()
+            Dim availableRoomIds(totalRooms) As String
+            For index = 0 To dt.AsEnumerable().Count() - 1
+                Dim roomId As String = dt.AsEnumerable().ElementAt(index).Item(0).ToString()
+                Dim reservation As Reservation = daoReservation.GetReservationByRoomId(roomId)
+                If ((EntryDate.CompareTo(reservation.EntryDateProp) < 0 And DepartureDate.CompareTo(reservation.EntryDateProp) < 0) Or (EntryDate.CompareTo(reservation.DepartureDateProp) > 0 And DepartureDate.CompareTo(reservation.DepartureDateProp) > 0)) Then
+                    availableRoomIds(index) = roomId
+                End If
+            Next
+            Return availableRoomIds
+        Catch ex As Exception
+            Throw (ex)
+        End Try
+    End Function
+
     ''' <summary>
     ''' Metodo que accede al metodo AddUser de daoUser
     ''' </summary>
@@ -315,11 +357,15 @@ Public Class Controller
     ''' <param name="Reservation">objeto reserva</param>
     Public Sub AddReservation(Reservation As Reservation)
         Try
-            Dim seasson As String = GetReservationSeasson(Reservation.EntryDateProp)
-            Reservation.SeasonProp = seasson
-            daoReservation.AddReservation(Reservation)
-            Dim invoice As Invoice = New Invoice(Reservation.ReservationIdProp)
-            daoInvoice.AddInvoice(invoice)
+            If (ClientExists(Reservation.ClientIdProp)) Then
+                Dim seasson As String = GetReservationSeasson(Reservation.EntryDateProp)
+                Reservation.SeasonProp = seasson
+                daoReservation.AddReservation(Reservation)
+                Dim invoice As Invoice = New Invoice(Reservation.ReservationIdProp)
+                daoInvoice.AddInvoice(invoice)
+            Else
+                Throw (New Exception("El cliente introducido no existe"))
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -331,7 +377,11 @@ Public Class Controller
     ''' <param name="Reservation">objeto reserva</param>
     Public Sub UpdateReservation(Reservation As Reservation)
         Try
-            daoReservation.UpdateReservation(Reservation)
+            If (ClientExists(Reservation.ClientIdProp)) Then
+                daoReservation.UpdateReservation(Reservation)
+            Else
+                Throw (New Exception("El cliente introducido no existe"))
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -392,12 +442,17 @@ Public Class Controller
     ''' <param name="ReservationId">ID de la resevra</param>
     ''' <returns>datatable con la informacion de la reserva</returns>
     Public Function GetReservationById(ReservationId As UInteger)
-        If Me.CheckReservationExists(ReservationId) Then
-            Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
-            Return reservation
-        Else
-            Return New DataTable
-        End If
+        Try
+            If Me.CheckReservationExists(ReservationId) Then
+                Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
+                Return reservation
+            Else
+                Return New DataTable
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+
     End Function
 
     ''' <summary>
@@ -429,6 +484,17 @@ Public Class Controller
         End Try
     End Function
 
+    Public Function GetAllReservationByClientId(ClientId As String) As DataTable
+        Try
+            If Me.CheckClientExists(ClientId) Then
+                Dim dt As DataTable
+                dt = daoReservation.GetAllReservationByClientId(ClientId)
+                Return dt
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
     ''' <summary>
     ''' Metodo que devuelve la temporada de la reserva
     ''' </summary>
@@ -477,6 +543,7 @@ Public Class Controller
     Private Sub GenerateInvoice(Reservation As Reservation)
         Try
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(Reservation.ReservationIdProp)
+            'Abrimos la pantalla que muestra los datos de la factura con la información precargada
         Catch ex As Exception
             Throw ex
         End Try

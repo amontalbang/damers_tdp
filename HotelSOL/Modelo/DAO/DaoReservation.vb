@@ -132,6 +132,18 @@ Public Class DAOReservation
     ''' </summary>
     ''' <param name="ClientId">ID de cliente</param>
     ''' <returns>devuelve un datatable con la lista de reservas</returns>
+    Public Function GetAllReservationByClientId(ClientId As String) As DataTable
+        Try
+            Dim consulta As String = "SELECT * FROM Reservas WHERE IDcliente = '" & ClientId & "'"
+            Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
+            Dim reservationList As New DataTable
+            adaptador.Fill(reservationList)
+            Return reservationList
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
     Public Function GetReservationByClientId(ClientId As String) As DataTable
         Try
             Dim consulta As String = "SELECT * FROM Reservas WHERE IDcliente = '" & ClientId & "' AND Estado = 1"
@@ -153,6 +165,27 @@ Public Class DAOReservation
     Public Function GetReservationByClientAndRoom(ClientId As String, RoomId As String) As Reservation
         Try
             Dim consulta As String = "SELECT * FROM Reservas WHERE IDcliente = '" & ClientId & "' IDHabitacion = " & RoomId & "' AND Estado = 1"
+            Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
+            Dim reservationList As New DataTable
+            adaptador.Fill(reservationList)
+            Dim reservation As New Reservation
+            reservation.ReservationIdProp = UInteger.Parse(reservationList.AsEnumerable().ElementAt(0).Item(0).ToString)
+            reservation.RoomIdProp = reservationList.AsEnumerable().ElementAt(0).Item(1).ToString
+            reservation.ClientIdProp = reservationList.AsEnumerable().ElementAt(0).Item(2).ToString
+            reservation.EntryDateProp = CDate(reservationList.AsEnumerable().ElementAt(0).Item(3).ToString)
+            reservation.DepartureDateProp = CDate(reservationList.AsEnumerable().ElementAt(0).Item(4).ToString)
+            reservation.SeasonProp = reservationList.AsEnumerable().ElementAt(0).Item(5).ToString
+            reservation.BoardProp = reservationList.AsEnumerable().ElementAt(0).Item(6).ToString
+            reservation.isActiveProp = reservationList.AsEnumerable().ElementAt(0).Item(7).ToString
+            Return reservation
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function GetReservationByRoomId(RoomId As String) As Reservation
+        Try
+            Dim consulta As String = "SELECT * FROM Reservas WHERE IDhabitacion = '" & RoomId & "' Estado = 1"
             Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
             Dim reservationList As New DataTable
             adaptador.Fill(reservationList)
