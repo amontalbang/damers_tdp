@@ -28,7 +28,6 @@ Partial Class Form17
         Me.SearchClientReservation = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ClientId = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -94,15 +93,6 @@ Partial Class Form17
         Me.ClientId.Size = New System.Drawing.Size(168, 20)
         Me.ClientId.TabIndex = 82
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(0, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
-        Me.Label3.TabIndex = 83
-        Me.Label3.Text = "Label3"
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -147,7 +137,6 @@ Partial Class Form17
         Me.Controls.Add(Me.checkin)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ClientId)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.SearchClientReservation)
@@ -167,7 +156,6 @@ Partial Class Form17
     Friend WithEvents SearchClientReservation As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents ClientId As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridView1 As DataGridView

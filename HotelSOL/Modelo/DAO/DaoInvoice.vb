@@ -89,7 +89,7 @@ Public Class DAOInvoice
     End Function
 
     Public Function GetInvoiceByReservationId(ReservationId As UInteger) As Invoice
-        Dim consulta As String = "SELECT * FROM Facturas WHERE IDreserva = " & ReservationId.ToString() & "'"
+        Dim consulta As String = "SELECT * FROM Facturas WHERE IDreserva = " & ReservationId
         Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
         Dim invoiceList As New DataTable
         adaptador.Fill(invoiceList)

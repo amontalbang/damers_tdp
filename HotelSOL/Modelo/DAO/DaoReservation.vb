@@ -51,7 +51,13 @@ Public Class DAOReservation
         Try
             Dim cmd As New System.Data.SqlClient.SqlCommand
             cmd.CommandType = System.Data.CommandType.Text
-            cmd.CommandText = "UPDATE Reservas set IDcliente = '" & Reservation.ClientIdProp & "', IDHabitacion = '" & Reservation.RoomIdProp & "', FechaEntr = '" & Reservation.EntryDateProp & "' , FechaSal = '" & Reservation.DepartureDateProp & "', Regimen = '" & Reservation.BoardProp & "' where IDreserva = '" & Reservation.ReservationIdProp & "'"
+            Dim estado As Integer
+            If Reservation.isActiveProp Then
+                estado = 1
+            Else
+                estado = 0
+            End If
+            cmd.CommandText = "UPDATE Reservas set IDcliente = '" & Reservation.ClientIdProp & "', IDHabitacion = '" & Reservation.RoomIdProp & "', FechaEntr = '" & Reservation.EntryDateProp & "' , FechaSal = '" & Reservation.DepartureDateProp & "', Regimen = '" & Reservation.BoardProp & "', Estado = " & estado & " where IDreserva = '" & Reservation.ReservationIdProp & "'"
             cmd.Connection = connector.Connect()
             cmd.ExecuteNonQuery()
             connector.Disconnect()
@@ -164,7 +170,7 @@ Public Class DAOReservation
     ''' <returns>Objeto reserva</returns>
     Public Function GetReservationByClientAndRoom(ClientId As String, RoomId As String) As Reservation
         Try
-            Dim consulta As String = "SELECT * FROM Reservas WHERE IDcliente = '" & ClientId & "' IDHabitacion = " & RoomId & "' AND Estado = 1"
+            Dim consulta As String = "SELECT * FROM Reservas WHERE IDcliente = '" & ClientId & "' AND IDHabitacion = " & RoomId & "' AND Estado = 1"
             Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
             Dim reservationList As New DataTable
             adaptador.Fill(reservationList)
@@ -183,9 +189,9 @@ Public Class DAOReservation
         End Try
     End Function
 
-    Public Function GetReservationByRoomId(RoomId As String) As Reservation
+    Public Function GetReservationByRoomId(RoomId As UInteger) As Reservation
         Try
-            Dim consulta As String = "SELECT * FROM Reservas WHERE IDhabitacion = '" & RoomId & "' Estado = 1"
+            Dim consulta As String = "SELECT * FROM Reservas WHERE IDhabitacion = " & RoomId & "AND  Estado = 1"
             Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
             Dim reservationList As New DataTable
             adaptador.Fill(reservationList)
@@ -199,6 +205,22 @@ Public Class DAOReservation
             reservation.BoardProp = reservationList.AsEnumerable().ElementAt(0).Item(6).ToString
             reservation.isActiveProp = reservationList.AsEnumerable().ElementAt(0).Item(7).ToString
             Return reservation
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function CheckIfReservationIsActive(ReservationId As UInteger) As Boolean
+        Try
+            Dim consulta As String = "SELECT Estado FROM Reservas WHERE IDreserva = " & ReservationId
+            Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
+            Dim reservationList As New DataTable
+            adaptador.Fill(reservationList)
+            Dim estado As UInteger = CUInt(reservationList.AsEnumerable().ElementAt(0).Item(0))
+            If (estado = 1) Then
+                Return True
+            End If
+            Return False
         Catch ex As Exception
             Throw ex
         End Try

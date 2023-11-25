@@ -21,7 +21,7 @@ Public Class LoginForm1
     ''' <param name="e"></param>
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
         Try
-            If controller.UserLogin(UsernameTextBox.Text, PasswordTextBox.Text) And UsernameTextBox.Text = "admin" Then
+            If controller.UserLogin(UsernameTextBox.Text, PasswordTextBox.Text) And UsernameTextBox.Text.ToLower = "admin" Then
                 MenuAdmin.Show()
                 Form1.Hide()
                 Me.Close()
