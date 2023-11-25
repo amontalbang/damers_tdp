@@ -10,10 +10,15 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim roomId As UInteger = CUInt(RoomSelector.SelectedItem)
-        Dim serviceId As String = ServiceTextBox.Text
-        Dim units As Integer = CInt(UnitsTextBox.Text)
-        controller.ChargeService(roomId, serviceId, units)
+        Try
+            Dim roomId As UInteger = CUInt(RoomSelector.SelectedItem)
+            Dim serviceId As String = CUInt(idServicio)
+            Dim units As Integer = CInt(UnitsTextBox.Text)
+            controller.ChargeService(roomId, serviceId, units)
+            MessageBox.Show("Servicio cargado con correctamente")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick

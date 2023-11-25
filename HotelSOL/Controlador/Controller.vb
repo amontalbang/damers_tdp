@@ -248,7 +248,13 @@ Public Class Controller
         End Try
     End Function
 
-    Public Sub ChargeService(roomId As UInteger, serviceId As String, units As Integer)
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="roomId"></param>
+    ''' <param name="serviceId"></param>
+    ''' <param name="units"></param>
+    Public Sub ChargeService(roomId As UInteger, serviceId As UInteger, units As Integer)
         Try
             Dim reservation As Reservation = daoReservation.GetReservationByRoomId(roomId)
             MessageBox.Show(reservation.ClientIdProp)
@@ -259,6 +265,10 @@ Public Class Controller
         End Try
     End Sub
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <returns></returns>
     Public Function GetRoomIds() As Array
         Try
             Dim dt As DataTable = daoRoom.GetRoomList()
@@ -273,6 +283,12 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' Función para comprobar si la habitación está disponible
+    ''' </summary>
+    ''' <param name="EntryDate"></param>
+    ''' <param name="DepartureDate"></param>
+    ''' <returns></returns>
     Public Function CheckRoomAvailability(EntryDate As Date, DepartureDate As Date) As Array
         Try
             Dim dt As DataTable = daoRoom.GetRoomList()
@@ -386,10 +402,6 @@ Public Class Controller
         End Try
     End Sub
 
-    Public Sub PayReservation(ReservationId As UInteger)
-
-    End Sub
-
     ''' <summary>
     ''' Metodo que accede al metodo RemoveReservation de daoReservation
     ''' </summary>
@@ -490,6 +502,11 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="ClientId"></param>
+    ''' <returns></returns>
     Public Function GetAllReservationByClientId(ClientId As String) As DataTable
         Try
             If Me.CheckClientExists(ClientId) Then
@@ -571,6 +588,12 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="Reservation"></param>
+    ''' <param name="InvoiceId"></param>
+    ''' <returns></returns>
     Public Function GetTotalInvoice(Reservation As Reservation, InvoiceId As UInteger) As UInteger
         Try
             Dim servicesList As DataTable = daoService.GetConsumedServices(InvoiceId)
@@ -603,6 +626,11 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="ReservationId"></param>
+    ''' <returns></returns>
     Public Function GetConsumedServices(ReservationId As UInteger) As DataTable
         Try
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)

@@ -103,9 +103,10 @@ Public Class DaoService
         End Try
     End Function
 
-    Public Sub ChargeService(invoiceId As UInteger, serviceId As String, units As UInteger)
+    Public Sub ChargeService(invoiceId As UInteger, serviceId As UInteger, units As UInteger)
         Try
-            Dim query As String = "INSERT ServiciosConsumidos (IDfactura, IDservicio, Cantidad) VALUES ('" & invoiceId & "', '" & serviceId & "', '" & units & "'"
+            Dim query As String = "INSERT INTO ServiciosConsumidos (IDfactura, IDservicio, Cantidad) VALUES (" & invoiceId & ", " & serviceId & ", " & units & ")"
+            command.CommandText = query
             ExecuteQuery()
         Catch ex As Exception
             Throw ex

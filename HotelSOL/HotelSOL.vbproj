@@ -134,6 +134,12 @@
     <Compile Include="Vistas\02Clients\07_ClientDelete.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\05Queries\Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\05Queries\Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\07Users\UserAdd.Designer.vb">
       <DependentUpon>UserAdd.vb</DependentUpon>
     </Compile>
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\02Clients\07_ClientDelete.resx">
       <DependentUpon>07_ClientDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\05Queries\Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\07Users\UserAdd.resx">
       <DependentUpon>UserAdd.vb</DependentUpon>
