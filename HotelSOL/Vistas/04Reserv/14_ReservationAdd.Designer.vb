@@ -190,6 +190,7 @@ Partial Class Form14
         '
         'RoomSelector
         '
+        Me.RoomSelector.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RoomSelector.FormattingEnabled = True
         Me.RoomSelector.Location = New System.Drawing.Point(331, 240)
         Me.RoomSelector.Name = "RoomSelector"

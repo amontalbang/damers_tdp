@@ -114,6 +114,8 @@ Public Class DaoService
 
     Public Sub GetConsumedServices()
 
+    End Sub
+
     ''' <summary>
     ''' Metodo que establece la comunicacion con la BD
     ''' </summary>
