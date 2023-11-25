@@ -5,13 +5,13 @@
         Me.CenterToScreen()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Try
             Dim clientId As String = TextBox10.Text
             Dim dt As DataTable = controller.GetReservationByClientId(clientId)
             DataGridView1.DataSource = dt
         Catch ex As Exception
-            MessageBox.Show("Error en la conexión con la base de datos")
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -20,7 +20,7 @@
             MenuAdmin.openFormHijo(New _33_InvoiceDetails())
             MenuAdmin.ocultarSubmenu()
         Catch ex As Exception
-            MessageBox.Show("Error de conexión en la base de datos")
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 

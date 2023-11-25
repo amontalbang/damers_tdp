@@ -10,7 +10,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim roomId As String = RoomSelector.SelectedItem.ToString()
+        Dim roomId As UInteger = CUInt(RoomSelector.SelectedItem)
         Dim serviceId As String = ServiceTextBox.Text
         Dim units As Integer = CInt(UnitsTextBox.Text)
         controller.ChargeService(roomId, serviceId, units)
@@ -27,7 +27,7 @@
             Dim dt As DataTable = controller.GetServiceList()
             DataGridView1.DataSource = dt
         Catch ex As Exception
-            MessageBox.Show("Error al conectar con la base de datos")
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
@@ -35,7 +35,7 @@
         Try
             RoomSelector.DataSource = controller.GetRoomIds()
         Catch ex As Exception
-            MessageBox.Show("Error al conectar con la base de datos")
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 

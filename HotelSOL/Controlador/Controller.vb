@@ -248,11 +248,12 @@ Public Class Controller
         End Try
     End Function
 
-    Public Sub ChargeService(roomId As String, serviceId As Integer, units As Integer)
+    Public Sub ChargeService(roomId As UInteger, serviceId As String, units As Integer)
         Try
             Dim reservation As Reservation = daoReservation.GetReservationByRoomId(roomId)
+            MessageBox.Show(reservation.ClientIdProp)
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(reservation.ReservationIdProp)
-            'Add servicio con unidades e invoiceId en la tabla de servicios cargados
+            daoService.ChargeService(invoice.InvoiceIdProp, serviceId, units)
         Catch ex As Exception
             Throw ex
         End Try
@@ -361,8 +362,6 @@ Public Class Controller
                 Dim seasson As String = GetReservationSeasson(Reservation.EntryDateProp)
                 Reservation.SeasonProp = seasson
                 daoReservation.AddReservation(Reservation)
-                Dim invoice As Invoice = New Invoice(Reservation.ReservationIdProp)
-                daoInvoice.AddInvoice(invoice)
             Else
                 Throw (New Exception("El cliente introducido no existe"))
             End If
@@ -408,13 +407,17 @@ Public Class Controller
     ''' </summary>
     ''' <param name="ReservationId">ID de la reserva</param>
     Public Sub CheckIn(ReservationId As UInteger)
-        'Cambiar la vista del checkin para que sea el listado de reservas con entrada para la fecha actual o
-        'un botón de checkin sin reserva
         Try
-            If Me.CheckReservationExists(ReservationId) Then
+            If Me.CheckReservationExists(ReservationId) And Not daoReservation.CheckIfReservationIsActive(ReservationId) Then
                 Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
                 reservation.isActiveProp = True
                 daoReservation.UpdateReservation(reservation)
+                Dim Invoice As Invoice = New Invoice(ReservationId)
+                daoInvoice.AddInvoice(Invoice)
+            ElseIf (daoReservation.CheckIfReservationIsActive(ReservationId)) Then
+                Throw New Exception("La reserva ya se ha activado")
+            Else
+                Throw New Exception("La reserva no existe")
             End If
         Catch ex As Exception
             Throw ex
@@ -430,7 +433,8 @@ Public Class Controller
             Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
             reservation.isActiveProp = False
             daoReservation.UpdateReservation(reservation)
-            Me.GenerateInvoice(reservation)
+            Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)
+
         Catch ex As Exception
             Throw ex
         End Try
@@ -441,13 +445,13 @@ Public Class Controller
     ''' </summary>
     ''' <param name="ReservationId">ID de la resevra</param>
     ''' <returns>datatable con la informacion de la reserva</returns>
-    Public Function GetReservationById(ReservationId As UInteger)
+    Public Function GetReservationById(ReservationId As UInteger) As Reservation
         Try
             If Me.CheckReservationExists(ReservationId) Then
                 Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
                 Return reservation
             Else
-                Return New DataTable
+                Throw New Exception("El número de reserva introducido no existe")
             End If
         Catch ex As Exception
             Throw ex
@@ -492,7 +496,8 @@ Public Class Controller
                 Dim dt As DataTable
                 dt = daoReservation.GetAllReservationByClientId(ClientId)
                 Return dt
-                Throw New Exception("El cliente no existe")
+            Else
+                Throw New Exception("El cliente introducido no existe")
             End If
         Catch ex As Exception
             Throw ex

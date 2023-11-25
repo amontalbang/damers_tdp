@@ -92,19 +92,37 @@ Public Class DaoService
     ''' </summary>
     ''' <returns>Devuelve un datatable con la lista de los servicios</returns>
     Public Function GetServiceList() As DataTable
-        Dim query As String = "SELECT * FROM Servicios"
-        Dim adapter As New SqlDataAdapter(query, connector.Connect())
-        Dim serviceList As New DataTable
-        adapter.Fill(serviceList)
-        Return serviceList
+        Try
+            Dim query As String = "SELECT * FROM Servicios"
+            Dim adapter As New SqlDataAdapter(query, connector.Connect())
+            Dim serviceList As New DataTable
+            adapter.Fill(serviceList)
+            Return serviceList
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
+
+    Public Sub ChargeService(invoiceId As UInteger, serviceId As String, units As UInteger)
+        Try
+            Dim query As String = "INSERT ServiciosConsumidos (IDfactura, IDservicio, Cantidad) VALUES ('" & invoiceId & "', '" & serviceId & "', '" & units & "'"
+            ExecuteQuery()
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
+
+    Public Sub GetConsumedServices()
+
+    End Sub
 
     ''' <summary>
     ''' Metodo que establece la comunicacion con la BD
     ''' </summary>
-    Public Sub ExecuteQuery()
-        Command.Connection = connector.Connect()
-        Command.ExecuteNonQuery()
+    Private Sub ExecuteQuery()
+        command.Connection = connector.Connect()
+        command.ExecuteNonQuery()
         connector.Disconnect()
     End Sub
+
 End Class
