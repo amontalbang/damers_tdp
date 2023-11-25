@@ -89,6 +89,7 @@ Partial Class Form17
         '
         'ClientId
         '
+        Me.ClientId.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ClientId.Location = New System.Drawing.Point(149, 138)
         Me.ClientId.Name = "ClientId"
         Me.ClientId.Size = New System.Drawing.Size(168, 20)
@@ -105,6 +106,7 @@ Partial Class Form17
         '
         'Label4
         '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(149, 107)
         Me.Label4.Name = "Label4"
@@ -114,23 +116,26 @@ Partial Class Form17
         '
         'Panel1
         '
+        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Location = New System.Drawing.Point(149, 212)
+        Me.Panel1.Location = New System.Drawing.Point(38, 212)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(510, 252)
+        Me.Panel1.Size = New System.Drawing.Size(737, 252)
         Me.Panel1.TabIndex = 85
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Location = New System.Drawing.Point(2, 0)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(510, 252)
+        Me.DataGridView1.Size = New System.Drawing.Size(743, 252)
         Me.DataGridView1.TabIndex = 0
         '
         'checkin
         '
+        Me.checkin.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.checkin.Location = New System.Drawing.Point(360, 482)
         Me.checkin.Name = "checkin"
         Me.checkin.Size = New System.Drawing.Size(75, 23)

@@ -15,7 +15,7 @@ Public Class MenuAdmin
     ''' <summary>
     ''' Metodo para ocultar los submenus
     ''' </summary>
-    Private Sub ocultarSubmenu()
+    Public Sub ocultarSubmenu()
         Try
 
         Catch ex As Exception
@@ -186,7 +186,7 @@ Public Class MenuAdmin
     ''' Metodo para mostrarlas vistas de las secciones en un panel secundario
     ''' </summary>
     ''' <param name="childForm">objeto formulario</param>
-    Private Sub openFormHijo(childForm As Form)
+    Public Sub openFormHijo(childForm As Form)
         If currentForm IsNot Nothing Then currentForm.Close()
         currentForm = childForm
         childForm.TopLevel = False

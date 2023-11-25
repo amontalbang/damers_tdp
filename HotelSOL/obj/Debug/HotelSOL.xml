@@ -777,7 +777,7 @@ HotelSOL
  </summary>
  <returns>devuelve un datatable con la lista de reservas</returns>
 </member>
-<member name="M:HotelSOL.DAOReservation.GetReservationByClientId(System.String)">
+<member name="M:HotelSOL.DAOReservation.GetAllReservationByClientId(System.String)">
  <summary>
  Metodo que devuelve las reservas referentes a un cliente
  </summary>

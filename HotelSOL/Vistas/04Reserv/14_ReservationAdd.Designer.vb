@@ -36,7 +36,7 @@ Partial Class Form14
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.BoardComboBox = New System.Windows.Forms.ComboBox()
         Me.RoomSelector = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
@@ -190,6 +190,7 @@ Partial Class Form14
         '
         'RoomSelector
         '
+        Me.RoomSelector.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RoomSelector.FormattingEnabled = True
         Me.RoomSelector.Location = New System.Drawing.Point(331, 240)
         Me.RoomSelector.Name = "RoomSelector"
@@ -203,7 +204,7 @@ Partial Class Form14
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
         Me.Controls.Add(Me.RoomSelector)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.BoardComboBox)
         Me.Controls.Add(Me.DepartureDatePicker)
         Me.Controls.Add(Me.EntryDatePicker)
         Me.Controls.Add(Me.Label7)
@@ -235,6 +236,6 @@ Partial Class Form14
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents BoardComboBox As ComboBox
     Friend WithEvents RoomSelector As ComboBox
 End Class

@@ -66,7 +66,7 @@ Public Class Form5
                 MessageBox.Show("EL CLIENTE INDICADO NO EXISTE")
             End If
         Catch ex As Exception
-            MessageBox.Show("NO SE HA PODIDO ESTABLECER CONEXIÓN CON LA BASE DE DATOS '" & vbCr & "''" & vbCr & "'ERROR: '" & ex.ToString & "'")
+            MessageBox.Show("Se ha producido un error al realizar la actualización de los datos. Vuelva a intentarlo más tarde")
         End Try
     End Sub
 

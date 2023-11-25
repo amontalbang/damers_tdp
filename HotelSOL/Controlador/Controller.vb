@@ -478,6 +478,8 @@ Public Class Controller
                 Dim dt As DataTable
                 dt = daoReservation.GetReservationByClientId(ClientId)
                 Return dt
+            Else
+                Throw New Exception("El cliente no existe")
             End If
         Catch ex As Exception
             Throw ex
@@ -490,6 +492,7 @@ Public Class Controller
                 Dim dt As DataTable
                 dt = daoReservation.GetAllReservationByClientId(ClientId)
                 Return dt
+                Throw New Exception("El cliente no existe")
             End If
         Catch ex As Exception
             Throw ex

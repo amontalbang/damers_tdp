@@ -51,7 +51,7 @@ Public Class DAOReservation
         Try
             Dim cmd As New System.Data.SqlClient.SqlCommand
             cmd.CommandType = System.Data.CommandType.Text
-            cmd.CommandText = "UPDATE Reservas set IDcliente = '" & Reservation.ClientIdProp & "', IDHabitacion = '" & Reservation.RoomIdProp & "', FechaEntr = '" & Reservation.EntryDateProp & "' , FechaSal = '" & Reservation.DepartureDateProp & "', Regimen = '" & Reservation.BoardProp & "' where IDreserva = '" & Reservation.ReservationIdProp & "'"
+            cmd.CommandText = "UPDATE Reservas set IDHabitacion = '" & Reservation.RoomIdProp & "', IDcliente = '" & Reservation.ClientIdProp & "', FechaEntr = '" & Reservation.EntryDateProp & "' , FechaSal = '" & Reservation.DepartureDateProp & "', Temporada = '" & Reservation.SeasonProp & "', Regimen = '" & Reservation.BoardProp & "', Estado = '" & Reservation.isActiveProp & "'  where IDreserva = '" & Reservation.ReservationIdProp & "'"
             cmd.Connection = connector.Connect()
             cmd.ExecuteNonQuery()
             connector.Disconnect()
