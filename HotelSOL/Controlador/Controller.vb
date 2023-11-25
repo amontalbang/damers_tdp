@@ -408,14 +408,14 @@ Public Class Controller
     ''' <param name="ReservationId">ID de la reserva</param>
     Public Sub CheckIn(ReservationId As UInteger)
         Try
-            If Me.CheckReservationExists(ReservationId) And Not daoReservation.CheckIfReservationIsActive(ReservationId) Then
+            If Me.CheckReservationExists(ReservationId) And Not daoInvoice.CheckIfReservationHasInvoice(ReservationId) Then
                 Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
                 reservation.isActiveProp = True
                 daoReservation.UpdateReservation(reservation)
                 Dim Invoice As Invoice = New Invoice(ReservationId)
                 daoInvoice.AddInvoice(Invoice)
-            ElseIf (daoReservation.CheckIfReservationIsActive(ReservationId)) Then
-                Throw New Exception("La reserva ya se ha activado")
+            ElseIf (daoInvoice.CheckIfReservationHasInvoice(ReservationId)) Then
+                Throw New Exception("La reserva ya se encuentra activa")
             Else
                 Throw New Exception("La reserva no existe")
             End If
@@ -428,17 +428,17 @@ Public Class Controller
     ''' Metodo para realizar el checkout de una reserva
     ''' </summary>
     ''' <param name="ReservationId">ID de la reserva</param>
-    Public Sub CheckOut(ReservationId As UInteger)
+    Public Function CheckOut(ReservationId As UInteger) As UInteger
         Try
             Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
             reservation.isActiveProp = False
             daoReservation.UpdateReservation(reservation)
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)
-
+            Return Me.GetTotalInvoice(reservation, invoice.InvoiceIdProp)
         Catch ex As Exception
             Throw ex
         End Try
-    End Sub
+    End Function
 
     ''' <summary>
     ''' Metodo que devuelve una reserva dada una ID de reserva
@@ -566,6 +566,48 @@ Public Class Controller
     Public Function UserLogin(UserId As String, Password As String) As Boolean
         Try
             Return daoUser.UserLogin(UserId, Password)
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function GetTotalInvoice(Reservation As Reservation, InvoiceId As UInteger) As UInteger
+        Try
+            Dim servicesList As DataTable = daoService.GetConsumedServices(InvoiceId)
+            Dim totalCount As UInteger = 0
+            For index = 0 To servicesList.Rows.Count() - 1
+                Dim serviceId As UInteger = CUInt(servicesList.AsEnumerable().ElementAt(index).Item(0))
+                totalCount = totalCount + daoService.GetServicePrice(serviceId)
+            Next
+            MessageBox.Show("No es el for")
+            Dim room As Room = daoRoom.GetRoomById(Reservation.RoomIdProp)
+            Select Case Reservation.SeasonProp
+                Case "baja"
+                    totalCount = totalCount + CUInt(room.PriceLProp)
+                Case "media"
+                    totalCount = totalCount + CUInt(room.PriceMProp)
+                Case "alta"
+                    totalCount = totalCount + CUInt(room.PriceHProp)
+            End Select
+            Select Case Reservation.BoardProp
+                Case "Media pensión"
+                    totalCount = totalCount * 1
+                Case "Pensión completa"
+                    totalCount = totalCount * 1.25
+                Case "Sin régimen"
+                    totalCount = totalCount * 1.5
+            End Select
+            Return totalCount
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function GetConsumedServices(ReservationId As UInteger) As DataTable
+        Try
+            Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)
+            Dim dt As DataTable = daoService.GetConsumedServices(invoice.InvoiceIdProp)
+            Return dt
         Catch ex As Exception
             Throw ex
         End Try

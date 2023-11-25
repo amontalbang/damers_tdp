@@ -112,9 +112,31 @@ Public Class DaoService
         End Try
     End Sub
 
-    Public Sub GetConsumedServices()
+    Public Function GetConsumedServices(InvoiceId As UInteger) As DataTable
+        Try
+            Dim query As String = "SELECT * FROM ServiciosConsumidos WHERE IDfactura = " & InvoiceId
+            Dim adapter As New SqlDataAdapter(query, connector.Connect())
+            Dim servicesList As New DataTable
+            adapter.Fill(servicesList)
+            Return servicesList
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 
-    End Sub
+    Public Function GetServicePrice(ServiceId As UInteger) As UInteger
+        Try
+            Dim query As String = "SELECT * FROM Servicios WHERE IDservicio = " & ServiceId
+            Dim adapter As New SqlDataAdapter(query, connector.Connect())
+            Dim service As New DataTable
+            Dim price As UInteger
+            adapter.Fill(service)
+            price = CUInt(service.AsEnumerable().ElementAt(0).Item(3))
+            Return price
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 
     ''' <summary>
     ''' Metodo que establece la comunicacion con la BD

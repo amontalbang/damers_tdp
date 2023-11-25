@@ -31,9 +31,9 @@ Partial Class _33_InvoiceDetails
         Me.Label = New System.Windows.Forms.Label()
         Me.ClientIDLabel = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.RoomLabel = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TotalLabel = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -139,18 +139,18 @@ Partial Class _33_InvoiceDetails
         Me.Label6.TabIndex = 122
         Me.Label6.Text = "Núm. hab.:"
         '
-        'Label7
+        'RoomLabel
         '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(179, 217)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(18, 25)
-        Me.Label7.TabIndex = 123
-        Me.Label7.Text = " "
+        Me.RoomLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.RoomLabel.AutoSize = True
+        Me.RoomLabel.BackColor = System.Drawing.Color.Transparent
+        Me.RoomLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RoomLabel.ForeColor = System.Drawing.Color.White
+        Me.RoomLabel.Location = New System.Drawing.Point(179, 217)
+        Me.RoomLabel.Name = "RoomLabel"
+        Me.RoomLabel.Size = New System.Drawing.Size(18, 25)
+        Me.RoomLabel.TabIndex = 123
+        Me.RoomLabel.Text = " "
         '
         'Label3
         '
@@ -165,18 +165,18 @@ Partial Class _33_InvoiceDetails
         Me.Label3.TabIndex = 124
         Me.Label3.Text = "TOTAL a pagar:"
         '
-        'Label4
+        'TotalLabel
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(689, 567)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(19, 29)
-        Me.Label4.TabIndex = 125
-        Me.Label4.Text = " "
+        Me.TotalLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TotalLabel.AutoSize = True
+        Me.TotalLabel.BackColor = System.Drawing.Color.Transparent
+        Me.TotalLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TotalLabel.ForeColor = System.Drawing.Color.White
+        Me.TotalLabel.Location = New System.Drawing.Point(689, 567)
+        Me.TotalLabel.Name = "TotalLabel"
+        Me.TotalLabel.Size = New System.Drawing.Size(19, 29)
+        Me.TotalLabel.TabIndex = 125
+        Me.TotalLabel.Text = " "
         '
         'Label8
         '
@@ -199,9 +199,9 @@ Partial Class _33_InvoiceDetails
         Me.ClientSize = New System.Drawing.Size(818, 622)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TotalLabel)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.RoomLabel)
         Me.Controls.Add(Me.Label)
         Me.Controls.Add(Me.ClientIDLabel)
         Me.Controls.Add(Me.Label5)
@@ -226,8 +226,8 @@ Partial Class _33_InvoiceDetails
     Friend WithEvents Label As Label
     Friend WithEvents ClientIDLabel As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
+    Friend WithEvents RoomLabel As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents TotalLabel As Label
     Friend WithEvents Label8 As Label
 End Class

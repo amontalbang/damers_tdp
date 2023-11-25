@@ -17,14 +17,14 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            MenuAdmin.openFormHijo(New _33_InvoiceDetails())
+            MenuAdmin.openFormHijo(New _33_InvoiceDetails(reservationId))
             MenuAdmin.ocultarSubmenu()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim i As Integer = DataGridView1.CurrentRow.Index
         reservationId = UInteger.Parse(DataGridView1.Item(0, i).Value())
     End Sub
