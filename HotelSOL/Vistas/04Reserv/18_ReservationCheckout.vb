@@ -17,8 +17,8 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            controller.CheckOut(reservationId)
-            Me.Close()
+            MenuAdmin.openFormHijo(New _33_InvoiceDetails())
+            MenuAdmin.ocultarSubmenu()
         Catch ex As Exception
             MessageBox.Show("Error de conexión en la base de datos")
         End Try
