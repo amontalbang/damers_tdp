@@ -41,7 +41,7 @@ Public Class Form12
         Try
             If controller.RoomExists(id) Then
                 controller.DeleteRoom(newRoom)
-                DataGridView1.DataSource = controller.GetClientList()
+                DataGridView1.DataSource = controller.GetRoomList()
                 MessageBox.Show("HABITACIÓN ELIMINADA CORRECTAMENTE")
             Else
                 MessageBox.Show("LA HABITACIÓN ESPECIFICADA NO EXISTE")

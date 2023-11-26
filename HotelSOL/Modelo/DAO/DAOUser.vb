@@ -21,7 +21,7 @@ Public Class DaoUser
     ''' </summary>
     ''' <param name="User">Objeto Usuario a registrar en la BD</param>
     Public Sub AddUser(User As User)
-        command.CommandText = "INSERT Usuarios (IDusuario, Email, Password) VALUES ('" & User.UserIdProp & "', '" & User.EmailProp & "', '" & User.PasswordProp & "'"
+        command.CommandText = "INSERT Usuarios (IDusuario, Email, Password) VALUES ('" & User.UserIdProp & "', '" & User.EmailProp & "', '" & User.PasswordProp & "')"
         ExecuteQuery()
     End Sub
 
@@ -39,7 +39,7 @@ Public Class DaoUser
     ''' </summary>
     ''' <param name="User">Objeto Usuario a modificar en la BD</param>
     Public Sub UpdateUser(User As User)
-        command.CommandText = "UPDATE Usuarios SET Email = '" & User.EmailProp & "' Password = '" & User.PasswordProp & "'"
+        command.CommandText = "UPDATE Usuarios SET Email = '" & User.EmailProp & "', Password = '" & User.PasswordProp & "' where IDusuario = '" & User.UserIdProp() & "'"
         ExecuteQuery()
     End Sub
 

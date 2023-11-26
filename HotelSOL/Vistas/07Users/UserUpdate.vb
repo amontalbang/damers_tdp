@@ -23,7 +23,7 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
-        Dim idUsuario As UInteger = UInteger.Parse(UserIdTextBox.Text).ToString()
+        Dim idUsuario As String = UserIdTextBox.Text
         Dim email As String = EmailTextBox.Text
         Dim password As String = PasswordTextBox.Text
         Dim newUser As User = New User(idUsuario, email, password)

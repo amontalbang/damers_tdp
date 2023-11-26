@@ -144,7 +144,7 @@ Partial Class Form9
         'PriceHTextBox
         '
         Me.PriceHTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PriceHTextBox.Location = New System.Drawing.Point(611, 357)
+        Me.PriceHTextBox.Location = New System.Drawing.Point(611, 269)
         Me.PriceHTextBox.MaximumSize = New System.Drawing.Size(115, 20)
         Me.PriceHTextBox.Name = "PriceHTextBox"
         Me.PriceHTextBox.Size = New System.Drawing.Size(68, 20)
@@ -162,7 +162,7 @@ Partial Class Form9
         'PriceLTextBox
         '
         Me.PriceLTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.PriceLTextBox.Location = New System.Drawing.Point(611, 269)
+        Me.PriceLTextBox.Location = New System.Drawing.Point(611, 357)
         Me.PriceLTextBox.MaximumSize = New System.Drawing.Size(115, 20)
         Me.PriceLTextBox.Name = "PriceLTextBox"
         Me.PriceLTextBox.Size = New System.Drawing.Size(68, 20)

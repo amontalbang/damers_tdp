@@ -57,7 +57,7 @@ Public Class DAOReservation
             Else
                 estado = 0
             End If
-            cmd.CommandText = "UPDATE Reservas set IDcliente = '" & Reservation.ClientIdProp & "', IDHabitacion = '" & Reservation.RoomIdProp & "', FechaEntr = '" & Reservation.EntryDateProp & "' , FechaSal = '" & Reservation.DepartureDateProp & "', Regimen = '" & Reservation.BoardProp & "', Estado = " & estado & " where IDreserva = '" & Reservation.ReservationIdProp & "'"
+            cmd.CommandText = "UPDATE Reservas set IDcliente = '" & Reservation.ClientIdProp & "', IDHabitacion = '" & Reservation.RoomIdProp & "', FechaEntr = '" & Reservation.EntryDateProp & "' , FechaSal = '" & Reservation.DepartureDateProp & "', Temporada = '" & Reservation.SeasonProp & "', Regimen = '" & Reservation.BoardProp & "', Estado = " & estado & " where IDreserva = '" & Reservation.ReservationIdProp & "'"
             cmd.Connection = connector.Connect()
             cmd.ExecuteNonQuery()
             connector.Disconnect()
