@@ -18,6 +18,7 @@ Public Class Reservation
 	''' Metodo constructor vacio para Reserva
 	''' </summary>
     Public Sub New()
+        Me.clientId = 0
     End Sub
 
     Public Sub New(reservationId As UInteger)

@@ -148,7 +148,7 @@ HotelSOL
 </member>
 <member name="M:HotelSOL.Controller.ChargeService(System.UInt32,System.UInt32,System.Int32)">
  <summary>
- 
+ Método que carga un nuevo servicio a una reserva
  </summary>
  <param name="roomId"></param>
  <param name="serviceId"></param>
@@ -156,9 +156,9 @@ HotelSOL
 </member>
 <member name="M:HotelSOL.Controller.GetRoomIds">
  <summary>
- 
+ Recupara los identificadores de las habitaciones
  </summary>
- <returns></returns>
+ <returns>Array con los identificadores de las habitaciones</returns>
 </member>
 <member name="M:HotelSOL.Controller.CheckRoomAvailability(System.DateTime,System.DateTime)">
  <summary>
@@ -313,6 +313,19 @@ HotelSOL
  <param name="InitialDate"></param>
  <param name="FinalDate"></param>
  <param name="Type"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationByClient(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="ClientId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetActiveReservations">
+ <summary>
+ 
+ </summary>
  <returns></returns>
 </member>
 <member name="T:HotelSOL.DaoFactory">
