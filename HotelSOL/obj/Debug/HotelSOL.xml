@@ -306,6 +306,15 @@ HotelSOL
  <param name="ReservationId"></param>
  <returns></returns>
 </member>
+<member name="M:HotelSOL.Controller.GetReservationListsByDate(System.DateTime,System.DateTime,System.String)">
+ <summary>
+ Obtiene los listados 
+ </summary>
+ <param name="InitialDate"></param>
+ <param name="FinalDate"></param>
+ <param name="Type"></param>
+ <returns></returns>
+</member>
 <member name="T:HotelSOL.DaoFactory">
  <summary>
  Clase que implementa el patron Factory Method y permiten creao objetos modificables de las distintas clases
@@ -820,6 +829,12 @@ HotelSOL
  Metodo que devuelve una lista con todas las reservas
  </summary>
  <returns>devuelve un datatable con la lista de reservas</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetActiveReservationList">
+ <summary>
+ Metodo que devuelve el listado de reservas activas
+ </summary>
+ <returns></returns>
 </member>
 <member name="M:HotelSOL.DAOReservation.GetAllReservationByClientId(System.String)">
  <summary>

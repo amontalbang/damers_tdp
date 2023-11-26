@@ -61,7 +61,7 @@ Public Class DAORoom
         room.PriceMProp = priceM
         priceH = dt.AsEnumerable().ElementAt(0).Item(5).ToString
         room.PriceHProp = priceH
-        Return New Room(room.RoomIdProp, room.TypeProp, room.CapacityProp, room.PriceLProp, room.PriceMProp, room.PriceHProp)
+        Return New Room(room.RoomIdProp, room.TypeProp, room.CapacityProp, room.PriceHProp, room.PriceMProp, room.PriceLProp)
     End Function
 
     Public Function GetRoomList() As DataTable

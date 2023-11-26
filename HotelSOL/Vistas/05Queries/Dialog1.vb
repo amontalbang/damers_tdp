@@ -10,8 +10,7 @@ Public Class Dialog1
         InitializeComponent()
 
         ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-        Data = Data
-
+        Me.data = Data
     End Sub
 
     Private Sub OK_Button_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK_Button.Click
@@ -26,6 +25,7 @@ Public Class Dialog1
 
     Private Sub Dialog1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
+        Llenar_Grid()
     End Sub
 
     Private Sub Llenar_Grid()

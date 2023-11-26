@@ -249,7 +249,7 @@ Public Class Controller
     End Function
 
     ''' <summary>
-    ''' 
+    ''' Método que carga un nuevo servicio a una reserva
     ''' </summary>
     ''' <param name="roomId"></param>
     ''' <param name="serviceId"></param>
@@ -257,7 +257,6 @@ Public Class Controller
     Public Sub ChargeService(roomId As UInteger, serviceId As UInteger, units As Integer)
         Try
             Dim reservation As Reservation = daoReservation.GetReservationByRoomId(roomId)
-            MessageBox.Show(reservation.ClientIdProp)
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(reservation.ReservationIdProp)
             daoService.ChargeService(invoice.InvoiceIdProp, serviceId, units)
         Catch ex As Exception
@@ -266,9 +265,9 @@ Public Class Controller
     End Sub
 
     ''' <summary>
-    ''' 
+    ''' Recupara los identificadores de las habitaciones
     ''' </summary>
-    ''' <returns></returns>
+    ''' <returns>Array con los identificadores de las habitaciones</returns>
     Public Function GetRoomIds() As Array
         Try
             Dim dt As DataTable = daoRoom.GetRoomList()
@@ -444,7 +443,7 @@ Public Class Controller
         Try
             Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
             reservation.isActiveProp = False
-            daoReservation.UpdateReservation(reservation)
+            'daoReservation.UpdateReservation(reservation)
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)
             Return Me.GetTotalInvoice(reservation, invoice.InvoiceIdProp)
         Catch ex As Exception
@@ -598,11 +597,6 @@ Public Class Controller
         Try
             Dim servicesList As DataTable = daoService.GetConsumedServices(InvoiceId)
             Dim totalCount As UInteger = 0
-            For index = 0 To servicesList.Rows.Count() - 1
-                Dim serviceId As UInteger = CUInt(servicesList.AsEnumerable().ElementAt(index).Item(0))
-                totalCount = totalCount + daoService.GetServicePrice(serviceId)
-            Next
-            MessageBox.Show("No es el for")
             Dim room As Room = daoRoom.GetRoomById(Reservation.RoomIdProp)
             Select Case Reservation.SeasonProp
                 Case "baja"
@@ -613,13 +607,18 @@ Public Class Controller
                     totalCount = totalCount + CUInt(room.PriceHProp)
             End Select
             Select Case Reservation.BoardProp
-                Case "Media pensión"
-                    totalCount = totalCount * 1
-                Case "Pensión completa"
-                    totalCount = totalCount * 1.25
                 Case "Sin régimen"
+                    totalCount = totalCount * 1
+                Case "Media pensión"
+                    totalCount = totalCount * 1.25
+                Case "Pensión completa"
                     totalCount = totalCount * 1.5
             End Select
+            totalCount = totalCount * CInt(DateDiff("d", Reservation.EntryDateProp, Reservation.DepartureDateProp))
+            For index = 0 To servicesList.Rows.Count() - 1
+                Dim serviceId As UInteger = CUInt(servicesList.AsEnumerable().ElementAt(index).Item(0))
+                totalCount = totalCount + daoService.GetServicePrice(serviceId) * servicesList.AsEnumerable().ElementAt(index).Item(3)
+            Next
             Return totalCount
         Catch ex As Exception
             Throw ex
@@ -635,6 +634,87 @@ Public Class Controller
         Try
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)
             Dim dt As DataTable = daoService.GetConsumedServices(invoice.InvoiceIdProp)
+            Return dt
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    ''' <summary>
+    ''' Obtiene los listados 
+    ''' </summary>
+    ''' <param name="InitialDate"></param>
+    ''' <param name="FinalDate"></param>
+    ''' <param name="Type"></param>
+    ''' <returns></returns>
+    Public Function GetReservationListsByDate(InitialDate As Date, FinalDate As Date, Type As String) As DataTable
+        Try
+            Dim dataSource As DataTable = daoReservation.GetReservationList()
+            Dim dt As New DataTable
+            dt.Merge(dataSource)
+            Dim removedRows As Integer = 0
+            Select Case Type
+                Case "reservation"
+                    For index = 0 To dataSource.Rows.Count() - 1
+                        Dim entryDate As Date = CDate(dataSource.AsEnumerable().ElementAt(index).Item(3))
+                        Dim departureDate As Date = CDate(dataSource.AsEnumerable().ElementAt(index).Item(4))
+                        If (Not ((entryDate.Date.CompareTo(InitialDate) >= 0) And (entryDate.Date.CompareTo(FinalDate) <= 0) And (departureDate.Date.CompareTo(InitialDate) >= 0) And (departureDate.Date.CompareTo(FinalDate) <= 0))) Then
+                            dt.Rows.RemoveAt(index - removedRows)
+                            removedRows = removedRows + 1
+                        End If
+                    Next
+                    Return dt
+                Case "entry"
+                    For index = 0 To dataSource.Rows.Count() - 1
+                        Dim entryDate As Date = CDate(dataSource.AsEnumerable().ElementAt(index).Item(3))
+                        Dim departureDate As Date = CDate(dataSource.AsEnumerable().ElementAt(index).Item(4))
+                        If (Not ((entryDate.Date.CompareTo(InitialDate) >= 0) And (entryDate.Date.CompareTo(FinalDate) <= 0))) Then
+                            dt.Rows.RemoveAt(index - removedRows)
+                            removedRows = removedRows + 1
+                        End If
+                    Next
+                    Return dt
+                Case "departure"
+                    For index = 0 To dataSource.Rows.Count() - 1
+                        Dim entryDate As Date = CDate(dataSource.AsEnumerable().ElementAt(index).Item(3))
+                        Dim departureDate As Date = CDate(dataSource.AsEnumerable().ElementAt(index).Item(4))
+                        If (Not ((departureDate.Date.CompareTo(InitialDate) >= 0) And (departureDate.Date.CompareTo(FinalDate) <= 0))) Then
+                            dt.Rows.RemoveAt(index - removedRows)
+                            removedRows = removedRows + 1
+                        End If
+                    Next
+                    Return dt
+            End Select
+            Throw New Exception("No se ha podido comparar correctamente")
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <param name="ClientId"></param>
+    ''' <returns></returns>
+    Public Function GetReservationByClient(ClientId As String) As DataTable
+        Try
+            If (daoClient.ClientExists(ClientId)) Then
+                Return daoReservation.GetAllReservationByClientId(ClientId)
+            Else
+                Throw New Exception("El cliente introducido no existe")
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    ''' <summary>
+    ''' 
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function GetActiveReservations() As DataTable
+        Try
+            Dim dt As DataTable = daoReservation.GetActiveReservationList()
             Return dt
         Catch ex As Exception
             Throw ex

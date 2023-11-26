@@ -45,7 +45,7 @@ Partial Class Form22
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.ClientTextBox = New System.Windows.Forms.TextBox()
         Me.ButtonClient = New System.Windows.Forms.Button()
         Me.ButtonActiveReservation = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -91,9 +91,9 @@ Partial Class Form22
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label5.Location = New System.Drawing.Point(369, 171)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 25)
+        Me.Label5.Size = New System.Drawing.Size(65, 25)
         Me.Label5.TabIndex = 122
-        Me.Label5.Text = "Salida:"
+        Me.Label5.Text = "Final:"
         '
         'Label4
         '
@@ -104,9 +104,9 @@ Partial Class Form22
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Location = New System.Drawing.Point(33, 171)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 25)
+        Me.Label4.Size = New System.Drawing.Size(73, 25)
         Me.Label4.TabIndex = 121
-        Me.Label4.Text = "Entrada:"
+        Me.Label4.Text = "Inicial:"
         '
         'Label2
         '
@@ -196,9 +196,9 @@ Partial Class Form22
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label7.Location = New System.Drawing.Point(369, 273)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(78, 25)
+        Me.Label7.Size = New System.Drawing.Size(65, 25)
         Me.Label7.TabIndex = 129
-        Me.Label7.Text = "Salida:"
+        Me.Label7.Text = "Final:"
         '
         'Label8
         '
@@ -209,9 +209,9 @@ Partial Class Form22
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label8.Location = New System.Drawing.Point(33, 273)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(93, 25)
+        Me.Label8.Size = New System.Drawing.Size(73, 25)
         Me.Label8.TabIndex = 128
-        Me.Label8.Text = "Entrada:"
+        Me.Label8.Text = "Inicial:"
         '
         'ButtonDepartures
         '
@@ -265,9 +265,9 @@ Partial Class Form22
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label10.Location = New System.Drawing.Point(369, 380)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(78, 25)
+        Me.Label10.Size = New System.Drawing.Size(65, 25)
         Me.Label10.TabIndex = 135
-        Me.Label10.Text = "Salida:"
+        Me.Label10.Text = "Final:"
         '
         'Label11
         '
@@ -278,9 +278,9 @@ Partial Class Form22
         Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label11.Location = New System.Drawing.Point(33, 380)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(93, 25)
+        Me.Label11.Size = New System.Drawing.Size(73, 25)
         Me.Label11.TabIndex = 134
-        Me.Label11.Text = "Entrada:"
+        Me.Label11.Text = "Inicial:"
         '
         'Label12
         '
@@ -308,14 +308,14 @@ Partial Class Form22
         Me.Label14.TabIndex = 140
         Me.Label14.Text = "ID Cliente:"
         '
-        'TextBox1
+        'ClientTextBox
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Location = New System.Drawing.Point(166, 476)
-        Me.TextBox1.MaximumSize = New System.Drawing.Size(200, 20)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox1.TabIndex = 145
+        Me.ClientTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ClientTextBox.Location = New System.Drawing.Point(166, 476)
+        Me.ClientTextBox.MaximumSize = New System.Drawing.Size(200, 20)
+        Me.ClientTextBox.Name = "ClientTextBox"
+        Me.ClientTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.ClientTextBox.TabIndex = 145
         '
         'ButtonClient
         '
@@ -363,7 +363,7 @@ Partial Class Form22
         Me.Controls.Add(Me.ButtonActiveReservation)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.ButtonClient)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ClientTextBox)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.ButtonDepartures)
@@ -415,7 +415,7 @@ Partial Class Form22
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents ClientTextBox As TextBox
     Friend WithEvents ButtonClient As Button
     Friend WithEvents ButtonActiveReservation As Button
     Friend WithEvents Label13 As Label
