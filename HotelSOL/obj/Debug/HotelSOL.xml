@@ -146,6 +146,28 @@ HotelSOL
  </summary>
  <returns>devuelve lista con todos los servicios</returns>
 </member>
+<member name="M:HotelSOL.Controller.ChargeService(System.UInt32,System.UInt32,System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="roomId"></param>
+ <param name="serviceId"></param>
+ <param name="units"></param>
+</member>
+<member name="M:HotelSOL.Controller.GetRoomIds">
+ <summary>
+ 
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.CheckRoomAvailability(System.DateTime,System.DateTime)">
+ <summary>
+ Función para comprobar si la habitación está disponible
+ </summary>
+ <param name="EntryDate"></param>
+ <param name="DepartureDate"></param>
+ <returns></returns>
+</member>
 <member name="M:HotelSOL.Controller.AddUser(HotelSOL.User)">
  <summary>
  Metodo que accede al metodo AddUser de daoUser
@@ -227,6 +249,13 @@ HotelSOL
  <param name="ClientId">ID de cliente</param>
  <returns>datatable con la informacion de la reserva</returns>
 </member>
+<member name="M:HotelSOL.Controller.GetAllReservationByClientId(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="ClientId"></param>
+ <returns></returns>
+</member>
 <member name="M:HotelSOL.Controller.GetReservationSeasson(System.DateTime)">
  <summary>
  Metodo que devuelve la temporada de la reserva
@@ -261,6 +290,30 @@ HotelSOL
  <param name="UserId">cadena con el nombre de usuario</param>
  <param name="Password">cadena con la contraseña de usuario</param>
  <returns>devuelve booleano con resultado del login</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetTotalInvoice(HotelSOL.Reservation,System.UInt32)">
+ <summary>
+ 
+ </summary>
+ <param name="Reservation"></param>
+ <param name="InvoiceId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetConsumedServices(System.UInt32)">
+ <summary>
+ 
+ </summary>
+ <param name="ReservationId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationListsByDate(System.DateTime,System.DateTime,System.String)">
+ <summary>
+ Obtiene los listados 
+ </summary>
+ <param name="InitialDate"></param>
+ <param name="FinalDate"></param>
+ <param name="Type"></param>
+ <returns></returns>
 </member>
 <member name="T:HotelSOL.DaoFactory">
  <summary>
@@ -776,6 +829,12 @@ HotelSOL
  Metodo que devuelve una lista con todas las reservas
  </summary>
  <returns>devuelve un datatable con la lista de reservas</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetActiveReservationList">
+ <summary>
+ Metodo que devuelve el listado de reservas activas
+ </summary>
+ <returns></returns>
 </member>
 <member name="M:HotelSOL.DAOReservation.GetAllReservationByClientId(System.String)">
  <summary>

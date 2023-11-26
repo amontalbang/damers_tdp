@@ -30,14 +30,14 @@ Partial Class Form22
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.ButtonReservation = New System.Windows.Forms.Button()
+        Me.ButtonEntries = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ButtonDepartures = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.DateTimePicker5 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker6 = New System.Windows.Forms.DateTimePicker()
@@ -45,9 +45,9 @@ Partial Class Form22
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ClientTextBox = New System.Windows.Forms.TextBox()
+        Me.ButtonClient = New System.Windows.Forms.Button()
+        Me.ButtonActiveReservation = New System.Windows.Forms.Button()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -91,9 +91,9 @@ Partial Class Form22
         Me.Label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label5.Location = New System.Drawing.Point(369, 171)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 25)
+        Me.Label5.Size = New System.Drawing.Size(65, 25)
         Me.Label5.TabIndex = 122
-        Me.Label5.Text = "Salida:"
+        Me.Label5.Text = "Final:"
         '
         'Label4
         '
@@ -104,9 +104,9 @@ Partial Class Form22
         Me.Label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label4.Location = New System.Drawing.Point(33, 171)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 25)
+        Me.Label4.Size = New System.Drawing.Size(73, 25)
         Me.Label4.TabIndex = 121
-        Me.Label4.Text = "Entrada:"
+        Me.Label4.Text = "Inicial:"
         '
         'Label2
         '
@@ -132,29 +132,29 @@ Partial Class Form22
         Me.Label1.TabIndex = 115
         Me.Label1.Text = "Listado"
         '
-        'Button2
+        'ButtonReservation
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(668, 170)
-        Me.Button2.MaximumSize = New System.Drawing.Size(120, 30)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(120, 30)
-        Me.Button2.TabIndex = 127
-        Me.Button2.Text = "Buscar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.ButtonReservation.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ButtonReservation.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonReservation.Location = New System.Drawing.Point(668, 170)
+        Me.ButtonReservation.MaximumSize = New System.Drawing.Size(120, 30)
+        Me.ButtonReservation.Name = "ButtonReservation"
+        Me.ButtonReservation.Size = New System.Drawing.Size(120, 30)
+        Me.ButtonReservation.TabIndex = 127
+        Me.ButtonReservation.Text = "Buscar"
+        Me.ButtonReservation.UseVisualStyleBackColor = True
         '
-        'Button3
+        'ButtonEntries
         '
-        Me.Button3.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(668, 272)
-        Me.Button3.MaximumSize = New System.Drawing.Size(120, 30)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(120, 30)
-        Me.Button3.TabIndex = 133
-        Me.Button3.Text = "Buscar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.ButtonEntries.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ButtonEntries.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonEntries.Location = New System.Drawing.Point(668, 272)
+        Me.ButtonEntries.MaximumSize = New System.Drawing.Size(120, 30)
+        Me.ButtonEntries.Name = "ButtonEntries"
+        Me.ButtonEntries.Size = New System.Drawing.Size(120, 30)
+        Me.ButtonEntries.TabIndex = 133
+        Me.ButtonEntries.Text = "Buscar"
+        Me.ButtonEntries.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -196,9 +196,9 @@ Partial Class Form22
         Me.Label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label7.Location = New System.Drawing.Point(369, 273)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(78, 25)
+        Me.Label7.Size = New System.Drawing.Size(65, 25)
         Me.Label7.TabIndex = 129
-        Me.Label7.Text = "Salida:"
+        Me.Label7.Text = "Final:"
         '
         'Label8
         '
@@ -209,21 +209,21 @@ Partial Class Form22
         Me.Label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label8.Location = New System.Drawing.Point(33, 273)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(93, 25)
+        Me.Label8.Size = New System.Drawing.Size(73, 25)
         Me.Label8.TabIndex = 128
-        Me.Label8.Text = "Entrada:"
+        Me.Label8.Text = "Inicial:"
         '
-        'Button4
+        'ButtonDepartures
         '
-        Me.Button4.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(668, 379)
-        Me.Button4.MaximumSize = New System.Drawing.Size(120, 30)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(120, 30)
-        Me.Button4.TabIndex = 139
-        Me.Button4.Text = "Buscar"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.ButtonDepartures.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ButtonDepartures.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonDepartures.Location = New System.Drawing.Point(668, 379)
+        Me.ButtonDepartures.MaximumSize = New System.Drawing.Size(120, 30)
+        Me.ButtonDepartures.Name = "ButtonDepartures"
+        Me.ButtonDepartures.Size = New System.Drawing.Size(120, 30)
+        Me.ButtonDepartures.TabIndex = 139
+        Me.ButtonDepartures.Text = "Buscar"
+        Me.ButtonDepartures.UseVisualStyleBackColor = True
         '
         'Label9
         '
@@ -265,9 +265,9 @@ Partial Class Form22
         Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label10.Location = New System.Drawing.Point(369, 380)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(78, 25)
+        Me.Label10.Size = New System.Drawing.Size(65, 25)
         Me.Label10.TabIndex = 135
-        Me.Label10.Text = "Salida:"
+        Me.Label10.Text = "Final:"
         '
         'Label11
         '
@@ -278,9 +278,9 @@ Partial Class Form22
         Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label11.Location = New System.Drawing.Point(33, 380)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(93, 25)
+        Me.Label11.Size = New System.Drawing.Size(73, 25)
         Me.Label11.TabIndex = 134
-        Me.Label11.Text = "Entrada:"
+        Me.Label11.Text = "Inicial:"
         '
         'Label12
         '
@@ -308,38 +308,38 @@ Partial Class Form22
         Me.Label14.TabIndex = 140
         Me.Label14.Text = "ID Cliente:"
         '
-        'TextBox1
+        'ClientTextBox
         '
-        Me.TextBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.TextBox1.Location = New System.Drawing.Point(166, 476)
-        Me.TextBox1.MaximumSize = New System.Drawing.Size(200, 20)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 20)
-        Me.TextBox1.TabIndex = 145
+        Me.ClientTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ClientTextBox.Location = New System.Drawing.Point(166, 476)
+        Me.ClientTextBox.MaximumSize = New System.Drawing.Size(200, 20)
+        Me.ClientTextBox.Name = "ClientTextBox"
+        Me.ClientTextBox.Size = New System.Drawing.Size(200, 20)
+        Me.ClientTextBox.TabIndex = 145
         '
-        'Button5
+        'ButtonClient
         '
-        Me.Button5.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(405, 469)
-        Me.Button5.MaximumSize = New System.Drawing.Size(120, 30)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(120, 30)
-        Me.Button5.TabIndex = 146
-        Me.Button5.Text = "Buscar"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.ButtonClient.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ButtonClient.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonClient.Location = New System.Drawing.Point(405, 469)
+        Me.ButtonClient.MaximumSize = New System.Drawing.Size(120, 30)
+        Me.ButtonClient.Name = "ButtonClient"
+        Me.ButtonClient.Size = New System.Drawing.Size(120, 30)
+        Me.ButtonClient.TabIndex = 146
+        Me.ButtonClient.Text = "Buscar"
+        Me.ButtonClient.UseVisualStyleBackColor = True
         '
-        'Button1
+        'ButtonActiveReservation
         '
-        Me.Button1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(462, 553)
-        Me.Button1.MaximumSize = New System.Drawing.Size(120, 30)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 30)
-        Me.Button1.TabIndex = 150
-        Me.Button1.Text = "Buscar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.ButtonActiveReservation.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ButtonActiveReservation.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonActiveReservation.Location = New System.Drawing.Point(462, 553)
+        Me.ButtonActiveReservation.MaximumSize = New System.Drawing.Size(120, 30)
+        Me.ButtonActiveReservation.Name = "ButtonActiveReservation"
+        Me.ButtonActiveReservation.Size = New System.Drawing.Size(120, 30)
+        Me.ButtonActiveReservation.TabIndex = 150
+        Me.ButtonActiveReservation.Text = "Buscar"
+        Me.ButtonActiveReservation.UseVisualStyleBackColor = True
         '
         'Label13
         '
@@ -360,25 +360,25 @@ Partial Class Form22
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.ButtonActiveReservation)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Button5)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.ButtonClient)
+        Me.Controls.Add(Me.ClientTextBox)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.ButtonDepartures)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.DateTimePicker5)
         Me.Controls.Add(Me.DateTimePicker6)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.ButtonEntries)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DateTimePicker3)
         Me.Controls.Add(Me.DateTimePicker4)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.ButtonReservation)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -400,14 +400,14 @@ Partial Class Form22
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents ButtonReservation As Button
+    Friend WithEvents ButtonEntries As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents DateTimePicker3 As DateTimePicker
     Friend WithEvents DateTimePicker4 As DateTimePicker
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Button4 As Button
+    Friend WithEvents ButtonDepartures As Button
     Friend WithEvents Label9 As Label
     Friend WithEvents DateTimePicker5 As DateTimePicker
     Friend WithEvents DateTimePicker6 As DateTimePicker
@@ -415,8 +415,8 @@ Partial Class Form22
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents ClientTextBox As TextBox
+    Friend WithEvents ButtonClient As Button
+    Friend WithEvents ButtonActiveReservation As Button
     Friend WithEvents Label13 As Label
 End Class

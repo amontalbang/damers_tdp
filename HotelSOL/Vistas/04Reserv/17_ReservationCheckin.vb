@@ -28,6 +28,7 @@
         Try
             controller.CheckIn(reservationId)
             Llenar_grid()
+            MessageBox.Show("El check-in se ha realizado correctamente")
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try

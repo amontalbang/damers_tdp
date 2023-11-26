@@ -134,6 +134,22 @@ Public Class DAOReservation
     End Function
 
     ''' <summary>
+    ''' Metodo que devuelve el listado de reservas activas
+    ''' </summary>
+    ''' <returns></returns>
+    Public Function GetActiveReservationList() As DataTable
+        Try
+            Dim consulta As String = "SELECT * FROM Reservas WHERE Estado = 1"
+            Dim adaptador As New SqlDataAdapter(consulta, connector.Connect())
+            Dim reservationList As New DataTable
+            adaptador.Fill(reservationList)
+            Return reservationList
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    ''' <summary>
     ''' Metodo que devuelve las reservas referentes a un cliente
     ''' </summary>
     ''' <param name="ClientId">ID de cliente</param>
@@ -221,6 +237,14 @@ Public Class DAOReservation
                 Return True
             End If
             Return False
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
+    Public Function GetReservationByDate(startDate As Date, endDate As Date) As DataTable
+        Try
+
         Catch ex As Exception
             Throw ex
         End Try
