@@ -40,7 +40,9 @@ Partial Class _33_InvoiceDetails
         '
         'DataGridView1
         '
-        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
@@ -76,7 +78,6 @@ Partial Class _33_InvoiceDetails
         '
         'Label5
         '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -89,7 +90,6 @@ Partial Class _33_InvoiceDetails
         '
         'ReservationIDLabel
         '
-        Me.ReservationIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.ReservationIDLabel.AutoSize = True
         Me.ReservationIDLabel.BackColor = System.Drawing.Color.Transparent
         Me.ReservationIDLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -102,7 +102,6 @@ Partial Class _33_InvoiceDetails
         '
         'Label
         '
-        Me.Label.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label.AutoSize = True
         Me.Label.BackColor = System.Drawing.Color.Transparent
         Me.Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -115,7 +114,6 @@ Partial Class _33_InvoiceDetails
         '
         'ClientIDLabel
         '
-        Me.ClientIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.ClientIDLabel.AutoSize = True
         Me.ClientIDLabel.BackColor = System.Drawing.Color.Transparent
         Me.ClientIDLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -128,7 +126,6 @@ Partial Class _33_InvoiceDetails
         '
         'Label6
         '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -141,7 +138,6 @@ Partial Class _33_InvoiceDetails
         '
         'RoomLabel
         '
-        Me.RoomLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.RoomLabel.AutoSize = True
         Me.RoomLabel.BackColor = System.Drawing.Color.Transparent
         Me.RoomLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -154,7 +150,7 @@ Partial Class _33_InvoiceDetails
         '
         'Label3
         '
-        Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -167,7 +163,7 @@ Partial Class _33_InvoiceDetails
         '
         'TotalLabel
         '
-        Me.TotalLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.TotalLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TotalLabel.AutoSize = True
         Me.TotalLabel.BackColor = System.Drawing.Color.Transparent
         Me.TotalLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -180,7 +176,7 @@ Partial Class _33_InvoiceDetails
         '
         'Label8
         '
-        Me.Label8.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

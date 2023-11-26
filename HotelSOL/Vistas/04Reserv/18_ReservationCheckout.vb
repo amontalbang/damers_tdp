@@ -24,7 +24,7 @@
         End Try
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick, DataGridView1.CellClick
         Dim i As Integer = DataGridView1.CurrentRow.Index
         reservationId = UInteger.Parse(DataGridView1.Item(0, i).Value())
     End Sub

@@ -166,6 +166,11 @@ Public Class DAOReservation
         End Try
     End Function
 
+    ''' <summary>
+    ''' Metodo que devuelve un datatable con la informacion de un CLiente dado un ID de cliente
+    ''' </summary>
+    ''' <param name="ClientId">ID de cliente</param>
+    ''' <returns>datatable con la informacion de un cliente</returns>
     Public Function GetReservationByClientId(ClientId As String) As DataTable
         Try
             Dim consulta As String = "SELECT * FROM Reservas WHERE IDcliente = '" & ClientId & "' AND Estado = 1"
@@ -205,6 +210,11 @@ Public Class DAOReservation
         End Try
     End Function
 
+    ''' <summary>
+    ''' Metodo que devuelve una reserva dada una ID de habitacion
+    ''' </summary>
+    ''' <param name="RoomId">ID de habitacion</param>
+    ''' <returns>objeto reserva</returns>
     Public Function GetReservationByRoomId(RoomId As UInteger) As Reservation
         Try
             Dim consulta As String = "SELECT * FROM Reservas WHERE IDhabitacion = " & RoomId & "AND  Estado = 1"
@@ -226,6 +236,11 @@ Public Class DAOReservation
         End Try
     End Function
 
+    ''' <summary>
+    ''' MEtodo que comprueba si una reserva esta activa
+    ''' </summary>
+    ''' <param name="ReservationId">ID de reserva</param>
+    ''' <returns>devuelve booleano con la respuesta de la comprobacion</returns>
     Public Function CheckIfReservationIsActive(ReservationId As UInteger) As Boolean
         Try
             Dim consulta As String = "SELECT Estado FROM Reservas WHERE IDreserva = " & ReservationId
@@ -242,6 +257,12 @@ Public Class DAOReservation
         End Try
     End Function
 
+    ''' <summary>
+    ''' metodo que devuelve un datatable con la informacion de una reserva dado un rango de fechas
+    ''' </summary>
+    ''' <param name="startDate"></param>
+    ''' <param name="endDate"></param>
+    ''' <returns></returns>
     Public Function GetReservationByDate(startDate As Date, endDate As Date) As DataTable
         Try
 

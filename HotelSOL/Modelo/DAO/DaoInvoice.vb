@@ -88,6 +88,11 @@ Public Class DAOInvoice
         Return invoiceList
     End Function
 
+    ''' <summary>
+    ''' Metodo que devueve una factura dada una ID de reserva
+    ''' </summary>
+    ''' <param name="ReservationId">ID de reserva</param>
+    ''' <returns>Objeto factura</returns>
     Public Function GetInvoiceByReservationId(ReservationId As UInteger) As Invoice
         Try
             Dim consulta As String = "SELECT * FROM Facturas WHERE IDreserva = " & ReservationId
@@ -108,6 +113,11 @@ Public Class DAOInvoice
         End Try
     End Function
 
+    ''' <summary>
+    ''' Metodo que comprueba si una reserva tiene asociada una factura
+    ''' </summary>
+    ''' <param name="ReservationId">ID de reserva</param>
+    ''' <returns>booleano con la respuesta de la consulta</returns>
     Public Function CheckIfReservationHasInvoice(ReservationId As UInteger) As Boolean
         Try
             Dim consulta As String = "SELECT * FROM Facturas WHERE IDreserva = " & ReservationId

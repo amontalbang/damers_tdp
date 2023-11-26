@@ -29,9 +29,9 @@ Partial Class Form17
         Me.Button2 = New System.Windows.Forms.Button()
         Me.ClientId = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.checkin = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.checkin = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -62,10 +62,10 @@ Partial Class Form17
         '
         'SearchClientReservation
         '
-        Me.SearchClientReservation.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.SearchClientReservation.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.SearchClientReservation.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.SearchClientReservation.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchClientReservation.Location = New System.Drawing.Point(360, 126)
+        Me.SearchClientReservation.Location = New System.Drawing.Point(360, 140)
         Me.SearchClientReservation.MaximumSize = New System.Drawing.Size(510, 40)
         Me.SearchClientReservation.Name = "SearchClientReservation"
         Me.SearchClientReservation.Size = New System.Drawing.Size(299, 40)
@@ -75,7 +75,7 @@ Partial Class Form17
         '
         'Button2
         '
-        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(149, 554)
@@ -88,44 +88,25 @@ Partial Class Form17
         '
         'ClientId
         '
-        Me.ClientId.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ClientId.Location = New System.Drawing.Point(149, 138)
+        Me.ClientId.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.ClientId.Location = New System.Drawing.Point(149, 152)
         Me.ClientId.Name = "ClientId"
         Me.ClientId.Size = New System.Drawing.Size(168, 20)
         Me.ClientId.TabIndex = 82
         '
         'Label4
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(149, 107)
+        Me.Label4.Location = New System.Drawing.Point(149, 121)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 13)
         Me.Label4.TabIndex = 84
         Me.Label4.Text = "ID Cliente"
         '
-        'Panel1
-        '
-        Me.Panel1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Location = New System.Drawing.Point(38, 212)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(737, 252)
-        Me.Panel1.TabIndex = 85
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(2, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(743, 252)
-        Me.DataGridView1.TabIndex = 0
-        '
         'checkin
         '
-        Me.checkin.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.checkin.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.checkin.Location = New System.Drawing.Point(360, 482)
         Me.checkin.Name = "checkin"
         Me.checkin.Size = New System.Drawing.Size(75, 23)
@@ -133,14 +114,37 @@ Partial Class Form17
         Me.checkin.Text = "CHECKIN"
         Me.checkin.UseVisualStyleBackColor = True
         '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.Controls.Add(Me.DataGridView1)
+        Me.Panel1.Location = New System.Drawing.Point(12, 230)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(794, 224)
+        Me.Panel1.TabIndex = 88
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.Size = New System.Drawing.Size(794, 224)
+        Me.DataGridView1.TabIndex = 82
+        '
         'Form17
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
-        Me.Controls.Add(Me.checkin)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.checkin)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ClientId)
         Me.Controls.Add(Me.Button2)
@@ -162,7 +166,7 @@ Partial Class Form17
     Friend WithEvents Button2 As Button
     Friend WithEvents ClientId As TextBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents checkin As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents checkin As Button
 End Class

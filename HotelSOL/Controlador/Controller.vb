@@ -443,7 +443,7 @@ Public Class Controller
         Try
             Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
             reservation.isActiveProp = False
-            'daoReservation.UpdateReservation(reservation)
+            daoReservation.UpdateReservation(reservation)
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)
             Return Me.GetTotalInvoice(reservation, invoice.InvoiceIdProp)
         Catch ex As Exception

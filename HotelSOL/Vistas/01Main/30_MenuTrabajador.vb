@@ -12,6 +12,7 @@ Public Class Form30
     ''' <param name="e"></param>
     Private Sub Form30_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ocultarSubmenu()
+        LabelUsername.Text = LoginForm1.UsernameTextBox.Text
     End Sub
 
     ''' <summary>

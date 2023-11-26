@@ -148,7 +148,7 @@ HotelSOL
 </member>
 <member name="M:HotelSOL.Controller.ChargeService(System.UInt32,System.UInt32,System.Int32)">
  <summary>
- 
+ Método que carga un nuevo servicio a una reserva
  </summary>
  <param name="roomId"></param>
  <param name="serviceId"></param>
@@ -156,9 +156,9 @@ HotelSOL
 </member>
 <member name="M:HotelSOL.Controller.GetRoomIds">
  <summary>
- 
+ Recupara los identificadores de las habitaciones
  </summary>
- <returns></returns>
+ <returns>Array con los identificadores de las habitaciones</returns>
 </member>
 <member name="M:HotelSOL.Controller.CheckRoomAvailability(System.DateTime,System.DateTime)">
  <summary>
@@ -313,6 +313,19 @@ HotelSOL
  <param name="InitialDate"></param>
  <param name="FinalDate"></param>
  <param name="Type"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationByClient(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="ClientId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetActiveReservations">
+ <summary>
+ 
+ </summary>
  <returns></returns>
 </member>
 <member name="T:HotelSOL.DaoFactory">
@@ -782,9 +795,76 @@ HotelSOL
  </summary>
  <returns>Un datatable con la lista de facturas</returns>
 </member>
+<member name="M:HotelSOL.DAOInvoice.GetInvoiceByReservationId(System.UInt32)">
+ <summary>
+ Metodo que devueve una factura dada una ID de reserva
+ </summary>
+ <param name="ReservationId">ID de reserva</param>
+ <returns>Objeto factura</returns>
+</member>
+<member name="M:HotelSOL.DAOInvoice.CheckIfReservationHasInvoice(System.UInt32)">
+ <summary>
+ Metodo que comprueba si una reserva tiene asociada una factura
+ </summary>
+ <param name="ReservationId">ID de reserva</param>
+ <returns>booleano con la respuesta de la consulta</returns>
+</member>
 <member name="M:HotelSOL.DAOInvoice.ExecuteQuery">
  <summary>
  Metodo que establece la comunicacion con la BD
+ </summary>
+</member>
+<member name="T:HotelSOL.DAORoom">
+ <summary>
+ Clase que implementa los metodos referentes a las habitaciones
+ </summary>
+</member>
+<member name="M:HotelSOL.DAORoom.#ctor">
+ <summary>
+ Metodo constructor de la clase
+ </summary>
+</member>
+<member name="M:HotelSOL.DAORoom.AddRoom(HotelSOL.Room)">
+ <summary>
+ Metodo que añade una habitacion
+ </summary>
+ <param name="room"></param>
+</member>
+<member name="M:HotelSOL.DAORoom.DeleteRoom(HotelSOL.Room)">
+ <summary>
+ Metodo que elimina una habitacion
+ </summary>
+ <param name="room"></param>
+</member>
+<member name="M:HotelSOL.DAORoom.UpdateRoom(HotelSOL.Room)">
+ <summary>
+ Metodo que actualiza una habitacion
+ </summary>
+ <param name="Room"></param>
+</member>
+<member name="M:HotelSOL.DAORoom.RoomExists(System.UInt32)">
+ <summary>
+ Metodo que comprueba si existe una habitacion
+ </summary>
+ <param name="roomId">ID de habitacion</param>
+ <returns>booleano con la respuesta</returns>
+</member>
+<member name="M:HotelSOL.DAORoom.GetRoomById(System.UInt32)">
+ <summary>
+ MEtodo que devuelve una habitacion dado un numero de habitacion
+ </summary>
+ <param name="roomId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.DAORoom.GetRoomList">
+ <summary>
+ Metodo que devuelve un datatable con la informacion de todas las habitaciones
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.DAORoom.ExecuteQuery">
+ <summary>
+ Metodo de conexion a BD
  </summary>
 </member>
 <member name="T:HotelSOL.DAOReservation">
@@ -843,6 +923,13 @@ HotelSOL
  <param name="ClientId">ID de cliente</param>
  <returns>devuelve un datatable con la lista de reservas</returns>
 </member>
+<member name="M:HotelSOL.DAOReservation.GetReservationByClientId(System.String)">
+ <summary>
+ Metodo que devuelve un datatable con la informacion de un CLiente dado un ID de cliente
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <returns>datatable con la informacion de un cliente</returns>
+</member>
 <member name="M:HotelSOL.DAOReservation.GetReservationByClientAndRoom(System.String,System.String)">
  <summary>
  Metodo que devuelve una reserva dada una ID de cliente y una ID de habitacion
@@ -850,6 +937,28 @@ HotelSOL
  <param name="ClientId">ID de cliente</param>
  <param name="RoomId">ID de habitacion</param>
  <returns>Objeto reserva</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationByRoomId(System.UInt32)">
+ <summary>
+ Metodo que devuelve una reserva dada una ID de habitacion
+ </summary>
+ <param name="RoomId">ID de habitacion</param>
+ <returns>objeto reserva</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.CheckIfReservationIsActive(System.UInt32)">
+ <summary>
+ MEtodo que comprueba si una reserva esta activa
+ </summary>
+ <param name="ReservationId">ID de reserva</param>
+ <returns>devuelve booleano con la respuesta de la comprobacion</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationByDate(System.DateTime,System.DateTime)">
+ <summary>
+ metodo que devuelve un datatable con la informacion de una reserva dado un rango de fechas
+ </summary>
+ <param name="startDate"></param>
+ <param name="endDate"></param>
+ <returns></returns>
 </member>
 <member name="T:HotelSOL.Invoice">
  <summary>
