@@ -3,7 +3,7 @@
     Private Sub Form21_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.CenterToScreen()
     End Sub
-
+    'Comentario
     Private Sub AddReservationButton_Click(sender As Object, e As EventArgs) Handles AddReservationButton.Click
         MenuAdmin.openFormHijo(New Form14())
         MenuAdmin.ocultarSubmenu()
