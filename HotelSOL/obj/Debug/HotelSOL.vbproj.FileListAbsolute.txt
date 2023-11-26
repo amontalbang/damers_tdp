@@ -93,4 +93,4 @@ C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debu
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL._32_Exports.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL._33_InvoiceDetails.resources
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL._33_InvoiceDetails.resources
-C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.Dialog1.resources
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Dialog1.resources

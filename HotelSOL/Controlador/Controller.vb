@@ -720,4 +720,35 @@ Public Class Controller
             Throw ex
         End Try
     End Function
+
+    Public Function CheckRoomAvailability(Type As String, Capacity As UInteger, EntryDate As Date, DepartureDate As Date) As DataTable
+        Try
+            Dim dataSource As DataTable = daoRoom.GetRoomList()
+            Dim dt As New DataTable
+            dt.Merge(dataSource)
+            Dim deleteCount As Integer = 0
+            For index = 0 To dataSource.Rows.Count() - 1
+                Dim rowData As DataRow = dataSource.AsEnumerable().ElementAt(index - deleteCount)
+                If (Not rowData.Item(1).Equals(Type)) Then
+                    dt.Rows.RemoveAt(index - deleteCount)
+                    deleteCount = deleteCount + 1
+                    Continue For
+                End If
+                If (Not CUInt(rowData.Item(2)).Equals(Capacity)) Then
+                    dt.Rows.RemoveAt(index - deleteCount)
+                    deleteCount = deleteCount + 1
+                    Continue For
+                End If
+                Dim reservation As Reservation = daoReservation.GetReservationByRoomId(rowData.Item(0))
+                If (reservation.ClientIdProp <> 0 And Not (DepartureDate.Date.CompareTo(reservation.EntryDateProp) <= 0 Or EntryDate.Date.CompareTo(reservation.DepartureDateProp) >= 0)) Then
+                    dt.Rows.RemoveAt(index - deleteCount)
+                    deleteCount = deleteCount + 1
+                    Continue For
+                End If
+            Next
+            Return dt
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class

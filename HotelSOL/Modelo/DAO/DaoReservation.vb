@@ -222,15 +222,18 @@ Public Class DAOReservation
             Dim reservationList As New DataTable
             adaptador.Fill(reservationList)
             Dim reservation As New Reservation
-            reservation.ReservationIdProp = UInteger.Parse(reservationList.AsEnumerable().ElementAt(0).Item(0).ToString)
-            reservation.RoomIdProp = reservationList.AsEnumerable().ElementAt(0).Item(1).ToString
-            reservation.ClientIdProp = reservationList.AsEnumerable().ElementAt(0).Item(2).ToString
-            reservation.EntryDateProp = CDate(reservationList.AsEnumerable().ElementAt(0).Item(3).ToString)
-            reservation.DepartureDateProp = CDate(reservationList.AsEnumerable().ElementAt(0).Item(4).ToString)
-            reservation.SeasonProp = reservationList.AsEnumerable().ElementAt(0).Item(5).ToString
-            reservation.BoardProp = reservationList.AsEnumerable().ElementAt(0).Item(6).ToString
-            reservation.isActiveProp = reservationList.AsEnumerable().ElementAt(0).Item(7).ToString
-            Return reservation
+            If reservationList.Rows.Count > 0 Then
+                reservation.ReservationIdProp = UInteger.Parse(reservationList.AsEnumerable().ElementAt(0).Item(0).ToString)
+                reservation.RoomIdProp = reservationList.AsEnumerable().ElementAt(0).Item(1).ToString
+                reservation.ClientIdProp = reservationList.AsEnumerable().ElementAt(0).Item(2).ToString
+                reservation.EntryDateProp = CDate(reservationList.AsEnumerable().ElementAt(0).Item(3).ToString)
+                reservation.DepartureDateProp = CDate(reservationList.AsEnumerable().ElementAt(0).Item(4).ToString)
+                reservation.SeasonProp = reservationList.AsEnumerable().ElementAt(0).Item(5).ToString
+                reservation.BoardProp = reservationList.AsEnumerable().ElementAt(0).Item(6).ToString
+                reservation.isActiveProp = reservationList.AsEnumerable().ElementAt(0).Item(7).ToString
+                Return reservation
+            End If
+            Return New Reservation
         Catch ex As Exception
             Throw ex
         End Try
