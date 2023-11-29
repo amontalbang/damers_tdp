@@ -34,7 +34,7 @@ Public Class Form28
         Dim root As XElement = New XElement("Servicios")
         Dim node As XElement
         For i = 0 To dt.Rows.Count - 1
-            node = New XElement("Servicios")
+            node = New XElement("Servicio")
             node.Add(New XElement("IDservicio", DataGridView1.Item(0, i).Value()))
             node.Add(New XElement("Nombre", DataGridView1.Item(1, i).Value()))
             node.Add(New XElement("Descripcion", DataGridView1.Item(2, i).Value()))

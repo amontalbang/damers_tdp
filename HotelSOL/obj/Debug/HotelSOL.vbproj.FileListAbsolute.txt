@@ -94,3 +94,26 @@ C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debu
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL._33_InvoiceDetails.resources
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL._33_InvoiceDetails.resources
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Dialog1.resources
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.Dialog1.resources
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\IronPython.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\IronPython.Modules.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\IronPython.SQLite.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\IronPython.Wpf.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\Microsoft.Scripting.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Buffers.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Memory.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\IronPython.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\IronPython.Modules.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\IronPython.SQLite.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\IronPython.Wpf.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\Microsoft.Scripting.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Buffers.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Memory.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

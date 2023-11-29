@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{58D544B2-F7F6-4781-81F1-1C0F275B170F}</ProjectGuid>
+    <ProjectGuid>{AD1AEE9B-246B-4E2E-966F-2806CA66C1B1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>PruebasUnitarias</RootNamespace>
     <AssemblyName>PruebasUnitarias</AssemblyName>

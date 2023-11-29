@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "HotelSOL", "HotelSOL\HotelSOL.vbproj", "{A9F0E12F-F9E9-4FB6-9DAE-ED96C91D1F2D}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PruebasUnitarias", "PruebasUnitarias\PruebasUnitarias.vbproj", "{AD1AEE9B-246B-4E2E-966F-2806CA66C1B1}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Odoo_Python", "Odoo_Python\Odoo_Python.pyproj", "{BAE323B5-31AA-4F42-8F10-FC980F10302D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,12 @@ Global
 		{A9F0E12F-F9E9-4FB6-9DAE-ED96C91D1F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9F0E12F-F9E9-4FB6-9DAE-ED96C91D1F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9F0E12F-F9E9-4FB6-9DAE-ED96C91D1F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1AEE9B-246B-4E2E-966F-2806CA66C1B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1AEE9B-246B-4E2E-966F-2806CA66C1B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1AEE9B-246B-4E2E-966F-2806CA66C1B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1AEE9B-246B-4E2E-966F-2806CA66C1B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAE323B5-31AA-4F42-8F10-FC980F10302D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAE323B5-31AA-4F42-8F10-FC980F10302D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

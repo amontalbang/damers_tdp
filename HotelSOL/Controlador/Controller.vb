@@ -751,4 +751,44 @@ Public Class Controller
             Throw ex
         End Try
     End Function
+
+    Public Sub datasetToXML(type As String)
+        Dim filename As String
+        Try
+            Dim dt As New DataTable
+            Dim ds As New DataSet
+            If type = "client" Then
+                dt = Me.GetClientList()
+                filename = "C:\Users\Simon\source\repos\HotelSOL\HotelSOL\Odoo\Clients.xml"
+            ElseIf type = "user" Then
+                dt = Me.GetUserList()
+                filename = "C:\Users\Simon\source\repos\HotelSOL\HotelSOL\Odoo\Users.xml"
+                'ElseIf type = "invoice" Then
+                '    dt = Me.GetinvoiceList()
+                'filename = "C:\Users\Simon\source\repos\HotelSOL\HotelSOL\Odoo\Invoices.xml"
+            ElseIf type = "reservation" Then
+                dt = Me.GetReservationsList()
+                filename = "C:\Users\Simon\source\repos\HotelSOL\HotelSOL\Odoo\Reservations.xml"
+            ElseIf type = "room" Then
+                dt = Me.GetRoomList()
+                filename = "C:\Users\Simon\source\repos\HotelSOL\HotelSOL\Odoo\Rooms.xml"
+            ElseIf type = "service" Then
+                dt = Me.GetServiceList()
+                filename = "C:\Users\Simon\source\repos\HotelSOL\HotelSOL\Odoo\Services.xml"
+            End If
+            ds.Tables.Add(dt)
+            If ds Is Nothing Then
+                MessageBox.Show("El DataSet esta vacio")
+                Return
+            End If
+            For Each t As DataTable In ds.Tables
+                Debug.Print(t.Rows.Count.ToString)
+            Next
+            Using stream As New System.IO.FileStream(filename, System.IO.FileMode.Create)
+                ds.WriteXml(stream)
+            End Using
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 End Class

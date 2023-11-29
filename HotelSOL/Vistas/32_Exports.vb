@@ -1,5 +1,8 @@
 ﻿Imports System.Collections.ObjectModel
 Imports System.Data.SqlClient
+Imports IronPython
+Imports IronPython.Hosting
+Imports Microsoft.Scripting.Hosting
 
 Public Class _32_Exports
 
@@ -8,48 +11,54 @@ Public Class _32_Exports
     Private command As System.Data.SqlClient.SqlCommand
 
     Private Sub _32_Exports_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.CenterToParent
+        Me.CenterToParent()
     End Sub
 
-    Private Sub ClientsExportButton_Click(sender As Object, e As EventArgs) Handles ClientsExportButton.Click
+    Private Sub SelectButton_Click(sender As Object, e As EventArgs) Handles SelectButton.Click
         Try
-            Dim i As Integer
-            Dim dt As New DataTable
-            dt = controller.GetClientList()
-            DataGridView1.DataSource = dt
-            Dim root As XElement = New XElement("Clientes")
-            Dim node As XElement
-            For i = 0 To dt.Rows.Count - 1
-                node = New XElement("Cliente")
-                node.Add(New XElement("IDcliente", DataGridView1(0, i).Value()))
-                node.Add(New XElement("Nombre", DataGridView1(1, i).Value()))
-                node.Add(New XElement("Apellidos", DataGridView1(2, i).Value()))
-                node.Add(New XElement("FechaNac", DataGridView1(3, i).Value()))
-                node.Add(New XElement("Telefono", DataGridView1(4, i).Value()))
-                node.Add(New XElement("Email", DataGridView1(5, i).Value()))
-                node.Add(New XElement("Direccion", DataGridView1(6, i).Value()))
-                node.Add(New XElement("TarjetaCred", DataGridView1(7, i).Value()))
-                node.Add(New XElement("Descuento", DataGridView1(8, i).Value()))
-                node.Add(New XElement("ReservaActiva", DataGridView1(9, i).Value()))
-                root.Add(node)
-            Next
-            Dim doc As XDocument = New XDocument(root)
-            doc.Save("EXPORTED_CLIENTS.xml")
-            MessageBox.Show("XML de clientes exportado correctamente")
+            If ListBox1.Items.Count > 0 Then
+                Dim optionSelected As String = ListBox1.SelectedItem.ToString
+                Dim pythonFile As String = ""
+                Select Case (optionSelected)
+                    Case "Usuarios"
+                        pythonFile = "C:\Users\Simon\source\repos\HotelSOL\Odoo_Python\Odoo_UsersImport.py"
+                        controller.datasetToXML("user")
+                    Case "Servicios"
+                        pythonFile = "C:\Users\Simon\source\repos\HotelSOL\Odoo_Python\Odoo_ServicesImport.py"
+                        controller.datasetToXML("service")
+                    Case "Clientes"
+                        pythonFile = "C:\Users\Simon\source\repos\HotelSOL\Odoo_Python\Odoo_ClientsImport.py"
+                        controller.datasetToXML("client")
+                    Case "Habitaciones"
+                        pythonFile = "C:\Users\Simon\source\repos\HotelSOL\Odoo_Python\Odoo_RoomsImport.py"
+                        controller.datasetToXML("client")
+                    Case "Facturas"
+                        pythonFile = "C:\Users\Simon\source\repos\HotelSOL\Odoo_Python\Odoo_InvoicesImport.py"
+                        controller.datasetToXML("client")
+                    Case "Reservas"
+                        pythonFile = "C:\Users\Simon\source\repos\HotelSOL\Odoo_Python\Odoo_ReservationsImport.py"
+                        controller.datasetToXML("client")
+                End Select
+                executePython(pythonFile)
+            ElseIf ListBox1.Items.Count = 0 Then
+                MessageBox.Show("Por favor, seleccione una opción")
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+
+    End Sub
+
+    Private Sub executePython(pythonFile As String)
+        Dim pyEngine As ScriptEngine = Python.CreateEngine()
+        Dim pysource As ScriptSource = pyEngine.CreateScriptSourceFromFile(pythonFile)
+        Debug.Print("lanzamos execute python")
+        Try
+            pysource.Execute()
+            MessageBox.Show("La carga de datos en Odoo fue exitosa")
         Catch ex As Exception
             Throw ex
         End Try
     End Sub
 
-    Private Sub RoomsExportsButton_Click(sender As Object, e As EventArgs) Handles RoomsExportsButton.Click
-
-    End Sub
-
-    Private Sub ServicesExportButton_Click(sender As Object, e As EventArgs) Handles ServicesExportButton.Click
-
-    End Sub
-
-    Private Sub UsersExportButton_Click(sender As Object, e As EventArgs) Handles UsersExportButton.Click
-
-    End Sub
 End Class

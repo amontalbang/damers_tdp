@@ -1368,7 +1368,7 @@ HotelSOL
  </summary>
  <param name="childForm">objeto formulario</param>
 </member>
-<member name="M:HotelSOL.MenuAdmin.Button8_Click_1(System.Object,System.EventArgs)">
+<member name="M:HotelSOL.MenuAdmin.OdooButton_Click_1(System.Object,System.EventArgs)">
  <summary>
  Metodo para Logout y regreso a menu principal
  </summary>
