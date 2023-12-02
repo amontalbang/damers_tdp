@@ -124,6 +124,14 @@ Public Class DAOInvoice
         End Try
     End Function
 
+    Public Function GetInvoicesList() As DataTable
+        Dim query As String = "SELECT * FROM Facturas"
+        Dim adapter As New SqlDataAdapter(query, connector.Connect())
+        Dim invoiceList As New DataTable
+        adapter.Fill(invoiceList)
+        Return invoiceList
+    End Function
+
     ''' <summary>
     ''' Metodo que establece la comunicacion con la BD
     ''' </summary>

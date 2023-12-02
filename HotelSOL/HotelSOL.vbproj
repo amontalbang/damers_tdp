@@ -136,6 +136,7 @@
     <Import Include="IronPython.Runtime.Types" />
     <Import Include="IronPython.SQLite" />
     <Import Include="IronPython.Zlib" />
+    <Import Include="Microsoft.Scripting.Hosting.Shell" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />

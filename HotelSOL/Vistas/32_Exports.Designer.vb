@@ -28,6 +28,7 @@ Partial Class _32_Exports
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.SelectButton = New System.Windows.Forms.Button()
+        Me.ListBox2 = New System.Windows.Forms.ListBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -96,12 +97,21 @@ Partial Class _32_Exports
         Me.SelectButton.Text = "Exportar datos"
         Me.SelectButton.UseVisualStyleBackColor = False
         '
+        'ListBox2
+        '
+        Me.ListBox2.FormattingEnabled = True
+        Me.ListBox2.Location = New System.Drawing.Point(625, 130)
+        Me.ListBox2.Name = "ListBox2"
+        Me.ListBox2.Size = New System.Drawing.Size(156, 186)
+        Me.ListBox2.TabIndex = 41
+        '
         '_32_Exports
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.ClientSize = New System.Drawing.Size(818, 622)
+        Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.SelectButton)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.PictureBox1)
@@ -121,4 +131,5 @@ Partial Class _32_Exports
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents SelectButton As Button
+    Friend WithEvents ListBox2 As ListBox
 End Class
