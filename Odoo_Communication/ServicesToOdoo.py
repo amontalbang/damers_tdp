@@ -16,6 +16,12 @@ uid = common.authenticate(db, username, password, {})
 xml_file = ET.parse('..\\..\\..\\XMLs\\Exported_Services.xml')
 root = xml_file.getroot()
 
+serviceOdooIds = object.execute(db, uid, password, 'x_servicios', 'search', [])
+serviceIds = []
+for id in serviceOdooIds:
+    [record] = object.execute(db, uid, password, 'x_servicios', 'read', [id])
+    serviceIds.append(record['x_studio_id_servicio'])
+
 servicios = []
 for servicio in root:
     IDservicio = servicio.find('IDservicio').text 
@@ -23,14 +29,16 @@ for servicio in root:
     Descripcion = servicio.find('Descripcion').text 
     Precio = servicio.find('Precio').text 
 
-    servicios.append({
-        'x_name' : Nombre,
-        'x_studio_id_servicio' : IDservicio,
-        'x_studio_nombre' : Nombre,
-        'x_studio_descripcin' : Descripcion,
-        'x_studio_precio' : Precio,
-    })
+    if (not (IDservicio in serviceIds)):
+        servicios.append({
+            'x_name' : Nombre,
+            'x_studio_id_servicio' : IDservicio,
+            'x_studio_nombre' : Nombre,
+            'x_studio_descripcin' : Descripcion,
+            'x_studio_precio' : Precio,
+        })
 
-for servicio in servicios:
-    do_write = object.execute(db, uid, password, 'x_servicios', 'create', [servicio])
-    print('Servicio cargado correctamente')
+if len(servicios) > 0:
+    for servicio in servicios:
+        do_write = object.execute(db, uid, password, 'x_servicios', 'create', [servicio])
+        print('Servicio cargado correctamente')

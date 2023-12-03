@@ -17,6 +17,12 @@ uid = common.authenticate(db, username, password, {})
 xml_file = ET.parse('..\\..\\..\\XMLs\\Exported_Users.xml')
 root = xml_file.getroot()
 
+userIds = object.execute(db, uid, password, 'x_usuarios', 'search', [])
+userEmails = []
+for id in userIds:
+    [record] = object.execute(db, uid, password, 'x_usuarios', 'read', [id])
+    userEmails.append(record['x_studio_email'])
+
 usuarios = []
 for usuario in root:
     IDusuario = usuario.find('IDusuario').text   
@@ -24,15 +30,17 @@ for usuario in root:
     Password = usuario.find('Password').text 
     print(IDusuario)
 
-    usuarios.append({
-        'x_name' : IDusuario,
-        'x_studio_user' : IDusuario,
-        'x_studio_password' : Password,
-        'x_studio_email' : Email,
-    })
+    if (not (Email in userEmails)):
+        usuarios.append({
+            'x_name' : IDusuario,
+            'x_studio_user' : IDusuario,
+            'x_studio_password' : Password,
+            'x_studio_email' : Email,
+        })
 
-for usuario in usuarios:
-    do_write = object.execute(db, uid, password, 'x_usuarios', 'create', [usuario])
-    print('Usuario cargado correctamente')
+if len(usuarios) > 0:
+    for usuario in usuarios:
+        do_write = object.execute(db, uid, password, 'x_usuarios', 'create', [usuario])
+        print('Usuario cargado correctamente')
 
 

@@ -221,6 +221,12 @@
     <Compile Include="Vistas\07Users\UserUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vistas\08Exports\Dialog2.Designer.vb">
+      <DependentUpon>Dialog2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\08Exports\Dialog2.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vistas\29_ListShowClients.Designer.vb">
       <DependentUpon>29_ListShowClients.vb</DependentUpon>
     </Compile>
@@ -362,10 +368,10 @@
     <Compile Include="Vistas\01Main\31_MenuAdmin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vistas\32_Exports.Designer.vb">
+    <Compile Include="Vistas\08Exports\32_Exports.Designer.vb">
       <DependentUpon>32_Exports.vb</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\32_Exports.vb">
+    <Compile Include="Vistas\08Exports\32_Exports.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\33_InvoiceDetails.Designer.vb">
@@ -402,6 +408,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\07Users\UserUpdate.resx">
       <DependentUpon>UserUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\08Exports\Dialog2.resx">
+      <DependentUpon>Dialog2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\29_ListShowClients.resx">
       <DependentUpon>29_ListShowClients.vb</DependentUpon>
@@ -472,7 +481,7 @@
     <EmbeddedResource Include="Vistas\01Main\31_MenuAdmin.resx">
       <DependentUpon>31_MenuAdmin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vistas\32_Exports.resx">
+    <EmbeddedResource Include="Vistas\08Exports\32_Exports.resx">
       <DependentUpon>32_Exports.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\33_InvoiceDetails.resx">

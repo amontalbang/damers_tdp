@@ -17,6 +17,12 @@ uid = common.authenticate(db, username, password, {})
 xml_file = ET.parse('..\\..\\..\\XMLs\\Exported_Rooms.xml')
 root = xml_file.getroot()
 
+roomOdooIds = object.execute(db, uid, password, 'x_habitaciones', 'search', [])
+roomIds = []
+for id in roomOdooIds:
+    [record] = object.execute(db, uid, password, 'x_habitaciones', 'read', [id])
+    roomIds.append(record['x_studio_nm_hab'])
+
 habitaciones = []
 for habitacion in root:
     IDhabitacion = habitacion.find('IDhabitacion').text   
@@ -27,17 +33,19 @@ for habitacion in root:
     PrecioH = habitacion.find('PrecioH').text
     print(IDhabitacion)
 
-    habitaciones.append({
-        'x_name' : IDhabitacion,
-        'x_studio_nm_hab' : IDhabitacion,
-        'x_studio_tipo_1' : Tipo,
-        'x_studio_capacidad' : Capacidad,
-        'x_studio_precio_temp_baja' : PrecioL,
-        'x_studio_precio_temp_media' : PrecioM,
-        'x_studio_precio_temp_alta' : PrecioH,
-    })
+    if (not (IDhabitacion in roomIds)):
+        habitaciones.append({
+            'x_name' : IDhabitacion,
+            'x_studio_nm_hab' : IDhabitacion,
+            'x_studio_tipo_1' : Tipo,
+            'x_studio_capacidad' : Capacidad,
+            'x_studio_precio_temp_baja' : PrecioL,
+            'x_studio_precio_temp_media' : PrecioM,
+            'x_studio_precio_temp_alta' : PrecioH,
+        })
 
-for habitacion in habitaciones:
-    do_write = object.execute(db, uid, password, 'x_habitaciones', 'create', [habitacion])
-    print('Habitacion cargada correctamente')
+if len(habitaciones) > 0:
+    for habitacion in habitaciones:
+        do_write = object.execute(db, uid, password, 'x_habitaciones', 'create', [habitacion])
+        print('Habitacion cargada correctamente')
 

@@ -799,4 +799,11 @@ Public Class Controller
             Throw ex
         End Try
     End Sub
+
+    Public Function XMLToDataset() As DataTable
+        Dim dt As New DataTable
+        dt.ReadXmlSchema("..\..\..\XMLs\Exported_Clients.xml")
+        dt.ReadXml("..\..\..\XMLs\Exported_Clients.xml")
+        Return dt
+    End Function
 End Class

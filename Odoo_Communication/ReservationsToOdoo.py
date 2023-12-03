@@ -17,6 +17,12 @@ uid = common.authenticate(db, username, password, {})
 xml_file = ET.parse('..\\..\\..\\XMLs\\Exported_Reservations.xml')
 root = xml_file.getroot()
 
+reservationOdooIds = object.execute(db, uid, password, 'x_reservas', 'search', [])
+reservationIds = []
+for id in reservationOdooIds:
+    [record] = object.execute(db, uid, password, 'x_reservas', 'read', [id])
+    reservationIds.append(record['x_studio_id_de_reserva'])
+
 reservas = []
 for reserva in root:
     IDreserva = reserva.find('IDreserva').text   
@@ -29,18 +35,20 @@ for reserva in root:
     Estado = reserva.find('Estado').text
     print(IDreserva)
 
-    reservas.append({
-        'x_name' : IDreserva,
-        'x_studio_id_de_reserva' : IDreserva,
-        'x_studio_id_habitacin' : IDhabitacion,
-        'x_studio_id_cliente' : IDCliente,
-        'x_studio_fecha_entrada' : FechaEntr,
-        'x_studio_fecha_salida' : FechaSal,
-        'x_studio_temporada' : Temporada,
-        'x_studio_rgimen' : Regimen,
-        'x_studio_estado' : Estado,
-    })
+    if (not (IDreserva in reservationIds)):
+        reservas.append({
+            'x_name' : IDreserva,
+            'x_studio_id_de_reserva' : IDreserva,
+            'x_studio_id_habitacin' : IDhabitacion,
+            'x_studio_id_cliente' : IDCliente,
+            'x_studio_fecha_entrada' : FechaEntr,
+            'x_studio_fecha_salida' : FechaSal,
+            'x_studio_temporada' : Temporada,
+            'x_studio_rgimen' : Regimen,
+            'x_studio_estado' : Estado,
+        })
 
-for reserva in reservas:
-    do_write = object.execute(db, uid, password, 'x_reservas', 'create', [reserva])
-    print('Reserva cargadas correctamente')
+if len(reservas) > 0:
+    for reserva in reservas:
+        do_write = object.execute(db, uid, password, 'x_reservas', 'create', [reserva])
+        print('Reserva cargadas correctamente')

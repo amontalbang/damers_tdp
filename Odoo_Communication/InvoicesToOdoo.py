@@ -17,6 +17,12 @@ uid = common.authenticate(db, username, password, {})
 xml_file = ET.parse('..\\..\\..\\XMLs\\Exported_Invoices.xml')
 root = xml_file.getroot()
 
+invoiceOdooIds = object.execute(db, uid, password, 'x_facturas', 'search', [])
+invoiceIds = []
+for id in invoiceOdooIds:
+    [record] = object.execute(db, uid, password, 'x_facturas', 'read', [id])
+    invoiceIds.append(record['x_studio_id_factura'])
+
 facturas = []
 for factura in root:
     IDfactura = factura.find('IDfactura').text   
@@ -24,13 +30,15 @@ for factura in root:
     Total = factura.find('Total').text
     print(IDfactura)
 
-    facturas.append({
-        'x_name' : IDfactura,
-        'x_studio_id_factura' : IDfactura,
-        'x_studio_id_reserva' : IDreserva,
-        'x_studio_total' : Total,
-    })
+    if (not (IDfactura in invoiceIds)):
+        facturas.append({
+            'x_name' : IDfactura,
+            'x_studio_id_factura' : IDfactura,
+            'x_studio_id_reserva' : IDreserva,
+            'x_studio_total' : Total,
+        })
 
-for factura in facturas:
-    do_write = object.execute(db, uid, password, 'x_facturas', 'create', [factura])
-    print('Factura cargadas correctamente')
+if len(facturas) > 0:
+    for factura in facturas:
+        do_write = object.execute(db, uid, password, 'x_facturas', 'create', [factura])
+        print('Factura cargadas correctamente')

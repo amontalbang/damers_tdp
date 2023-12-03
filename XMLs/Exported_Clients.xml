@@ -1,122 +1,38 @@
 <NewDataSet>
   <Table1>
-    <IDcliente>56843265-O</IDcliente>
-    <Nombre>Miguel</Nombre>
-    <Apellidos>Estepa</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Miguel@mail.com</Email>
-    <Direccion>Calle perales 4</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>20</Descuento>
+    <IDcliente>1</IDcliente>
+    <Nombre>alberto</Nombre>
+    <Apellidos>montalban</Apellidos>
+    <FechaNac>2023-11-07T00:00:00+01:00</FechaNac>
+    <Telefono>6</Telefono>
+    <Email>m</Email>
+    <Direccion>m</Direccion>
+    <TarjetaCred>m</TarjetaCred>
+    <Descuento>5</Descuento>
     <ReservaActiva>false</ReservaActiva>
   </Table1>
   <Table1>
-    <IDcliente>56846545-N</IDcliente>
-    <Nombre>Esther</Nombre>
-    <Apellidos>Torres</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Esther@mail.com</Email>
-    <Direccion>QAvenida pajares 25</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>20</Descuento>
+    <IDcliente>2</IDcliente>
+    <Nombre>Luis</Nombre>
+    <Apellidos>Anton</Apellidos>
+    <FechaNac>2023-12-02T00:00:00+01:00</FechaNac>
+    <Telefono>6</Telefono>
+    <Email>m</Email>
+    <Direccion>m</Direccion>
+    <TarjetaCred>m</TarjetaCred>
+    <Descuento>1</Descuento>
     <ReservaActiva>false</ReservaActiva>
   </Table1>
   <Table1>
-    <IDcliente>56846598-G</IDcliente>
-    <Nombre>Pedro</Nombre>
-    <Apellidos>Sanchez</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Pedro@mail.com</Email>
-    <Direccion>Plaza castilla 5</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>0</Descuento>
-    <ReservaActiva>false</ReservaActiva>
-  </Table1>
-  <Table1>
-    <IDcliente>56847115-C</IDcliente>
-    <Nombre>Lola</Nombre>
-    <Apellidos>Perez</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Lola@mail.com</Email>
-    <Direccion>Calle presa 36</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>10</Descuento>
-    <ReservaActiva>false</ReservaActiva>
-  </Table1>
-  <Table1>
-    <IDcliente>56847125-R</IDcliente>
-    <Nombre>Cristina</Nombre>
-    <Apellidos>Laña</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Cristina@mail.com</Email>
-    <Direccion>Avenida del rey 8</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>0</Descuento>
-    <ReservaActiva>false</ReservaActiva>
-  </Table1>
-  <Table1>
-    <IDcliente>56847125-T</IDcliente>
-    <Nombre>Alberto</Nombre>
-    <Apellidos>Fernandez</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Alberto@mail.com</Email>
-    <Direccion>Calle pez 5</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>0</Descuento>
-    <ReservaActiva>false</ReservaActiva>
-  </Table1>
-  <Table1>
-    <IDcliente>56847157-K</IDcliente>
-    <Nombre>Natalia</Nombre>
-    <Apellidos>Navarro</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Natalia@mail.com</Email>
-    <Direccion>Plaza olavide 2</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>0</Descuento>
-    <ReservaActiva>false</ReservaActiva>
-  </Table1>
-  <Table1>
-    <IDcliente>56847159-A</IDcliente>
-    <Nombre>Beatriz</Nombre>
-    <Apellidos>Martin</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Beatriz@mail.com</Email>
-    <Direccion>Calle fuencarral 75</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>10</Descuento>
-    <ReservaActiva>false</ReservaActiva>
-  </Table1>
-  <Table1>
-    <IDcliente>56847471-X</IDcliente>
-    <Nombre>Daniel</Nombre>
-    <Apellidos>Nogal</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Daniel@mail.com</Email>
-    <Direccion>Paseo imperial 45</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>0</Descuento>
-    <ReservaActiva>false</ReservaActiva>
-  </Table1>
-  <Table1>
-    <IDcliente>56847654-S</IDcliente>
-    <Nombre>Pepe</Nombre>
-    <Apellidos>Sanz</Apellidos>
-    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
-    <Telefono>652143026</Telefono>
-    <Email>Pepe@mail.com</Email>
-    <Direccion>Calle luna 56</Direccion>
-    <TarjetaCred>456879123546</TarjetaCred>
-    <Descuento>10</Descuento>
+    <IDcliente>20918145</IDcliente>
+    <Nombre>as</Nombre>
+    <Apellidos>as</Apellidos>
+    <FechaNac>2023-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>as</Telefono>
+    <Email>as</Email>
+    <Direccion>as</Direccion>
+    <TarjetaCred>as</TarjetaCred>
+    <Descuento>1</Descuento>
     <ReservaActiva>false</ReservaActiva>
   </Table1>
 </NewDataSet>

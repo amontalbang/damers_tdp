@@ -117,3 +117,26 @@ C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Buffers.xml
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Memory.xml
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Simon\source\repos\HotelSOL\HotelSOL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\IronPython.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\IronPython.Modules.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\IronPython.SQLite.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\IronPython.Wpf.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\Microsoft.Dynamic.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\Microsoft.Scripting.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\Microsoft.Scripting.Metadata.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Buffers.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Memory.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\IronPython.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\IronPython.Modules.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\IronPython.SQLite.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\IronPython.Wpf.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\Microsoft.Dynamic.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\Microsoft.Scripting.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\Microsoft.Scripting.Metadata.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Buffers.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Memory.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Dialog2.resources

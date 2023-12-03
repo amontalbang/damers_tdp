@@ -38,6 +38,13 @@
     </Compile>
     <Compile Include="UsersToOdoo.py" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HotelSOL\HotelSOL.vbproj">
+      <Name>HotelSOL</Name>
+      <Project>{a9f0e12f-f9e9-4fb6-9dae-ed96c91d1f2d}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
        Visual Studio and specify your pre- and post-build commands in
