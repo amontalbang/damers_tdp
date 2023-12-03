@@ -140,3 +140,4 @@ C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debu
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\monta\Desktop\FP DAM\NET\proyecto_hotelsol\damers_tdp\HotelSOL\obj\Debug\HotelSOL.Dialog2.resources
+C:\Users\Simon\source\repos\HotelSOL\HotelSOL\obj\Debug\HotelSOL.Dialog2.resources

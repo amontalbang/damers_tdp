@@ -802,8 +802,8 @@ Public Class Controller
 
     Public Function XMLToDataset() As DataTable
         Dim dt As New DataTable
-        dt.ReadXmlSchema("..\..\..\XMLs\Exported_Clients.xml")
-        dt.ReadXml("..\..\..\XMLs\Exported_Clients.xml")
-        Return dt
+        Dim ds As New DataSet
+        ds.ReadXml("..\..\..\XMLs\odooToClients.xml")
+        Return ds.Tables.Item(0)
     End Function
 End Class

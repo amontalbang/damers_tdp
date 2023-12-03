@@ -43,7 +43,6 @@ Public Class _32_Exports
                         controller.datasetToXML("reservation")
                         Me.ejecutarScriptPython(filename)
                 End Select
-                'executePython(pythonFile)
             ElseIf ListBox1.Items.Count = 0 Then
                 MessageBox.Show("Por favor, seleccione una opción")
             End If
@@ -54,8 +53,8 @@ Public Class _32_Exports
     End Sub
 
     Public Sub ejecutarScriptPython(filename As String)
-        Dim ejecutable As String = "C:\Users\monta\AppData\Local\Programs\Python\Python38-32\python.exe"
-        'Dim ejecutable As String = "C:\Users\Simon\AppData\Local\Programs\Python\Python36-32\python.exe"
+        'Dim ejecutable As String = "C:\Users\monta\AppData\Local\Programs\Python\Python38-32\python.exe"
+        Dim ejecutable As String = "C:\Users\Simon\AppData\Local\Programs\Python\Python36-32\python.exe"
         Dim psi As New ProcessStartInfo(ejecutable)
         psi.WorkingDirectory = IO.Path.GetDirectoryName("..\..\..\Odoo_Communication\")
         psi.FileName = filename
@@ -64,9 +63,41 @@ Public Class _32_Exports
 
     Private Sub ImportButton_Click(sender As Object, e As EventArgs) Handles ImportButton.Click
         Try
-            data = controller.XMLToDataset()
+            If ListBox1.Items.Count > 0 Then
+                Dim optionSelected As String = ListBox1.SelectedItem.ToString
+                Dim filename As String = ""
+                Select Case (optionSelected)
+                    Case "Usuarios"
+                        filename = "OdooToApp_Users.py"
+                        Me.ejecutarScriptPython(filename)
+                        data = controller.XMLToDataset()
+                    Case "Servicios"
+                        filename = "OdooToApp_Services.py"
+                        controller.datasetToXML("service")
+                        Me.ejecutarScriptPython(filename)
+                    Case "Clientes"
+                        filename = "OdooToApp_Clients.py"
+                        controller.datasetToXML("client")
+                        Me.ejecutarScriptPython(filename)
+                    Case "Habitaciones"
+                        filename = "OdooToApp_Rooms.py"
+                        controller.datasetToXML("room")
+                        Me.ejecutarScriptPython(filename)
+                    Case "Facturas"
+                        filename = "OdooToApp_Invoices.py"
+                        controller.datasetToXML("invoice")
+                        Me.ejecutarScriptPython(filename)
+                    Case "Reservas"
+                        filename = "OdooToApp_Reservations.py"
+                        controller.datasetToXML("reservation")
+                        Me.ejecutarScriptPython(filename)
+                End Select
+                Show_Dialog()
+            ElseIf ListBox1.Items.Count = 0 Then
+                MessageBox.Show("Por favor, seleccione una opción")
+            End If
         Catch ex As Exception
-            MessageBox.Show(ex.Message)
+            Throw ex
         End Try
     End Sub
 

@@ -27,6 +27,24 @@
     <Compile Include="InvoicesToOdoo.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="OdooToApp_Clients.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OdooToApp_Invoices.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OdooToApp_Reservations.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OdooToApp_Rooms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OdooToApp_Services.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OdooToApp_Users.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ReservationsToOdoo.py">
       <SubType>Code</SubType>
     </Compile>

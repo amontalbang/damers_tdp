@@ -10,19 +10,23 @@ db = 'damerstpd'
 username = 'smaquedam@uoc.edu'
 password = 'DAMERs_IoT'
 
+# Creamos la llamada rpc a Odoo
 common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
 object = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 uid = common.authenticate(db, username, password, {})
 
-xml_file = ET.parse('..\\..\\..\\XMLs\\Exported_Users.xml')
+# Recogemos el XML que procede y le damos formato
+xml_file = ET.parse('..\\XMLs\\Exported_Users.xml')
 root = xml_file.getroot()
 
+# Creamos un array con los datos existentes en Odoo usando los identificadores
 userIds = object.execute(db, uid, password, 'x_usuarios', 'search', [])
 userEmails = []
 for id in userIds:
     [record] = object.execute(db, uid, password, 'x_usuarios', 'read', [id])
     userEmails.append(record['x_studio_email'])
 
+# Creamos un segundo array con los datos del XML a exportar
 usuarios = []
 for usuario in root:
     IDusuario = usuario.find('IDusuario').text   
@@ -38,6 +42,7 @@ for usuario in root:
             'x_studio_email' : Email,
         })
 
+# Recorremos ese segundo array escribiendo los datos en Odoo
 if len(usuarios) > 0:
     for usuario in usuarios:
         do_write = object.execute(db, uid, password, 'x_usuarios', 'create', [usuario])
