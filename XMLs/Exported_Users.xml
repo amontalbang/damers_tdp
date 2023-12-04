@@ -2,7 +2,7 @@
   <Table1>
     <IDusuario>Admin</IDusuario>
     <Email>Admin@mail.com</Email>
-    <Password>123</Password>
+    <Password>123456</Password>
   </Table1>
   <Table1>
     <IDusuario>Juan</IDusuario>

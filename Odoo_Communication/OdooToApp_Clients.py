@@ -13,7 +13,6 @@ models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 
 if uid:
     print("autenticacion exitosa") 
-    #print(models.execute_kw(db, uid, password, 'x_clientes', 'search_read', [], {'fields': ['x_studio_nombre', 'x_studio_apellidos', 'x_studio_dni', 'x_studio_fecha_de_nacimiento_1', 'x_studio_telfono', 'x_studio_email', 'x_studio_direccin', 'x_studio_tarjeta_de_crdito', 'x_studio_descuento', 'x_studio_reserva_activa'], 'limit': 100}))   
     [usuarios] = [models.execute_kw(db, uid, password, 'x_clientes', 'search_read', [], {'fields': ['x_studio_nombre', 'x_studio_apellidos', 'x_studio_dni', 'x_studio_fecha_de_nacimiento_1', 'x_studio_telfono', 'x_studio_email', 'x_studio_direccin', 'x_studio_tarjeta_de_crdito', 'x_studio_descuento', 'x_studio_reserva_activa'], 'limit': 100})]
 
     odoo = ET.Element('NewDataset')

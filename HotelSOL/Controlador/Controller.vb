@@ -709,9 +709,9 @@ Public Class Controller
     End Function
 
     ''' <summary>
-    ''' 
+    ''' Función para recuperar los datos de las reservas activas
     ''' </summary>
-    ''' <returns></returns>
+    ''' <returns>Datatable con la información de las reservas activas</returns>
     Public Function GetActiveReservations() As DataTable
         Try
             Dim dt As DataTable = daoReservation.GetActiveReservationList()
@@ -721,6 +721,14 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' Función que comprueba la disponibilidad de habitaciones
+    ''' </summary>
+    ''' <param name="Type"></param>
+    ''' <param name="Capacity"></param>
+    ''' <param name="EntryDate"></param>
+    ''' <param name="DepartureDate"></param>
+    ''' <returns>Datatable con el listado de habitaciones disponibles</returns>
     Public Function CheckRoomAvailability(Type As String, Capacity As UInteger, EntryDate As Date, DepartureDate As Date) As DataTable
         Try
             Dim dataSource As DataTable = daoRoom.GetRoomList()
@@ -760,6 +768,10 @@ Public Class Controller
         End Try
     End Function
 
+    ''' <summary>
+    ''' Método que convierte un dataset en un XML que guarda en el equipo
+    ''' </summary>
+    ''' <param name="type"></param>
     Public Sub datasetToXML(type As String)
         Dim filename As String = ""
         Try
@@ -800,10 +812,30 @@ Public Class Controller
         End Try
     End Sub
 
-    Public Function XMLToDataset() As DataTable
+    ''' <summary>
+    ''' Función que convierte un archivo de tipo XML en un dataset
+    ''' </summary>
+    ''' <param name="OptionSel"></param>
+    ''' <returns>Datatable contenida en el dataset</returns>
+    Public Function XMLToDataset(OptionSel As String) As DataTable
         Dim dt As New DataTable
         Dim ds As New DataSet
-        ds.ReadXml("..\..\..\XMLs\odooToClients.xml")
+        Dim fileName As String = ""
+        Select Case (OptionSel)
+            Case "Usuarios"
+                fileName = "..\..\..\XMLs\odooToUsers.xml"
+            Case "Reservas"
+                fileName = "..\..\..\XMLs\odooToReservations.xml"
+            Case "Clientes"
+                fileName = "..\..\..\XMLs\odooToClients.xml"
+            Case "Facturas"
+                fileName = "..\..\..\XMLs\odooToInvoices.xml"
+            Case "Servicios"
+                fileName = "..\..\..\XMLs\odooToServices.xml"
+            Case "Habitaciones"
+                fileName = "..\..\..\XMLs\odooToRooms.xml"
+        End Select
+        ds.ReadXml(fileName)
         Return ds.Tables.Item(0)
     End Function
 End Class
