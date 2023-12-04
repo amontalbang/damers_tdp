@@ -46,7 +46,7 @@ if uid:
         else:
             ReservaActiva.text = 'false'
     xml = ET.ElementTree(odoo)
-    xml.write('..\\XMLs\\odooToClients.xml')
+    xml.write('odooToClients.xml')
 
 
 else:

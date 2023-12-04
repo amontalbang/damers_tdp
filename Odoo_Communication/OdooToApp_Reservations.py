@@ -40,7 +40,7 @@ if uid:
         else:
             Estado.text = 'false'
     xml = ET.ElementTree(odoo)
-    xml.write('..\\XMLs\\odooToReservations.xml')
+    xml.write('odooToReservations.xml')
 
 
 else:

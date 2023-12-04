@@ -26,7 +26,7 @@ if uid:
         Total = ET.SubElement(Table1, 'Total')
         Total.text = str(factura['x_studio_total'])
     xml = ET.ElementTree(odoo)
-    xml.write('..\\XMLs\\odooToInvoices.xml')
+    xml.write('odooToInvoices.xml')
 
 
 else:

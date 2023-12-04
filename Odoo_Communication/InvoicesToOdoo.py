@@ -14,7 +14,7 @@ common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
 object = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 uid = common.authenticate(db, username, password, {})
 
-xml_file = ET.parse('..\\XMLs\\Exported_Invoices.xml')
+xml_file = ET.parse('Exported_Invoices.xml')
 root = xml_file.getroot()
 
 invoiceOdooIds = object.execute(db, uid, password, 'x_facturas', 'search', [])

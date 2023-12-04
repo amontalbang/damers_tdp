@@ -29,7 +29,7 @@ if uid:
         Precio.text = str(servicio['x_studio_precio'])
         
     xml = ET.ElementTree(odoo)
-    xml.write('..\\XMLs\\odooToServices.xml')
+    xml.write('odooToServices.xml')
 
 
 else:

@@ -779,22 +779,22 @@ Public Class Controller
             Dim ds As New DataSet
             If type = "client" Then
                 dt = Me.GetClientList()
-                filename = "..\..\..\XMLs\Exported_Clients.xml"
+                filename = "Exported_Clients.xml"
             ElseIf type = "user" Then
                 dt = Me.GetUserList()
-                filename = "..\..\..\XMLs\Exported_Users.xml"
+                filename = "Exported_Users.xml"
             ElseIf type = "invoice" Then
                 dt = Me.GetInvoiceList()
-                filename = "..\..\..\XMLs\Exported_Invoices.xml"
+                filename = "Exported_Invoices.xml"
             ElseIf type = "reservation" Then
                 dt = Me.GetReservationsList()
-                filename = "..\..\..\XMLs\Exported_Reservations.xml"
+                filename = "Exported_Reservations.xml"
             ElseIf type = "room" Then
                 dt = Me.GetRoomList()
-                filename = "..\..\..\XMLs\Exported_Rooms.xml"
+                filename = "Exported_Rooms.xml"
             ElseIf type = "service" Then
                 dt = Me.GetServiceList()
-                filename = "..\..\..\XMLs\Exported_Services.xml"
+                filename = "Exported_Services.xml"
             End If
             ds.Tables.Add(dt)
             If ds Is Nothing Then
@@ -823,17 +823,17 @@ Public Class Controller
         Dim fileName As String = ""
         Select Case (OptionSel)
             Case "Usuarios"
-                fileName = "..\..\..\XMLs\odooToUsers.xml"
+                fileName = "odooToUsers.xml"
             Case "Reservas"
-                fileName = "..\..\..\XMLs\odooToReservations.xml"
+                fileName = "odooToReservations.xml"
             Case "Clientes"
-                fileName = "..\..\..\XMLs\odooToClients.xml"
+                fileName = "odooToClients.xml"
             Case "Facturas"
-                fileName = "..\..\..\XMLs\odooToInvoices.xml"
+                fileName = "odooToInvoices.xml"
             Case "Servicios"
-                fileName = "..\..\..\XMLs\odooToServices.xml"
+                fileName = "odooToServices.xml"
             Case "Habitaciones"
-                fileName = "..\..\..\XMLs\odooToRooms.xml"
+                fileName = "odooToRooms.xml"
         End Select
         ds.ReadXml(fileName)
         Return ds.Tables.Item(0)

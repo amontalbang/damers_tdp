@@ -513,6 +513,43 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ClientsToOdoo.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InvoicesToOdoo.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OdooToApp_Clients.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OdooToApp_Invoices.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OdooToApp_Reservations.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OdooToApp_Rooms.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OdooToApp_Services.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OdooToApp_Users.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReservationsToOdoo.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RoomsToOdoo.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ServicesToOdoo.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsersToOdoo.py" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -1,0 +1,22 @@
+<NewDataSet>
+  <Table1>
+    <IDusuario>Admin</IDusuario>
+    <Email>Admin@mail.com</Email>
+    <Password>123456</Password>
+  </Table1>
+  <Table1>
+    <IDusuario>Juan</IDusuario>
+    <Email>Juan@mail.com</Email>
+    <Password>Juan456</Password>
+  </Table1>
+  <Table1>
+    <IDusuario>Pedro</IDusuario>
+    <Email>Pedro@mail.com</Email>
+    <Password>Pedro789</Password>
+  </Table1>
+  <Table1>
+    <IDusuario>Pepi</IDusuario>
+    <Email>Pepi@mail.com</Email>
+    <Password>Pepi123</Password>
+  </Table1>
+</NewDataSet>

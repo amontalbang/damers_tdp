@@ -33,7 +33,7 @@ if uid:
         PrecioH = ET.SubElement(Table1, 'PrecioH')
         PrecioH.text = habitacion['x_studio_precio_temp_alta']
     xml = ET.ElementTree(odoo)
-    xml.write('..\\XMLs\\odooToRooms.xml')
+    xml.write('odooToRooms.xml')
 
 
 else:

@@ -16,7 +16,7 @@ object = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 uid = common.authenticate(db, username, password, {})
 
 # Recogemos el XML que procede y le damos formato
-xml_file = ET.parse('..\\XMLs\\Exported_Users.xml')
+xml_file = ET.parse('Exported_Users.xml')
 root = xml_file.getroot()
 
 # Creamos un array con los datos existentes en Odoo usando los identificadores

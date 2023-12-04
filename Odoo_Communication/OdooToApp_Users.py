@@ -27,7 +27,7 @@ if uid:
         Password.text = usuario['x_studio_password']
         
     xml = ET.ElementTree(odoo)
-    xml.write('..\\XMLs\\odooToUsers.xml')
+    xml.write('odooToUsers.xml')
 
 
 else:
