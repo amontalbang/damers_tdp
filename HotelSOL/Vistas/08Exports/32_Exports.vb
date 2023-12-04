@@ -60,7 +60,7 @@ Public Class _32_Exports
         Dim ejecutable As String = "C:\Users\monta\AppData\Local\Programs\Python\Python38-32\python.exe"
         'Dim ejecutable As String = "C:\Users\Simon\AppData\Local\Programs\Python\Python36-32\python.exe"
         Dim psi As New ProcessStartInfo(ejecutable)
-        psi.WorkingDirectory = IO.Path.GetDirectoryName("Release\")
+        psi.WorkingDirectory = IO.Path.GetDirectoryName(".\")
         psi.FileName = filename
         Process.Start(psi)
     End Sub
