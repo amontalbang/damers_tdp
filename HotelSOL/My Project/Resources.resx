@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ClientsToOdoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ClientsToOdoo.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="InvoicesToOdoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\InvoicesToOdoo.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OdooToApp_Clients" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OdooToApp_Clients.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OdooToApp_Invoices" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OdooToApp_Invoices.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OdooToApp_Reservations" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OdooToApp_Reservations.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OdooToApp_Rooms" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OdooToApp_Rooms.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OdooToApp_Services" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OdooToApp_Services.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OdooToApp_Users" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OdooToApp_Users.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ReservationsToOdoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReservationsToOdoo.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="RoomsToOdoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\RoomsToOdoo.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ServicesToOdoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ServicesToOdoo.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="UsersToOdoo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UsersToOdoo.py;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

@@ -57,11 +57,9 @@ Public Class _32_Exports
     ''' </summary>
     ''' <param name="filename"></param>
     Public Sub ejecutarScriptPython(filename As String)
-        Dim ejecutable As String = "C:\Users\monta\AppData\Local\Programs\Python\Python38-32\python.exe"
-        'Dim ejecutable As String = "C:\Users\Simon\AppData\Local\Programs\Python\Python36-32\python.exe"
+        Dim ejecutable As String = "python.exe"
         Dim psi As New ProcessStartInfo(ejecutable)
-        psi.WorkingDirectory = IO.Path.GetDirectoryName(".\")
-        psi.FileName = filename
+        psi.Arguments = filename
         Process.Start(psi)
     End Sub
 

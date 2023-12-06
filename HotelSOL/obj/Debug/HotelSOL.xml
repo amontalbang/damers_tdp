@@ -22,66 +22,6 @@ HotelSOL
   búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
-<member name="P:HotelSOL.My.Resources.Resources.ClientsToOdoo">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.InvoicesToOdoo">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.OdooToApp_Clients">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.OdooToApp_Invoices">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.OdooToApp_Reservations">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.OdooToApp_Rooms">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.OdooToApp_Services">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.OdooToApp_Users">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.ReservationsToOdoo">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.RoomsToOdoo">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.ServicesToOdoo">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
-<member name="P:HotelSOL.My.Resources.Resources.UsersToOdoo">
-<summary>
-  Busca un recurso adaptado de tipo System.Byte[].
-</summary>
-</member>
 <member name="T:HotelSOL.Controller">
  <summary>
  Clase Controlador que enlaza las vistas y el modelo

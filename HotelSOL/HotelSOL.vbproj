@@ -166,6 +166,11 @@
     <Compile Include="Modelo\Invoice.vb" />
     <Compile Include="Modelo\Room.vb" />
     <Compile Include="Modelo\Reservation.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\01Main\01.1Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -346,11 +351,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -471,9 +471,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\01Main\30_MenuTrabajador.resx">
       <DependentUpon>30_MenuTrabajador.vb</DependentUpon>
@@ -514,42 +514,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <None Include="Resources\ClientsToOdoo.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\InvoicesToOdoo.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\OdooToApp_Clients.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\OdooToApp_Invoices.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\OdooToApp_Reservations.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\OdooToApp_Rooms.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\OdooToApp_Services.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\OdooToApp_Users.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ReservationsToOdoo.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\RoomsToOdoo.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ServicesToOdoo.py" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\UsersToOdoo.py" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

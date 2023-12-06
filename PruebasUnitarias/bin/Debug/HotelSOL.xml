@@ -8,18 +8,18 @@ HotelSOL
 <members>
 <member name="T:HotelSOL.My.Resources.Resources">
 <summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
 </summary>
 </member>
 <member name="P:HotelSOL.My.Resources.Resources.ResourceManager">
 <summary>
-  Returns the cached ResourceManager instance used by this class.
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
 </summary>
 </member>
 <member name="P:HotelSOL.My.Resources.Resources.Culture">
 <summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
 </summary>
 </member>
 <member name="T:HotelSOL.Controller">
@@ -324,9 +324,32 @@ HotelSOL
 </member>
 <member name="M:HotelSOL.Controller.GetActiveReservations">
  <summary>
- 
+ Función para recuperar los datos de las reservas activas
  </summary>
- <returns></returns>
+ <returns>Datatable con la información de las reservas activas</returns>
+</member>
+<member name="M:HotelSOL.Controller.CheckRoomAvailability(System.String,System.UInt32,System.DateTime,System.DateTime)">
+ <summary>
+ Función que comprueba la disponibilidad de habitaciones
+ </summary>
+ <param name="Type"></param>
+ <param name="Capacity"></param>
+ <param name="EntryDate"></param>
+ <param name="DepartureDate"></param>
+ <returns>Datatable con el listado de habitaciones disponibles</returns>
+</member>
+<member name="M:HotelSOL.Controller.datasetToXML(System.String)">
+ <summary>
+ Método que convierte un dataset en un XML que guarda en el equipo
+ </summary>
+ <param name="type"></param>
+</member>
+<member name="M:HotelSOL.Controller.XMLToDataset(System.String)">
+ <summary>
+ Función que convierte un archivo de tipo XML en un dataset
+ </summary>
+ <param name="OptionSel"></param>
+ <returns>Datatable contenida en el dataset</returns>
 </member>
 <member name="T:HotelSOL.DaoFactory">
  <summary>
@@ -1368,12 +1391,37 @@ HotelSOL
  </summary>
  <param name="childForm">objeto formulario</param>
 </member>
-<member name="M:HotelSOL.MenuAdmin.Button8_Click_1(System.Object,System.EventArgs)">
+<member name="M:HotelSOL.MenuAdmin.OdooButton_Click_1(System.Object,System.EventArgs)">
  <summary>
  Metodo para Logout y regreso a menu principal
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
+</member>
+<member name="M:HotelSOL._32_Exports.SelectButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que captura el clic en el botón de export
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL._32_Exports.ejecutarScriptPython(System.String)">
+ <summary>
+ Método para ejecutar el script de python
+ </summary>
+ <param name="filename"></param>
+</member>
+<member name="M:HotelSOL._32_Exports.ImportButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que captura el clic en el botón del import
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL._32_Exports.Show_Dialog">
+ <summary>
+ Método para mostrar el cuadro de diálogo con la información del import
+ </summary>
 </member>
 </members>
 </doc>

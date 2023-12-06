@@ -22,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -58,126 +58,6 @@ Namespace My.Resources
             Set
                 resourceCulture = value
             End Set
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property ClientsToOdoo() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("ClientsToOdoo", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property InvoicesToOdoo() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("InvoicesToOdoo", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property OdooToApp_Clients() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("OdooToApp_Clients", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property OdooToApp_Invoices() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("OdooToApp_Invoices", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property OdooToApp_Reservations() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("OdooToApp_Reservations", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property OdooToApp_Rooms() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("OdooToApp_Rooms", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property OdooToApp_Services() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("OdooToApp_Services", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property OdooToApp_Users() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("OdooToApp_Users", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property ReservationsToOdoo() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("ReservationsToOdoo", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property RoomsToOdoo() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("RoomsToOdoo", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property ServicesToOdoo() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("ServicesToOdoo", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Friend ReadOnly Property UsersToOdoo() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("UsersToOdoo", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
         End Property
     End Module
 End Namespace
