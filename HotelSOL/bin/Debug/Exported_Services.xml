@@ -4,77 +4,69 @@
     <Nombre>Lavandería</Nombre>
     <Descripcion>servicio de lavandería</Descripcion>
     <Precio>13</Precio>
-  </Table1>
-  <Table1>
-    <IDservicio>2</IDservicio>
-    <Nombre>Servicio aeropuerto</Nombre>
-    <Descripcion>servicio transporte hacia el aeropuerto</Descripcion>
-    <Precio>35</Precio>
-  </Table1>
-  <Table1>
-    <IDservicio>3</IDservicio>
-    <Nombre>Retoucherie</Nombre>
-    <Descripcion>servicio de reparacion de ropa y calzado</Descripcion>
-    <Precio>14</Precio>
-  </Table1>
-  <Table1>
-    <IDservicio>4</IDservicio>
-    <Nombre>Cama</Nombre>
-    <Descripcion>cama extra en la habitación</Descripcion>
-    <Precio>37</Precio>
-  </Table1>
-  <Table1>
-    <IDservicio>5</IDservicio>
-    <Nombre>Persona extra</Nombre>
-    <Descripcion>precio por huésped extra</Descripcion>
-    <Precio>58</Precio>
-  </Table1>
-  <Table1>
-    <IDservicio>6</IDservicio>
-    <Nombre>Desayuno</Nombre>
-    <Descripcion>servicio de desayuno en habitación</Descripcion>
-    <Precio>6</Precio>
-  </Table1>
-  <Table1>
-    <IDservicio>7</IDservicio>
-    <Nombre>Menú del día</Nombre>
-    <Descripcion>servicio de menú en el restaurante</Descripcion>
-    <Precio>15</Precio>
+    <Disponible>0</Disponible>
   </Table1>
   <Table1>
     <IDservicio>8</IDservicio>
     <Nombre>Champagne</Nombre>
     <Descripcion>botella de champagne</Descripcion>
-    <Precio>23</Precio>
-  </Table1>
-  <Table1>
-    <IDservicio>9</IDservicio>
-    <Nombre>Agua</Nombre>
-    <Descripcion>botella de agua 1,5L</Descripcion>
-    <Precio>2</Precio>
-  </Table1>
-  <Table1>
-    <IDservicio>10</IDservicio>
-    <Nombre>Refresco</Nombre>
-    <Descripcion>Lata de refresco</Descripcion>
-    <Precio>3</Precio>
+    <Precio>50</Precio>
+    <Disponible>0</Disponible>
   </Table1>
   <Table1>
     <IDservicio>11</IDservicio>
     <Nombre>Cerveza</Nombre>
     <Descripcion>lata de cerveza</Descripcion>
     <Precio>3</Precio>
+    <Disponible>0</Disponible>
   </Table1>
   <Table1>
     <IDservicio>12</IDservicio>
     <Nombre>Sandwich</Nombre>
     <Descripcion>sandwich al gusto</Descripcion>
     <Precio>5</Precio>
+    <Disponible>0</Disponible>
   </Table1>
   <Table1>
     <IDservicio>13</IDservicio>
     <Nombre>Bollería</Nombre>
     <Descripcion>unidad de bollería al gusto</Descripcion>
     <Precio>1</Precio>
+    <Disponible>0</Disponible>
+  </Table1>
+  <Table1>
+    <IDservicio>35</IDservicio>
+    <Nombre>Consigna</Nombre>
+    <Descripcion>Servicio de consigna</Descripcion>
+    <Precio>5</Precio>
+    <Disponible>0</Disponible>
+  </Table1>
+  <Table1>
+    <IDservicio>36</IDservicio>
+    <Nombre>Lata CocaCola</Nombre>
+    <Descripcion>Unidad lata CocaCola</Descripcion>
+    <Precio>1</Precio>
+    <Disponible>1000</Disponible>
+  </Table1>
+  <Table1>
+    <IDservicio>37</IDservicio>
+    <Nombre>Lavandería</Nombre>
+    <Descripcion>Servicios de lavandería</Descripcion>
+    <Precio>5</Precio>
+    <Disponible>0</Disponible>
+  </Table1>
+  <Table1>
+    <IDservicio>38</IDservicio>
+    <Nombre>botella agua 0,5L</Nombre>
+    <Descripcion>Botella agua unidad</Descripcion>
+    <Precio>1</Precio>
+    <Disponible>1000</Disponible>
+  </Table1>
+  <Table1>
+    <IDservicio>45</IDservicio>
+    <Nombre>Refresco</Nombre>
+    <Descripcion>Lata de refresco</Descripcion>
+    <Precio>3</Precio>
+    <Disponible>0</Disponible>
   </Table1>
 </NewDataSet>

@@ -1,1 +1,7 @@
-<NewDataSet />
+<NewDataSet>
+  <Table1>
+    <IDfactura>1</IDfactura>
+    <IDreserva>1</IDreserva>
+    <Total>0</Total>
+  </Table1>
+</NewDataSet>

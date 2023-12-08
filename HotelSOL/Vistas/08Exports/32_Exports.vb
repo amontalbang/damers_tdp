@@ -4,8 +4,6 @@ Imports Microsoft.Scripting.Hosting
 Public Class _32_Exports
 
     Private controller As Controller = New Controller
-    Private connector As DatabaseConnection
-    Private command As System.Data.SqlClient.SqlCommand
     Private data As DataTable
 
     Private Sub _32_Exports_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -89,6 +87,7 @@ Public Class _32_Exports
                 End Select
                 Me.ejecutarScriptPython(filename)
                 data = controller.XMLToDataset(optionSelected)
+                controller.RegisterIntoDB(data, optionSelected)
                 System.Threading.Thread.Sleep(3000)
                 Show_Dialog()
             ElseIf ListBox1.Items.Count = 0 Then

@@ -8,6 +8,23 @@ Public Class Service
 	Private name As String
 	Private description As String
 	Private price As UInteger
+	Private unitsAvailable As UInteger
+
+	''' <summary>
+	''' Metodo constructor con todos los atributos del objeto
+	''' </summary>
+	''' <param name="ServiceId">Id del servicio</param>
+	''' <param name="Name">nombre del servicio</param>
+	''' <param name="Description">descripcion del servicio</param>
+	''' <param name="Price">precio del servicio</param>
+	''' <param name="Units">unidades disponibles del producto</param>
+	Public Sub New(ServiceId As UInteger, Name As String, Description As String, Price As UInteger, Units As UInteger)
+		Me.serviceId = ServiceId
+		Me.name = Name
+		Me.description = Description
+		Me.price = Price
+		Me.unitsAvailable = Units
+	End Sub
 
 	''' <summary>
 	''' Metodo constructor con todos los atributos del objeto
@@ -21,6 +38,7 @@ Public Class Service
 		Me.name = Name
 		Me.description = Description
 		Me.price = Price
+		Me.unitsAvailable = 0
 	End Sub
 
 	''' <summary>
@@ -33,6 +51,7 @@ Public Class Service
 		Me.name = Name
 		Me.description = Description
 		Me.price = Price
+		Me.unitsAvailable = 0
 	End Sub
 
 	''' <summary>
@@ -47,7 +66,6 @@ Public Class Service
 	''' Constructor vacio de objeto
 	''' </summary>
 	Public Sub New()
-
 	End Sub
 
 	''' <summary>
@@ -99,6 +117,19 @@ Public Class Service
 		End Get
 		Set(ByVal Value As UInteger)
 			price = Value
+		End Set
+	End Property
+
+	''' <summary>
+	''' Propiedad con get/set para el numero de unidades disponibles
+	''' </summary>
+	''' <returns>entero indicando el numero de unidades disponibles</returns>
+	Public Property UnitsAvailableProp() As UInteger
+		Get
+			Return unitsAvailable
+		End Get
+		Set(ByVal Value As UInteger)
+			unitsAvailable = Value
 		End Set
 	End Property
 End Class

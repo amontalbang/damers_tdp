@@ -78,14 +78,18 @@ Public Class DaoUser
     ''' <param name="Password">Contraseña del usuario</param>
     ''' <returns>Booleano con la respuesta exitosa o no del login</returns>
     Public Function UserLogin(UserId As String, Password As String) As Boolean
-        Dim query As String = "SELECT * FROM Usuarios where IDusuario='" & UserId & "'and Password ='" & Password & "'"
-        Dim adapter As New SqlDataAdapter(query, connector.Connect())
-        Dim dt As New DataTable
-        adapter.Fill(dt)
-        If dt.AsEnumerable().Count() > 0 Then
-            Return True
-        End If
-        Return False
+        Try
+            Dim query As String = "SELECT * FROM Usuarios where IDusuario='" & UserId & "'and Password ='" & Password & "'"
+            Dim adapter As New SqlDataAdapter(query, connector.Connect())
+            Dim dt As New DataTable
+            adapter.Fill(dt)
+            If dt.AsEnumerable().Count() > 0 Then
+                Return True
+            End If
+            Return False
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Function
 
     ''' <summary>

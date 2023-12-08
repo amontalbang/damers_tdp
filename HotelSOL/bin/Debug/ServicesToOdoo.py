@@ -16,29 +16,32 @@ uid = common.authenticate(db, username, password, {})
 xml_file = ET.parse('Exported_Services.xml')
 root = xml_file.getroot()
 
-serviceOdooIds = object.execute(db, uid, password, 'x_servicios', 'search', [])
+serviceOdooIds = object.execute(db, uid, password, 'product.template', 'search', [])
+print(serviceOdooIds)
 serviceIds = []
 for id in serviceOdooIds:
-    [record] = object.execute(db, uid, password, 'x_servicios', 'read', [id])
-    serviceIds.append(record['x_studio_id_servicio'])
+    [record] = object.execute(db, uid, password, 'product.template', 'read', [id])
+    serviceIds.append(record['name'])
 
 servicios = []
 for servicio in root:
     IDservicio = servicio.find('IDservicio').text 
-    Nombre = servicio.find('Nombre').text 
+    Nombre = servicio.find('Nombre').text
     Descripcion = servicio.find('Descripcion').text 
-    Precio = servicio.find('Precio').text 
+    Precio = servicio.find('Precio').text
+    Available = servicio.find('Disponible').text
 
-    if (not (IDservicio in serviceIds)):
+    if (not (Nombre in serviceIds)):
         servicios.append({
-            'x_name' : Nombre,
-            'x_studio_id_servicio' : IDservicio,
-            'x_studio_nombre' : Nombre,
-            'x_studio_descripcin' : Descripcion,
-            'x_studio_precio' : Precio,
+            'name' : Nombre,
+            'x_studio_idservicio' : IDservicio,
+            'x_studio_description' : Descripcion,
+            'list_price': Precio,
+            'qty_available' : Available,
+            'detailed_type' : 'product'
         })
 
 if len(servicios) > 0:
     for servicio in servicios:
-        do_write = object.execute(db, uid, password, 'x_servicios', 'create', [servicio])
+        do_write = object.execute(db, uid, password, 'product.template', 'create', [servicio])
         print('Servicio cargado correctamente')

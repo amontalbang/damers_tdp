@@ -13,20 +13,26 @@ models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 
 if uid:
     print("autenticacion exitosa")   
-    [servicios] = [models.execute_kw(db, uid, password, 'x_servicios', 'search_read', [], {'fields': ['x_name', 'x_studio_id_servicio', 'x_studio_nombre', 'x_studio_descripcin', 'x_studio_precio'], 'limit': 100})]
-
+    [servicios] = [models.execute_kw(db, uid, password, 'product.template', 'search_read', [], {'fields': ['x_studio_idservicio', 'name', 'list_price', 'x_studio_description', 'detailed_type', 'qty_available', 'sale_ok'], 'limit': 100})]
+    print('servicios', servicios)
     odoo = ET.Element('NewDataset')
 
     for servicio in servicios:
-        Table1 = ET.SubElement(odoo, 'Table1')
-        IDservicio = ET.SubElement(Table1, 'IDservicio')
-        IDservicio.text = str(servicio['x_studio_id_servicio'])
-        Nombre = ET.SubElement(Table1, 'Nombre')
-        Nombre.text = servicio['x_studio_nombre']
-        Descripcion = ET.SubElement(Table1, 'Descripcion')
-        Descripcion.text = servicio['x_studio_descripcin']
-        Precio = ET.SubElement(Table1, 'Precio')
-        Precio.text = str(servicio['x_studio_precio'])
+        if ((servicio['detailed_type'] == 'consu') or (servicio['detailed_type'] == 'product')) and (servicio['sale_ok']):
+            Table1 = ET.SubElement(odoo, 'Table1')
+            IDservicio = ET.SubElement(Table1, 'IDservicio')
+            IDservicio.text = str(servicio['x_studio_idservicio'])
+            Nombre = ET.SubElement(Table1, 'Nombre')
+            Nombre.text = servicio['name']
+            Descripcion = ET.SubElement(Table1, 'Descripcion')
+            Descripcion.text = servicio['x_studio_description']
+            Precio = ET.SubElement(Table1, 'Precio')
+            Precio.text = str(int(servicio['list_price']))
+            Available = ET.SubElement(Table1, 'Available')
+            if (servicio['detailed_type'] == 'consu'):
+                Available.text = '0'
+            else:
+                Available.text = str(int(servicio['qty_available']))
         
     xml = ET.ElementTree(odoo)
     xml.write('odooToServices.xml')

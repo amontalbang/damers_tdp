@@ -8,6 +8,8 @@ Public Class Invoice
     Private reservationId As UInteger
     Private consumedServices As Array
     Private totalAmount As Double
+    Private days As UInteger
+    Private pricePerDay As Double
 
     ''' <summary>
 	''' Metodo constructor vacio para Factura
@@ -84,4 +86,31 @@ Public Class Invoice
             consumedServices = Value
         End Set
     End Property
+
+    ''' <summary>
+    ''' Propiedad con get/set para los dias de estancia
+    ''' </summary>
+    ''' <returns>Dias de estancia en la habitacion</returns>
+    Public Property DaysProp() As UInteger
+        Get
+            Return days
+        End Get
+        Set(ByVal Value As UInteger)
+            days = Value
+        End Set
+    End Property
+
+    ''' <summary>
+    ''' Propiedad get/set para el precio por noche
+    ''' </summary>
+    ''' <returns>Precio por noche de la habitacion</returns>
+    Public Property PricePerDayProp() As Double
+        Get
+            Return pricePerDay
+        End Get
+        Set(ByVal Value As Double)
+            pricePerDay = Value
+        End Set
+    End Property
+
 End Class

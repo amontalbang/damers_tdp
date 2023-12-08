@@ -13,18 +13,20 @@ models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 
 if uid:
     print("autenticacion exitosa") 
-    [facturas] = [models.execute_kw(db, uid, password, 'x_facturas', 'search_read', [], {'fields': ['x_studio_id_reserva', 'x_studio_id_factura', 'x_studio_total'], 'limit': 100})]
+    [facturas] = [models.execute_kw(db, uid, password, 'x_facturas', 'search_read', [], {'fields': ['x_name', 'x_studio_id_reserva', 'x_studio_id_factura', 'x_studio_total'], 'limit': 100})]
 
     odoo = ET.Element('NewDataset')
 
-    for factura in facturas: 
+    for factura in facturas:
+        print(factura)
         Table1 = ET.SubElement(odoo, 'Table1')
         IDfactura = ET.SubElement(Table1, 'IDfactura')
         IDfactura.text = factura['x_studio_id_factura']
         IDreserva = ET.SubElement(Table1, 'IDreserva')
-        IDreserva.text = factura['x_studio_id_reserva']
+        IDreserva.text = str(factura['x_studio_id_reserva'])
         Total = ET.SubElement(Table1, 'Total')
         Total.text = str(factura['x_studio_total'])
+        
     xml = ET.ElementTree(odoo)
     xml.write('odooToInvoices.xml')
 

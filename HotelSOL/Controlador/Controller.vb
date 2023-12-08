@@ -32,7 +32,11 @@ Public Class Controller
     ''' <param name="Client">objeto cliente</param>
     Public Sub AddClient(Client As Client)
         Try
-            daoClient.AddClient(Client)
+            If Not Me.ClientExists(Client.NumberIdProp) Then
+                daoClient.AddClient(Client)
+            Else
+                Throw New Exception("El cliente ya existe")
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -56,7 +60,11 @@ Public Class Controller
     ''' <param name="Client">objeto cliente</param>
     Public Sub DeleteClient(Client As Client)
         Try
-            daoClient.DeleteClient(Client)
+            If Me.ClientExists(Client.NumberIdProp) Then
+                daoClient.DeleteClient(Client)
+            Else
+                Throw New Exception("El cliente Not existe")
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -256,9 +264,16 @@ Public Class Controller
     ''' <param name="units"></param>
     Public Sub ChargeService(roomId As UInteger, serviceId As UInteger, units As Integer)
         Try
-            Dim reservation As Reservation = daoReservation.GetReservationByRoomId(roomId)
-            Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(reservation.ReservationIdProp)
-            daoService.ChargeService(invoice.InvoiceIdProp, serviceId, units)
+            Dim service As Service = daoService.GetServiceById(serviceId)
+            If service.UnitsAvailableProp > 0 Then
+                Dim reservation As Reservation = daoReservation.GetReservationByRoomId(roomId)
+                Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(reservation.ReservationIdProp)
+                daoService.ChargeService(invoice.InvoiceIdProp, serviceId, units)
+                service.UnitsAvailableProp = service.UnitsAvailableProp - 1
+                daoService.UpdateService(service)
+            Else
+                Throw New Exception("Producto no disponible")
+            End If
         Catch ex As Exception
             Throw ex
         End Try
@@ -445,7 +460,8 @@ Public Class Controller
             reservation.isActiveProp = False
             daoReservation.UpdateReservation(reservation)
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)
-            Return Me.GetTotalInvoice(reservation, invoice.InvoiceIdProp)
+            invoice.TotalAmountProp = Me.GetTotalInvoice(reservation, invoice)
+            Return invoice.TotalAmountProp
         Catch ex As Exception
             Throw ex
         End Try
@@ -591,34 +607,38 @@ Public Class Controller
     ''' 
     ''' </summary>
     ''' <param name="Reservation"></param>
-    ''' <param name="InvoiceId"></param>
+    ''' <param name="Invoice"></param>
     ''' <returns></returns>
-    Public Function GetTotalInvoice(Reservation As Reservation, InvoiceId As UInteger) As UInteger
+    Public Function GetTotalInvoice(Reservation As Reservation, Invoice As Invoice) As UInteger
         Try
-            Dim servicesList As DataTable = daoService.GetConsumedServices(InvoiceId)
-            Dim totalCount As UInteger = 0
+            Dim servicesList As DataTable = daoService.GetConsumedServices(Invoice.InvoiceIdProp)
+            Dim pricePerDay As Double = 0
             Dim room As Room = daoRoom.GetRoomById(Reservation.RoomIdProp)
             Select Case Reservation.SeasonProp
                 Case "baja"
-                    totalCount = totalCount + CUInt(room.PriceLProp)
+                    pricePerDay = pricePerDay + CUInt(room.PriceLProp)
                 Case "media"
-                    totalCount = totalCount + CUInt(room.PriceMProp)
+                    pricePerDay = pricePerDay + CUInt(room.PriceMProp)
                 Case "alta"
-                    totalCount = totalCount + CUInt(room.PriceHProp)
+                    pricePerDay = pricePerDay + CUInt(room.PriceHProp)
             End Select
             Select Case Reservation.BoardProp
                 Case "Sin régimen"
-                    totalCount = totalCount * 1
+                    pricePerDay = pricePerDay * 1
                 Case "Media pensión"
-                    totalCount = totalCount * 1.25
+                    pricePerDay = pricePerDay * 1.25
                 Case "Pensión completa"
-                    totalCount = totalCount * 1.5
+                    pricePerDay = pricePerDay * 1.5
             End Select
-            totalCount = totalCount * CInt(DateDiff("d", Reservation.EntryDateProp, Reservation.DepartureDateProp))
+            Dim days As UInteger = CInt(DateDiff("d", Reservation.EntryDateProp, Reservation.DepartureDateProp))
+            Dim totalCount As Double = pricePerDay * days
             For index = 0 To servicesList.Rows.Count() - 1
                 Dim serviceId As UInteger = CUInt(servicesList.AsEnumerable().ElementAt(index).Item(0))
                 totalCount = totalCount + daoService.GetServicePrice(serviceId) * servicesList.AsEnumerable().ElementAt(index).Item(3)
             Next
+            Invoice.DaysProp = days
+            Invoice.PricePerDayProp = pricePerDay
+            daoInvoice.UpdateInvoice(Invoice)
             Return totalCount
         Catch ex As Exception
             Throw ex
@@ -836,6 +856,54 @@ Public Class Controller
                 fileName = "odooToRooms.xml"
         End Select
         ds.ReadXml(fileName)
-        Return ds.Tables.Item(0)
+        If ds.Tables.Count() > 0 Then
+            Return ds.Tables.Item(0)
+        Else
+            Return New DataTable()
+        End If
     End Function
+
+    Public Sub RegisterIntoDB(dt As DataTable, OptionSel As String)
+        Try
+            For Each row As DataRow In dt.Rows
+                Select Case (OptionSel)
+                    Case "Usuarios"
+                        Dim user As New User(row.Item(0), row.Item(1), row.Item(2))
+                        If Not Me.UserExists(user.UserIdProp) Then
+                            Me.AddUser(user)
+                        End If
+                    Case "Reservas"
+                        Dim reservation As New Reservation
+                    Case "Clientes"
+                        Dim activeRservation As Boolean
+                        If row.Item(9).Equals("true") Then
+                            activeRservation = True
+                        Else
+                            activeRservation = False
+                        End If
+                        Dim client As New Client(row.Item(0), row.Item(1), row.Item(2), row.Item(3), row.Item(4), row.Item(5), row.Item(6), row.Item(7), CUInt(row.Item(8)), activeRservation)
+                        If Not Me.ClientExists(client.NumberIdProp) Then
+                            Me.AddClient(client)
+                        End If
+                    Case "Facturas"
+                        ' Pendiente
+                        Dim invoice As New Invoice()
+                    Case "Servicios"
+                        Dim service As New Service(row.Item(0), row.Item(1), row.Item(2), CUInt(row.Item(3)), CUInt(row.Item(4)))
+                        If daoService.ServiceExistsByName(service.NameProp) Then
+                            daoService.UpdateService(service)
+                        Else
+                            daoService.AddService(service)
+                        End If
+                    Case "Habitaciones"
+                        Dim room As New Room(row.Item(0), row.Item(1), row.Item(2), CUInt(row.Item(3)), CUInt(row.Item(4)), CUInt(row.Item(5)))
+                        If Not Me.RoomExists(room.RoomIdProp) Then
+                            Me.AddRoom(room)
+                        End If
+                End Select
+            Next
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 End Class

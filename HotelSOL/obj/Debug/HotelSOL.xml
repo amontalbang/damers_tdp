@@ -291,12 +291,12 @@ HotelSOL
  <param name="Password">cadena con la contraseña de usuario</param>
  <returns>devuelve booleano con resultado del login</returns>
 </member>
-<member name="M:HotelSOL.Controller.GetTotalInvoice(HotelSOL.Reservation,System.UInt32)">
+<member name="M:HotelSOL.Controller.GetTotalInvoice(HotelSOL.Reservation,HotelSOL.Invoice)">
  <summary>
  
  </summary>
  <param name="Reservation"></param>
- <param name="InvoiceId"></param>
+ <param name="Invoice"></param>
  <returns></returns>
 </member>
 <member name="M:HotelSOL.Controller.GetConsumedServices(System.UInt32)">
@@ -515,6 +515,13 @@ HotelSOL
  <param name="IdService">ID del servicio a consultar</param>
  <returns>Booleano con la existencia o no del servicio</returns>
 </member>
+<member name="M:HotelSOL.DaoService.ServiceExistsByName(System.String)">
+ <summary>
+ Metodo para comprobar si existe un servicio identificando por el nombre
+ </summary>
+ <param name="Name">Nombre del servicio a consultar</param>
+ <returns>Booleano con la existencia o no del servicio</returns>
+</member>
 <member name="M:HotelSOL.DaoService.GetServiceById(System.UInt32)">
  <summary>
  Metodo para recuperar un servicio de la BD
@@ -591,6 +598,16 @@ HotelSOL
  Clase que alberga los atributos, constructores y propiedades de Servicio
  </summary>
 </member>
+<member name="M:HotelSOL.Service.#ctor(System.UInt32,System.String,System.String,System.UInt32,System.UInt32)">
+ <summary>
+ Metodo constructor con todos los atributos del objeto
+ </summary>
+ <param name="ServiceId">Id del servicio</param>
+ <param name="Name">nombre del servicio</param>
+ <param name="Description">descripcion del servicio</param>
+ <param name="Price">precio del servicio</param>
+ <param name="Units">unidades disponibles del producto</param>
+</member>
 <member name="M:HotelSOL.Service.#ctor(System.UInt32,System.String,System.String,System.UInt32)">
  <summary>
  Metodo constructor con todos los atributos del objeto
@@ -642,6 +659,12 @@ HotelSOL
  Propiedad con get/set para el precio del servicio
  </summary>
  <returns>entero indicando el precio del servicio</returns>
+</member>
+<member name="P:HotelSOL.Service.UnitsAvailableProp">
+ <summary>
+ Propiedad con get/set para el numero de unidades disponibles
+ </summary>
+ <returns>entero indicando el numero de unidades disponibles</returns>
 </member>
 <member name="T:HotelSOL.User">
  <summary>
@@ -922,6 +945,18 @@ HotelSOL
  Propiedad con get/set para los servicios consumidos
  </summary>
  <returns>array con los servicios consumidos</returns>
+</member>
+<member name="P:HotelSOL.Invoice.DaysProp">
+ <summary>
+ Propiedad con get/set para los dias de estancia
+ </summary>
+ <returns>Dias de estancia en la habitacion</returns>
+</member>
+<member name="P:HotelSOL.Invoice.PricePerDayProp">
+ <summary>
+ Propiedad get/set para el precio por noche
+ </summary>
+ <returns>Precio por noche de la habitacion</returns>
 </member>
 <member name="T:HotelSOL.Room">
  <summary>

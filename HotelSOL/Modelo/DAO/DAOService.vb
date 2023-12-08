@@ -21,9 +21,13 @@ Public Class DaoService
     ''' </summary>
     ''' <param name="Service">Objeto Servicio a registrar en la BD</param>
     Public Sub AddService(Service As Service)
-        command.CommandText = "INSERT Servicios (Nombre, Descripcion, Precio) VALUES 
-            ('" & Service.NameProp() & "', '" & Service.DescriptionProp() & "', '" & Service.PriceProp() & "')"
-        ExecuteQuery()
+        Try
+            command.CommandText = "INSERT Servicios (Nombre, Descripcion, Precio, Disponible) VALUES 
+            ('" & Service.NameProp() & "', '" & Service.DescriptionProp() & "', '" & Service.PriceProp() & "', '" & Service.UnitsAvailableProp & "')"
+            ExecuteQuery()
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     ''' <summary>
@@ -40,7 +44,7 @@ Public Class DaoService
     ''' </summary>
     ''' <param name="Service">Objeto Factura a modificar en la BD</param>
     Public Sub UpdateService(Service As Service)
-        command.CommandText = "UPDATE Servicios SET Nombre = '" & Service.NameProp() & "', Descripcion = '" & Service.DescriptionProp() & "', Precio = '" & Service.PriceProp() & "' WHERE IDservicio = '" & Service.ServiceIdProp() & "'"
+        command.CommandText = "UPDATE Servicios SET Nombre = '" & Service.NameProp & "', Descripcion = '" & Service.DescriptionProp & "', Precio = '" & Service.PriceProp & "', Disponible = '" & Service.UnitsAvailableProp & "' WHERE IDservicio = '" & Service.ServiceIdProp() & "'"
         ExecuteQuery()
     End Sub
 
@@ -60,6 +64,23 @@ Public Class DaoService
     ''' <returns>Booleano con la existencia o no del servicio</returns>
     Public Function ServiceExists(IdService As UInteger) As Boolean
         Dim query As String = "SELECT * FROM Servicios WHERE IDservicio = '" & IdService & "'"
+        Dim adapter As New SqlDataAdapter(query, connector.Connect())
+        Dim dt As New DataTable
+        adapter.Fill(dt)
+        If dt.AsEnumerable().Count() > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    ''' <summary>
+    ''' Metodo para comprobar si existe un servicio identificando por el nombre
+    ''' </summary>
+    ''' <param name="Name">Nombre del servicio a consultar</param>
+    ''' <returns>Booleano con la existencia o no del servicio</returns>
+    Public Function ServiceExistsByName(Name As String) As Boolean
+        Dim query As String = "SELECT * FROM Servicios WHERE Nombre = '" & Name & "'"
         Dim adapter As New SqlDataAdapter(query, connector.Connect())
         Dim dt As New DataTable
         adapter.Fill(dt)

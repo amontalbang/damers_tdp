@@ -39,7 +39,7 @@ Public Class DAOInvoice
     ''' </summary>
     ''' <param name="Invoice">Objeto Factura a modificar en la BD</param>
     Public Sub UpdateInvoice(Invoice As Invoice)
-        command.CommandText = "UPDATE Facturas set IDreserva = '" & Invoice.InvoiceIdProp & "', Total = '" & Invoice.TotalAmountProp & "'"
+        command.CommandText = "UPDATE Facturas set Total = '" & Invoice.TotalAmountProp & "' WHERE IDreserva = " & Invoice.ReservationIdProp
         ExecuteQuery()
     End Sub
 

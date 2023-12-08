@@ -1,1 +1,14 @@
-<NewDataSet />
+<NewDataSet>
+  <Table1>
+    <IDcliente>1</IDcliente>
+    <Nombre>Alberto</Nombre>
+    <Apellidos>Montalban</Apellidos>
+    <FechaNac>2020-01-01T00:00:00+01:00</FechaNac>
+    <Telefono>6</Telefono>
+    <Email>m</Email>
+    <Direccion>m</Direccion>
+    <TarjetaCred>6</TarjetaCred>
+    <Descuento>0</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+</NewDataSet>
