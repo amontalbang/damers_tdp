@@ -20,7 +20,7 @@
     Private Sub Llenar_Labels()
         Try
             Dim reservation As Reservation = controller.GetReservationById(reservationId)
-            TotalLabel.Text = controller.CheckOut(reservationId)
+            TotalLabel.Text = controller.CheckOut(reservationId).ToString()
             RoomLabel.Text = reservation.RoomIdProp.ToString()
             ClientIDLabel.Text = reservation.ClientIdProp.ToString()
             ReservationIDLabel.Text = reservation.ReservationIdProp.ToString()

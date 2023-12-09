@@ -22,8 +22,8 @@ Public Class DaoService
     ''' <param name="Service">Objeto Servicio a registrar en la BD</param>
     Public Sub AddService(Service As Service)
         Try
-            command.CommandText = "INSERT Servicios (Nombre, Descripcion, Precio, Disponible) VALUES 
-            ('" & Service.NameProp() & "', '" & Service.DescriptionProp() & "', '" & Service.PriceProp() & "', '" & Service.UnitsAvailableProp & "')"
+            command.CommandText = "INSERT Servicios (IDservicio, Nombre, Descripcion, Precio, Disponible) VALUES 
+            ('" & Service.ServiceIdProp() & "', '" & Service.NameProp() & "', '" & Service.DescriptionProp() & "', '" & Service.PriceProp() & "', '" & Service.UnitsAvailableProp & "')"
             ExecuteQuery()
         Catch ex As Exception
             Throw ex
@@ -62,7 +62,7 @@ Public Class DaoService
     ''' </summary>
     ''' <param name="IdService">ID del servicio a consultar</param>
     ''' <returns>Booleano con la existencia o no del servicio</returns>
-    Public Function ServiceExists(IdService As UInteger) As Boolean
+    Public Function ServiceExists(IdService As String) As Boolean
         Dim query As String = "SELECT * FROM Servicios WHERE IDservicio = '" & IdService & "'"
         Dim adapter As New SqlDataAdapter(query, connector.Connect())
         Dim dt As New DataTable
@@ -96,7 +96,7 @@ Public Class DaoService
     ''' </summary>
     ''' <param name="IdService">ID del servicio a recuperar</param>
     ''' <returns>Objeto Servicio con los datos si existiera u objeto Servicio nuevo en caso de no existir</returns>
-    Public Function GetServiceById(IdService As UInteger) As Service
+    Public Function GetServiceById(IdService As String) As Service
         Dim query As String = "SELECT * FROM Servicios WHERE IDservicio = '" & IdService & "'"
         Dim adapter As New SqlDataAdapter(query, connector.Connect())
         Dim dt As New DataTable
@@ -105,7 +105,8 @@ Public Class DaoService
             Return New Service()
         End If
         Dim dr As DataRow = dt.AsEnumerable().ElementAt(0)
-        Return New Service(dr.Field(Of String)("Nombre"), dr.Field(Of String)("Descripcion"), dr.Field(Of UInteger)("Precio"))
+        Return New Service(IdService, dr.Item(1), dr.Item(2), CUInt(dr.Item(3)), CUInt(dr.Item(4)))
+        'Return New Service(IdService, dr.Field(Of String)("Nombre"), dr.Field(Of String)("Descripcion"), dr.Field(Of UInteger)("Precio"), dr.Field(Of UInteger)("Disponible"))
     End Function
 
     ''' <summary>
@@ -124,9 +125,9 @@ Public Class DaoService
         End Try
     End Function
 
-    Public Sub ChargeService(invoiceId As UInteger, serviceId As UInteger, units As UInteger)
+    Public Sub ChargeService(invoiceId As UInteger, serviceId As String, units As UInteger)
         Try
-            Dim query As String = "INSERT INTO ServiciosConsumidos (IDfactura, IDservicio, Cantidad) VALUES (" & invoiceId & ", " & serviceId & ", " & units & ")"
+            Dim query As String = "INSERT INTO ServiciosConsumidos (IDfactura, IDservicio, Cantidad) VALUES (" & invoiceId & ", '" & serviceId & "', " & units & ")"
             command.CommandText = query
             ExecuteQuery()
         Catch ex As Exception
@@ -146,7 +147,7 @@ Public Class DaoService
         End Try
     End Function
 
-    Public Function GetServicePrice(ServiceId As UInteger) As UInteger
+    Public Function GetServicePrice(ServiceId As String) As UInteger
         Try
             Dim query As String = "SELECT * FROM Servicios WHERE IDservicio = " & ServiceId
             Dim adapter As New SqlDataAdapter(query, connector.Connect())

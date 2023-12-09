@@ -4,7 +4,7 @@
 Public Class Service
 
 	'Definicion de atributos
-	Private serviceId As UInteger
+	Private serviceId As String
 	Private name As String
 	Private description As String
 	Private price As UInteger
@@ -18,7 +18,7 @@ Public Class Service
 	''' <param name="Description">descripcion del servicio</param>
 	''' <param name="Price">precio del servicio</param>
 	''' <param name="Units">unidades disponibles del producto</param>
-	Public Sub New(ServiceId As UInteger, Name As String, Description As String, Price As UInteger, Units As UInteger)
+	Public Sub New(ServiceId As String, Name As String, Description As String, Price As UInteger, Units As UInteger)
 		Me.serviceId = ServiceId
 		Me.name = Name
 		Me.description = Description
@@ -33,7 +33,7 @@ Public Class Service
 	''' <param name="Name">nombre del servicio</param>
 	''' <param name="Description">descripcion del servicio</param>
 	''' <param name="Price">precio del servicio</param>
-	Public Sub New(ServiceId As UInteger, Name As String, Description As String, Price As UInteger)
+	Public Sub New(ServiceId As String, Name As String, Description As String, Price As UInteger)
 		Me.serviceId = ServiceId
 		Me.name = Name
 		Me.description = Description
@@ -58,7 +58,7 @@ Public Class Service
 	''' Constructor de objeto
 	''' </summary>
 	''' <param name="ServiceId">Id del servicio</param>
-	Public Sub New(ServiceId As UInteger)
+	Public Sub New(ServiceId As String)
 		Me.serviceId = ServiceId
 	End Sub
 
@@ -72,11 +72,11 @@ Public Class Service
 	''' Propiedad con get/set para la Id del servicio
 	''' </summary>
 	''' <returns>entero indicando la Id del servicio</returns>
-	Public Property ServiceIdProp() As UInteger
+	Public Property ServiceIdProp() As String
 		Get
 			Return serviceId
 		End Get
-		Set(ByVal Value As UInteger)
+		Set(ByVal Value As String)
 			serviceId = Value
 		End Set
 	End Property

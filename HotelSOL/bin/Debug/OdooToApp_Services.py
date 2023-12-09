@@ -13,15 +13,14 @@ models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
 
 if uid:
     print("autenticacion exitosa")   
-    [servicios] = [models.execute_kw(db, uid, password, 'product.template', 'search_read', [], {'fields': ['x_studio_idservicio', 'name', 'list_price', 'x_studio_description', 'detailed_type', 'qty_available', 'sale_ok'], 'limit': 100})]
-    print('servicios', servicios)
+    [servicios] = [models.execute_kw(db, uid, password, 'product.template', 'search_read', [], {'fields': ['default_code', 'name', 'list_price', 'x_studio_description', 'detailed_type', 'qty_available', 'sale_ok'], 'limit': 100})]
     odoo = ET.Element('NewDataset')
 
     for servicio in servicios:
         if ((servicio['detailed_type'] == 'consu') or (servicio['detailed_type'] == 'product')) and (servicio['sale_ok']):
             Table1 = ET.SubElement(odoo, 'Table1')
             IDservicio = ET.SubElement(Table1, 'IDservicio')
-            IDservicio.text = str(servicio['x_studio_idservicio'])
+            IDservicio.text = str(servicio['default_code'])
             Nombre = ET.SubElement(Table1, 'Nombre')
             Nombre.text = servicio['name']
             Descripcion = ET.SubElement(Table1, 'Descripcion')

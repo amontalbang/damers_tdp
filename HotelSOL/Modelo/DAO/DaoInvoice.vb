@@ -39,7 +39,7 @@ Public Class DAOInvoice
     ''' </summary>
     ''' <param name="Invoice">Objeto Factura a modificar en la BD</param>
     Public Sub UpdateInvoice(Invoice As Invoice)
-        command.CommandText = "UPDATE Facturas set Total = '" & Invoice.TotalAmountProp & "' WHERE IDreserva = " & Invoice.ReservationIdProp
+        command.CommandText = "UPDATE Facturas set Total = '" & Invoice.TotalAmountProp & "', Estancia = '" & Invoice.DaysProp & "', Precio_dia = '" & Invoice.PricePerDayProp & "' WHERE IDreserva = " & Invoice.ReservationIdProp
         ExecuteQuery()
     End Sub
 
@@ -98,7 +98,7 @@ Public Class DAOInvoice
             If (invoiceList.Rows.Count() > 0) Then
                 invoice.InvoiceIdProp = CUInt(invoiceList.AsEnumerable().ElementAt(0).Item(0).ToString)
                 invoice.ReservationIdProp = CUInt(invoiceList.AsEnumerable().ElementAt(0).Item(1).ToString)
-                invoice.TotalAmountProp = CDbl(invoiceList.AsEnumerable().ElementAt(0).Item(2).ToString)
+                invoice.TotalAmountProp = CUInt(invoiceList.AsEnumerable().ElementAt(0).Item(4).ToString)
             Else
                 Throw New Exception("No se han encontrado facturas")
             End If

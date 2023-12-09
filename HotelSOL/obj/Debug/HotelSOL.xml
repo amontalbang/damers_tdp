@@ -133,7 +133,7 @@ HotelSOL
  <param name="Service">entero con el Id del servicio</param>
  <returns>devuelve el objeto servicio solicitado</returns>
 </member>
-<member name="M:HotelSOL.Controller.ServiceExists(System.UInt32)">
+<member name="M:HotelSOL.Controller.ServiceExists(System.String)">
  <summary>
  Metodo que accede al metodo ServiceExists de daoService
  </summary>
@@ -146,7 +146,7 @@ HotelSOL
  </summary>
  <returns>devuelve lista con todos los servicios</returns>
 </member>
-<member name="M:HotelSOL.Controller.ChargeService(System.UInt32,System.UInt32,System.Int32)">
+<member name="M:HotelSOL.Controller.ChargeService(System.UInt32,System.String,System.Int32)">
  <summary>
  Método que carga un nuevo servicio a una reserva
  </summary>
@@ -508,7 +508,7 @@ HotelSOL
  <param name="ServiceId">ID del servicio a consultar</param>
  <returns>Booleano con respuesta de servicio disponible</returns>
 </member>
-<member name="M:HotelSOL.DaoService.ServiceExists(System.UInt32)">
+<member name="M:HotelSOL.DaoService.ServiceExists(System.String)">
  <summary>
  Metodo para comprobar si existe un servicio
  </summary>
@@ -522,7 +522,7 @@ HotelSOL
  <param name="Name">Nombre del servicio a consultar</param>
  <returns>Booleano con la existencia o no del servicio</returns>
 </member>
-<member name="M:HotelSOL.DaoService.GetServiceById(System.UInt32)">
+<member name="M:HotelSOL.DaoService.GetServiceById(System.String)">
  <summary>
  Metodo para recuperar un servicio de la BD
  </summary>
@@ -598,7 +598,7 @@ HotelSOL
  Clase que alberga los atributos, constructores y propiedades de Servicio
  </summary>
 </member>
-<member name="M:HotelSOL.Service.#ctor(System.UInt32,System.String,System.String,System.UInt32,System.UInt32)">
+<member name="M:HotelSOL.Service.#ctor(System.String,System.String,System.String,System.UInt32,System.UInt32)">
  <summary>
  Metodo constructor con todos los atributos del objeto
  </summary>
@@ -608,7 +608,7 @@ HotelSOL
  <param name="Price">precio del servicio</param>
  <param name="Units">unidades disponibles del producto</param>
 </member>
-<member name="M:HotelSOL.Service.#ctor(System.UInt32,System.String,System.String,System.UInt32)">
+<member name="M:HotelSOL.Service.#ctor(System.String,System.String,System.String,System.UInt32)">
  <summary>
  Metodo constructor con todos los atributos del objeto
  </summary>
@@ -625,7 +625,7 @@ HotelSOL
  <param name="Description">descripcion del servicio</param>
  <param name="Price">precio del servicio</param>
 </member>
-<member name="M:HotelSOL.Service.#ctor(System.UInt32)">
+<member name="M:HotelSOL.Service.#ctor(System.String)">
  <summary>
  Constructor de objeto
  </summary>

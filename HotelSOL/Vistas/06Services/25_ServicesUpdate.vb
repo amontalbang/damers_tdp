@@ -40,7 +40,7 @@ Public Class Form25
     ''' <param name="sender"></param>
     ''' <param name="e"></param>
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim idServicio As UInteger = UInteger.Parse(ServiceIdTextBox.Text).ToString()
+        Dim idServicio As String = ServiceIdTextBox.Text
         Dim nombre As String = NameTextBox.Text
         Dim descripcion As String = DescriptionTextBox.Text
         Dim precio As UInteger = UInteger.Parse(PriceTextBox.Text).ToString()

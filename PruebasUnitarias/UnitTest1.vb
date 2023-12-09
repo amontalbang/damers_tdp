@@ -32,7 +32,7 @@ Imports HotelSol
         Dim cliente As String = "56843265-O"
         Dim habitacion As UInteger = "101"
         Dim usuario As String = "Juan"
-        Dim servicio As UInteger = "8"
+        Dim servicio As String = "8"
         Dim reserva As UInteger = "8"
         Dim resultado As Boolean = True
 
