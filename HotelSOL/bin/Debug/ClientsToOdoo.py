@@ -20,10 +20,10 @@ xml_file = ET.parse('Exported_Clients.xml')
 root = xml_file.getroot()
 
 # Creamos un array con los datos existentes en Odoo usando los identificadores
-userIds = object.execute(db, uid, password, 'x_clientes', 'search', [])
+userIds = object.execute(db, uid, password, 'res.partner', 'search', [])
 userEmails = []
 for id in userIds:
-    [record] = object.execute(db, uid, password, 'x_clientes', 'read', [id])
+    [record] = object.execute(db, uid, password, 'res.partner', 'read', [id])
     userEmails.append(record['x_studio_dni'])
 
 # Creamos un segundo array con los datos del XML a exportar
@@ -43,21 +43,22 @@ for cliente in root:
 
     if (not (IDcliente in userEmails)):
         clientes.append({
-            'x_name' : IDcliente,
+            'name' : Nombre + " " + Apellidos,
             'x_studio_nombre' : Nombre,
             'x_studio_apellidos' : Apellidos,
             'x_studio_dni' : IDcliente,
             'x_studio_fecha_de_nacimiento_1' : FechaNac,
-            'x_studio_telfono' : Telefono,
-            'x_studio_email' : Email,
+            'mobile' : Telefono,
+            'email' : Email,
             'x_studio_direccin' : Direccion,
-            'x_studio_tarjeta_de_crdito' : TarjetaCred,
+            'x_studio_tarjeta_de_crdito_1' : TarjetaCred,
             'x_studio_descuento' : Descuento,
-            'x_studio_reserva_activa' : ReservaActiva,
+            'x_studio_reserva_activa' : False,
+            'customer_rank' : 1
         })
 
 # Recorremos ese segundo array escribiendo los datos en Odoo
 if len(clientes) > 0:
     for cliente in clientes:
-        do_write = object.execute(db, uid, password, 'x_clientes', 'create', [cliente])
+        do_write = object.execute(db, uid, password, 'res.partner', 'create', [cliente])
         print('Usuario cargado correctamente')
