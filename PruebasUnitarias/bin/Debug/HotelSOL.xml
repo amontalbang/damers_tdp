@@ -1,0 +1,1427 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+HotelSOL
+</name>
+</assembly>
+<members>
+<member name="T:HotelSOL.My.Resources.Resources">
+<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:HotelSOL.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:HotelSOL.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member>
+<member name="T:HotelSOL.Controller">
+ <summary>
+ Clase Controlador que enlaza las vistas y el modelo
+ </summary>
+</member>
+<member name="M:HotelSOL.Controller.#ctor">
+ <summary>
+ Metodo constructor de la clase
+ </summary>
+</member>
+<member name="M:HotelSOL.Controller.AddClient(HotelSOL.Client)">
+ <summary>
+ Metodo que accede al metodo AddClient de daoClient
+ </summary>
+ <param name="Client">objeto cliente</param>
+</member>
+<member name="M:HotelSOL.Controller.UpdateClient(HotelSOL.Client)">
+ <summary>
+ Metodo que accede al metodo UpdateClient de daoClient
+ </summary>
+ <param name="Client">objeto cliente</param>
+</member>
+<member name="M:HotelSOL.Controller.DeleteClient(HotelSOL.Client)">
+ <summary>
+ Metodo que accede al metodo DeleteClient de daoClient
+ </summary>
+ <param name="Client">objeto cliente</param>
+</member>
+<member name="M:HotelSOL.Controller.GetClientById(System.String)">
+ <summary>
+ Metodo que accede al metodo GetClientById de daoClient
+ </summary>
+ <param name="Client">cadena con Id del cliente</param>
+ <returns>devuelve el cliente solicitado</returns>
+</member>
+<member name="M:HotelSOL.Controller.ClientExists(System.String)">
+ <summary>
+ Metodo que accede al metodo ClientExists de daoClient
+ </summary>
+ <param name="Client">cadena con Id del cliente</param>
+ <returns>devuelve booleano con la existencia del cliente</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetClientList">
+ <summary>
+ Metodo que accede al metodo GetClientList de daoClient
+ </summary>
+ <returns>devuelve la lista de clientes</returns>
+</member>
+<member name="M:HotelSOL.Controller.AddRoom(HotelSOL.Room)">
+ <summary>
+ Metodo que accede al metodo AddRoom de daoRoom
+ </summary>
+ <param name="Room">objeto habitacion</param>
+</member>
+<member name="M:HotelSOL.Controller.DeleteRoom(HotelSOL.Room)">
+ <summary>
+ Metodo que accede al metodo DeleteRoom de daoRoom
+ </summary>
+ <param name="Room">objeto habitacion</param>
+</member>
+<member name="M:HotelSOL.Controller.UpdateRoom(HotelSOL.Room)">
+ <summary>
+ Metodo que accede al metodo UpdateRoom de daoRoom
+ </summary>
+ <param name="Room">objeto habitacion</param>
+</member>
+<member name="M:HotelSOL.Controller.GetRoomById(System.String)">
+ <summary>
+ Metodo que accede al metodo GetRoomById de daoRoom
+ </summary>
+ <param name="Room">cadena con el numero de habitacion</param>
+ <returns>devuelve la habitacion solicitada</returns>
+</member>
+<member name="M:HotelSOL.Controller.RoomExists(System.String)">
+ <summary>
+ Metodo que accede al metodo RoomExists de daoRoom
+ </summary>
+ <param name="Room">cadena con el numero de habitacion</param>
+ <returns>booleano con la existencia de la habitacion</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetRoomList">
+ <summary>
+ Metodo que accede al metodo GetRoomList de daoRoom
+ </summary>
+ <returns>devuelve datatable con lista de habitaciones</returns>
+</member>
+<member name="M:HotelSOL.Controller.AddService(HotelSOL.Service)">
+ <summary>
+ Metodo que accede al metodo AddService de daoService
+ </summary>
+ <param name="Service">objeto servicio</param>
+</member>
+<member name="M:HotelSOL.Controller.DeleteService(HotelSOL.Service)">
+ <summary>
+ Metodo que accede al metodo DeleteService de daoService
+ </summary>
+ <param name="Service">objeto servicio</param>
+</member>
+<member name="M:HotelSOL.Controller.UpdateService(HotelSOL.Service)">
+ <summary>
+ Metodo que accede al metodo UpdateService de daoService
+ </summary>
+ <param name="Service">objeto servicio</param>
+</member>
+<member name="M:HotelSOL.Controller.GetServiceById(System.UInt32)">
+ <summary>
+ Metodo que accede al metodo GetServiceById de daoService
+ </summary>
+ <param name="Service">entero con el Id del servicio</param>
+ <returns>devuelve el objeto servicio solicitado</returns>
+</member>
+<member name="M:HotelSOL.Controller.ServiceExists(System.UInt32)">
+ <summary>
+ Metodo que accede al metodo ServiceExists de daoService
+ </summary>
+ <param name="Service">entero con el Id del servicio</param>
+ <returns>booleano con la existencia del servicio</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetServiceList">
+ <summary>
+ Metodo que accede al metodo GetServiceList de daoService
+ </summary>
+ <returns>devuelve lista con todos los servicios</returns>
+</member>
+<member name="M:HotelSOL.Controller.ChargeService(System.UInt32,System.UInt32,System.Int32)">
+ <summary>
+ Método que carga un nuevo servicio a una reserva
+ </summary>
+ <param name="roomId"></param>
+ <param name="serviceId"></param>
+ <param name="units"></param>
+</member>
+<member name="M:HotelSOL.Controller.GetRoomIds">
+ <summary>
+ Recupara los identificadores de las habitaciones
+ </summary>
+ <returns>Array con los identificadores de las habitaciones</returns>
+</member>
+<member name="M:HotelSOL.Controller.CheckRoomAvailability(System.DateTime,System.DateTime)">
+ <summary>
+ Función para comprobar si la habitación está disponible
+ </summary>
+ <param name="EntryDate"></param>
+ <param name="DepartureDate"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.AddUser(HotelSOL.User)">
+ <summary>
+ Metodo que accede al metodo AddUser de daoUser
+ </summary>
+ <param name="User">objeto usuario</param>
+</member>
+<member name="M:HotelSOL.Controller.DeleteUser(HotelSOL.User)">
+ <summary>
+ Metodo que accede al metodo DeleteUser de daoUser
+ </summary>
+ <param name="User">objeto usuario</param>
+</member>
+<member name="M:HotelSOL.Controller.UpdateUser(HotelSOL.User)">
+ <summary>
+ Metodo que accede al metodo UpdateUser de daoUser
+ </summary>
+ <param name="User">objeto usuario</param>
+</member>
+<member name="M:HotelSOL.Controller.UserExists(System.String)">
+ <summary>
+ Metodo que accede al metodo UserExists de daoUser
+ </summary>
+ <param name="User">cadena con el Id de usuario</param>
+ <returns>booleano con la existencia del usuario consultado</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetUserList">
+ <summary>
+ Metodo que accede al metodo GetUserList de daoUser
+ </summary>
+ <returns>devuelve lista con todos los usuarios</returns>
+</member>
+<member name="M:HotelSOL.Controller.AddReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que añade una reserva
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.UpdateReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que accede al metodo UpdateReservation de daoReservation
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.RemoveReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que accede al metodo RemoveReservation de daoReservation
+ </summary>
+ <param name="ReservationId">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.CheckIn(System.UInt32)">
+ <summary>
+ Metodo para realizar el checkin de una reserva
+ </summary>
+ <param name="ReservationId">ID de la reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.CheckOut(System.UInt32)">
+ <summary>
+ Metodo para realizar el checkout de una reserva
+ </summary>
+ <param name="ReservationId">ID de la reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationById(System.UInt32)">
+ <summary>
+ Metodo que devuelve una reserva dada una ID de reserva
+ </summary>
+ <param name="ReservationId">ID de la resevra</param>
+ <returns>datatable con la informacion de la reserva</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationsList">
+ <summary>
+ Metodo que devuelve una lista de todas las reservas
+ </summary>
+ <returns>datatable con la informacion de las reservas</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationByClientId(System.String)">
+ <summary>
+ Metodo que devuelve una reserva dada una ID de cliente
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <returns>datatable con la informacion de la reserva</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetAllReservationByClientId(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="ClientId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationSeasson(System.DateTime)">
+ <summary>
+ Metodo que devuelve la temporada de la reserva
+ </summary>
+ <param name="EntryDate">fecha de entrada en la reserva</param>
+ <returns>tipo de temporada</returns>
+</member>
+<member name="M:HotelSOL.Controller.CheckReservationExists(System.UInt32)">
+ <summary>
+ Metodo que comprueba si existe una reserva dada una ID de reserva
+ </summary>
+ <param name="ReservationId">ID de la reserva</param>
+ <returns>booleano con la respuesta</returns>
+</member>
+<member name="M:HotelSOL.Controller.CheckClientExists(System.String)">
+ <summary>
+ Metodo que comprueba si existe un cliente
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <returns>booleano con la respuesta</returns>
+</member>
+<member name="M:HotelSOL.Controller.GenerateInvoice(HotelSOL.Reservation)">
+ <summary>
+ Metodo que genera una factura para una reserva concreta
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.Controller.UserLogin(System.String,System.String)">
+ <summary>
+ Metodo que instancia on objeto daoUser y accede al metodo de comprobar las credenciales para el login
+ </summary>
+ <param name="UserId">cadena con el nombre de usuario</param>
+ <param name="Password">cadena con la contraseña de usuario</param>
+ <returns>devuelve booleano con resultado del login</returns>
+</member>
+<member name="M:HotelSOL.Controller.GetTotalInvoice(HotelSOL.Reservation,System.UInt32)">
+ <summary>
+ 
+ </summary>
+ <param name="Reservation"></param>
+ <param name="InvoiceId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetConsumedServices(System.UInt32)">
+ <summary>
+ 
+ </summary>
+ <param name="ReservationId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationListsByDate(System.DateTime,System.DateTime,System.String)">
+ <summary>
+ Obtiene los listados 
+ </summary>
+ <param name="InitialDate"></param>
+ <param name="FinalDate"></param>
+ <param name="Type"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetReservationByClient(System.String)">
+ <summary>
+ 
+ </summary>
+ <param name="ClientId"></param>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.Controller.GetActiveReservations">
+ <summary>
+ Función para recuperar los datos de las reservas activas
+ </summary>
+ <returns>Datatable con la información de las reservas activas</returns>
+</member>
+<member name="M:HotelSOL.Controller.CheckRoomAvailability(System.String,System.UInt32,System.DateTime,System.DateTime)">
+ <summary>
+ Función que comprueba la disponibilidad de habitaciones
+ </summary>
+ <param name="Type"></param>
+ <param name="Capacity"></param>
+ <param name="EntryDate"></param>
+ <param name="DepartureDate"></param>
+ <returns>Datatable con el listado de habitaciones disponibles</returns>
+</member>
+<member name="M:HotelSOL.Controller.datasetToXML(System.String)">
+ <summary>
+ Método que convierte un dataset en un XML que guarda en el equipo
+ </summary>
+ <param name="type"></param>
+</member>
+<member name="M:HotelSOL.Controller.XMLToDataset(System.String)">
+ <summary>
+ Función que convierte un archivo de tipo XML en un dataset
+ </summary>
+ <param name="OptionSel"></param>
+ <returns>Datatable contenida en el dataset</returns>
+</member>
+<member name="T:HotelSOL.DaoFactory">
+ <summary>
+ Clase que implementa el patron Factory Method y permiten creao objetos modificables de las distintas clases
+ en nesta superclase
+ </summary>
+</member>
+<member name="M:HotelSOL.DaoFactory.#ctor">
+ <summary>
+ Metodo constructor de la clase
+ </summary>
+</member>
+<member name="M:HotelSOL.DaoFactory.GetDaoUser">
+ <summary>
+ Metodo para crear objeto DaoUser
+ </summary>
+ <returns>Devuelve un nuevo DaoUser</returns>
+</member>
+<member name="M:HotelSOL.DaoFactory.GetDaoClient">
+ <summary>
+ Metodo para crear objeto DaoClient
+ </summary>
+ <returns>Devuelve un nuevo DaoClient</returns>
+</member>
+<member name="M:HotelSOL.DaoFactory.GetDaoService">
+ <summary>
+ Metodo para crear objeto DaoService
+ </summary>
+ <returns>Devuelve un nuevo DaoService</returns>
+</member>
+<member name="M:HotelSOL.DaoFactory.GetDaoInvoice">
+ <summary>
+ Metodo para crear objeto DaoInvoice
+ </summary>
+ <returns>Devuelve un nuevo DaoInvoice</returns>
+</member>
+<member name="M:HotelSOL.DaoFactory.GetDaoRoom">
+ <summary>
+ Metodo para crear objeto DaoRoom
+ </summary>
+ <returns>Devuelve un nuevo DaoRoom</returns>
+</member>
+<member name="M:HotelSOL.DaoFactory.GetDaoReservation">
+ <summary>
+ Metodo para crear objeto DaoReservation
+ </summary>
+ <returns>Devuelve un nuevo DaoReservation</returns>
+</member>
+<member name="T:HotelSOL.DatabaseConnection">
+ <summary>
+ Clase que alberga los metodos de conexion con la BD
+ </summary>
+</member>
+<member name="M:HotelSOL.DatabaseConnection.#ctor">
+ <summary>
+ Metodo constructor de la clase
+ </summary>
+</member>
+<member name="M:HotelSOL.DatabaseConnection.Connect">
+ <summary>
+ Metodo que conecta con la BD
+ </summary>
+ <returns>Devuelve una conexion abierta con SQL</returns>
+</member>
+<member name="M:HotelSOL.DatabaseConnection.Disconnect">
+ <summary>
+ Metodo que desconecta con la BD
+ </summary>
+</member>
+<member name="T:HotelSOL.DaoUser">
+ <summary>
+ Clase que alberga los metodos referentes a Usuarios
+ </summary>
+</member>
+<member name="M:HotelSOL.DaoUser.#ctor">
+ <summary>
+ Metodo constructor de la clase
+ </summary>
+</member>
+<member name="M:HotelSOL.DaoUser.AddUser(HotelSOL.User)">
+ <summary>
+ Metodo que añade un usuario en la BD
+ </summary>
+ <param name="User">Objeto Usuario a registrar en la BD</param>
+</member>
+<member name="M:HotelSOL.DaoUser.DeleteUser(HotelSOL.User)">
+ <summary>
+ Metodo que elimina un usuario en la BD
+ </summary>
+ <param name="User">Objeto Usuario a eliminar de la BD</param>
+</member>
+<member name="M:HotelSOL.DaoUser.UpdateUser(HotelSOL.User)">
+ <summary>
+ Metodo que modifica un usuario de la BD
+ </summary>
+ <param name="User">Objeto Usuario a modificar en la BD</param>
+</member>
+<member name="M:HotelSOL.DaoUser.UserExists(System.String)">
+ <summary>
+ Metodo para comprobar si existe un usuario
+ </summary>
+ <param name="UserId">ID del usuario que queremos comprobar</param>
+ <returns>Booleano con la respuesta de su existencia en la BD</returns>
+</member>
+<member name="M:HotelSOL.DaoUser.GetUserList">
+ <summary>
+ Metodo que devuelve las lista de todos los usuarios registrados en la BD
+ </summary>
+ <returns>Un datatable con la lista de usuarios</returns>
+</member>
+<member name="M:HotelSOL.DaoUser.UserLogin(System.String,System.String)">
+ <summary>
+ Metodo que permite la autenticación en la aplicacion
+ </summary>
+ <param name="UserId">ID del usuario que esta manejando la app</param>
+ <param name="Password">Contraseña del usuario</param>
+ <returns>Booleano con la respuesta exitosa o no del login</returns>
+</member>
+<member name="M:HotelSOL.DaoUser.ExecuteQuery">
+ <summary>
+ Metodo que establece la comunicacion con la BD
+ </summary>
+</member>
+<member name="T:HotelSOL.DaoService">
+ <summary>
+ Clase que alberga los metodos referentes a Servicios
+ </summary>
+</member>
+<member name="M:HotelSOL.DaoService.#ctor">
+ <summary>
+ Metodo constructor de la clase
+ </summary>
+</member>
+<member name="M:HotelSOL.DaoService.AddService(HotelSOL.Service)">
+ <summary>
+ Metodo que añade una factura en la BD
+ </summary>
+ <param name="Service">Objeto Servicio a registrar en la BD</param>
+</member>
+<member name="M:HotelSOL.DaoService.DeleteService(HotelSOL.Service)">
+ <summary>
+ Metodo que elimina una factura de la BD
+ </summary>
+ <param name="Service">Objeto Factura a registrar en la BD</param>
+</member>
+<member name="M:HotelSOL.DaoService.UpdateService(HotelSOL.Service)">
+ <summary>
+ Metodo que modifica una factura de la BD
+ </summary>
+ <param name="Service">Objeto Factura a modificar en la BD</param>
+</member>
+<member name="M:HotelSOL.DaoService.ServiceAvailable(System.String)">
+ <summary>
+ Metodo que indica si un servicio esta disponible
+ </summary>
+ <param name="ServiceId">ID del servicio a consultar</param>
+ <returns>Booleano con respuesta de servicio disponible</returns>
+</member>
+<member name="M:HotelSOL.DaoService.ServiceExists(System.UInt32)">
+ <summary>
+ Metodo para comprobar si existe un servicio
+ </summary>
+ <param name="IdService">ID del servicio a consultar</param>
+ <returns>Booleano con la existencia o no del servicio</returns>
+</member>
+<member name="M:HotelSOL.DaoService.GetServiceById(System.UInt32)">
+ <summary>
+ Metodo para recuperar un servicio de la BD
+ </summary>
+ <param name="IdService">ID del servicio a recuperar</param>
+ <returns>Objeto Servicio con los datos si existiera u objeto Servicio nuevo en caso de no existir</returns>
+</member>
+<member name="M:HotelSOL.DaoService.GetServiceList">
+ <summary>
+ Metodo que devuelve la lista de todos los servicio registrados en la BD
+ </summary>
+ <returns>Devuelve un datatable con la lista de los servicios</returns>
+</member>
+<member name="M:HotelSOL.DaoService.ExecuteQuery">
+ <summary>
+ Metodo que establece la comunicacion con la BD
+ </summary>
+</member>
+<member name="T:HotelSOL.DaoClient">
+ <summary>
+ Clase que alberga los metodos referentes a Clientes
+ </summary>
+</member>
+<member name="M:HotelSOL.DaoClient.#ctor">
+ <summary>
+ Metodo constructor de la clase
+ </summary>
+</member>
+<member name="M:HotelSOL.DaoClient.AddClient(HotelSOL.Client)">
+ <summary>
+ Metodo que añade un Cliente en la BD
+ </summary>
+ <param name="Client">Objeto Cliente a registrar en la BD</param>
+</member>
+<member name="M:HotelSOL.DaoClient.DeleteClient(HotelSOL.Client)">
+ <summary>
+ Metodo que elimina un Cliente de la BD
+ </summary>
+ <param name="Client">Objeto Cliente a borrar en la BD</param>
+</member>
+<member name="M:HotelSOL.DaoClient.UpdateClient(HotelSOL.Client)">
+ <summary>
+ Metodo que actualiza un Cliente en la BD
+ </summary>
+ <param name="Client">Objeto Cliente a actualizar en la BD</param>
+</member>
+<member name="M:HotelSOL.DaoClient.ClientExists(System.String)">
+ <summary>
+ Metodo para comprobar si existe un cliente
+ </summary>
+ <param name="ClientId">ID del cliente que queremos comprobar</param>
+ <returns>Booleano con la respuesta de su existencia en la BD</returns>
+</member>
+<member name="M:HotelSOL.DaoClient.GetClientById(System.String)">
+ <summary>
+ Metodo para obtener un cliente de la BD
+ </summary>
+ <param name="ClientId">ID del cliente que queremos recuperar</param>
+ <returns>Objeto cliente con la informacion del mismo si existe o cliente nuevo si no existe</returns>
+</member>
+<member name="M:HotelSOL.DaoClient.GetClientList">
+ <summary>
+ Metodo que devuelve las lista de todos los clientes registrados en la BD
+ </summary>
+ <returns>Un datatable con la lista de clientes</returns>
+</member>
+<member name="M:HotelSOL.DaoClient.ExecuteQuery">
+ <summary>
+ Metodo que establece la comunicacion con la BD
+ </summary>
+</member>
+<member name="T:HotelSOL.Service">
+ <summary>
+ Clase que alberga los atributos, constructores y propiedades de Servicio
+ </summary>
+</member>
+<member name="M:HotelSOL.Service.#ctor(System.UInt32,System.String,System.String,System.UInt32)">
+ <summary>
+ Metodo constructor con todos los atributos del objeto
+ </summary>
+ <param name="ServiceId">Id del servicio</param>
+ <param name="Name">nombre del servicio</param>
+ <param name="Description">descripcion del servicio</param>
+ <param name="Price">precio del servicio</param>
+</member>
+<member name="M:HotelSOL.Service.#ctor(System.String,System.String,System.UInt32)">
+ <summary>
+ Constructor de objeto
+ </summary>
+ <param name="Name">nombre del servicio</param>
+ <param name="Description">descripcion del servicio</param>
+ <param name="Price">precio del servicio</param>
+</member>
+<member name="M:HotelSOL.Service.#ctor(System.UInt32)">
+ <summary>
+ Constructor de objeto
+ </summary>
+ <param name="ServiceId">Id del servicio</param>
+</member>
+<member name="M:HotelSOL.Service.#ctor">
+ <summary>
+ Constructor vacio de objeto
+ </summary>
+</member>
+<member name="P:HotelSOL.Service.ServiceIdProp">
+ <summary>
+ Propiedad con get/set para la Id del servicio
+ </summary>
+ <returns>entero indicando la Id del servicio</returns>
+</member>
+<member name="P:HotelSOL.Service.NameProp">
+ <summary>
+ Propiedad con get/set para el nombre del servicio
+ </summary>
+ <returns>cadena con el nombre del servicio</returns>
+</member>
+<member name="P:HotelSOL.Service.DescriptionProp">
+ <summary>
+ Propiedad con get/set para la descripcion del servicio
+ </summary>
+ <returns>cadena con la descripcion del servicio</returns>
+</member>
+<member name="P:HotelSOL.Service.PriceProp">
+ <summary>
+ Propiedad con get/set para el precio del servicio
+ </summary>
+ <returns>entero indicando el precio del servicio</returns>
+</member>
+<member name="T:HotelSOL.User">
+ <summary>
+ Clase que alberga los atributos, constructores y propiedades de Usuario
+ </summary>
+</member>
+<member name="M:HotelSOL.User.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Metodo constructor con todos los atributos del objeto
+ </summary>
+ <param name="UserId">cadena Id del usuario</param>
+ <param name="Email">cadena email del usuario</param>
+ <param name="Password">cadena contraseña del usuario</param>
+</member>
+<member name="M:HotelSOL.User.#ctor(System.String)">
+ <summary>
+ Metodo constructor con Id de usuario
+ </summary>
+ <param name="UserId">cadena Id del usuario</param>
+</member>
+<member name="M:HotelSOL.User.#ctor">
+ <summary>
+ Metodo constructor vacio para Cliente
+ </summary>
+</member>
+<member name="P:HotelSOL.User.UserIdProp">
+ <summary>
+ Propiedad con get/set para Id del usuario
+ </summary>
+ <returns>cadena con Id</returns>
+</member>
+<member name="P:HotelSOL.User.EmailProp">
+ <summary>
+ Propiedad con get/set para el email del usuario
+ </summary>
+ <returns>cadena con el email</returns>
+</member>
+<member name="P:HotelSOL.User.PasswordProp">
+ <summary>
+ Propiedad con get/set para la contraseña del usuario
+ </summary>
+ <returns>cadena con la contraseña</returns>
+</member>
+<member name="T:HotelSOL.Client">
+ <summary>
+ Clase que alberga los atributos, constructores y propiedades de Cliente
+ </summary>
+</member>
+<member name="M:HotelSOL.Client.#ctor(System.String,System.String,System.String,System.DateTime,System.String,System.String,System.String,System.String,System.UInt32,System.Boolean)">
+ <summary>
+ Metodo constructor con todos los atributos del objeto
+ </summary>
+ <param name="NumberId">DNI del cliente</param>
+ <param name="Name">Nombre del cliente</param>
+ <param name="Surname">Apellidos del cliente</param>
+ <param name="BirthDate">Fecha de nacimiento del cliente</param>
+ <param name="PhoneNumber">Telefono del cliente</param>
+ <param name="Email">Email del cliente</param>
+ <param name="Address">Direccion del cliente</param>
+ <param name="CreditCard">Numero de la tarjeta de credito del cliente</param>
+ <param name="Discount">Descuento aplicable al cliente</param>
+ <param name="ActiveReservation">Booleano que indica si el cliente esta hospedado en el momento de la consulta</param>
+</member>
+<member name="M:HotelSOL.Client.#ctor(System.String)">
+ <summary>
+ Metodo constructor con IdCliente
+ </summary>
+ <param name="NumberId">DNI del cliente</param>
+</member>
+<member name="M:HotelSOL.Client.#ctor">
+ <summary>
+ Metodo constructor vacio para Cliente
+ </summary>
+</member>
+<member name="P:HotelSOL.Client.NameProp">
+ <summary>
+ Propiedad con get/set para nombre del cliente
+ </summary>
+ <returns>cadena con el nombre del cliente</returns>
+</member>
+<member name="P:HotelSOL.Client.SurnameProp">
+ <summary>
+ Propiedad con get/set para apellidos del cliente
+ </summary>
+ <returns>cadena con los apellidos</returns>
+</member>
+<member name="P:HotelSOL.Client.NumberIdProp">
+ <summary>
+ Propiedad con get/set para DNI del cliente
+ </summary>
+ <returns>cadena con el DNI</returns>
+</member>
+<member name="P:HotelSOL.Client.BirthDateProp">
+ <summary>
+ Propiedad con get/set para fecha de nac. del cliente
+ </summary>
+ <returns>fecha de nac.</returns>
+</member>
+<member name="P:HotelSOL.Client.PhoneNumberProp">
+ <summary>
+ Propiedad con get/set para telefono del cliente
+ </summary>
+ <returns>cadena con el numero de telefono</returns>
+</member>
+<member name="P:HotelSOL.Client.EmailProp">
+ <summary>
+ Propiedad con get/set para email del cliente
+ </summary>
+ <returns>cadena con el email</returns>
+</member>
+<member name="P:HotelSOL.Client.AddressProp">
+ <summary>
+ Propiedad con get/set para direccion del cliente
+ </summary>
+ <returns>cadena con la direccion</returns>
+</member>
+<member name="P:HotelSOL.Client.CreditCardProp">
+ <summary>
+ Propiedad con get/set para numero de tarjeta credito del cliente
+ </summary>
+ <returns>cadena con el numero de tarjeta credito</returns>
+</member>
+<member name="P:HotelSOL.Client.DiscountAvailableProp">
+ <summary>
+ Propiedad con get/set para descuento del cliente
+ </summary>
+ <returns>entero con porcentaje de descuento</returns>
+</member>
+<member name="P:HotelSOL.Client.ActiveReservationProp">
+ <summary>
+ Propiedad con get/set para reserva activa del cliente
+ </summary>
+ <returns>booleano reserva activa</returns>
+</member>
+<member name="T:HotelSOL.DAOInvoice">
+ <summary>
+ Clase que alberga los metodos referentes a Facturas
+ </summary>
+</member>
+<member name="M:HotelSOL.DAOInvoice.#ctor">
+ <summary>
+ Metodo constructor de la clase
+ </summary>
+</member>
+<member name="M:HotelSOL.DAOInvoice.AddInvoice(HotelSOL.Invoice)">
+ <summary>
+ Metodo que añade una factura en la BD
+ </summary>
+ <param name="Invoice">Objeto Factura a registrar en la BD</param>
+</member>
+<member name="M:HotelSOL.DAOInvoice.UpdateInvoice(HotelSOL.Invoice)">
+ <summary>
+ Metodo que actualiza una factura de la BD
+ </summary>
+ <param name="Invoice">Objeto Factura a modificar en la BD</param>
+</member>
+<member name="M:HotelSOL.DAOInvoice.InvoiceExists(System.UInt32)">
+ <summary>
+ Metodo para comprobar si existe una factura en la BD
+ </summary>
+ <param name="InvoiceId">Numero de factura a comprobar</param>
+ <returns>Booleano con la respuesta de la existencia o no en la BD</returns>
+</member>
+<member name="M:HotelSOL.DAOInvoice.GetInvoiceById(System.UInt32)">
+ <summary>
+ Metodo para recuperar una factura de la BD
+ </summary>
+ <param name="InvoiceId">Numero de factura a recuperar</param>
+ <returns>Objeto Factura con sus datos en caso de existir o nueva factura si no existe</returns>
+</member>
+<member name="M:HotelSOL.DAOInvoice.GetInvoiceList">
+ <summary>
+ Metodo para obtener la lista con todas las facturas registradas en la base de datos
+ </summary>
+ <returns>Un datatable con la lista de facturas</returns>
+</member>
+<member name="M:HotelSOL.DAOInvoice.ExecuteQuery">
+ <summary>
+ Metodo que establece la comunicacion con la BD
+ </summary>
+</member>
+<member name="T:HotelSOL.DAOReservation">
+ <summary>
+ Clase que implementa los metodos referentes a las reservas
+ </summary>
+</member>
+<member name="M:HotelSOL.DAOReservation.AddReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que añade una reserva de la BD
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.DAOReservation.RemoveReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que elimina una reserva de la BD
+ </summary>
+ <param name="ReservationId">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.DAOReservation.UpdateReservation(HotelSOL.Reservation)">
+ <summary>
+ Metodo que actualiza una reserva en la BD
+ </summary>
+ <param name="Reservation">objeto reserva</param>
+</member>
+<member name="M:HotelSOL.DAOReservation.ReservationExists(System.UInt32)">
+ <summary>
+ Metodo que comprueba se existe una reserva en la BD
+ </summary>
+ <param name="reservationId">ID de la reserva</param>
+ <returns>devuelve el resultado de la comprobacion</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationById(System.UInt32)">
+ <summary>
+ Metodo que devuelve una reserva por su ID de reserva
+ </summary>
+ <param name="reservationId">ID de la reserva</param>
+ <returns>la reserva si existe en la BD o una nueva reserva si no existe</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationList">
+ <summary>
+ Metodo que devuelve una lista con todas las reservas
+ </summary>
+ <returns>devuelve un datatable con la lista de reservas</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetActiveReservationList">
+ <summary>
+ Metodo que devuelve el listado de reservas activas
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetAllReservationByClientId(System.String)">
+ <summary>
+ Metodo que devuelve las reservas referentes a un cliente
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <returns>devuelve un datatable con la lista de reservas</returns>
+</member>
+<member name="M:HotelSOL.DAOReservation.GetReservationByClientAndRoom(System.String,System.String)">
+ <summary>
+ Metodo que devuelve una reserva dada una ID de cliente y una ID de habitacion
+ </summary>
+ <param name="ClientId">ID de cliente</param>
+ <param name="RoomId">ID de habitacion</param>
+ <returns>Objeto reserva</returns>
+</member>
+<member name="T:HotelSOL.Invoice">
+ <summary>
+ Clase que alberga los atributos, constructores y propiedades de Factura
+ </summary>
+</member>
+<member name="M:HotelSOL.Invoice.#ctor">
+ <summary>
+ Metodo constructor vacio para Factura
+ </summary>
+</member>
+<member name="M:HotelSOL.Invoice.#ctor(System.UInt32,System.UInt32,System.Double)">
+ <summary>
+ Metodo constructor del objeto
+ </summary>
+ <param name="InvoiceId">Numero de factura</param>
+ <param name="ReservationId">Numero de reserva</param>
+ <param name="TotalAmount">Precio total</param>
+</member>
+<member name="P:HotelSOL.Invoice.ReservationIdProp">
+ <summary>
+ Propiedad con get/set para numero de reserva
+ </summary>
+ <returns>entero con el numero de reserva</returns>
+</member>
+<member name="P:HotelSOL.Invoice.TotalAmountProp">
+ <summary>
+ Propiedad con get/set para precio total
+ </summary>
+ <returns>doble con el precio total</returns>
+</member>
+<member name="P:HotelSOL.Invoice.ConsumedServicesProp">
+ <summary>
+ Propiedad con get/set para los servicios consumidos
+ </summary>
+ <returns>array con los servicios consumidos</returns>
+</member>
+<member name="T:HotelSOL.Room">
+ <summary>
+ Clase que alberga los atributos, constructores y propiedades de Habitacion
+ </summary>
+</member>
+<member name="M:HotelSOL.Room.#ctor">
+ <summary>
+ Metodo constructor vacio para Habitacion
+ </summary>
+</member>
+<member name="M:HotelSOL.Room.#ctor(System.String)">
+ <summary>
+ Metodo constructor con numero de habitacion
+ </summary>
+ <param name="RoomId">numero de habitacion</param>
+</member>
+<member name="M:HotelSOL.Room.#ctor(System.String,System.String,System.String,System.UInt32,System.UInt32,System.UInt32)">
+ <summary>
+ Metodo constructor con los atributos del objeto
+ </summary>
+ <param name="RoomId">numero de habitacion</param>
+ <param name="Type">tipo de habitacion</param>
+ <param name="Capacity">capacidad de huespedes</param>
+ <param name="PriceH">precio temporada alta</param>
+ <param name="PriceM">precio temporada media</param>
+ <param name="PriceL">precio temporada baja</param>
+</member>
+<member name="P:HotelSOL.Room.RoomIdProp">
+ <summary>
+ Propiedad con get/set para numero de habitacion
+ </summary>
+ <returns>cadena con numero de habitacion</returns>
+</member>
+<member name="P:HotelSOL.Room.TypeProp">
+ <summary>
+ Propiedad con get/set para tipo de habitacion
+ </summary>
+ <returns>cadena con tipo de habitacion</returns>
+</member>
+<member name="P:HotelSOL.Room.CapacityProp">
+ <summary>
+ Propiedad con get/set para capacidad de habitacion
+ </summary>
+ <returns>cadena con capacidad de habitacion</returns>
+</member>
+<member name="P:HotelSOL.Room.PriceHProp">
+ <summary>
+ Propiedad con get/set para precio en temporada alta
+ </summary>
+ <returns>entero con el precio de la habitacion</returns>
+</member>
+<member name="P:HotelSOL.Room.PriceMProp">
+ <summary>
+ Propiedad con get/set para precio en temporada media
+ </summary>
+ <returns>entero con el precio de la habitacion</returns>
+</member>
+<member name="P:HotelSOL.Room.PriceLProp">
+ <summary>
+ Propiedad con get/set para precio en temporada baja
+ </summary>
+ <returns>entero con el precio de la habitacion</returns>
+</member>
+<member name="T:HotelSOL.Reservation">
+ <summary>
+ Clase que alberga los atributos, constructores y propiedades de Reserva
+ </summary>
+</member>
+<member name="M:HotelSOL.Reservation.#ctor">
+ <summary>
+ Metodo constructor vacio para Reserva
+ </summary>
+</member>
+<member name="P:HotelSOL.Reservation.ReservationIdProp">
+ <summary>
+ Propiedad con get/set para numero de reserva
+ </summary>
+ <returns>entero con el numero de reserva</returns>
+</member>
+<member name="P:HotelSOL.Reservation.RoomIdProp">
+ <summary>
+ Propiedad con get/set para numero de habitacion
+ </summary>
+ <returns>entero con el numero de habitacion</returns>
+</member>
+<member name="P:HotelSOL.Reservation.ClientIdProp">
+ <summary>
+ Propiedad con get/set para Id de cliente
+ </summary>
+ <returns>cadena con el Id de cliente</returns>
+</member>
+<member name="P:HotelSOL.Reservation.EntryDateProp">
+ <summary>
+ Propiedad con get/set para fecha de entrada
+ </summary>
+ <returns>fecha de entrada</returns>
+</member>
+<member name="P:HotelSOL.Reservation.DepartureDateProp">
+ <summary>
+ Propiedad con get/set para fecha de salida
+ </summary>
+ <returns>fecha de salida</returns>
+</member>
+<member name="P:HotelSOL.Reservation.SeasonProp">
+ <summary>
+ Propiedad con get/set para temporada
+ </summary>
+ <returns>cadena indicando la temporada</returns>
+</member>
+<member name="P:HotelSOL.Reservation.BoardProp">
+ <summary>
+ Propiedad con get/set para regimen
+ </summary>
+ <returns>cadena indicando el regimen</returns>
+</member>
+<member name="T:HotelSOL.Form1">
+ <summary>
+ Vista de menu principal
+ </summary>
+</member>
+<member name="M:HotelSOL.Form1.Form1_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form1.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Captura boton login
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form1.Button2_Click(System.Object,System.EventArgs)">
+ <summary>
+ Captura boton salda de la app
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form4">
+ <summary>
+ Vista de añadir cliente
+ </summary>
+</member>
+<member name="M:HotelSOL.Form4.Form4_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form4.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo que captura el boton para añadir un cliente
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form5">
+ <summary>
+ Vista de modificar cliente
+ </summary>
+</member>
+<member name="M:HotelSOL.Form5.Form5_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form5.DataGridView1_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ Metodo que muestra los datos del objeto seleccionado en el Grid
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form5.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo que captura el boton para mopdificar un cliente
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form6">
+ <summary>
+ Vista de comprobar cliente
+ </summary>
+</member>
+<member name="M:HotelSOL.Form6.Form6_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form6.Button2_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo que captura un boton para recoger datos de un cliente y mostrar en el Grid
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form7">
+ <summary>
+ Vista de eliminar cliente
+ </summary>
+</member>
+<member name="M:HotelSOL.Form7.Form7_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form7.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo que captura el boton para borrar un cliente
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form7.DataGridView1_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ Metodo que muestra los datos del objeto seleccionado en el Grid
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form9">
+ <summary>
+ Vista de añadir habitacion
+ </summary>
+</member>
+<member name="M:HotelSOL.Form9.Form9_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form9.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo de captura un boton para añadir habitacion
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form10">
+ <summary>
+ Vista de modificar habitacion
+ </summary>
+</member>
+<member name="M:HotelSOL.Form10.Form10_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form10.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo de caprtura de un boton para modificar habitacion
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form10.DataGridView1_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ Metodo que muestra los datos del objeto seleccionado en el Grid
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form11">
+ <summary>
+ Vista de comprobar habitacion
+ </summary>
+</member>
+<member name="M:HotelSOL.Form11.Form11_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form11.Button2_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo que captura un boton para comprobar una habitacion
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form12">
+ <summary>
+ Vista de eliminar habitacion
+ </summary>
+</member>
+<member name="M:HotelSOL.Form12.Form12_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form12.DataGridView1_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ Metodo que muestra los datos del objeto seleccionado en el Grid
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form12.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo que captura un boton para eliminar una habitacion
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form14">
+ <summary>
+ Vista de añadir reserva
+ </summary>
+</member>
+<member name="M:HotelSOL.Form14.Form14_Load(System.Object,System.EventArgs)">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form24">
+ <summary>
+ Vista de añadir servicio
+ </summary>
+</member>
+<member name="M:HotelSOL.Form24.Form24_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form24.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo que captura el boton para añadir un servicio
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form25">
+ <summary>
+ Vista de modificar servicio
+ </summary>
+</member>
+<member name="M:HotelSOL.Form25.Form25_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form25.DataGridView1_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+ <summary>
+ Metodo que muestra los datos del objeto seleccionado en el Grid
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form25.Button1_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo que captura el boton para modificar un servicio
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.LoginForm1">
+ <summary>
+ Vista de ventana de Login
+ </summary>
+</member>
+<member name="M:HotelSOL.LoginForm1.LoginForm1_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.LoginForm1.OK_Click(System.Object,System.EventArgs)">
+ <summary>
+ Captura de boton confirmar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.LoginForm1.Cancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Captura de boton cancelar
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.Form30">
+ <summary>
+ Vista Menu Trabajador
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.Form30_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.Form30.ocultarSubmenu">
+ <summary>
+ Metodo para ocultar los submenus
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.mostrarSubmenu(System.Windows.Forms.Panel)">
+ <summary>
+ Metodo para mostrar los submenus
+ </summary>
+ <param name="submenu"></param>
+</member>
+<member name="M:HotelSOL.Form30.openFormHijo(System.Windows.Forms.Form)">
+ <summary>
+ Metodo para mostrarlas vistas de las secciones en un panel secundario
+ </summary>
+</member>
+<member name="M:HotelSOL.Form30.Button7_Click(System.Object,System.EventArgs)">
+ <summary>
+ Metodo para Logout y regreso a menu principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:HotelSOL.MenuAdmin">
+ <summary>
+ Vista menu de administrador
+ </summary>
+</member>
+<member name="M:HotelSOL.MenuAdmin.Form30_Load(System.Object,System.EventArgs)">
+ <summary>
+ Carga del formulario
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL.MenuAdmin.ocultarSubmenu">
+ <summary>
+ Metodo para ocultar los submenus
+ </summary>
+</member>
+<member name="M:HotelSOL.MenuAdmin.mostrarSubmenu(System.Windows.Forms.Panel)">
+ <summary>
+ Metodo para mostrar los submenus
+ </summary>
+ <param name="submenu"></param>
+</member>
+<member name="M:HotelSOL.MenuAdmin.openFormHijo(System.Windows.Forms.Form)">
+ <summary>
+ Metodo para mostrarlas vistas de las secciones en un panel secundario
+ </summary>
+ <param name="childForm">objeto formulario</param>
+</member>
+<member name="M:HotelSOL.MenuAdmin.OdooButton_Click_1(System.Object,System.EventArgs)">
+ <summary>
+ Metodo para Logout y regreso a menu principal
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL._32_Exports.SelectButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que captura el clic en el botón de export
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL._32_Exports.ejecutarScriptPython(System.String)">
+ <summary>
+ Método para ejecutar el script de python
+ </summary>
+ <param name="filename"></param>
+</member>
+<member name="M:HotelSOL._32_Exports.ImportButton_Click(System.Object,System.EventArgs)">
+ <summary>
+ Método que captura el clic en el botón del import
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="M:HotelSOL._32_Exports.Show_Dialog">
+ <summary>
+ Método para mostrar el cuadro de diálogo con la información del import
+ </summary>
+</member>
+</members>
+</doc>

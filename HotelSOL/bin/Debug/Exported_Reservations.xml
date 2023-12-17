@@ -1,0 +1,22 @@
+<NewDataSet>
+  <Table1>
+    <IDreserva>1</IDreserva>
+    <IDhabitacion>105</IDhabitacion>
+    <IDCliente>1</IDCliente>
+    <FechaEntr>2023-12-06T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-12-09T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Pensión completa</Regimen>
+    <Estado>true</Estado>
+  </Table1>
+  <Table1>
+    <IDreserva>2</IDreserva>
+    <IDhabitacion>108</IDhabitacion>
+    <IDCliente>1</IDCliente>
+    <FechaEntr>2023-12-06T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-12-09T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Pensión completa</Regimen>
+    <Estado>false</Estado>
+  </Table1>
+</NewDataSet>

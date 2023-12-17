@@ -1,0 +1,177 @@
+<NewDataSet>
+  <Table1>
+    <IDfactura>1</IDfactura>
+    <IDreserva>1</IDreserva>
+    <Estancia>6</Estancia>
+    <Precio_dia>35</Precio_dia>
+    <Total>210</Total>
+    <IDreserva1>1</IDreserva1>
+    <IDhabitacion>100</IDhabitacion>
+    <IDCliente>56847125-T</IDCliente>
+    <FechaEntr>2023-11-06T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-11-12T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Sin régimen</Regimen>
+    <Estado>false</Estado>
+    <IDcliente1>56847125-T</IDcliente1>
+    <Nombre>Alberto</Nombre>
+    <Apellidos>Fernandez</Apellidos>
+    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>652143026</Telefono>
+    <Email>Alberto@mail.com</Email>
+    <Direccion>Calle pez 5</Direccion>
+    <TarjetaCred>456879123546</TarjetaCred>
+    <Descuento>0</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+  <Table1>
+    <IDfactura>2</IDfactura>
+    <IDreserva>2</IDreserva>
+    <Estancia>3</Estancia>
+    <Precio_dia>52.5</Precio_dia>
+    <Total>157.5</Total>
+    <IDreserva1>2</IDreserva1>
+    <IDhabitacion>102</IDhabitacion>
+    <IDCliente>56847654-S</IDCliente>
+    <FechaEntr>2023-11-22T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-11-25T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Pensión completa</Regimen>
+    <Estado>false</Estado>
+    <IDcliente1>56847654-S</IDcliente1>
+    <Nombre>Pepe</Nombre>
+    <Apellidos>Sanz</Apellidos>
+    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>652143026</Telefono>
+    <Email>Pepe@mail.com</Email>
+    <Direccion>Calle luna 56</Direccion>
+    <TarjetaCred>456879123546</TarjetaCred>
+    <Descuento>10</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+  <Table1>
+    <IDfactura>3</IDfactura>
+    <IDreserva>3</IDreserva>
+    <Estancia>6</Estancia>
+    <Precio_dia>82.5</Precio_dia>
+    <Total>495</Total>
+    <IDreserva1>3</IDreserva1>
+    <IDhabitacion>109</IDhabitacion>
+    <IDCliente>56847115-C</IDCliente>
+    <FechaEntr>2023-10-02T00:00:00+02:00</FechaEntr>
+    <FechaSal>2023-10-08T00:00:00+02:00</FechaSal>
+    <Temporada>media</Temporada>
+    <Regimen>Media pensión</Regimen>
+    <Estado>false</Estado>
+    <IDcliente1>56847115-C</IDcliente1>
+    <Nombre>Lola</Nombre>
+    <Apellidos>Perez</Apellidos>
+    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>652143026</Telefono>
+    <Email>Lola@mail.com</Email>
+    <Direccion>Calle presa 36</Direccion>
+    <TarjetaCred>456879123546</TarjetaCred>
+    <Descuento>10</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+  <Table1>
+    <IDfactura>4</IDfactura>
+    <IDreserva>4</IDreserva>
+    <Estancia>7</Estancia>
+    <Precio_dia>85.5</Precio_dia>
+    <Total>598.5</Total>
+    <IDreserva1>4</IDreserva1>
+    <IDhabitacion>110</IDhabitacion>
+    <IDCliente>56847157-K</IDCliente>
+    <FechaEntr>2023-12-01T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-12-08T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Pensión completa</Regimen>
+    <Estado>false</Estado>
+    <IDcliente1>56847157-K</IDcliente1>
+    <Nombre>Natalia</Nombre>
+    <Apellidos>Navarro</Apellidos>
+    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>652143026</Telefono>
+    <Email>Natalia@mail.com</Email>
+    <Direccion>Plaza olavide 2</Direccion>
+    <TarjetaCred>456879123546</TarjetaCred>
+    <Descuento>0</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+  <Table1>
+    <IDfactura>5</IDfactura>
+    <IDreserva>5</IDreserva>
+    <Estancia>1</Estancia>
+    <Precio_dia>35</Precio_dia>
+    <Total>35</Total>
+    <IDreserva1>5</IDreserva1>
+    <IDhabitacion>100</IDhabitacion>
+    <IDCliente>56847125-R</IDCliente>
+    <FechaEntr>2023-12-23T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-12-24T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Sin régimen</Regimen>
+    <Estado>false</Estado>
+    <IDcliente1>56847125-R</IDcliente1>
+    <Nombre>Cristina</Nombre>
+    <Apellidos>Laña</Apellidos>
+    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>652143026</Telefono>
+    <Email>Cristina@mail.com</Email>
+    <Direccion>Avenida del rey 8</Direccion>
+    <TarjetaCred>456879123546</TarjetaCred>
+    <Descuento>0</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+  <Table1>
+    <IDfactura>6</IDfactura>
+    <IDreserva>6</IDreserva>
+    <Estancia>6</Estancia>
+    <Precio_dia>150</Precio_dia>
+    <Total>1003</Total>
+    <IDreserva1>6</IDreserva1>
+    <IDhabitacion>113</IDhabitacion>
+    <IDCliente>56847471-X</IDCliente>
+    <FechaEntr>2023-12-04T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-12-10T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Pensión completa</Regimen>
+    <Estado>false</Estado>
+    <IDcliente1>56847471-X</IDcliente1>
+    <Nombre>Daniel</Nombre>
+    <Apellidos>Nogal</Apellidos>
+    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>652143026</Telefono>
+    <Email>Daniel@mail.com</Email>
+    <Direccion>Paseo imperial 45</Direccion>
+    <TarjetaCred>456879123546</TarjetaCred>
+    <Descuento>0</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+  <Table1>
+    <IDfactura>7</IDfactura>
+    <IDreserva>7</IDreserva>
+    <Estancia>1</Estancia>
+    <Precio_dia>57</Precio_dia>
+    <Total>57</Total>
+    <IDreserva1>7</IDreserva1>
+    <IDhabitacion>109</IDhabitacion>
+    <IDCliente>56846598-G</IDCliente>
+    <FechaEntr>2023-12-09T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-12-10T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Sin régimen</Regimen>
+    <Estado>false</Estado>
+    <IDcliente1>56846598-G</IDcliente1>
+    <Nombre>Pedro</Nombre>
+    <Apellidos>Sanchez</Apellidos>
+    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>652143026</Telefono>
+    <Email>Pedro@mail.com</Email>
+    <Direccion>Plaza castilla 5</Direccion>
+    <TarjetaCred>456879123546</TarjetaCred>
+    <Descuento>0</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+</NewDataSet>
