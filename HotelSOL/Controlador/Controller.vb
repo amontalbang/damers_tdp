@@ -458,9 +458,9 @@ Public Class Controller
         Try
             Dim reservation As Reservation = daoReservation.GetReservationById(ReservationId)
             reservation.isActiveProp = False
-            daoReservation.UpdateReservation(reservation)
             Dim invoice As Invoice = daoInvoice.GetInvoiceByReservationId(ReservationId)
             invoice.TotalAmountProp = Me.GetTotalInvoice(reservation, invoice)
+            daoReservation.UpdateReservation(reservation)
             Return invoice.TotalAmountProp
         Catch ex As Exception
             Throw ex
@@ -638,6 +638,7 @@ Public Class Controller
             Next
             Invoice.DaysProp = days
             Invoice.PricePerDayProp = pricePerDay
+            Invoice.TotalAmountProp = totalCount
             daoInvoice.UpdateInvoice(Invoice)
             Return totalCount
         Catch ex As Exception

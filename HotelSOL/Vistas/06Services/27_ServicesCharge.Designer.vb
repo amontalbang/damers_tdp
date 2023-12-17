@@ -158,7 +158,7 @@ Partial Class Form27
         '
         'RoomSelector
         '
-        Me.RoomSelector.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RoomSelector.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.RoomSelector.FormattingEnabled = True
         Me.RoomSelector.Location = New System.Drawing.Point(210, 373)
         Me.RoomSelector.Name = "RoomSelector"

@@ -97,7 +97,7 @@ Public Class DaoService
     ''' <param name="IdService">ID del servicio a recuperar</param>
     ''' <returns>Objeto Servicio con los datos si existiera u objeto Servicio nuevo en caso de no existir</returns>
     Public Function GetServiceById(IdService As UInteger) As Service
-        Dim query As String = "SELECT * FROM Servicios WHERE IDservicio = '" & IdService & "'"
+        Dim query As String = "SELECT * FROM Servicios WHERE IDservicio = " & IdService
         Dim adapter As New SqlDataAdapter(query, connector.Connect())
         Dim dt As New DataTable
         adapter.Fill(dt)
@@ -105,7 +105,14 @@ Public Class DaoService
             Return New Service()
         End If
         Dim dr As DataRow = dt.AsEnumerable().ElementAt(0)
-        Return New Service(dr.Field(Of String)("Nombre"), dr.Field(Of String)("Descripcion"), dr.Field(Of UInteger)("Precio"))
+        'Return New Service(dr.Field(Of String)("Nombre"), dr.Field(Of String)("Descripcion"), dr.Field(Of UInteger)("Precio"))
+        Dim service As New Service
+        service.ServiceIdProp = CUInt(dt.AsEnumerable().ElementAt(0).Item(0).ToString)
+        service.NameProp = dt.AsEnumerable().ElementAt(0).Item(1).ToString
+        service.DescriptionProp = dt.AsEnumerable().ElementAt(0).Item(2).ToString
+        service.PriceProp = CUInt(dt.AsEnumerable().ElementAt(0).Item(3).ToString)
+        service.UnitsAvailableProp = CUInt(dt.AsEnumerable().ElementAt(0).Item(4).ToString)
+        Return New Service(service.ServiceIdProp, service.NameProp, service.DescriptionProp, service.PriceProp, service.UnitsAvailableProp)
     End Function
 
     ''' <summary>

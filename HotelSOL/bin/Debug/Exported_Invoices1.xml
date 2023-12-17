@@ -1,0 +1,27 @@
+<NewDataSet>
+  <Table1>
+    <IDfactura>1</IDfactura>
+    <IDreserva>1</IDreserva>
+    <Estancia>9</Estancia>
+    <Precio_dia>35</Precio_dia>
+    <Total>210</Total>
+    <IDreserva1>1</IDreserva1>
+    <IDhabitacion>100</IDhabitacion>
+    <IDCliente>56847125-T</IDCliente>
+    <FechaEntr>2023-12-01T00:00:00+01:00</FechaEntr>
+    <FechaSal>2023-12-10T00:00:00+01:00</FechaSal>
+    <Temporada>baja</Temporada>
+    <Regimen>Sin régimen</Regimen>
+    <Estado>false</Estado>
+    <IDcliente1>56847125-T</IDcliente1>
+    <Nombre>Alberto</Nombre>
+    <Apellidos>Fernandez</Apellidos>
+    <FechaNac>1988-11-21T00:00:00+01:00</FechaNac>
+    <Telefono>652143026</Telefono>
+    <Email>Alberto@mail.com</Email>
+    <Direccion>Calle pez 5</Direccion>
+    <TarjetaCred>456879123546</TarjetaCred>
+    <Descuento>0</Descuento>
+    <ReservaActiva>false</ReservaActiva>
+  </Table1>
+</NewDataSet>
